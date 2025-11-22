@@ -1,0 +1,14 @@
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+import joblib   
+
+merged = pd.read_csv("fight_cleaned.csv")
+
+numeric_cols = ['height_diff', 'reach_diff', 'age_diff', 'strike_eff_diff',
+                'grapple_eff_diff', 'performance_diff', 'win_ratio_diff']
+
+scaler = StandardScaler()
+
+merged[numeric_cols] = scaler.fit_transform(merged[numeric_cols])
+
+joblib.dump(scaler, "mma_scaler.pkl")   
