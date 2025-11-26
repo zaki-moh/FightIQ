@@ -3,22 +3,20 @@ import joblib
 
 
 stats = pd.read_csv("ufc-fighters-statistics.csv")
-historic_fights = pd.read_csv("large_dataset.csv")
 
 model = joblib.load("models/MMA_predictor.pkl")
-scaler = joblib.load("models/scalar.pkl")
+scaler = joblib.load("models/scaler.pkl")
 
 
 def predictWinner(fighter_A_Name, fighter_B_Name):
-    fighter_A_name = fighter_A_Name.lower()
-    fighter_B_name = fighter_B_name.lower()
+    fighter_A_Name = fighter_A_Name.lower()
+    fighter_B_Name = fighter_B_Name.lower()
     fighter_A = stats.loc[stats['name'].str.lower() == fighter_A_Name].squeeze()
     fighter_B = stats.loc[stats['name'].str.lower() == fighter_B_Name].squeeze()
     numeric_cols = ['height_diff',	'reach_diff',	'age_diff',	'strike_eff_diff',	'grapple_eff_diff',	'performance_diff',	'win_ratio_diff']
 
     if fighter_A.empty or fighter_B.empty:
-        print("One or both fighters not found in the dataset.")
-        return
+        return {"error": "One or more fighters not found"}
 
     input_data = pd.DataFrame({
         'height_diff': [fighter_A['height_cm'] - fighter_B['height_cm']],
@@ -39,7 +37,7 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
     return {
         "fighter_A": fighter_A["name"],
         "fighter_B": fighter_B["name"],
-        "Winner": fighter_A_Name if r_win_prob > b_win_prob else fighter_B_Name,
+        "Winner": fighter_A["name"] if r_win_prob > b_win_prob else fighter_B["name"],
         "probabilities": {
             fighter_A["name"]: r_win_prob,
             fighter_B["name"]: b_win_prob

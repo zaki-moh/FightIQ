@@ -1,17 +1,16 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from predict import predictWinner
 
 app = FastAPI()
 
 class Matchup(BaseModel):
     fighter_A: str
-    fighter_b: str
-
-
-@app.get("/")
-def Home():
-    return {"Message": "Hello world"}
-
+    fighter_B: str
+    
 @app.post("/predict")
 def predict(data: Matchup):
-    return {'fighter_A': data.fighter_A, 'fighter_b': data.fighter_b, }
+    result = predictWinner(data.fighter_A, data.fighter_B)
+    if result == None:
+        return {"error": "One or more fighters not found"}
+    return result

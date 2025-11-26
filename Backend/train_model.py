@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
-import joblib
+import joblib 
 
 stats = pd.read_csv("ufc-fighters-statistics.csv")
 historic_fights = pd.read_csv("large_dataset.csv")
@@ -67,7 +67,7 @@ scaler = StandardScaler()
 numeric_cols = ['height_diff',	'reach_diff',	'age_diff',	'strike_eff_diff',	'grapple_eff_diff',	'performance_diff',	'win_ratio_diff']
 
 merged[numeric_cols] = scaler.fit_transform(merged[numeric_cols])
-joblib.dump(scaler, "Scalar.pkl")
+joblib.dump(scaler, "scaler.pkl")
 X = merged[['height_diff',	'reach_diff',	'age_diff',	'strike_eff_diff',	'grapple_eff_diff',	'performance_diff',	'win_ratio_diff']]
 y = merged['r_fighter_win']
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=42)
