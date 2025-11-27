@@ -5,8 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import joblib 
 
-stats = pd.read_csv("ufc-fighters-statistics.csv")
-historic_fights = pd.read_csv("large_dataset.csv")
+stats = pd.read_csv("data/ufc-fighters-statistics.csv")
+historic_fights = pd.read_csv("data/large_dataset.csv")
 
 historic_fights = historic_fights.iloc[50:]
 #print(historic_fights)
@@ -60,14 +60,14 @@ merged['r_fighter_win'] = (merged['winner'] == merged['r_fighter']).astype(int)
 merged = merged[['r_fighter', 'b_fighter', 'height_diff', 'reach_diff', 'age_diff', 'strike_eff_diff', 'grapple_eff_diff', 'performance_diff', 'win_ratio_diff', 'r_fighter_win']].copy()
 #print(merged.columns.tolist())
 #merged.head()
-merged.to_csv("fighters_cleaned.csv", index=False)
+merged.to_csv("data/fighters_cleaned.csv", index=False)
 
 scaler = StandardScaler()
 
 numeric_cols = ['height_diff',	'reach_diff',	'age_diff',	'strike_eff_diff',	'grapple_eff_diff',	'performance_diff',	'win_ratio_diff']
 
 merged[numeric_cols] = scaler.fit_transform(merged[numeric_cols])
-joblib.dump(scaler, "scaler.pkl")
+joblib.dump(scaler, "models/scaler.pkl")
 X = merged[['height_diff',	'reach_diff',	'age_diff',	'strike_eff_diff',	'grapple_eff_diff',	'performance_diff',	'win_ratio_diff']]
 y = merged['r_fighter_win']
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=42)
@@ -75,5 +75,5 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_sta
 model = RandomForestClassifier(n_estimators=200, class_weight='balanced', random_state=42)
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
-joblib.dump(model, "MMA_predictor.pkl")
+joblib.dump(model, "models/MMA_predictor.pkl")
 

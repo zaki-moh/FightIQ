@@ -1,3 +1,4 @@
+from fastapi import HTTPException
 from fastapi import FastAPI
 from pydantic import BaseModel
 from predict import predictWinner
@@ -11,6 +12,6 @@ class Matchup(BaseModel):
 @app.post("/predict")
 def predict(data: Matchup):
     result = predictWinner(data.fighter_A, data.fighter_B)
-    if result == None:
-        return {"error": "One or more fighters not found"}
+    if "error" in result:
+        raise HTTPException(status_code=404, detail=result["error"])
     return result

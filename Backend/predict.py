@@ -2,7 +2,7 @@ import pandas as pd
 import joblib
 
 
-stats = pd.read_csv("ufc-fighters-statistics.csv")
+stats = pd.read_csv("data/ufc-fighters-statistics.csv")
 
 model = joblib.load("models/MMA_predictor.pkl")
 scaler = joblib.load("models/scaler.pkl")
