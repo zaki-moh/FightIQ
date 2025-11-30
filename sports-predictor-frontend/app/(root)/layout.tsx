@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '@/components/Header'
+import Header from '@/components/ui/Header'
 
 const Layout = ({ children }: {children: React.ReactNode}) => {
   return (
     <main className="min-h-screen text-white">
         <Header />
-        <div className="container ">
+        <div className="container">
             {children}
         </div>
     </main>
