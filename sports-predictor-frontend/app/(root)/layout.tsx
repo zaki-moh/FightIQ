@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '@/components/ui/Header'
+import Footer from '@/components/ui/Footer'
 
 const Layout = ({ children }: {children: React.ReactNode}) => {
   return (
@@ -8,6 +9,7 @@ const Layout = ({ children }: {children: React.ReactNode}) => {
         <div className="container">
             {children}
         </div>
+        <Footer />
     </main>
   )
 }
