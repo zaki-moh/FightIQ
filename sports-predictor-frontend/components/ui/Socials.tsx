@@ -1,37 +1,32 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import FooterItems from './FooterItems'
-import Socials from './Socials'
+import React from 'react'
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Footer = () => {
+const Socials = () => {
   return (
-    <footer className="bg-[#050D27] text-white py-10">
-      <div
-        className="
-          max-w-6xl mx-auto
-          flex flex-col items-center gap-12
-          md:flex-row md:items-start md:justify-between md:gap-20
-          lg:gap-32
-          xl:gap-48
-        "
-      >
-        <div className="flex flex-col items-center md:items-start gap-4">
-          <Image
-            src="/assets/icons/croppedLogo.png"
-            alt="logo"
-            width={1526}
-            height={1024}
-            className="h-14 w-auto object-top"
-          />
-          <p className="text-sm text-white/60">© 2025 SportaAI</p>
-        </div>
+    <div className="flex flex-col">
+      <div className="font-bold mb-2 tracking-wide text-sm">Follow Us</div>
 
-        <FooterItems />
+      <ul className="flex gap-4 text-xl">
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">
+            <FaInstagram className="hover:text-pink-400 transition" />
+          </a>
+        </li>
 
-        <Socials />
-      </div>
-    </footer>
+        <li>
+          <a href="https://githubgithub.com/zaki-moh" target="_blank">
+            <FaGithub className="hover:text-gray-400 transition" />
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/zakaria-mohamed-61a89a1b3/" target="_blank">
+            <FaLinkedin className="hover:text-blue-500 transition" />
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };
 
-export default Footer;
+export default Socials;
