@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Welcome from "@/components/ui/Welcome";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      Hello world
+    <div className="container mx-auto py-8">
+        <Welcome />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import Socials from './Socials'
 const Footer = () => {
 
   return (
-    <footer className="bg-[#050D27] text-white py-10">
+    <footer className="bg-[#0A1F45] text-white py-10">
     <div className=" 
         max-w-6xl mx-auto px-6
         flex flex-col gap-12
