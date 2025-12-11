@@ -14,7 +14,7 @@ const Socials = () => {
         </li>
 
         <li>
-          <a href="https://githubgithub.com/zaki-moh" target="_blank">
+          <a href="https://github.com/zaki-moh" target="_blank">
             <FaGithub className="hover:text-gray-400 transition" />
           </a>
         </li>

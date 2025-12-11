@@ -27,7 +27,10 @@ const Welcome = () => {
           </Button>
         </div>
       </section>
-      <div className="flex items-center justify-center gap-6 mt-20">
+
+      <div className="w-3/4 mx-auto border-t-2 max-w-4xl bg-white/30 h-[3px] mt-10
+        bg-gradient-to-r from-transparent via-white/20 to-transparent"/>
+      <div className="flex items-center justify-center gap-6 mt-10">
         <BoltIcon className="w-8 h-8 text-white" />
         
         <p className="text-white/30 text-3xl">|</p>
