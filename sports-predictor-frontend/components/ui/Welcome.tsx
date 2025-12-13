@@ -26,11 +26,11 @@ const Welcome = () => {
     <div className="flex flex-col items-center justify-center px-4">
       <section className="flex flex-col w-full items-center justify-center gap-6 mt-20 sm:mt-24 text-center opacity-0 fade-in-up animate-[delay-150ms]">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
-          Welcome to Sporta AI!
+          Welcome to FightIQ!
         </h1>
 
         <h2 className="text-base sm:text-lg lg:text-xl font-light text-gray-400 leading-relaxed max-w-2xl">
-          AI-powered sports predictions and analytics
+          AI-powered combat sports predictions and analytics
         </h2>
 
         {/* BUTTONS */}

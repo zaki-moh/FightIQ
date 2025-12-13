@@ -25,7 +25,7 @@ const Button = ({
     primary: "bg-blue-600 hover:bg-blue-500 text-white", 
     secondary: "bg-grey-700 hover:bg-gray-600 text-white",
     outline: "border border-gray-300 text-gray-200 hover:bg-gray-800/90",
-    ghost: "text-gray-300 hover:bg-gray-800/30",
+    ghost: "text-gray-300 bg-gray-700/30 hover:bg-gray-500/30 backdrop-blur-sm",
   };
 
   const sizeStyles = {
