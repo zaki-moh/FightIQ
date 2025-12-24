@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
@@ -6,12 +7,18 @@ import {
   ChartBarIcon,
   Cog6ToothIcon
 } from '@heroicons/react/24/outline'
+import { useRouter } from 'next/navigation'
 
 const Page = () => {
+    const router = useRouter();
+  
+    const learnMore = () => {
+      router.push("/learn-more-about-model")
+    }
+
   return (
     <main className="flex flex-col w-full items-center">
 
-      {/* ================= HERO ================= */}
       <section className="max-w-3xl w-full px-6 mt-20 text-center">
         <h1 className="text-white font-semibold text-4xl leading-tight">
           How FightIQ Delivers <br />
@@ -42,10 +49,8 @@ const Page = () => {
         </div>
       </section>
 
-      {/* HERO → WHY (major transition) */}
       <div className="my-20 h-px w-full bg-white/10" />
 
-      {/* ================= WHY ================= */}
       <section className="max-w-3xl w-full px-6 text-center">
         <h2 className="text-white font-semibold text-3xl">
           Why FightIQ Exists
@@ -60,10 +65,8 @@ const Page = () => {
         </p>
       </section>
 
-      {/* WHY → HOW (medium transition) */}
       <div className="my-14 h-px w-full bg-white/10" />
 
-      {/* ================= HOW IT WORKS ================= */}
       <section className="max-w-5xl w-full px-6 text-center">
         <h2 className="text-white font-semibold text-3xl mb-8">
           How FightIQ Works
@@ -90,10 +93,8 @@ const Page = () => {
         </div>
       </section>
 
-      {/* HOW → ACCURACY (medium transition) */}
       <div className="my-14 h-px w-full bg-white/10" />
 
-      {/* ================= ACCURACY ================= */}
       <section className="max-w-3xl w-full px-6 text-center">
         <h2 className="text-white font-semibold text-3xl mb-4">
           Accuracy & Transparency
@@ -110,10 +111,8 @@ const Page = () => {
         </p>
       </section>
 
-      {/* ACCURACY → CTA (major transition / conclusion) */}
       <div className="my-20 h-px w-full bg-white/10" />
 
-      {/* ================= CTA ================= */}
       <section className="max-w-3xl w-full px-6 text-center mb-24">
         <h3 className="font-semibold text-2xl text-white">
           Ready to see FightIQ in action?
@@ -132,6 +131,7 @@ const Page = () => {
             size="sm"
             variant="ghost"
             className="h-12 w-64 border-white/20 hover:border-white/40"
+            onClick={learnMore}
           >
             Learn About the Model
           </Button>
