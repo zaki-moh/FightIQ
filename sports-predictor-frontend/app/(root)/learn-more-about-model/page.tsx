@@ -132,7 +132,7 @@ const page = () => {
 
         <div className="my-16 h-px w-full bg-white/10"/>
 
-        <section className="px-6 max-w-3xl w-full text-left mb-24">
+        <section className="px-6 max-w-3xl w-full text-left">
             <h2 className="text-2xl font-semibold leading-snug text-white">
                 Model Architecture and Training Procedure
             </h2>
@@ -179,6 +179,177 @@ const page = () => {
                 performance across different subsets of data and reduces sensitivity to noise
                 in the training set.
             </p>       
+        </section>
+
+        <div className="my-16 h-px w-full bg-white/10"/>
+
+        <section className="px-6 max-w-3xl w-full text-left">
+            <h2 className="text-2xl font-semibold leading-snug text-white">
+                  Evaluation Methodology and Metrics
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                This section describes how the model’s performance is evaluated and how
+                predictive accuracy is measured. It outlines the data splitting strategy,
+                the evaluation metrics used, and the rationale behind these choices to ensure
+                reported results reflect realistic, out-of-sample performance.
+            </p>
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+            Train–Test Split Strategy
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                To evaluate performance under realistic conditions, the dataset is split into
+                training and test sets based on fight chronology rather than random sampling.
+                All fights used for evaluation occur strictly after those used for training,
+                ensuring the model is tested only on future, unseen matchups. This approach
+                preserves temporal integrity and prevents information leakage that could
+                artificially inflate reported performance.
+            </p>
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+            Evaluation Metrics
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Model performance is evaluated using standard classification metrics that
+                reflect both predictive accuracy and probabilistic quality. Overall accuracy
+                is reported to measure how often the model correctly identifies the winning
+                fighter, while probability-based metrics are used to assess the reliability of
+                predicted confidence levels. Together, these metrics provide a balanced view
+                of performance beyond a single summary statistic.
+            </p>
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+            Interpretation of Results
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Reported performance metrics should be interpreted as estimates of the model’s
+                ability to generalize to future fights rather than guarantees of individual
+                outcomes. While the model demonstrates predictive skill above baseline
+                expectations, uncertainty remains inherent in fight outcomes due to
+                unmodeled factors and stochastic variation. As such, predictions are best
+                viewed as informed probabilistic assessments rather than deterministic
+                forecasts.
+            </p>
+        </section>
+
+        <div className="my-16 h-px w-full bg-white/10"/>
+
+        <section className="px-6 w-full max-w-3xl text-left">
+            <h2 className="text-2xl font-semibold leading-snug text-white">
+                Calibration and Prediction Confidence
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Because the model produces probabilistic predictions rather than binary
+                outcomes, it is important to understand how these probabilities should be
+                interpreted. This section explains the concept of calibration, how prediction
+                confidence is assessed, and how users should reason about the model’s output
+                in practice.
+            </p>
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+                Probability Calibration
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Probability calibration refers to how closely the model’s predicted
+                probabilities align with observed outcomes. A well-calibrated model assigns
+                probabilities such that, over many predictions, events predicted with a given
+                confidence occur at approximately that rate. Calibration is particularly
+                important for decision-making tasks, as it ensures that predicted confidence
+                levels meaningfully reflect real-world uncertainty rather than overconfidence
+                or underconfidence.
+            </p>
+
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+                Interpreting Prediction Confidence
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                A predicted win probability represents the model’s confidence given the
+                available pre-fight information, not a guaranteed outcome. For example, a
+                prediction of 70% indicates that, across similar matchups, the favored fighter
+                would be expected to win approximately seven out of ten times. Individual
+                fights remain inherently uncertain, and lower-confidence predictions should
+                be interpreted as closer matchups rather than errors.
+            </p>
+
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+                Practical Use of Probabilities
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                In practice, predicted probabilities are most useful when considered in
+                aggregate rather than as isolated forecasts. Higher-confidence predictions
+                generally indicate clearer statistical advantages, while predictions near
+                50% reflect evenly matched fights. Users are encouraged to treat probabilities
+                as guidance for relative confidence and risk assessment rather than definitive
+                predictions of fight outcomes.
+            </p>
+        </section>
+
+        <div className="my-16 h-px w-full bg-white/10"/>
+
+        <section className="px-6 w-full max-w-3xl text-left">
+            <h2 className="text-2xl font-semibold leading-snug text-white">
+                Limitations and Known Constraints
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                While the model demonstrates predictive skill on historical data, it operates
+                under several important limitations. This section outlines known constraints
+                related to data coverage, modeling assumptions, and unobserved factors that
+                may affect predictive performance in real-world scenarios.
+            </p>
+
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+                Data Coverage and Recency
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                The model is trained on historical fight data available through the end of the
+                2021 season. As a result, predictions may be less reliable for fighters whose
+                skill level, style, or competitive context has changed significantly since
+                that time. Ongoing updates to the dataset would be required to fully capture
+                recent trends, evolving training methods, and changes in the competitive
+                landscape.
+            </p>
+
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+                Unmodeled Factors
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Certain factors that can influence fight outcomes are difficult to quantify
+                reliably and are not explicitly modeled. These include injuries, short-notice
+                fight changes, training camp quality, weight cut conditions, and in-fight
+                dynamics. Because such information is either unavailable or inconsistent prior
+                to a fight, the model relies solely on historical and statistical signals.
+            </p>
+
+            <h3 className="mt-8 text-xl font-semibold leading-snug text-white">
+                Probabilistic Uncertainty
+            </h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Even with well-calibrated probabilities, fight outcomes remain inherently
+                uncertain due to randomness and unobserved variables. Close matchups, in
+                particular, may result in outcomes that differ from the model’s highest-probability
+                prediction. As such, the model’s outputs should be interpreted as probabilistic
+                guidance rather than definitive predictions.
+            </p>
+        </section>
+
+        <div className="my-16 h-px w-full bg-white/10"/>
+        
+        <section className="px-6 w-full max-w-3xl text-left"> 
+            <h2 className="text-2xl font-semibold leading-snug text-white">
+                Future Improvements
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+                Several extensions could further improve the model’s accuracy, robustness, and
+                applicability. Potential improvements include incorporating more recent fight
+                data to capture evolving fighter performance, exploring additional features
+                related to matchup dynamics, and experimenting with alternative model
+                architectures better suited to complex non-linear interactions. Additional
+                work could also focus on refining probability calibration and expanding
+                evaluation across different promotions and weight classes.
+            </p>
+                    
+            <ul className="mt-4 space-y-2 list-disc list-inside text-white/60 text-lg mb-24">
+                <li>Regularly updating the dataset to include recent fights and emerging fighters.</li>
+                <li>Incorporating richer matchup-level features and stylistic indicators.</li>
+                <li>Exploring alternative model architectures and ensemble approaches.</li>
+                <li>Improving probability calibration and uncertainty estimation.</li>
+            </ul>
         </section>
     </main>
   )
