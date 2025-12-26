@@ -16,6 +16,10 @@ const Page = () => {
       router.push("/learn-more-about-model")
     }
 
+    const viewPredictions = () => {
+      router.push("/view-predictions")
+    }
+
   return (
     <main className="flex flex-col w-full items-center">
 
@@ -31,18 +35,12 @@ const Page = () => {
         </p>
 
         <div className="flex justify-center gap-4 mt-8">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-11 w-40 border border-white/20 hover:border-white/40 text-white"
-          >
-            Get Started
-          </Button>
 
           <Button
             size="sm"
             variant="primary"
-            className="h-11 w-42"
+            className="h-12 w-44"
+            onClick={viewPredictions}
           >
             View Predictions
           </Button>
@@ -123,6 +121,7 @@ const Page = () => {
             size="sm"
             variant="primary"
             className="h-12 w-48"
+            onClick={viewPredictions}
           >
             View Predictions
           </Button>
