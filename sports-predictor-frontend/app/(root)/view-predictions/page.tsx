@@ -1,9 +1,13 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Card from '@/components/ui/Card'
+import { useRouter } from 'next/navigation'
 
 
-const page = () => {
+const Page = () => {
+    const router = useRouter();
+    
     const sports = [
         {
             id: 'mma',
@@ -30,21 +34,29 @@ const page = () => {
             alt: 'Premier League',
         },
     ]
+    
+    const onClick = (src: string) => {
+        router.push(`/${src}`)
+    }
 
   return (
     <main className="flex flex-col items-center w-full">
         <h1 className="mt-12 text-4xl text-white font-semibold leading-normal">
             Choose a sport
         </h1>
-        <section className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
             {sports.map((sport) => (
                 <Card 
                     key={sport.id}
-                    title={sport.title}
-                    className="p-6 w-64"
-                    icon={<Image width={1024} height={379} src={sport.logo} alt={sport.alt}
-                    className="h-16 w-auto object-contain"
-                    />}
+                    onClick={() => onClick(sport.id)}
+                    className="px-6 py-8 w-44 flex flex-col items-center gap-3 cursor-pointer hover:bg-white/10 hover:scale-[1.03] transition-all duration-200"
+                    icon={ 
+                        <div className="flex justify-center items-center h-24 w-32">
+                            <Image width={1024} height={379} src={sport.logo} alt={sport.alt}
+                            className="max-h-full max-w-full object-contain"
+                            />
+                        </div>
+                    }
                 />
             ))}
         </section>
@@ -52,4 +64,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
