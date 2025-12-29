@@ -28,7 +28,7 @@ const Page = () => {
             alt: 'NFL',
         },
         {
-            id: 'premier-league',
+            id: 'premier-leugue',
             title: 'Premier League',
             logo: '/assets/icons/PremLeug.png',
             alt: 'Premier League',
@@ -49,7 +49,7 @@ const Page = () => {
                 <Card 
                     key={sport.id}
                     onClick={() => onClick(sport.id)}
-                    className="px-6 py-8 w-44 flex flex-col items-center gap-3 cursor-pointer hover:bg-white/10 hover:scale-[1.03] transition-all duration-200"
+                    className="px-6 py-8 w-40 flex flex-col items-center gap-3 cursor-pointer hover:bg-white/10 hover:scale-[1.03] transition-all duration-200"
                     icon={ 
                         <div className="flex justify-center items-center h-24 w-32">
                             <Image width={1024} height={379} src={sport.logo} alt={sport.alt}

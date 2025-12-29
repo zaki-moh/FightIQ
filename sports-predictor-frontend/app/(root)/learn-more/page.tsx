@@ -70,23 +70,26 @@ const Page = () => {
           How FightIQ Works
         </h2>
 
-        <div className="flex flex-col sm:flex-row gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
           <Card
             title="01 · Data Ingestion"
             description="Aggregates historical fight outcomes and fighter-level statistics from multiple trusted data sources."
             icon={<CloudIcon className="h-8 w-8 text-white" />}
+          className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
           />
 
           <Card
             title="02 · ML Pipeline"
             description="Performs feature engineering, model training, evaluation, and confidence calibration."
             icon={<Cog6ToothIcon className="h-8 w-8 text-white" />}
+          className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
           />
 
           <Card
             title="03 · Prediction Output"
             description="Generates calibrated win-probability predictions for upcoming matchups."
             icon={<ChartBarIcon className="h-8 w-8 text-white" />}
+          className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
           />
         </div>
       </section>
