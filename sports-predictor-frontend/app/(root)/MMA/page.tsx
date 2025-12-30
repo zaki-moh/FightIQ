@@ -2,6 +2,7 @@ import FighterSelector from '@/components/ui/FighterSelector'
 import React from 'react'
 
 const MMA = () => {
+  
   return (
     <main className="flex flex-col items-center ">
       <section className="max-w-4xl py-12 w-full text-center">
