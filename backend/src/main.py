@@ -1,17 +1,31 @@
-from fastapi import HTTPException
-from fastapi import FastAPI
+from fastapi import HTTPException, FastAPI
 from pydantic import BaseModel
 from predict import predictWinner
 
 app = FastAPI()
 
 class Matchup(BaseModel):
-    fighter_A: str
-    fighter_B: str
-    
-@app.post("/predict")
+    fighterA: str
+    fighterB: str
+
+class PredictionResult(BaseModel):
+    winner: str
+    confidence: float
+
+@app.post("/predict", response_model=PredictionResult)
 def predict(data: Matchup):
-    result = predictWinner(data.fighter_A, data.fighter_B)
+    if data.fighterA == data.fighterB:
+        raise HTTPException(
+            status_code=400,
+            detail="Fighters must be different"
+        )
+
+    result = predictWinner(data.fighterA, data.fighterB)
+
     if "error" in result:
-        raise HTTPException(status_code=404, detail=result["error"])
+        raise HTTPException(
+            status_code=404,
+            detail=result["error"]
+        )
+
     return result

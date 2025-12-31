@@ -1,13 +1,13 @@
 import React from 'react'
-import clsx from "clsx"
-
+import clsx from 'clsx'
 
 interface ButtonProps {
-    children: React.ReactNode;  
-    variant?: "primary" | "secondary" | "outline" | "ghost";
-    size?: "sm" | "md" | "lg";
-    onClick?: () => void
-    className?: string;
+  children: React.ReactNode
+  variant?: "primary" | "secondary" | "outline" | "ghost"
+  size?: "sm" | "md" | "lg"
+  onClick?: () => void
+  disabled?: boolean
+  className?: string
 }
 
 const Button = ({
@@ -15,33 +15,39 @@ const Button = ({
   variant = "primary",
   size = "md",
   onClick,
+  disabled = false,
   className
 }: ButtonProps) => {
 
-  const baseStyles = 
-  "rounded-lg font-semibold transition-all duration-200 focus:outline-none";
+  const baseStyles =
+    "rounded-lg font-semibold transition-all duration-200 focus:outline-none"
 
   const variantStyles = {
-    primary: "bg-blue-600 hover:bg-blue-500 text-white", 
-    secondary: "bg-grey-700 hover:bg-gray-600 text-white",
+    primary: "bg-blue-600 text-white hover:bg-blue-500",
+    secondary: "bg-gray-700 text-white hover:bg-gray-600",
     outline: "border border-gray-300 text-gray-200 hover:bg-gray-800/90",
     ghost: "text-gray-300 bg-gray-700/30 hover:bg-gray-500/30 backdrop-blur-sm",
-  };
+  }
 
   const sizeStyles = {
     sm: "px-5 py-1.5 text-sm",
     md: "px-7 py-2.5 text-md",
     lg: "px-9 py-3 text-lg",
   }
+
   return (
     <button
-    onClick={onClick}
-    className={clsx(
-      baseStyles,
-      variantStyles[variant],
-      sizeStyles[size],
-      className
-    )}>
+      disabled={disabled}
+      onClick={onClick}
+      className={clsx(
+        baseStyles,
+        sizeStyles[size],
+        disabled
+          ? "opacity-50 cursor-not-allowed"
+          : variantStyles[variant],
+        className
+      )}
+    >
       {children}
     </button>
   )
