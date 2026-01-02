@@ -4,9 +4,17 @@ import FighterSelector from '@/components/ui/FighterSelector'
 import React, { useState } from 'react'
 
 const MMA = () => {
+  type PredictionResult = {
+    fighterA: string;
+    fighterB: string;
+    winner: string;
+    confidence: number;
+    probabilities: Record<string, number>;
+  }
   const [fighterA, setFighterA] = useState("")
   const [fighterB, setFighterB] = useState("")
   const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<PredictionResult | null>(null)
 
   const canPredict =
     fighterA &&
@@ -31,6 +39,7 @@ const MMA = () => {
 
       const data = await response.json()
       console.log("Prediction result:", data)
+      setResult(data)
 
     } catch (error) {
       console.error("Error predicting fight:", error)
@@ -68,6 +77,12 @@ const MMA = () => {
         >
           {loading ? "Predicting..." : "Predict"}
         </Button>
+        {result && (
+          <div className="text-white mt-6">
+            <p>Winner: <span className="font-semibold">{result.winner}</span></p>
+            <p>Confidence: {(result.confidence * 100).toFixed(1)}%</p>
+          </div>
+        )}
       </section>
     </main>
   )
