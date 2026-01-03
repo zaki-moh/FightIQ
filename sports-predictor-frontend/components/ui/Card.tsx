@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface CardProps {
-  icon: React.ReactNode
+  icon?: React.ReactNode
   title?: string
   description?: string
   className?: string

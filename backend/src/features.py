@@ -32,5 +32,4 @@ def add_features(stats):
 
     stats['win_ratio'] = stats['wins'] / (stats['wins'] + stats['losses'] + stats['draws'])
     stats['win_ratio'] = stats['win_ratio'].fillna(0)
-
     return stats

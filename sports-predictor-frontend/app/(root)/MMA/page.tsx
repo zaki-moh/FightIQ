@@ -1,5 +1,6 @@
 'use client'
 import Button from '@/components/ui/Button'
+import FighterCard from '@/components/ui/FighterCard'
 import FighterSelector from '@/components/ui/FighterSelector'
 import React, { useState } from 'react'
 
@@ -83,6 +84,31 @@ const MMA = () => {
             <p>Confidence: {(result.confidence * 100).toFixed(1)}%</p>
           </div>
         )}
+
+        {result && (
+          <div className="flex mt-8 gap-12 w-full justify-center">
+            <FighterCard
+              fighterName={fighterA}
+              isWinner={result.winner === fighterA}
+              confidence={
+                result.winner === fighterA
+                  ? result?.probabilities?.[fighterA]
+                  : undefined
+              }
+            />
+
+            <FighterCard
+              fighterName={fighterB}
+              isWinner={result.winner === fighterB}
+              confidence={
+                result.winner === fighterB
+                  ? result?.probabilities?.[fighterB]
+                  : undefined
+              }
+            />
+          </div>
+        )}
+
       </section>
     </main>
   )
