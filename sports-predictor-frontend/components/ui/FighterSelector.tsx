@@ -37,7 +37,7 @@ const FighterSelector = ({
   }
 
   return (
-    <div className="mt-8 flex gap-4 justify-center items-center">
+<div className="mt-6 flex justify-center gap-8">
 
       {/* Fighter A */}
       <div className="relative w-full max-w-xs">
@@ -79,7 +79,7 @@ const FighterSelector = ({
         )}
       </div>
 
-      <Placeholder placeholder="VS" align="text-center" />
+      <Placeholder placeholder="VS" />
 
       {/* Fighter B */}
       <div className="relative w-full max-w-xs">

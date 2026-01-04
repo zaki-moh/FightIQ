@@ -1,56 +1,58 @@
 import React from 'react'
-import Card from './Card';
+import Card from './Card'
 import Image from 'next/image'
 
-
 interface FighterCardProps {
-  fighterName: string;
-  isWinner: boolean;
-  image?: string;
-  confidence?: number;
-  subtitle?: string;
-  className?: string;
+  fighterName: string
+  isWinner: boolean
+  image?: string
+  confidence?: number
+  subtitle?: string
+  className?: string
 }
 
 const FighterCard = ({
-    fighterName, 
-    isWinner,
-    image,
-    confidence,
-    subtitle,
-    className
+  fighterName,
+  isWinner,
+  image,
+  confidence,
+  subtitle,
+  className
 }: FighterCardProps) => {
   return (
     <Card
-        className={`
-            w-full max-w-sm transition
-            ${isWinner ? "ring-2 ring-blue-500" : "opacity-80"}
-            ${className || ""}
-        `}
-    > 
-        {isWinner && (
-            <div className="absolute -top-3 right-3 text-blue-400 text-xl">
-            👑
-            </div>
-        )}
+      className={`
+        relative w-full max-w-sm transition
+        ${isWinner
+      ? "ring-2 ring-blue-500"
+      : "opacity-80 hover:scale-[1.02] hover:ring-2 hover:ring-blue-400/50"
+        }
+        ${className || ""}
+      `}
+    >
+      {isWinner && (
+        <div className="absolute top-2 right-2 z-20 bg-black/40 rounded-full px-2 py-1 text-blue-400 text-lg">
+          👑
+        </div>
+      )}
 
-        {subtitle && (
-            <p className="text-sm text-white/60 text-center mt-1">
-            {subtitle}
-            </p>
-        )}
-
+    <div className="relative w-full h-60 rounded-md overflow-hidden">
         <Image
-            src={image || "/fighter-placeholder.png"}
-            alt={`${fighterName} photo`}
-            className="w-full h-48 object-cover rounded-md"
+          src={image || "/assets/icons/generic_fighter.png"}
+          alt={`${fighterName} photo`}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, 320px"
+          priority={isWinner}
         />
+      </div>
 
-        <h3 className="mt-3 text-lg text-white font-semibold text-center">
-            {fighterName}
-        </h3>
+      {/* Fighter name */}
+      <h3 className="mt-3 text-lg text-white font-semibold text-center">
+        {fighterName}
+      </h3>
 
-        {isWinner && confidence !== undefined && (
+      {isWinner && confidence !== undefined && (
         <p className="mt-2 text-sm text-blue-400 text-center">
           Confidence: {(confidence * 100).toFixed(1)}%
         </p>

@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 
-interface CardProps {
+type CardProps = PropsWithChildren<{
   icon?: React.ReactNode
   title?: string
   description?: string
   className?: string
   onClick?: () => void
-}
+}>
 
 const Card = ({
   icon,
@@ -14,6 +14,7 @@ const Card = ({
   description,
   className = '',
   onClick,
+  children,
 }: CardProps) => {
   const isClickable = Boolean(onClick)
 
@@ -32,7 +33,7 @@ const Card = ({
         ${className}
       `}
     >
-      <div className="mb-4">{icon}</div>
+      {icon && <div className="mb-4">{icon}</div>}
 
       {title && (
         <h3 className="text-white text-xl font-bold mb-2">
@@ -45,6 +46,8 @@ const Card = ({
           {description}
         </p>
       )}
+
+      {children}
     </div>
   )
 }
