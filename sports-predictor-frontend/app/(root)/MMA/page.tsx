@@ -11,6 +11,9 @@ const MMA = () => {
     winner: string;
     confidence: number;
     probabilities: Record<string, number>;
+    edge: {
+      type: "striking" | "grappling" | "no_clear_advantage";
+    };
   }
   const [fighterA, setFighterA] = useState("")
   const [fighterB, setFighterB] = useState("")
@@ -39,7 +42,17 @@ const MMA = () => {
       }
 
       const data = await response.json()
-      console.log("Prediction result:", data)
+      console.log("RAW DATA:", data)
+      console.log("probabilities:", data.probabilities)
+      console.log("prob keys:", Object.keys(data.probabilities ?? {}))
+      console.log("fighterA:", fighterA)
+      console.log("fighterB:", fighterB)
+      console.log(
+        "lookup A:",
+        data.probabilities?.[fighterA],
+        typeof data.probabilities?.[fighterA]
+      )
+      
       setResult(data)
 
     } catch (error) {
@@ -90,21 +103,14 @@ const MMA = () => {
             <FighterCard
               fighterName={fighterA}
               isWinner={result.winner === fighterA}
-              confidence={
-                result.winner === fighterA
-                  ? result?.probabilities?.[fighterA]
-                  : undefined
-              }
+              confidence={result?.probabilities?.[fighterA]}
+              edgeType={result.edge?.type}
             />
-
             <FighterCard
               fighterName={fighterB}
               isWinner={result.winner === fighterB}
-              confidence={
-                result.winner === fighterB
-                  ? result?.probabilities?.[fighterB]
-                  : undefined
-              }
+              confidence={result?.probabilities?.[fighterB]}
+              edgeType={result.edge?.type}
             />
           </div>
         )}

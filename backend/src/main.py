@@ -13,15 +13,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+class Edge(BaseModel):
+    type: str | None
+    
 class Matchup(BaseModel):
     fighterA: str
     fighterB: str
 
-class PredictionResult(BaseModel):
+class PredictionResponse(BaseModel):
+    fighterA: str
+    fighterB: str
     winner: str
     confidence: float
+    probabilities: dict[str, float]
+    edge: Edge
 
-@app.post("/predict", response_model=PredictionResult)
+@app.post("/predict", response_model=PredictionResponse)
 def predict(data: Matchup):
     if data.fighterA == data.fighterB:
         raise HTTPException(

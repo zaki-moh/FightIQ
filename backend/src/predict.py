@@ -22,6 +22,9 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
     fighter_A = stats.loc[stats['name'].str.lower() == fighter_A_Name].squeeze()
     fighter_B = stats.loc[stats['name'].str.lower() == fighter_B_Name].squeeze()
 
+    if fighter_A.empty or fighter_B.empty:
+        return {"error": "One or more fighters not found"}
+
     numeric_cols = [
         'height_diff',
         'reach_diff',
@@ -31,9 +34,6 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         'performance_diff',
         'win_ratio_diff'
     ]
-
-    if fighter_A.empty or fighter_B.empty:
-        return {"error": "One or more fighters not found"}
 
     input_data = pd.DataFrame({
         'height_diff': [fighter_A['height_cm'] - fighter_B['height_cm']],
@@ -53,13 +53,35 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
 
     confidence = max(r_win_prob, b_win_prob)
 
+    winner_name = (
+        fighter_A["name"] if r_win_prob > b_win_prob else fighter_B["name"]
+    )
+
+
+    strike_diff = fighter_A['strike_efficiency'] - fighter_B['strike_efficiency']
+    grapple_diff = fighter_A['grapple_efficiency'] - fighter_B['grapple_efficiency']
+
+    STYLE_THRESHOLD = 0.05
+    style_edge = None
+
+    if abs(strike_diff) > abs(grapple_diff) and abs(strike_diff) > STYLE_THRESHOLD:
+        style_edge = "striking"
+    elif abs(grapple_diff) > STYLE_THRESHOLD:
+        style_edge = "grappling"
+
+    style_edge_for_winner = style_edge if style_edge else "no_clear_advantage"
+
+
     return {
-        "fighter_A": fighter_A["name"],
-        "fighter_B": fighter_B["name"],
-        "winner": fighter_A["name"] if r_win_prob > b_win_prob else fighter_B["name"],
+        "fighterA": fighter_A["name"],
+        "fighterB": fighter_B["name"],
+        "winner": winner_name,
         "confidence": float(confidence),
         "probabilities": {
             fighter_A["name"]: float(r_win_prob),
             fighter_B["name"]: float(b_win_prob)
+        },
+        "edge": {
+            "type": style_edge_for_winner
         }
     }
