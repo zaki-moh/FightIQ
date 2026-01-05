@@ -22,10 +22,13 @@ const FighterCard = ({
   return (
     <Card
       className={`
-        relative w-full max-w-sm transition
+        relative min-h-[300px]
+        w-80
+        px-4 py-5
+        flex flex-col gap-2
         ${isWinner
-      ? "ring-2 ring-blue-500"
-      : "opacity-80 hover:scale-[1.02] hover:ring-2 hover:ring-blue-400/50"
+          ? "ring-2 ring-blue-500"
+          : "opacity-80 hover:scale-[1.02] hover:ring-2 hover:ring-blue-400/50"
         }
         ${className || ""}
       `}
@@ -36,24 +39,14 @@ const FighterCard = ({
         </div>
       )}
 
-    <div className="relative w-full h-60 rounded-md overflow-hidden">
-        <Image
-          src={image || "/assets/icons/generic_fighter.png"}
-          alt={`${fighterName} photo`}
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, 320px"
-          priority={isWinner}
-        />
-      </div>
-
-      {/* Fighter name */}
-      <h3 className="mt-3 text-lg text-white font-semibold text-center">
+      <h3 className="text-lg text-white font-semibold text-center">
         {fighterName}
       </h3>
 
+      <hr className="my-1 border-t border-white/10" />
+
       {isWinner && confidence !== undefined && (
-        <p className="mt-2 text-sm text-blue-400 text-center">
+        <p className="text-sm text-white/70 text-center">
           Confidence: {(confidence * 100).toFixed(1)}%
         </p>
       )}

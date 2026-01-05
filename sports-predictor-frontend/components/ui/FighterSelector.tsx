@@ -37,7 +37,7 @@ const FighterSelector = ({
   }
 
   return (
-<div className="mt-6 flex justify-center gap-8">
+<div className="mt-6 flex justify-center gap-8 items-center">
 
       {/* Fighter A */}
       <div className="relative w-full max-w-xs">
