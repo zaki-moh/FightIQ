@@ -6,38 +6,45 @@ import Placeholder from './Placeholder'
 interface FighterSelectorProps {
   fighterA: string
   fighterB: string
-  setFighterA: React.Dispatch<React.SetStateAction<string>>
-  setFighterB: React.Dispatch<React.SetStateAction<string>>
+
+  onChangeA: (value: string) => void
+  onSelectA: (name: string) => void
+
+  onChangeB: (value: string) => void
+  onSelectB: (name: string) => void
 }
 
 const FighterSelector = ({
   fighterA,
   fighterB,
-  setFighterA,
-  setFighterB,
+  onChangeA,
+  onSelectA,
+  onChangeB,
+  onSelectB,
 }: FighterSelectorProps) => {
   const [openA, setOpenA] = useState(false)
   const [openB, setOpenB] = useState(false)
 
-  let filteredA: Fighter[] = []
-  let filteredB: Fighter[] = []
+  const filteredA =
+    fighterA.length >= 2
+      ? fighters.filter(
+          (f) =>
+            f.name.toLowerCase().includes(fighterA.toLowerCase()) &&
+            f.name !== fighterB
+        )
+      : []
 
-  if (fighterA.length >= 2) {
-    filteredA = fighters.filter((f) =>
-      f.name.toLowerCase().includes(fighterA.toLowerCase()) &&
-      f.name !== fighterB
-    )
-  }
-
-  if (fighterB.length >= 2) {
-    filteredB = fighters.filter((f) =>
-      f.name.toLowerCase().includes(fighterB.toLowerCase()) &&
-      f.name !== fighterA
-    )
-  }
+  const filteredB =
+    fighterB.length >= 2
+      ? fighters.filter(
+          (f) =>
+            f.name.toLowerCase().includes(fighterB.toLowerCase()) &&
+            f.name !== fighterA
+        )
+      : []
 
   return (
-<div className="mt-6 flex justify-center gap-8 items-center">
+    <div className="mt-6 flex justify-center gap-8 items-center">
 
       {/* Fighter A */}
       <div className="relative w-full max-w-xs">
@@ -45,7 +52,7 @@ const FighterSelector = ({
           type="text"
           value={fighterA}
           onChange={(e) => {
-            setFighterA(e.target.value)
+            onChangeA(e.target.value)
             setOpenA(e.target.value.length >= 2)
           }}
           onBlur={() => {
@@ -62,7 +69,7 @@ const FighterSelector = ({
                 <div
                   key={f.id}
                   onClick={() => {
-                    setFighterA(f.name)
+                    onSelectA(f.name)
                     setOpenA(false)
                   }}
                   className="px-4 py-2 text-white text-sm cursor-pointer hover:bg-white/10"
@@ -87,7 +94,7 @@ const FighterSelector = ({
           type="text"
           value={fighterB}
           onChange={(e) => {
-            setFighterB(e.target.value)
+            onChangeB(e.target.value)
             setOpenB(e.target.value.length >= 2)
           }}
           onBlur={() => {
@@ -104,7 +111,7 @@ const FighterSelector = ({
                 <div
                   key={f.id}
                   onClick={() => {
-                    setFighterB(f.name)
+                    onSelectB(f.name)
                     setOpenB(false)
                   }}
                   className="px-4 py-2 text-white text-sm cursor-pointer hover:bg-white/10"

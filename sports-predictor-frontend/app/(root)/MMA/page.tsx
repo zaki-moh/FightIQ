@@ -2,61 +2,90 @@
 import Button from '@/components/ui/Button'
 import FighterCard from '@/components/ui/FighterCard'
 import FighterSelector from '@/components/ui/FighterSelector'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
+type PredictionResult = {
+  fighterA: string
+  fighterB: string
+  winner: string
+  confidence: number
+  probabilities: Record<string, number>
+  edge: {
+    type: 'striking' | 'grappling' | 'no_clear_advantage'
+  }
+}
 
 const MMA = () => {
-  type PredictionResult = {
-    fighterA: string;
-    fighterB: string;
-    winner: string;
-    confidence: number;
-    probabilities: Record<string, number>;
-    edge: {
-      type: "striking" | "grappling" | "no_clear_advantage";
-    };
-  }
-  const [fighterA, setFighterA] = useState("")
-  const [fighterB, setFighterB] = useState("")
+  const [fighterA, setFighterA] = useState('')
+  const [fighterB, setFighterB] = useState('')
+
+  const [selectedA, setSelectedA] = useState<string | null>(null)
+  const [selectedB, setSelectedB] = useState<string | null>(null)
+
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<PredictionResult | null>(null)
 
+  const [isDirty, setIsDirty] = useState(true)
+
+  useEffect(() => {
+    setResult(null)
+    setIsDirty(true)
+  }, [fighterA, fighterB])
+
+  const handleChangeA = (text: string) => {
+    setFighterA(text)
+    setSelectedA(null) 
+  }
+
+  const handleSelectA = (name: string) => {
+    setFighterA(name)
+    setSelectedA(name) 
+  }
+
+  const handleChangeB = (text: string) => {
+    setFighterB(text)
+    setSelectedB(null) 
+  }
+
+  const handleSelectB = (name: string) => {
+    setFighterB(name)
+    setSelectedB(name) 
+  }
+
+  const inputsFilled =
+    selectedA !== null &&
+    selectedB !== null &&
+    selectedA !== selectedB
+
   const canPredict =
-    fighterA &&
-    fighterB &&
-    fighterA !== fighterB &&
+    selectedA !== null &&
+    selectedB !== null &&
+    selectedA !== selectedB &&
+    isDirty &&
     !loading
+
 
   const handlePredict = async () => {
     setLoading(true)
 
     try {
-      const response = await fetch("http://localhost:8000/predict", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('http://localhost:8000/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fighterA, fighterB }),
       })
 
       if (!response.ok) {
         const errorData = await response.json()
-        throw new Error(errorData.detail || "Prediction failed")
+        throw new Error(errorData.detail || 'Prediction failed')
       }
 
-      const data = await response.json()
-      console.log("RAW DATA:", data)
-      console.log("probabilities:", data.probabilities)
-      console.log("prob keys:", Object.keys(data.probabilities ?? {}))
-      console.log("fighterA:", fighterA)
-      console.log("fighterB:", fighterB)
-      console.log(
-        "lookup A:",
-        data.probabilities?.[fighterA],
-        typeof data.probabilities?.[fighterA]
-      )
-      
-      setResult(data)
+      const data: PredictionResult = await response.json()
 
+      setResult(data)
+      setIsDirty(false) 
     } catch (error) {
-      console.error("Error predicting fight:", error)
+      console.error('Error predicting fight:', error)
     } finally {
       setLoading(false)
     }
@@ -68,9 +97,11 @@ const MMA = () => {
         <h1 className="text-white text-4xl font-semibold tracking-tight">
           UFC Fight Predictor
         </h1>
+
         <h2 className="mt-4 text-white/60 text-lg">
           Select two fighters to see who our model predicts will win.
         </h2>
+
         <p className="mt-6 text-white/40 text-sm">
           ↓ Enter two fighters below to generate a matchup prediction
         </p>
@@ -78,8 +109,13 @@ const MMA = () => {
         <FighterSelector
           fighterA={fighterA}
           fighterB={fighterB}
-          setFighterA={setFighterA}
-          setFighterB={setFighterB}
+
+          onChangeA={handleChangeA}
+          onSelectA={handleSelectA}
+
+          onChangeB={handleChangeB}
+          onSelectB={handleSelectB}
+
         />
 
         <Button
@@ -89,32 +125,39 @@ const MMA = () => {
           onClick={handlePredict}
           disabled={!canPredict}
         >
-          {loading ? "Predicting..." : "Predict"}
+          {loading ? 'Predicting...' : 'Predict'}
         </Button>
+
         {result && (
           <div className="text-white mt-6">
-            <p>Winner: <span className="font-semibold">{result.winner}</span></p>
-            <p>Confidence: {(result.confidence * 100).toFixed(1)}%</p>
+            <p>
+              Winner:{' '}
+              <span className="font-semibold">{result.winner}</span>
+            </p>
+            <p>
+              Confidence:{' '}
+              {(result.confidence * 100).toFixed(1)}%
+            </p>
           </div>
         )}
 
+        {/* Cards */}
         {result && (
           <div className="flex mt-8 gap-12 w-full justify-center">
             <FighterCard
               fighterName={fighterA}
               isWinner={result.winner === fighterA}
-              confidence={result?.probabilities?.[fighterA]}
-              edgeType={result.edge?.type}
+              confidence={result.probabilities[fighterA]}
+              edgeType={result.edge.type}
             />
             <FighterCard
               fighterName={fighterB}
               isWinner={result.winner === fighterB}
-              confidence={result?.probabilities?.[fighterB]}
-              edgeType={result.edge?.type}
+              confidence={result.probabilities[fighterB]}
+              edgeType={result.edge.type}
             />
           </div>
         )}
-
       </section>
     </main>
   )
