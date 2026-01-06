@@ -58,9 +58,7 @@ const MMA = () => {
     selectedA !== selectedB
 
   const canPredict =
-    selectedA !== null &&
-    selectedB !== null &&
-    selectedA !== selectedB &&
+    inputsFilled &&
     isDirty &&
     !loading
 
@@ -74,13 +72,11 @@ const MMA = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fighterA, fighterB }),
       })
+      const data = await response.json()
 
       if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.detail || 'Prediction failed')
+        throw new Error(data.detail || 'Prediction failed')
       }
-
-      const data: PredictionResult = await response.json()
 
       setResult(data)
       setIsDirty(false) 
@@ -141,7 +137,6 @@ const MMA = () => {
           </div>
         )}
 
-        {/* Cards */}
         {result && (
           <div className="flex mt-8 gap-12 w-full justify-center">
             <FighterCard

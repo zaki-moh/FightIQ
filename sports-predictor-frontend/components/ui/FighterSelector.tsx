@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { fighters, Fighter } from "@/data/fighters"
+import { fighters, Fighter } from '@/data/fighters'
 import Placeholder from './Placeholder'
 
 interface FighterSelectorProps {
@@ -25,27 +25,30 @@ const FighterSelector = ({
   const [openA, setOpenA] = useState(false)
   const [openB, setOpenB] = useState(false)
 
-  const filteredA =
-    fighterA.length >= 2
-      ? fighters.filter(
-          (f) =>
-            f.name.toLowerCase().includes(fighterA.toLowerCase()) &&
-            f.name !== fighterB
-        )
-      : []
+  let filteredA: Fighter[] = []
 
-  const filteredB =
-    fighterB.length >= 2
-      ? fighters.filter(
-          (f) =>
-            f.name.toLowerCase().includes(fighterB.toLowerCase()) &&
-            f.name !== fighterA
-        )
-      : []
+  if (fighterA.length >= 2) {
+    filteredA = fighters.filter((f) => {
+      return (
+        f.name.toLowerCase().includes(fighterA.toLowerCase()) &&
+        f.name !== fighterB
+      )
+    })
+  }
+
+  let filteredB: Fighter[] = []
+
+  if (fighterB.length >= 2) {
+    filteredB = fighters.filter((f) => {
+      return (
+        f.name.toLowerCase().includes(fighterB.toLowerCase()) &&
+        f.name !== fighterA
+      )
+    })
+  }
 
   return (
     <div className="mt-6 flex justify-center gap-8 items-center">
-
       {/* Fighter A */}
       <div className="relative w-full max-w-xs">
         <input

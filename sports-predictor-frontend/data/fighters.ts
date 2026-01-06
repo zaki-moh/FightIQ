@@ -1,4 +1,4 @@
-export interface Fighter {
+export type Fighter = {
   id: number
   name: string
 }
