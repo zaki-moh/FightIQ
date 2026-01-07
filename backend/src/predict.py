@@ -15,16 +15,7 @@ model = joblib.load(MODELS_DIR / "MMA_predictor.pkl")
 scaler = joblib.load(MODELS_DIR / "scaler.pkl")
 
 
-def predictWinner(fighter_A_Name, fighter_B_Name):
-    fighter_A_Name = fighter_A_Name.lower()
-    fighter_B_Name = fighter_B_Name.lower()
-
-    fighter_A = stats.loc[stats['name'].str.lower() == fighter_A_Name].squeeze()
-    fighter_B = stats.loc[stats['name'].str.lower() == fighter_B_Name].squeeze()
-
-    if fighter_A.empty or fighter_B.empty:
-        return {"error": "One or more fighters not found"}
-
+def prob_A_beats_B(fighter_A, fighter_B):
     numeric_cols = [
         'height_diff',
         'reach_diff',
@@ -47,16 +38,32 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
 
     input_data[numeric_cols] = scaler.transform(input_data[numeric_cols])
 
-    probs = model.predict_proba(input_data)[0]
-    r_win_prob = probs[1]
-    b_win_prob = probs[0]
+    return model.predict_proba(input_data)[0][1]
 
-    confidence = max(r_win_prob, b_win_prob)
 
-    winner_name = (
-        fighter_A["name"] if r_win_prob > b_win_prob else fighter_B["name"]
-    )
+def predictWinner(fighter_A_Name, fighter_B_Name):
+    fighter_A_Name = fighter_A_Name.lower()
+    fighter_B_Name = fighter_B_Name.lower()
 
+    fighter_A = stats.loc[stats['name'].str.lower() == fighter_A_Name].squeeze()
+    fighter_B = stats.loc[stats['name'].str.lower() == fighter_B_Name].squeeze()
+
+    if fighter_A.empty or fighter_B.empty:
+        return {"error": "One or more fighters not found"}
+
+    p_A_wins = prob_A_beats_B(fighter_A, fighter_B)
+    p_B_wins = prob_A_beats_B(fighter_B, fighter_A)
+
+    total = p_A_wins + p_B_wins
+    p_A = p_A_wins / total
+    p_B = p_B_wins / total
+
+    if p_A > p_B:
+        winner_name = fighter_A["name"]
+        confidence = p_A
+    else:
+        winner_name = fighter_B["name"]
+        confidence = p_B
 
     strike_diff = fighter_A['strike_efficiency'] - fighter_B['strike_efficiency']
     grapple_diff = fighter_A['grapple_efficiency'] - fighter_B['grapple_efficiency']
@@ -68,9 +75,8 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         style_edge = "striking"
     elif abs(grapple_diff) > STYLE_THRESHOLD:
         style_edge = "grappling"
-
-    style_edge_for_winner = style_edge if style_edge else "no_clear_advantage"
-
+    else:
+        style_edge = "no_clear_advantage"
 
     return {
         "fighterA": fighter_A["name"],
@@ -78,10 +84,12 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         "winner": winner_name,
         "confidence": float(confidence),
         "probabilities": {
-            fighter_A["name"]: float(r_win_prob),
-            fighter_B["name"]: float(b_win_prob)
+            fighter_A["name"]: float(p_A),
+            fighter_B["name"]: float(p_B)
         },
         "edge": {
-            "type": style_edge_for_winner
+            "type": style_edge
         }
     }
+
+

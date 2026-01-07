@@ -1,4 +1,5 @@
 'use client'
+import clsx from 'clsx'
 import Card from './Card'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -55,38 +56,46 @@ const FighterCard = ({
         flex flex-col gap-2
         transition-colors duration-200
         ${isWinner
-          ? "ring-2 ring-blue-400"
-          : "opacity-90 border border-white/10 hover:ring-1 hover:ring-white/20"
+          ? "ring-2 ring-blue-400 "
+          : "opacity-85 border border-white/10 hover:ring-1 hover:ring-white/20"
         }
         ${className || ""}
       `}
     >
 
-      <div className="flex items-baseline justify-center gap-2">
-        <h3 className="text-lg text-white font-semibold text-center">
-          {fighterName}
-        </h3>
-        {isWinner && (
-          <span
-            className="
-              inline-flex
-              items-center
-              justify-center
-              w-8 h-8
-              rounded-full
-              bg-blue-500/15
-              text-blue-400
-              text-sm
-              translate-y-[-2px]
-            "
-            aria-label="Winner"
+      <div className="mt-6 mb-4 text-center space-y-2">
+        <div className="flex items-baseline justify-center gap-2">
+          <h3
+            className={clsx(
+              'text-lg text-white',
+              isWinner ? 'font-bold' : 'font-semibold'
+            )}
           >
-            👑
-          </span>
-        )}
-      </div>
+            {fighterName}
+          </h3>
 
-      <hr className="my-1 border-t border-white/10" />
+          {isWinner && (
+            <span
+              className="
+                inline-flex
+                items-center
+                justify-center
+                w-8 h-8
+                rounded-full
+                bg-blue-500/15
+                text-blue-400
+                text-sm
+                translate-y-[-2px]
+              "
+              aria-label="Winner"
+            >
+              👑
+            </span>
+          )}
+        </div>
+
+        <hr className="border-t border-white/10" />
+      </div>
 
       <div className="mt-2 h-2.5 w-full bg-white/10 rounded-full overflow-hidden">
         <div
@@ -98,7 +107,7 @@ const FighterCard = ({
         />
       </div>
 
-      <p className="text-sm text-white/45">
+      <p className="text-sm text-white/45 text-center">
         Win Probability
         <span className="ml-1 font-semibold text-white/80">
           {(confidence * 100).toFixed(1)}%
