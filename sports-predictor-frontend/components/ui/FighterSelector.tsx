@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { fighters, Fighter } from '@/data/fighters'
 import Placeholder from './Placeholder'
+import clsx from 'clsx'
 
 interface FighterSelectorProps {
   fighterA: string
@@ -50,7 +51,7 @@ const FighterSelector = ({
   return (
     <div className="mt-6 flex justify-center gap-8 items-center">
       {/* Fighter A */}
-      <div className="relative w-full max-w-xs">
+      <div className="relative z-50 w-full max-w-xs">
         <input
           type="text"
           value={fighterA}
@@ -58,24 +59,32 @@ const FighterSelector = ({
             onChangeA(e.target.value)
             setOpenA(e.target.value.length >= 2)
           }}
-          onBlur={() => {
-            setTimeout(() => setOpenA(false), 100)
-          }}
+          onBlur={() => {setOpenA(false)}}
           placeholder="Enter fighter name"
-          className="w-full rounded-md bg-white/5 border border-white/10 px-4 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
+          className={clsx(
+            'w-full bg-white/5 border border-white/10 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40',
+            openA ? 'rounded-t-md rounded-b-none' : 'rounded-md'
+          )}
         />
 
         {openA && (
-          <div className="absolute z-10 mt-1 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
+          <div className="absolute z-50 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
             {filteredA.length > 0 ? (
               filteredA.slice(0, 10).map((f) => (
                 <div
                   key={f.id}
-                  onClick={() => {
+                  onMouseDown={() => {
                     onSelectA(f.name)
                     setOpenA(false)
                   }}
-                  className="px-4 py-2 text-white text-sm cursor-pointer hover:bg-white/10"
+                  className="
+                    px-4 py-2
+                    text-white text-sm
+                    cursor-pointer
+                    transition-colors
+                    hover:bg-blue-500/15
+                    active:bg-blue-500/25
+                  "
                 >
                   {f.name}
                 </div>
@@ -92,7 +101,7 @@ const FighterSelector = ({
       <Placeholder placeholder="VS" />
 
       {/* Fighter B */}
-      <div className="relative w-full max-w-xs">
+      <div className="relative z-50 w-full max-w-xs">
         <input
           type="text"
           value={fighterB}
@@ -100,24 +109,33 @@ const FighterSelector = ({
             onChangeB(e.target.value)
             setOpenB(e.target.value.length >= 2)
           }}
-          onBlur={() => {
-            setTimeout(() => setOpenB(false), 100)
-          }}
+          onBlur={() => {setOpenB(false)}}
           placeholder="Enter fighter name"
-          className="w-full rounded-md bg-white/5 border border-white/10 px-4 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
+          className={clsx(
+            'w-full bg-white/5 border border-white/10 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40',
+            openB ? 'rounded-t-md rounded-b-none' : 'rounded-md'
+          )}
         />
 
         {openB && (
-          <div className="absolute z-10 mt-1 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
+          <div className="absolute z-50 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
             {filteredB.length > 0 ? (
               filteredB.slice(0, 10).map((f) => (
                 <div
                   key={f.id}
-                  onClick={() => {
+                  onMouseDown={() => {
                     onSelectB(f.name)
                     setOpenB(false)
                   }}
-                  className="px-4 py-2 text-white text-sm cursor-pointer hover:bg-white/10"
+                  onBlur={() => {setOpenB(false)}}
+                  className="
+                    px-4 py-2
+                    text-white text-sm
+                    cursor-pointer
+                    transition-colors
+                    hover:bg-blue-500/15
+                    active:bg-blue-500/25
+                  "
                 >
                   {f.name}
                 </div>

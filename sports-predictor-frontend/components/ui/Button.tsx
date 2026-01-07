@@ -43,7 +43,7 @@ const Button = ({
         baseStyles,
         sizeStyles[size],
         disabled
-          ? "opacity-50 cursor-not-allowed"
+          ? "cursor-not-allowed bg-gray-700/30 text-gray-400 backdrop-blur-sm"
           : variantStyles[variant],
         className
       )}

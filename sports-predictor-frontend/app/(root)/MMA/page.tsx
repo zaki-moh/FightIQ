@@ -121,7 +121,11 @@ const MMA = () => {
           onClick={handlePredict}
           disabled={!canPredict}
         >
-          {loading ? 'Predicting...' : 'Predict'}
+          {loading
+            ? 'Predicting...'
+            : isDirty
+              ? 'Predict'
+              : 'Change fighters to re-predict'}
         </Button>
 
         {result && (
