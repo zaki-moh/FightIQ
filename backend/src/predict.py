@@ -14,6 +14,50 @@ stats = add_features(stats)
 model = joblib.load(MODELS_DIR / "MMA_predictor.pkl")
 scaler = joblib.load(MODELS_DIR / "scaler.pkl")
 
+EXPLANATION_RULES = [
+    {
+    "key": "grapple_eff_diff",
+    "threshold": 0.05,
+    "text": "superior grappling control and takedown efficiency",
+    "priority": 1
+    },
+    {
+        "key": "strike_eff_diff",
+        "threshold": 0.05,
+        "text": "more efficient striking exchanges",
+        "priority": 2
+    },
+    {
+    "key": "win_ratio_diff",
+    "threshold": 0.08,
+    "text": "higher long-term win consistency",
+    "priority": 2
+    },
+    {
+    "key": "performance_diff",
+    "threshold": 0.06,
+    "text": "stronger overall fight performance metrics",
+    "priority": 3
+    },
+    {
+    "key": "reach_diff",
+    "threshold": 5.0,  # cm
+    "text": "significant reach advantage",
+    "priority": 4
+    },
+    {
+    "key": "height_diff",
+    "threshold": 5.0,  # cm
+    "text": "notable physical size advantage",
+    "priority": 4
+    },
+    {
+    "key": "age_diff",
+    "threshold": 4,  # years
+    "text": "age-related physical advantage",
+    "priority": 5
+    }
+]
 
 def prob_A_beats_B(fighter_A, fighter_B):
     numeric_cols = [
@@ -25,8 +69,7 @@ def prob_A_beats_B(fighter_A, fighter_B):
         'performance_diff',
         'win_ratio_diff'
     ]
-
-    input_data = pd.DataFrame({
+    diffs = {
         'height_diff': [fighter_A['height_cm'] - fighter_B['height_cm']],
         'reach_diff': [fighter_A['reach_in_cm'] - fighter_B['reach_in_cm']],
         'age_diff': [fighter_A['age'] - fighter_B['age']],
@@ -34,7 +77,10 @@ def prob_A_beats_B(fighter_A, fighter_B):
         'grapple_eff_diff': [fighter_A['grapple_efficiency'] - fighter_B['grapple_efficiency']],
         'performance_diff': [fighter_A['performance'] - fighter_B['performance']],
         'win_ratio_diff': [fighter_A['win_ratio'] - fighter_B['win_ratio']]
-    })
+    }
+
+        
+    input_data = pd.DataFrame(diffs)
 
     input_data[numeric_cols] = scaler.transform(input_data[numeric_cols])
 
@@ -77,6 +123,45 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         style_edge = "grappling"
     else:
         style_edge = "no_clear_advantage"
+        
+    diffs = {
+        'height_diff': fighter_A['height_cm'] - fighter_B['height_cm'],
+        'reach_diff': fighter_A['reach_in_cm'] - fighter_B['reach_in_cm'],
+        'age_diff': fighter_A['age'] - fighter_B['age'],
+        'strike_eff_diff': fighter_A['strike_efficiency'] - fighter_B['strike_efficiency'],
+        'grapple_eff_diff': fighter_A['grapple_efficiency'] - fighter_B['grapple_efficiency'],
+        'performance_diff': fighter_A['performance'] - fighter_B['performance'],
+        'win_ratio_diff': fighter_A['win_ratio'] - fighter_B['win_ratio']
+    }
+    
+    explanation_factors = []
+
+    for rule in EXPLANATION_RULES:
+        key = rule["key"]
+        threshold = rule["threshold"]
+        diff = diffs[key]
+
+        if abs(diff) < threshold:
+            continue
+
+        if winner_name == fighter_A["name"] and diff < 0:
+            continue
+        
+        if winner_name == fighter_B["name"] and diff > 0:
+            continue
+
+        explanation_factors.append({
+            "key": key,
+            "text": rule["text"],
+            "priority": rule["priority"],
+            "value": diff
+        })
+            
+    explanation_factors.sort(
+        key=lambda f: (f["priority"], abs(f["value"])),
+        reverse=True
+    ) 
+    
 
     return {
         "fighterA": fighter_A["name"],
