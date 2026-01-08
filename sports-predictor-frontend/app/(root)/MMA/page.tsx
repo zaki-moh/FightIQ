@@ -2,6 +2,7 @@
 import Button from '@/components/ui/Button'
 import FighterCard from '@/components/ui/FighterCard'
 import FighterSelector from '@/components/ui/FighterSelector'
+import PredictionExplanation from '@/components/ui/PredictionExplanation'
 import React, { useState, useEffect } from 'react'
 
 type PredictionResult = {
@@ -156,6 +157,9 @@ const MMA = () => {
               edgeType={result.edge.type}
             />
           </div>
+        )}
+        {result && (
+          <PredictionExplanation name={result.winner}/>
         )}
       </section>
     </main>
