@@ -86,7 +86,21 @@ def prob_A_beats_B(fighter_A, fighter_B):
 
     return model.predict_proba(input_data)[0][1]
 
-
+def build_summary(winner_name, explanation_factors):
+    if not explanation_factors:
+        return f"{winner_name} is favored based on overall statistical balance."
+    
+    top_factors = [f['text'] for f in explanation_factors[:3]]
+    
+    if len(top_factors) == 1:
+        return f"{winner_name} is favored due to {top_factors[0]}."
+        
+    return (
+        f"{winner_name} is favored due to " +
+        " and ".join(top_factors) + 
+        "."
+    )
+        
 def predictWinner(fighter_A_Name, fighter_B_Name):
     fighter_A_Name = fighter_A_Name.lower()
     fighter_B_Name = fighter_B_Name.lower()
@@ -158,10 +172,8 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         })
             
     explanation_factors.sort(
-        key=lambda f: (f["priority"], abs(f["value"])),
-        reverse=True
+        key=lambda f: (f["priority"], -abs(f["value"]))
     ) 
-    
 
     return {
         "fighterA": fighter_A["name"],
@@ -171,10 +183,23 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         "probabilities": {
             fighter_A["name"]: float(p_A),
             fighter_B["name"]: float(p_B)
-        },
+        }, 
         "edge": {
             "type": style_edge
+        },
+        "explanation": {
+            "summary": build_summary(winner_name, explanation_factors),
+            "factors": [
+                {
+                    "type": f["key"],
+                    "description": f["text"],
+                    "importance": f["priority"],
+                    "advantage": float(abs(f["value"]))
+                }
+                for f in explanation_factors[:3]
+            ]
         }
+        
     }
 
 
