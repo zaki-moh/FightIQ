@@ -19,6 +19,16 @@ class Edge(BaseModel):
 class Matchup(BaseModel):
     fighterA: str
     fighterB: str
+    
+class ExplanationFactor(BaseModel):
+    type: str
+    description: str
+    importance: int
+    advantage: float
+    
+class Explanation(BaseModel):
+    summary: str
+    factors: list[ExplanationFactor]
 
 class PredictionResponse(BaseModel):
     fighterA: str
@@ -27,6 +37,7 @@ class PredictionResponse(BaseModel):
     confidence: float
     probabilities: dict[str, float]
     edge: Edge
+    explanation: Explanation
 
 @app.post("/predict", response_model=PredictionResponse)
 def predict(data: Matchup):

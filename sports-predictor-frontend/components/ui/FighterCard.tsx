@@ -3,19 +3,7 @@ import clsx from 'clsx'
 import Card from './Card'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-
-
-
-const EDGE_LABELS = {
-  striking: "Edge in striking",
-  grappling: "Edge in grappling",
-  no_clear_advantage: "No clear stylistic advantage"
-}
-const EDGE_ICON = {
-  striking: "🥊",
-  grappling: "🤼",
-  no_clear_advantage: "⚖️", 
-}
+import { EDGE_ICON, EDGE_LABELS } from '@/constants/constants'
 
 interface FighterCardProps {
   fighterName: string

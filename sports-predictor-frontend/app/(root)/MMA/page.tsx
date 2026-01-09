@@ -14,6 +14,7 @@ type PredictionResult = {
   edge: {
     type: 'striking' | 'grappling' | 'no_clear_advantage'
   }
+  explanation: PredictionExplanation
 }
 
 const MMA = () => {
@@ -159,7 +160,7 @@ const MMA = () => {
           </div>
         )}
         {result && (
-          <PredictionExplanation name={result.winner}/>
+          <PredictionExplanation name={result.winner} explanation={result.explanation}/>
         )}
       </section>
     </main>
