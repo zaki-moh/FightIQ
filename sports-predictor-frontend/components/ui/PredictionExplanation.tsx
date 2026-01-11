@@ -30,7 +30,7 @@ const PredictionExplanations = ({
     
   return (
     <section className="max-w-3xl mt-10 px-4 mx-auto">
-      <div className="rounded-xl bg-white/5 border border-white/5  p-5">
+      <div className="rounded-xl bg-white/5 border border-white/5  p-6">
         <h3 className="mt-4 text-white/90 text-base font-medium text-center tracking-wide">
           Why the model favors {name} 
         </h3>
@@ -43,19 +43,15 @@ const PredictionExplanations = ({
 
         <div className="my-6 h-px bg-white/5" />
 
-        <p className="text-xs text-white/40 text-center mb-6">
-          Based on comparative performance metrics
-        </p>
-
-        <ul className="space-y-4">
+        <ul className="space-y-3">
           {normalizedFactors.map((f, idx) => (
             <li key={f.label} className="flex gap-3">
-              <div className="mt-1 flex h-6 w-6 shrink-0 rounded-full items-center justify-center bg-blue-500/20 text-blue-400 text-xs font-semibold">
+              <div className="mt-0.5 flex h-6 w-6 shrink-0 rounded-full items-center justify-center bg-blue-500/20 text-blue-400 text-xs font-semibold">
                 {idx + 1}
               </div>
 
               <div className="flex flex-col gap-2 flex-1">
-                <p className="text-white/90 text-sm font-medium">
+                <p className="text-white/80 text-sm font-medium leading-snug">
                   {f.description}
                 </p>
 
@@ -63,10 +59,10 @@ const PredictionExplanations = ({
               </div>
             </li>
           ))}
-          <p className="mt-6 text-xs text-white/35 text-center italic">
-            Factors are ranked by importance and relative magnitude.
-          </p>
         </ul>
+        <p className="mt-6 text-[11px] text-white/35 text-center italic">
+          Factors are ranked by importance and relative magnitude.
+        </p>
       </div>
     </section>
   )
