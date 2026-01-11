@@ -10,28 +10,22 @@ const Page = () => {
     
     const sports = [
         {
-            id: 'mma',
-            title: 'MMA',
+            id: 'ufc',
+            title: 'UFC',
             logo: '/assets/icons/UFC.webp',
             alt: 'UFC',
         },
         {
-            id: 'nba',
-            title: 'NBA',
-            logo: '/assets/icons/NBA.png',
+            id: 'one',
+            title: 'OneChampionship',
+            logo: '/assets/icons/OneChampionship.png',
             alt: 'NBA',
         },
         {
-            id: 'nfl',
-            title: 'NFL',
-            logo: '/assets/icons/NFLlogo.png',
+            id: 'toprank',
+            title: 'TopRank',
+            logo: '/assets/icons/TopRank.png',
             alt: 'NFL',
-        },
-        {
-            id: 'premier-leugue',
-            title: 'Premier League',
-            logo: '/assets/icons/PremLeug.png',
-            alt: 'Premier League',
         },
     ]
     
@@ -44,14 +38,14 @@ const Page = () => {
         <h1 className="mt-12 text-4xl text-white font-semibold leading-normal">
             Choose a sport
         </h1>
-        <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+        <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {sports.map((sport) => (
                 <Card 
                     key={sport.id}
                     onClick={() => onClick(sport.id)}
                     className="px-6 py-8 w-40 flex flex-col items-center gap-3 cursor-pointer hover:bg-white/10 hover:scale-[1.03] transition-all duration-200"
                     icon={ 
-                        <div className="flex justify-center items-center h-24 w-32">
+                        <div className="flex justify-center items-center h-26 w-32">
                             <Image width={1024} height={379} src={sport.logo} alt={sport.alt}
                             className="max-h-full max-w-full object-contain"
                             />

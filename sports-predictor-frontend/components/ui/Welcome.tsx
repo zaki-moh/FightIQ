@@ -72,8 +72,8 @@ const Welcome = () => {
 
         <Card
           icon={<GlobeAmericasIcon className="w-10 h-10 text-cyan-400" />}
-          title="Multi-Sport Support"
-          description="Predictions tailored to UFC, NBA, NFL, Premier League, and more."
+          title="Combat Sports Focus"
+          description="Explainable fight predictions tailored to modern MMA promotions, with support expanding over time."
           className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
         />
       </section>

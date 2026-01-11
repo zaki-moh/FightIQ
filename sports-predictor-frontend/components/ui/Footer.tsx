@@ -14,10 +14,10 @@ const Footer = () => {
   ">
       <div className="flex flex-col items-center md:items-start gap-4">
         <Image
-          src="/assets/icons/croppedLogo.png"
+          src="/assets/icons/FightIQ.png"
           alt="logo"
-          width={1526}
-          height={1024}
+            width={898} 
+            height={366} 
           className="h-14 w-auto object-top"
         />
         <p className="text-sm text-white/60">© 2025 SportaAI</p>
