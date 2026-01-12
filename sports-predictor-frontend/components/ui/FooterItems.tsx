@@ -1,16 +1,17 @@
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import AboutModal from './aboutModal';
 
 const FooterItems = () => {
-    const [about, setAbout] = useState(false)
+    const [aboutOpen, setAboutOpen] = useState(false)
 
     return (
         <ul className="flex flex-col gap-2 font-light">
             <li className="font-bold mb-2 tracking-wide text-sm">Navigation</li>
         
             <li>
-                <Link href="/" onClick={() => setAbout(false)} className="hover:text-gray-300 transition">
+                <Link href="/" onClick={() => setAboutOpen(true)} className="hover:text-gray-300 transition">
                     About 
                 </Link>
             </li>
@@ -26,6 +27,11 @@ const FooterItems = () => {
                     Contact 
                 </Link>
             </li>
+
+            <AboutModal
+                open={aboutOpen}
+                onClose={() => setAboutOpen(false)}
+            />
         </ul>
     );
 };
