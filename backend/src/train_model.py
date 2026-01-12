@@ -46,7 +46,7 @@ merged = merged.merge(
     right_on='b_name'
 )
 
-
+merged['weight_diff'] = merged['r_weight_in_kg'] - merged['b_weight_in_kg']
 merged['height_diff'] = merged['r_height_cm'] - merged['b_height_cm']
 merged['reach_diff'] = merged['r_reach_in_cm'] - merged['b_reach_in_cm']
 merged['age_diff'] = merged['r_age'] - merged['b_age']

@@ -20,7 +20,7 @@ const Footer = () => {
             height={366} 
           className="h-14 w-auto object-top"
         />
-        <p className="text-sm text-white/60">© 2025 SportaAI</p>
+        <p className="text-sm text-white/60">© 2025 FightIQ</p>
       </div>
       <div>
         <FooterItems />

@@ -4,6 +4,7 @@ def add_features(stats):
     stats = stats.copy()
 
     stats['height_cm'] = stats['height_cm'].fillna(stats['height_cm'].median())
+    stats['weight_in_kg'] = stats['height_cm'].fillna(stats['height_cm'].median())
 
     stats['date_of_birth'] = pd.to_datetime(stats['date_of_birth'], errors='coerce')
     today = pd.to_datetime('today')

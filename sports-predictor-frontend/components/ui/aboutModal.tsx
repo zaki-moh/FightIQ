@@ -30,7 +30,11 @@ const AboutModal = ({ open, onClose }: AboutModalProps) => {
           UFC supported. Additional promotions in development.
         </p>
 
-        <div className="mt-5">
+        <p className="mt-5 text-[9px] text-white/50 italic">
+          For informational purposes only. Not intended for wagering or betting.
+        </p>
+
+        <div className="mt-6">
           <Button onClick={onClose} variant="secondary">
             Close
           </Button>

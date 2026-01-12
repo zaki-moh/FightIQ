@@ -20,6 +20,7 @@ type PredictionResult = {
 const MMA = () => {
   const [fighterA, setFighterA] = useState('')
   const [fighterB, setFighterB] = useState('')
+  const [error, setError] = useState<string | null>(null)
 
   const [selectedA, setSelectedA] = useState<string | null>(null)
   const [selectedB, setSelectedB] = useState<string | null>(null)
@@ -31,6 +32,7 @@ const MMA = () => {
 
   useEffect(() => {
     setResult(null)
+    setError(null)
     setIsDirty(true)
   }, [fighterA, fighterB])
 
@@ -67,23 +69,32 @@ const MMA = () => {
 
   const handlePredict = async () => {
     setLoading(true)
+    setResult(null)
+    setError(null)
+
+    const API_URL = process.env.NEXT_PUBLIC_API_URL
 
     try {
-      const response = await fetch('http://localhost:8000/predict', {
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fighterA, fighterB }),
       })
-      const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.detail || 'Prediction failed')
+        throw new Error('Prediction unavailable')
       }
 
+      const data = await response.json()
       setResult(data)
-      setIsDirty(false) 
-    } catch (error) {
-      console.error('Error predicting fight:', error)
+      setIsDirty(false)
+
+    } catch (err) {
+      console.error('Prediction request failed:', err)
+
+      setError(
+        'We couldn’t generate a prediction right now. Please try again shortly.'
+      )
     } finally {
       setLoading(false)
     }
@@ -159,7 +170,12 @@ const MMA = () => {
             />
           </div>
         )}
-        {result && (
+        {error && !result && (
+          <p className="mt-6 mx-auto max-w-md rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+            {error}
+          </p>
+        )}
+        {result && !error && (
           <PredictionExplanation name={result.winner} explanation={result.explanation}/>
         )}
       </section>
