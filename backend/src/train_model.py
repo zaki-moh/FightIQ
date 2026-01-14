@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
-from src.features import add_features
+from features import add_features
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -59,6 +59,7 @@ merged['r_fighter_win'] = (merged['winner'] == merged['r_fighter']).astype(int)
 
 merged = merged[
     [
+        'weight_diff',
         'height_diff',
         'reach_diff',
         'age_diff',
@@ -75,6 +76,7 @@ merged.to_csv(DATA_DIR / "fighters_cleaned.csv", index=False)
 
 
 numeric_cols = [
+    'weight_diff',
     'height_diff',
     'reach_diff',
     'age_diff',
