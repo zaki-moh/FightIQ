@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / "data"
 MODELS_DIR = BASE_DIR / "models"
 
-stats = pd.read_csv(DATA_DIR / "ufc-fighters-statistics.csv")
+stats = pd.read_csv(DATA_DIR / "ufc-fighters-statistics-with-gender.csv")
 stats = add_features(stats)
 
 model = joblib.load(MODELS_DIR / "MMA_predictor.pkl")
@@ -141,7 +141,7 @@ def build_summary(winner_name: str, explanation_factors: list) -> str:
 def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     fighter_A_Name = fighter_A_Name.lower()
     fighter_B_Name = fighter_B_Name.lower()
-
+    
     fighter_A = stats.loc[
         stats["name"].str.lower() == fighter_A_Name
     ].squeeze()
@@ -149,6 +149,56 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     fighter_B = stats.loc[
         stats["name"].str.lower() == fighter_B_Name
     ].squeeze()
+    
+    if (fighter_A["gender"].lower() == "male" and fighter_B["gender"].lower() == "female"):
+        return {
+            "fighterA": fighter_A["name"],
+            "fighterB": fighter_B["name"],
+            "winner": fighter_A["name"],
+            "confidence": 0.95,
+            "probabilities": {
+                fighter_A["name"]: 0.95,
+                fighter_B["name"]: 0.05,
+            },
+            "edge": {"type": "division"},
+            "explanation": {
+                "summary": "This prediction reflects division-specific competitive context."
+                ,
+                "factors": [
+                    {
+                        "type": "division",
+                        "description": "division-specific matchup context",
+                        "importance": 0,
+                        "advantage": 0.0,
+                    }
+                ],
+            },
+        }
+    
+    elif (fighter_A["gender"].lower() == "female" and fighter_B["gender"].lower() == "male"):
+        return {
+            "fighterA": fighter_A["name"],
+            "fighterB": fighter_B["name"],
+            "winner": fighter_B["name"],
+            "confidence": 0.95,
+            "probabilities": {
+                fighter_A["name"]: 0.05,
+                fighter_B["name"]: 0.95,
+            },
+            "edge": {"type": "division"},
+            "explanation": {
+                "summary": "This prediction reflects division-specific competitive context."
+                ,
+                "factors": [
+                    {
+                        "type": "division",
+                        "description": "Performance metrics are evaluated within division-specific competitive baselines.",
+                        "importance": 0,
+                        "advantage": 0.0,
+                    }
+                ],
+            },
+        }
 
     if fighter_A.empty or fighter_B.empty:
         return {"error": "One or more fighters not found"}
@@ -159,6 +209,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     total = p_A_wins + p_B_wins
     p_A = p_A_wins / total
     p_B = p_B_wins / total
+    
 
     weight_diff = fighter_A["weight_in_kg"] - fighter_B["weight_in_kg"]
     weight_in_lb = weight_diff * 2.20462

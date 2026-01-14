@@ -12,7 +12,7 @@ type PredictionResult = {
   confidence: number
   probabilities: Record<string, number>
   edge: {
-    type: 'striking' | 'grappling' | 'no_clear_advantage' | 'weight'
+    type: 'striking' | 'grappling' | 'no_clear_advantage' | 'weight' | 'division'
   }
   explanation: PredictionExplanation
 }

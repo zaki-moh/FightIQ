@@ -3,13 +3,13 @@ import clsx from 'clsx'
 import Card from './Card'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { EDGE_ICON, EDGE_LABELS } from '@/constants/constants'
+import { EDGE_ICON, EDGE_CONTEXT } from '@/constants/constants'
 
 interface FighterCardProps {
   fighterName: string
   isWinner: boolean
   confidence?: number | undefined
-  edgeType?: "striking" | "grappling" | "no_clear_advantage" | "weight"
+  edgeType?: "striking" | "grappling" | "no_clear_advantage" | "weight" | "division"
   subtitle?: string
   className?: string
 }
@@ -114,7 +114,7 @@ const FighterCard = ({
             "
           >
             <span aria-hidden>{EDGE_ICON[edgeType]}</span>
-            {EDGE_LABELS[edgeType]}
+            {EDGE_CONTEXT[edgeType]}
           </span>
         </div>
       )}

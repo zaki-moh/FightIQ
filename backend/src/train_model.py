@@ -16,7 +16,7 @@ MODELS_DIR = BASE_DIR / "models"
 MODELS_DIR.mkdir(exist_ok=True)
 
 
-stats_path = DATA_DIR / "ufc-fighters-statistics.csv"
+stats_path = DATA_DIR / "ufc-fighters-statistics-with-gender.csv"
 fights_path = DATA_DIR / "large_dataset.csv"
 
 stats = pd.read_csv(stats_path)
@@ -67,7 +67,7 @@ merged = merged[
         'grapple_eff_diff',
         'performance_diff',
         'win_ratio_diff',
-        'r_fighter_win'
+        'r_fighter_win',
     ]
 ].copy()
 
@@ -83,7 +83,7 @@ numeric_cols = [
     'strike_eff_diff',
     'grapple_eff_diff',
     'performance_diff',
-    'win_ratio_diff'
+    'win_ratio_diff',
 ]
 
 scaler = StandardScaler()
