@@ -14,7 +14,7 @@ const Footer = () => {
   ">
       <div className="flex flex-col items-center md:items-start gap-4">
         <Image
-          src="/assets/icons/FightIQ.png"
+          src="/assets/icons/FightIQlogo.png"
           alt="logo"
             width={898} 
             height={366} 
