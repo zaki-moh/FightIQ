@@ -37,6 +37,7 @@ class PredictionResponse(BaseModel):
     confidence: float
     probabilities: dict[str, float]
     edge: Edge
+    is_historic: bool
     explanation: Explanation
 
 @app.post("/predict", response_model=PredictionResponse)

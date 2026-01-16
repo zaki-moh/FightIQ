@@ -14,6 +14,7 @@ type PredictionResult = {
   edge: {
     type: 'striking' | 'grappling' | 'no_clear_advantage' | 'weight' | 'division'
   }
+  is_historic: boolean
   explanation: PredictionExplanation
 }
 
@@ -150,6 +151,16 @@ const MMA = () => {
             <p>
               Confidence:{' '}
               {(result.confidence * 100).toFixed(1)}%
+            </p>
+          </div>
+        )}
+
+        {result?.is_historic && (
+          <div className="mt-3 max-w-xl mx-auto rounded-md border-l-2 border-yellow-400/40 bg-yellow-400/5 px-3 py-2">
+            <p className="text-xs leading-relaxed text-yellow-300/60">
+              <span className="font-medium text-yellow-300/80">⚠️ Historical matchup</span>{" "}
+              This fight occurred during FightIQ’s training era.
+              Shown for exploration and not included in accuracy metrics.
             </p>
           </div>
         )}

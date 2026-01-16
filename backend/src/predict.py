@@ -13,6 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / "data"
 MODELS_DIR = BASE_DIR / "models"
 
+fights_path = DATA_DIR / "large_dataset.csv"
+historic_df = pd.read_csv(fights_path)
+
 stats = pd.read_csv(DATA_DIR / "ufc-fighters-statistics-with-gender.csv")
 stats = add_features(stats)
 
@@ -73,12 +76,17 @@ EXPLANATION_RULES = [
     },
 ]
 
+def build_historic_matchups(historic_df):  
+    historic_matchups = set()  
+    for index, row in historic_df.iterrows():
+        matchup = frozenset([
+            row['r_fighter'].lower(),
+            row['b_fighter'].lower()
+        ])
+        historic_matchups.add(matchup)
+    return historic_matchups
 
-
-
-
-
-
+historic_fights = build_historic_matchups(historic_df)
 
 
 def prob_A_beats_B(fighter_A, fighter_B) -> float:
@@ -141,7 +149,8 @@ def build_summary(winner_name: str, explanation_factors: list) -> str:
 def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     fighter_A_Name = fighter_A_Name.lower()
     fighter_B_Name = fighter_B_Name.lower()
-    is_historic = 0
+    query = frozenset([fighter_A_Name, fighter_B_Name])
+    is_historic = 1 if query in historic_fights else 0
     
     rowsA = stats.loc[stats["name"].str.lower() == fighter_A_Name]
 
@@ -157,7 +166,6 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     
     fighter_B = rowsB.iloc[0]
 
-
     if (fighter_A["gender"].lower() == "male" and fighter_B["gender"].lower() == "female"):
         return {
             "fighterA": fighter_A["name"],
@@ -169,7 +177,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
                 fighter_B["name"]: 0.05,
             },
             "edge": {"type": "division"},
-            "is_ishistoric": 0,
+            "is_historic": is_historic,
             "explanation": {
                 "summary": "This prediction reflects division-specific competitive context."
                 ,
@@ -195,7 +203,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
                 fighter_B["name"]: 0.95,
             },
             "edge": {"type": "division"},
-            "is_ishistoric": 0,
+            "is_historic": is_historic,
             "explanation": {
                 "summary": "This prediction reflects division-specific competitive context."
                 ,
@@ -253,7 +261,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
                 fighter_B["name"]: float(P_B),
             },
             "edge": {"type": "weight"},
-            "is_ishistoric": is_historic,
+            "is_historic": is_historic,
             "explanation": {
                 "summary": (
                     f"This prediction is driven by a significant size mismatch "
@@ -346,6 +354,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
             fighter_B["name"]: float(p_B),
         },
         "edge": {"type": style_edge},
+        "is_historic": is_historic,
         "explanation": {
             "summary": build_summary(winner_name, explanation_factors),
             "factors": [
