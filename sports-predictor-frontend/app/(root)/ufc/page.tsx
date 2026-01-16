@@ -93,7 +93,7 @@ const MMA = () => {
       console.error('Prediction request failed:', err)
 
       setError(
-        'We couldn’t generate a prediction right now. Please try again shortly.'
+        'We couldn’t generate a prediction for this matchup. Please select different fighters.'
       )
     } finally {
       setLoading(false)

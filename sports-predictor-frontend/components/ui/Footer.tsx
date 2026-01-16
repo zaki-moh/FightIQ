@@ -18,7 +18,7 @@ const Footer = () => {
           alt="logo"
             width={898} 
             height={366} 
-          className="h-14 w-auto object-top"
+          className="h-10 w-auto object-top opacity-90"
         />
         <p className="text-sm text-white/60">© 2025 FightIQ</p>
       </div>

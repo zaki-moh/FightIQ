@@ -141,15 +141,23 @@ def build_summary(winner_name: str, explanation_factors: list) -> str:
 def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     fighter_A_Name = fighter_A_Name.lower()
     fighter_B_Name = fighter_B_Name.lower()
+    is_historic = 0
     
-    fighter_A = stats.loc[
-        stats["name"].str.lower() == fighter_A_Name
-    ].squeeze()
+    rowsA = stats.loc[stats["name"].str.lower() == fighter_A_Name]
 
-    fighter_B = stats.loc[
-        stats["name"].str.lower() == fighter_B_Name
-    ].squeeze()
+    if rowsA.empty:
+        return {"error": "error"}
     
+    fighter_A = rowsA.iloc[0]
+    
+    rowsB = stats.loc[stats["name"].str.lower() == fighter_B_Name]
+    
+    if rowsB.empty:
+        return {"error": "error"}
+    
+    fighter_B = rowsB.iloc[0]
+
+
     if (fighter_A["gender"].lower() == "male" and fighter_B["gender"].lower() == "female"):
         return {
             "fighterA": fighter_A["name"],
@@ -161,6 +169,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
                 fighter_B["name"]: 0.05,
             },
             "edge": {"type": "division"},
+            "is_ishistoric": 0,
             "explanation": {
                 "summary": "This prediction reflects division-specific competitive context."
                 ,
@@ -186,6 +195,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
                 fighter_B["name"]: 0.95,
             },
             "edge": {"type": "division"},
+            "is_ishistoric": 0,
             "explanation": {
                 "summary": "This prediction reflects division-specific competitive context."
                 ,
@@ -214,13 +224,13 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
     weight_diff = fighter_A["weight_in_kg"] - fighter_B["weight_in_kg"]
     weight_in_lb = weight_diff * 2.20462
 
-    if abs(weight_in_lb) >= 30:
-        if abs(weight_in_lb) <= 40:
-            base_conf = 0.90
-        elif abs(weight_in_lb) <= 50:
-            base_conf = 0.93
+    if abs(weight_in_lb) >= 20:
+        if abs(weight_in_lb) <= 30:
+            base_conf = 0.80
+        elif abs(weight_in_lb) <= 40:
+            base_conf = 0.85
         else:
-            base_conf = 0.95
+            base_conf = 0.90
 
         if weight_in_lb > 0:
             P_A = base_conf
@@ -243,6 +253,7 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
                 fighter_B["name"]: float(P_B),
             },
             "edge": {"type": "weight"},
+            "is_ishistoric": is_historic,
             "explanation": {
                 "summary": (
                     f"This prediction is driven by a significant size mismatch "
@@ -274,14 +285,16 @@ def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
         fighter_A["grapple_efficiency"] - fighter_B["grapple_efficiency"]
     )
 
-    STYLE_THRESHOLD = 0.05
-
-    if abs(strike_diff) > abs(grapple_diff) and abs(strike_diff) > STYLE_THRESHOLD:
+    THRESHOLD = 0.08
+    DOMINANCE_RATIO = 1.25
+    
+    if abs(strike_diff) > (abs(grapple_diff) * DOMINANCE_RATIO) and abs(strike_diff) > THRESHOLD:
         style_edge = "striking"
-    elif abs(grapple_diff) > STYLE_THRESHOLD:
+    elif abs(grapple_diff) > (abs(strike_diff) * DOMINANCE_RATIO) and abs(grapple_diff) > THRESHOLD:
         style_edge = "grappling"
     else:
         style_edge = "no_clear_advantage"
+
 
     diffs = {
         "weight_diff": weight_diff,

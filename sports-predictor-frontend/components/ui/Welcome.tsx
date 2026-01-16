@@ -23,7 +23,7 @@ const Welcome = () => {
         </h1>
 
         <p className="text-base sm:text-lg lg:text-xl font-light text-gray-400 leading-relaxed">
-          AI-powered combat sports predictions and analytics
+          AI-powered predictions for UFC, ONE Championship, and Top Rank fights
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center">
