@@ -30,8 +30,8 @@ const PredictionExplanations = ({
     
   return (
     <section className="max-w-3xl mt-10 px-4 mx-auto">
-      <div className="rounded-xl bg-white/5 border border-white/5  p-6">
-        <h3 className="mt-4 text-white/90 text-base font-medium text-center tracking-wide">
+      <div className="rounded-xl bg-white/5 border border-white/5 p-4 sm:p-6">
+        <h3 className="mt-2 sm:mt-4 text-sm sm:text-base text-white/90 font-medium text-center tracking-wide">
           Why the model favors {name} 
         </h3>
 
@@ -45,13 +45,13 @@ const PredictionExplanations = ({
 
         <ul className="space-y-3">
           {normalizedFactors.map((f, idx) => (
-            <li key={f.label} className="flex gap-3">
+            <li key={f.label} className="flex flex-col sm:flex-row gap-3">
               <div className="mt-0.5 flex h-6 w-6 shrink-0 rounded-full items-center justify-center bg-blue-500/20 text-blue-400 text-xs font-semibold">
                 {idx + 1}
               </div>
 
-              <div className="flex flex-col gap-2 flex-1">
-                <p className="text-white/80 text-sm font-medium leading-snug">
+              <div className="flex flex-col gap-2 w-full">
+                <p className="text-white/80 text-sm leading-snug">
                   {f.description}
                 </p>
 

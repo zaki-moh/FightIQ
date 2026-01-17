@@ -10,15 +10,15 @@ import {
 import { useRouter } from 'next/navigation'
 
 const Page = () => {
-    const router = useRouter();
-  
-    const learnMore = () => {
-      router.push("/learn-more-about-model")
-    }
+  const router = useRouter()
 
-    const viewPredictions = () => {
-      router.push("/view-predictions")
-    }
+  const learnMore = () => {
+    router.push('/learn-more-about-model')
+  }
+
+  const viewPredictions = () => {
+    router.push('/view-predictions')
+  }
 
   return (
     <main className="flex flex-col w-full items-center">
@@ -26,16 +26,15 @@ const Page = () => {
       <section className="max-w-3xl w-full px-6 mt-20 text-center">
         <h1 className="text-white font-semibold text-4xl leading-tight">
           How FightIQ Delivers <br />
-          Smarter Combat Sports Predictions
+          Data-Driven Fight Predictions
         </h1>
 
         <p className="text-white/60 font-light text-xl mt-5 leading-relaxed">
-          A behind-the-scenes look at our machine learning pipeline,
-          accuracy validation, and combat-sports analytics.
+          A transparent look at how historical fight data and machine learning
+          are used to generate explainable UFC matchup predictions.
         </p>
 
         <div className="flex justify-center gap-4 mt-8">
-
           <Button
             size="sm"
             variant="primary"
@@ -49,17 +48,17 @@ const Page = () => {
 
       <div className="my-20 h-px w-full bg-white/10" />
 
+      {/* Why */}
       <section className="max-w-3xl w-full px-6 text-center">
         <h2 className="text-white font-semibold text-3xl">
           Why FightIQ Exists
         </h2>
 
         <p className="text-white/60 text-lg leading-relaxed mt-4">
-          Combat sports predictions are often driven by hype, odds movement,
-          or intuition. FightIQ was built to take a data-first approach, by
-          leveraging historical fight data, fighter-level metrics, and
-          machine learning to produce transparent, calibrated predictions
-          you can actually trust.
+          Combat sports predictions are often driven by hype, narratives,
+          or betting lines. FightIQ was built to take a data-first approach
+          using historical fight outcomes and fighter-level metrics to
+          produce consistent, explainable predictions.
         </p>
       </section>
 
@@ -70,45 +69,46 @@ const Page = () => {
           How FightIQ Works
         </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
           <Card
-            title="01 · Data Ingestion"
-            description="Aggregates historical fight outcomes and fighter-level statistics from multiple trusted data sources."
+            title="01 · Historical Data"
+            description="Uses curated UFC fight outcomes and fighter-level statistics to construct training examples."
             icon={<CloudIcon className="h-8 w-8 text-white" />}
-          className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
+            className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
           />
 
           <Card
-            title="02 · ML Pipeline"
-            description="Performs feature engineering, model training, evaluation, and confidence calibration."
+            title="02 · Feature Engineering"
+            description="Transforms raw statistics into matchup-based differentials such as striking efficiency, grappling efficiency, and physical attributes."
             icon={<Cog6ToothIcon className="h-8 w-8 text-white" />}
-          className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
+            className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
           />
 
           <Card
-            title="03 · Prediction Output"
-            description="Generates calibrated win-probability predictions for upcoming matchups."
+            title="03 · ML Prediction"
+            description="Applies a trained Random Forest model to estimate win probabilities and generate interpretable matchup insights."
             icon={<ChartBarIcon className="h-8 w-8 text-white" />}
-          className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
+            className="p-6 hover:-translate-y-0.5 transition-transform duration-200"
           />
         </div>
       </section>
 
       <div className="my-14 h-px w-full bg-white/10" />
 
+      {/* Accuracy */}
       <section className="max-w-3xl w-full px-6 text-center">
         <h2 className="text-white font-semibold text-3xl mb-4">
-          Accuracy & Transparency
+          Accuracy & Evaluation
         </h2>
 
         <p className="text-white font-semibold text-xl">
-          ~70% prediction accuracy
+          ~70% accuracy on held-out historical data
         </p>
 
         <p className="text-gray-400 font-light mt-3 leading-relaxed">
-          Evaluated using held-out historical UFC fight data with strict
-          train/test splits, ongoing evaluation, and conservative confidence
-          calibration to reduce overfitting and false confidence.
+          Evaluated using a strict train/test split on historical UFC fight data.
+          Predictions shown for past matchups are clearly labeled and excluded
+          from accuracy reporting to prevent data leakage.
         </p>
       </section>
 
@@ -116,7 +116,7 @@ const Page = () => {
 
       <section className="max-w-3xl w-full px-6 text-center mb-24">
         <h3 className="font-semibold text-2xl text-white">
-          Ready to see FightIQ in action?
+          Ready to explore FightIQ?
         </h3>
 
         <div className="flex justify-center gap-4 mt-6">

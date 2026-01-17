@@ -6,7 +6,7 @@ interface ContactModalProps {
   onClose: () => void
 }
 
-const contactModal = ({
+const ContactModal = ({
     open,
     onClose,
 }:ContactModalProps) => {
@@ -48,4 +48,4 @@ const contactModal = ({
   )
 }
 
-export default contactModal
+export default ContactModal

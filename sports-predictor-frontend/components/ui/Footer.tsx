@@ -14,11 +14,11 @@ const Footer = () => {
   ">
       <div className="flex flex-col items-center md:items-start gap-4">
         <Image
-          src="/assets/icons/FightIQlogo.png"
+          src="/assets/icons/FightIQfinal.png"
           alt="logo"
             width={898} 
             height={366} 
-          className="h-10 w-auto object-top opacity-90"
+          className="h-11 w-auto object-top opacity-90"
         />
         <p className="text-sm text-white/60">© 2025 FightIQ</p>
       </div>

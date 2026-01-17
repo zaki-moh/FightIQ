@@ -131,7 +131,7 @@ const MMA = () => {
         <Button
           variant="primary"
           size="lg"
-          className="mt-4 px-10"
+          className="mt-4 px-6 sm:px-10"
           onClick={handlePredict}
           disabled={!canPredict}
         >
@@ -166,7 +166,7 @@ const MMA = () => {
         )}
 
         {result && (
-          <div className="flex mt-8 gap-12 w-full justify-center">
+          <div className="mt-8 w-full flex flex-col gap-6 sm:flex-row sm:gap-12 justify-center">
             <FighterCard
               fighterName={fighterA}
               isWinner={result.winner === fighterA}

@@ -11,11 +11,11 @@ const Header = () => {
       <div className="flex items-center w-full justify-between px-6 h-16">
         <Link href="/" className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 active:scale-90"> 
           <Image 
-            src="/assets/icons/FightIQlogo.png"
+            src="/assets/icons/FightIQfinal.png"
             alt="logo" 
             width={1536} 
             height={1024} 
-            className="h-9 w-auto cursor-pointer"
+            className="h-10 w-auto cursor-pointer"
           />
         </Link>
         <nav>
