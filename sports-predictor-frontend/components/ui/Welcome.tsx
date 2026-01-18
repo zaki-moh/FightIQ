@@ -16,7 +16,7 @@ const Welcome = () => {
   const router = useRouter()
 
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex flex-col items-center px-4 pb-16 sm:pb-24">
       <section className="mt-20 sm:mt-24 text-center flex flex-col gap-6 max-w-3xl">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
           Welcome to FightIQ!

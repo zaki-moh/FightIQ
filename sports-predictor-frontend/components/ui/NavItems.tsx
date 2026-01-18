@@ -33,7 +33,7 @@ const NavItems = () => {
       <li className="flex justify-center items-center w-14 h-8 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 active:scale-90 hover:opacity-90">
         <Link href="/toprank">
           <Image
-            src="/assets/icons/TopRank.png"
+            src="/assets/icons/TopRank2.png"
             alt="NFL"
             width={1024}
             height={379}

@@ -24,7 +24,7 @@ const Page = () => {
         {
             id: 'toprank',
             title: 'TopRank',
-            logo: '/assets/icons/TopRank.png',
+            logo: '/assets/icons/TopRank2.png',
             alt: 'NFL',
         },
     ]
@@ -34,7 +34,7 @@ const Page = () => {
     }
 
   return (
-    <main className="flex flex-col items-center w-full">
+    <main className="flex flex-col items-center w-full pb-24">
         <h1 className="mt-12 text-4xl text-white font-semibold leading-normal">
             Choose a sport
         </h1>
