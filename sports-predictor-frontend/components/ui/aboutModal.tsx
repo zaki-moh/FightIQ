@@ -10,7 +10,10 @@ const AboutModal = ({ open, onClose }: AboutModalProps) => {
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      onClick={(e) => e.stopPropagation()}
+    >
       <div
         className="absolute inset-0 bg-black/60"
         onClick={onClose}

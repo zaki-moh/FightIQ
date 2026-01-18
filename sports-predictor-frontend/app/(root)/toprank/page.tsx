@@ -2,7 +2,7 @@ import React from 'react'
 
 const NFL = () => {
   return (
-    <main className="flex min-h-[70vh] flex-col items-center justify-center text-center px-4">
+    <main className="flex min-h-[60vh] sm:min-h-[70vh] flex-col items-center justify-center text-center px-4">
       <h1 className="text-3xl md:text-4xl font-semibold text-white/90">
         ONE Championship predictions coming soon
       </h1>
