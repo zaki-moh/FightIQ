@@ -8,7 +8,7 @@ import { EDGE_ICON, EDGE_CONTEXT } from '@/constants/constants'
 interface FighterCardProps {
   fighterName: string
   isWinner: boolean
-  confidence?: number | undefined
+  confidence?: number 
   edgeType?: "striking" | "grappling" | "no_clear_advantage" | "weight" | "division"
   subtitle?: string
   className?: string
@@ -98,7 +98,7 @@ const FighterCard = ({
       <p className="text-sm text-white/45 text-center">
         Win Probability
         <span className="ml-1 font-semibold text-white/80">
-          {(confidence * 100).toFixed(1)}%
+            {((confidence ?? 0) * 100).toFixed(1)}%
         </span>
       </p>
 
