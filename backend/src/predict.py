@@ -160,9 +160,9 @@ def build_summary(winner_name: str, explanation_factors: list) -> str:
 
 
 def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
-     if stats is None or model is None or scaler is None:
+    if stats is None or model is None or scaler is None:
         return {"error": "Prediction system not initialized"}
-        
+
     fighter_A_Name = fighter_A_Name.lower()
     fighter_B_Name = fighter_B_Name.lower()
     query = frozenset([fighter_A_Name, fighter_B_Name])
