@@ -1,14 +1,14 @@
 import React from 'react'
 
-const NFL = () => {
+const NBA = () => {
   return (
-    <main className="flex min-h-[60vh] sm:min-h-[70vh] flex-col items-center justify-center text-center px-4">
+       <main className="flex min-h-[60vh] sm:min-h-[70vh] flex-col items-center justify-center text-center px-4">
       <h1 className="text-3xl md:text-4xl font-semibold text-white/90">
-        ONE Championship predictions coming soon
+        TopRank predictions coming soon
       </h1>
 
       <p className="mt-3 text-sm md:text-base text-white/60 max-w-md">
-        We’re building data-driven predictions and explainable fight analytics for ONE Championship.
+        We’re building data-driven predictions and explainable fight analytics for TopRank.
       </p>
 
       <div className="mt-6 h-px w-24 bg-white/10" />
@@ -16,4 +16,4 @@ const NFL = () => {
   )
 }
 
-export default NFL
+export default NBA

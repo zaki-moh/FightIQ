@@ -102,8 +102,8 @@ const MMA = () => {
   }
 
   return (
-    <main className="flex flex-col items-center pb-16 sm:pb-24">
-      <section className="max-w-4xl py-12 w-full text-center">
+    <div className="relative z-0 flex flex-col items-center pb-16 sm:pb-24">
+      <div className="max-w-4xl py-12 w-full text-center">
         <h1 className="text-white text-4xl font-semibold tracking-tight">
           UFC Fight Predictor
         </h1>
@@ -189,8 +189,8 @@ const MMA = () => {
         {result && !error && (
           <PredictionExplanation name={result.winner} explanation={result.explanation}/>
         )}
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
 

@@ -51,7 +51,7 @@ const FighterSelector = ({
   return (
     <div className="mt-6 flex justify-center gap-8 items-center">
       {/* Fighter A */}
-      <div className="relative z-50 w-full max-w-xs">
+      <div className="relative w-full max-w-xs">
         <input
           type="text"
           value={fighterA}
@@ -68,7 +68,7 @@ const FighterSelector = ({
         />
 
         {openA && (
-          <div className="absolute z-50 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
+          <div className="absolute z-20 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
             {filteredA.length > 0 ? (
               filteredA.slice(0, 10).map((f) => (
                 <div
@@ -101,7 +101,7 @@ const FighterSelector = ({
       <Placeholder placeholder="VS" />
 
       {/* Fighter B */}
-      <div className="relative z-50 w-full max-w-xs">
+      <div className="relative w-full max-w-xs">
         <input
           type="text"
           value={fighterB}
@@ -118,7 +118,7 @@ const FighterSelector = ({
         />
 
         {openB && (
-          <div className="absolute z-50 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
+          <div className="absolute z-20 w-full rounded-md bg-black border border-white/10 max-h-60 overflow-y-auto">
             {filteredB.length > 0 ? (
               filteredB.slice(0, 10).map((f) => (
                 <div

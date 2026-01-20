@@ -19,13 +19,13 @@ const Page = () => {
             id: 'one',
             title: 'OneChampionship',
             logo: '/assets/icons/OneChampionship.png',
-            alt: 'NBA',
+            alt: 'ONE',
         },
         {
             id: 'toprank',
             title: 'TopRank',
             logo: '/assets/icons/TopRank2.png',
-            alt: 'NFL',
+            alt: 'TopRank',
         },
     ]
     
