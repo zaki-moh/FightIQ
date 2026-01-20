@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from features import add_features
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 MODELS_DIR = BASE_DIR / "models"
 

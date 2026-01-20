@@ -7,21 +7,34 @@ import pandas as pd
 from src.features import add_features
 
 
-
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent  
 DATA_DIR = BASE_DIR / "data"
 MODELS_DIR = BASE_DIR / "models"
 
-fights_path = DATA_DIR / "large_dataset.csv"
-historic_df = pd.read_csv(fights_path)
 
-stats = pd.read_csv(DATA_DIR / "ufc-fighters-statistics-with-gender.csv")
-stats = add_features(stats)
+historic_df = None
+stats = None
+model = None
+scaler = None
 
-model = joblib.load(MODELS_DIR / "MMA_predictor.pkl")
-scaler = joblib.load(MODELS_DIR / "scaler.pkl")
+try:
+    fights_path = DATA_DIR / "large_dataset.csv"
+    historic_df = pd.read_csv(fights_path)
+except FileNotFoundError:
+    print(f"[WARN] Historic dataset not found at {fights_path}")
 
+try:
+    stats_path = DATA_DIR / "ufc-fighters-statistics-with-gender.csv"
+    stats = pd.read_csv(stats_path)
+    stats = add_features(stats)
+except FileNotFoundError:
+    print(f"[WARN] Fighter stats not found at {stats_path}")
+
+try:
+    model = joblib.load(MODELS_DIR / "MMA_predictor.pkl")
+    scaler = joblib.load(MODELS_DIR / "scaler.pkl")
+except FileNotFoundError:
+    print("[WARN] Model or scaler not found")
 
 
 
@@ -147,6 +160,9 @@ def build_summary(winner_name: str, explanation_factors: list) -> str:
 
 
 def predictWinner(fighter_A_Name: str, fighter_B_Name: str):
+     if stats is None or model is None or scaler is None:
+        return {"error": "Prediction system not initialized"}
+        
     fighter_A_Name = fighter_A_Name.lower()
     fighter_B_Name = fighter_B_Name.lower()
     query = frozenset([fighter_A_Name, fighter_B_Name])
