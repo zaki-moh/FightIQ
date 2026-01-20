@@ -2,12 +2,19 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from src.predict import predictWinner
+import os
 
 app = FastAPI()
 
+
+origins = os.getenv(
+    "CORS_ORIGINS",
+    "http://localhost:3000"
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -48,7 +55,10 @@ def predict(data: Matchup):
             detail="Fighters must be different"
         )
 
-    result = predictWinner(data.fighterA, data.fighterB)
+    try:
+        result = predictWinner(data.fighterA, data.fighterB)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Prediction failed")
 
     if "error" in result:
         raise HTTPException(
@@ -57,3 +67,11 @@ def predict(data: Matchup):
         )
 
     return result
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+@app.get("/")
+def root():
+    return {"message": "FightIQ API"}
