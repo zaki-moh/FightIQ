@@ -7,18 +7,18 @@ import os
 app = FastAPI()
 
 
-origins = os.getenv(
-    "CORS_ORIGINS",
-    "http://localhost:3000"
-).split(",")
+origins = [
+    "https://fight-iq-omega.vercel.app",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=origins,
     allow_credentials=False,
-    allow_methods=["*"],
+    allow_methods=["POST", "GET", "OPTIONS"],
     allow_headers=["*"],
 )
+
 
 class Edge(BaseModel):
     type: str | None
