@@ -18,11 +18,6 @@ export const metadata: Metadata = {
     template: '%s | FightIQ',
   },
   description: 'AI-powered UFC fight predictions with explainable insights.',
-  icons: {
-    icon: "/FightIQfinal.png",
-    shortcut: "/FightIQfinal.png",
-    apple: "/FightIQfinal.png",
-  },
 };
 
 export const montserrat = Montserrat({
