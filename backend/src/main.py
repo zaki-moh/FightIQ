@@ -7,15 +7,13 @@ import os
 app = FastAPI()
 
 
-origins = [
-    "https://fight-iq-omega.vercel.app",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[
+        "https://fight-iq-omega.vercel.app",
+    ],
     allow_credentials=False,
-    allow_methods=["POST", "GET", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
