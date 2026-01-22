@@ -103,16 +103,16 @@ const MMA = () => {
 
   return (
     <div className="relative z-0 flex flex-col items-center pb-16 sm:pb-24">
-      <div className="max-w-4xl py-12 w-full text-center">
-        <h1 className="text-white text-4xl font-semibold tracking-tight">
+      <div className="max-w-4xl px-4 sm:px-6 lg:px-0 py-10 sm:py-12 w-full text-center">
+        <h1 className="text-white text-3xl sm:text-4xl font-semibold tracking-tight">
           UFC Fight Predictor
         </h1>
 
-        <h2 className="mt-4 text-white/60 text-lg">
+        <h2 className="mt-3 sm:mt-4 text-white/60 sm:text-lg text-base">
           Select two fighters to see who our model predicts will win.
         </h2>
 
-        <p className="mt-6 text-white/40 text-sm">
+        <p className="mt-4 sm:mt-6 text-white/40 text-sm">
           ↓ Enter two fighters below to generate a matchup prediction
         </p>
 
@@ -131,7 +131,7 @@ const MMA = () => {
         <Button
           variant="primary"
           size="lg"
-          className="mt-4 px-6 sm:px-10"
+          className="mt-6 sm:mt-4 px-6 sm:px-10 w-full sm:w-auto"
           onClick={handlePredict}
           disabled={!canPredict}
         >
@@ -143,7 +143,7 @@ const MMA = () => {
         </Button>
 
         {result && (
-          <div className="text-white mt-6">
+          <div className="text-white mt-4 sm:mt-6 text-sm sm:text-base">
             <p>
               Winner:{' '}
               <span className="font-semibold">{result.winner}</span>
@@ -166,13 +166,14 @@ const MMA = () => {
         )}
 
         {result && (
-          <div className="mt-8 w-full flex flex-col gap-6 sm:flex-row sm:gap-12 justify-center">
+          <div className="mt-8 flex flex-col items-center gap-6 sm:flex-row sm:gap-12 sm:justify-center items-center">
             <FighterCard
               fighterName={fighterA}
               isWinner={result.winner === fighterA}
               confidence={result.probabilities[fighterA]}
               edgeType={result.edge.type}
             />
+
             <FighterCard
               fighterName={fighterB}
               isWinner={result.winner === fighterB}
@@ -181,13 +182,19 @@ const MMA = () => {
             />
           </div>
         )}
+
         {error && !result && (
           <p className="mt-6 mx-auto max-w-md rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
             {error}
           </p>
         )}
         {result && !error && (
-          <PredictionExplanation name={result.winner} explanation={result.explanation}/>
+          <div className="mt-10 px-2 sm:px-0 max-w-3xl mx-auto">
+            <PredictionExplanation
+              name={result.winner}
+              explanation={result.explanation}
+            />
+          </div>
         )}
       </div>
     </div>

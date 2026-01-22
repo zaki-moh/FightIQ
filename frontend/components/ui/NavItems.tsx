@@ -1,43 +1,58 @@
 'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
 const NavItems = () => {
-
   return (
-    <ul className="flex flex-row gap-10 font-bold">
-      <li className="flex items-center justify-center w-14 h-8 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 active:scale-90 hover:opacity-90">
-        <Link href="/ufc">
+    <ul className="flex items-center gap-6 sm:gap-8">
+      <li>
+        <Link
+          href="/ufc"
+          className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12
+                     transition-opacity hover:opacity-90 active:opacity-70"
+          aria-label="UFC predictions"
+        >
           <Image
             src="/assets/icons/UFC.webp"
             alt="UFC"
-            width={1024}
-            height={379}
-            className="object-contain cursor-pointer"
+            width={128}
+            height={48}
+            className="max-h-full max-w-full object-contain"
           />
         </Link>
       </li>
 
-      <li className="flex justify-center items-center w-14 h-8 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 active:scale-90 hover:opacity-90">
-        <Link href="/one">
+      <li>
+        <Link
+          href="/one"
+          className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12
+                     transition-opacity hover:opacity-90 active:opacity-70"
+          aria-label="ONE Championship predictions"
+        >
           <Image
             src="/assets/icons/OneChampionship.png"
-            alt="NBA"
-            width={1024}
-            height={379}
-            className="object-contain cursor-pointer"
+            alt="ONE Championship"
+            width={128}
+            height={48}
+            className="max-h-full max-w-full object-contain"
           />
         </Link>
       </li>
 
-      <li className="flex justify-center items-center w-14 h-8 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 active:scale-90 hover:opacity-90">
-        <Link href="/toprank">
+      <li>
+        <Link
+          href="/toprank"
+          className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12
+                     transition-opacity hover:opacity-90 active:opacity-70"
+          aria-label="Top Rank predictions"
+        >
           <Image
             src="/assets/icons/TopRank2.png"
-            alt="NFL"
-            width={1024}
-            height={379}
-            className="h-full w-auto object-contain scale-[0.85]"
+            alt="Top Rank"
+            width={128}
+            height={48}
+            className="max-h-full max-w-full object-contain"
           />
         </Link>
       </li>

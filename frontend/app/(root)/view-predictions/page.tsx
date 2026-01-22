@@ -4,56 +4,78 @@ import Image from 'next/image'
 import Card from '@/components/ui/Card'
 import { useRouter } from 'next/navigation'
 
-
 const Page = () => {
-    const router = useRouter();
-    
-    const sports = [
-        {
-            id: 'ufc',
-            title: 'UFC',
-            logo: '/assets/icons/UFC.webp',
-            alt: 'UFC',
-        },
-        {
-            id: 'one',
-            title: 'OneChampionship',
-            logo: '/assets/icons/OneChampionship.png',
-            alt: 'ONE',
-        },
-        {
-            id: 'toprank',
-            title: 'TopRank',
-            logo: '/assets/icons/TopRank2.png',
-            alt: 'TopRank',
-        },
-    ]
-    
-    const onClick = (src: string) => {
-        router.push(`/${src}`)
-    }
+  const router = useRouter()
+
+  const go = (path: string) => router.push(`/${path}`)
 
   return (
-    <main className="min-h-[70vh] flex flex-col items-center w-full">
-        <h1 className="mt-12 text-3xl sm:text-4xl text-white font-semibold leading-normal">
-            Choose a sport
-        </h1>
-        <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-            {sports.map((sport) => (
-                <Card 
-                    key={sport.id}
-                    onClick={() => onClick(sport.id)}
-                    className="px-6 py-8 w-48 sm:52 flex flex-col items-center gap-3 cursor-pointer hover:bg-white/10 hover:scale-[1.03] transition-all duration-200"
-                    icon={ 
-                        <div className="flex justify-center items-center h-24 w-32">
-                            <Image width={1024} height={379} src={sport.logo} alt={sport.alt}
-                            className="max-h-full max-w-full object-contain"
-                            />
-                        </div>
-                    }
+    <main className="min-h-[70vh] flex flex-col items-center w-full px-4 sm:px-6 pb-16 sm:pb-24">
+      <h1 className="mt-8 sm:mt-12 text-3xl sm:text-4xl text-white font-semibold leading-normal text-center">
+        Choose a sport
+      </h1>
+
+      <section className="mt-10 w-full max-w-4xl flex flex-col gap-6">
+        {/* Top row */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <Card
+            onClick={() => go('ufc')}
+            className="px-6 py-8 w-full sm:w-52 flex flex-col items-center gap-3 cursor-pointer
+                       hover:bg-white/10 active:scale-[0.98] hover:scale-[1.03]
+                       transition-all duration-200"
+            icon={
+              <div className="flex justify-center items-center h-24 w-32">
+                <Image
+                  width={1024}
+                  height={379}
+                  src="/assets/icons/UFC.webp"
+                  alt="UFC"
+                  className="max-h-full max-w-full object-contain"
                 />
-            ))}
-        </section>
+              </div>
+            }
+          />
+
+          <Card
+            onClick={() => go('one')}
+            className="px-6 py-8 w-full sm:w-52 flex flex-col items-center gap-3 cursor-pointer
+                       hover:bg-white/10 active:scale-[0.98] hover:scale-[1.03]
+                       transition-all duration-200"
+            icon={
+              <div className="flex justify-center items-center h-24 w-32">
+                <Image
+                  width={1024}
+                  height={379}
+                  src="/assets/icons/OneChampionship.png"
+                  alt="ONE Championship"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            }
+          />
+        </div>
+
+        {/* Bottom row */}
+        <div className="flex justify-center sm:mt-2">
+          <Card
+            onClick={() => go('toprank')}
+            className="px-6 py-8 w-full sm:w-52 flex flex-col items-center gap-3 cursor-pointer
+                       hover:bg-white/10 active:scale-[0.98] hover:scale-[1.03]
+                       transition-all duration-200"
+            icon={
+              <div className="flex justify-center items-center h-24 w-32">
+                <Image
+                  width={1024}
+                  height={379}
+                  src="/assets/icons/TopRank2.png"
+                  alt="Top Rank"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            }
+          />
+        </div>
+      </section>
     </main>
   )
 }

@@ -1,19 +1,20 @@
 import React from 'react'
 
-const NBA = () => {
+const Toprank = () => {
   return (
-       <main className="flex min-h-[60vh] sm:min-h-[70vh] flex-col items-center justify-center text-center px-4">
-      <h1 className="text-3xl md:text-4xl font-semibold text-white/90">
-        TopRank predictions coming soon
+    <main className="flex min-h-[60vh] sm:min-h-[70vh] flex-col items-center justify-center text-center px-4 pb-16 sm:pb-24">
+      <h1 className="text-2xl sm:max-w-3xl md:text-4xl font-semibold text-white/90">
+      TopRank predictions coming soon
       </h1>
 
       <p className="mt-3 text-sm md:text-base text-white/60 max-w-md">
-        We’re building data-driven predictions and explainable fight analytics for TopRank.
+      We’re building data-driven predictions and explainable fight analytics for TopRank.
       </p>
 
-      <div className="mt-6 h-px w-24 bg-white/10" />
+      <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
     </main>
   )
+  
 }
 
-export default NBA
+export default Toprank
