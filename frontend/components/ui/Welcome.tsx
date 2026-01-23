@@ -79,6 +79,46 @@ const Welcome = () => {
           />
         </div>
       </section>
+
+      <section className="mt-20 px-6 flex flex-col items-center"> 
+        <h1 className="text-2xl sm:text-3xl font-semibold text-white">
+          How FightIQ works
+        </h1>
+        <p className="mt-4 max-w-2xl text-center text-white/70">
+          A high-level view of how predictions flow through the system, from input to explainable output.
+        </p>
+
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-5xl">
+          <div>
+            <h3 className="text-lg font-semibold text-white ">
+              1. User Input
+            </h3>
+            <p className="mt-2 font-sm text-white/70 max-w-xs">
+              Select two fighters in the UI and submit a prediction request from the frontend.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-white ">
+              2. Backend Inference
+            </h3>
+            <p className="mt-2 font-sm text-white/70 max-w-xs">
+              The FastAPI backend validates the request, constructs matchup features from both fighters, and runs the trained machine learning model to generate a prediction.           
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-white">
+              3. Explainable Output
+            </h3>
+            <p className="mt-2 font-sm text-white/70 max-w-xs">
+              The system returns win probabilities, a predicted winner, and ranked contributing factors that explain the model’s decision.
+            </p>
+          </div>
+
+        </div>
+      </section>
       </div>
     </main>
   )
