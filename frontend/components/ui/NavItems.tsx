@@ -15,7 +15,7 @@ const NavItems = () => {
           aria-label="UFC predictions"
         >
           <Image
-            src="/assets/icons/UFC.webp"
+            src="/assets/icons/UFCcropped.png"
             alt="UFC"
             width={128}
             height={48}
