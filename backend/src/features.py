@@ -1,17 +1,24 @@
 import pandas as pd
 
 
-def add_features(stats: pd.DataFrame) -> pd.DataFrame:
-    stats = stats.copy()
+def add_physical_features(stats: pd.DataFrame) -> None:
+    for col in ["height_cm", "weight_in_kg", "reach_in_cm"]:
+        stats[col] = (
+            stats.groupby("weight_in_kg")[col]
+                .transform(lambda x: x.fillna(x.median()))
+                    .fillna(stats[col].median())
+        )
 
-    stats["height_cm"] = stats["height_cm"].fillna(stats["height_cm"].median())
-    stats["weight_in_kg"] = stats["weight_in_kg"].fillna(stats["weight_in_kg"].median())
 
+def add_age(stats: pd.DataFrame) -> None:
     stats["date_of_birth"] = pd.to_datetime(stats["date_of_birth"], errors="coerce")
     today = pd.to_datetime("today")
     stats["age"] = (today - stats["date_of_birth"]).dt.days // 365
     stats["age"] = stats["age"].fillna(stats["age"].median())
 
+
+
+def strike_efficiency(stats: pd.DataFrame) -> None:
     mean_strikes = (
         stats["significant_strikes_landed_per_minute"]
         .replace(0, pd.NA)
@@ -39,12 +46,13 @@ def add_features(stats: pd.DataFrame) -> pd.DataFrame:
         - defense_penalty
     )
 
+
+
+def grapple_efficiency(stats: pd.DataFrame) -> None:
     td_pressure = (
         stats["average_takedowns_landed_per_15_minutes"]
         / stats["average_takedowns_landed_per_15_minutes"].quantile(0.95)
-    )
-
-    td_pressure = td_pressure.clip(lower=0, upper=1).fillna(0)
+    ).clip(lower=0, upper=1).fillna(0)
 
     submission_pressure = (
         stats["average_submissions_attempted_per_15_minutes"] / 5
@@ -56,6 +64,9 @@ def add_features(stats: pd.DataFrame) -> pd.DataFrame:
         + 0.2 * submission_pressure
     )
 
+
+
+def performance_score(stats: pd.DataFrame) -> None:
     stats["performance"] = (
         0.3 * stats["normalized_strikes"]
         + 0.3 * (stats["significant_strike_defence"] / 100)
@@ -66,9 +77,23 @@ def add_features(stats: pd.DataFrame) -> pd.DataFrame:
     stats["performance"] *= 0.3
 
 
+
+def win_ratio(stats: pd.DataFrame) -> None:
     stats["win_ratio"] = (
         stats["wins"]
         / (stats["wins"] + stats["losses"] + stats["draws"])
     ).fillna(0)
+
+
+
+def add_features(stats: pd.DataFrame) -> pd.DataFrame:
+    stats = stats.copy()
+
+    add_physical_features(stats)
+    add_age(stats)
+    strike_efficiency(stats)
+    grapple_efficiency(stats)
+    performance_score(stats)
+    win_ratio(stats)
 
     return stats
