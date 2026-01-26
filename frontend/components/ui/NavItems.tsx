@@ -10,7 +10,7 @@ const NavItems = () => {
         <Link
           href="/ufc"
           className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12
-                    opacity-75 transition-opacity
+                    opacity-85 transition-opacity
                     hover:opacity-100 active:opacity-85"
           aria-label="UFC predictions"
         >
@@ -28,7 +28,7 @@ const NavItems = () => {
         <Link
           href="/one"
           className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12
-                    opacity-75 transition-opacity
+                    opacity-85 transition-opacity
                     hover:opacity-100 active:opacity-85"
           aria-label="ONE Championship predictions"
         >
@@ -45,9 +45,9 @@ const NavItems = () => {
       <li>
         <Link
           href="/toprank"
-          className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12
-                    opacity-75 transition-opacity
-                    hover:opacity-100 active:opacity-85"
+          className="flex items-center justify-center h-8 w-8 sm:h-10 sm:w-10
+                    opacity-85 transition-opacity
+                    hover:opacity-100 hover:fill-[#D20A0A] active:opacity-85 translate-y-[1px]"
           aria-label="Top Rank predictions"
         >
           <Image
