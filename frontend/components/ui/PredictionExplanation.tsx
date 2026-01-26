@@ -32,7 +32,7 @@ const PredictionExplanations = ({
     <section className="max-w-3xl mt-10 px-4 mx-auto">
       <div className="rounded-xl bg-white/5 border border-white/5 p-4 sm:p-6">
         <h3 className="mt-2 sm:mt-4 text-sm sm:text-base text-white/90 font-medium text-center tracking-wide">
-          Why the model favors {name} 
+          Why the model favors {name} in this matchup
         </h3>
 
         <div className="my-8 h-px bg-white/10" />

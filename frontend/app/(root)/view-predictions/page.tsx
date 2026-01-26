@@ -28,7 +28,7 @@ const Page = () => {
                 <Image
                   width={1024}
                   height={379}
-                  src="/assets/icons/UFC.webp"
+                  src="/assets/icons/UFCcropped.png"
                   alt="UFC"
                   className="max-h-full max-w-full object-contain"
                 />

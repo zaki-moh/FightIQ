@@ -143,15 +143,12 @@ const MMA = () => {
         </Button>
 
         {result && (
-          <div className="text-white mt-4 sm:mt-6 text-sm sm:text-base">
-            <p>
-              Winner:{' '}
-              <span className="font-semibold">{result.winner}</span>
-            </p>
-            <p>
-              Confidence:{' '}
-              {(result.confidence * 100).toFixed(1)}%
-            </p>
+          <div className="mt-9 items-center flex text-white/60 gap-3">
+            <div className="h-px px bg-white/10 flex-1"/>
+            <span className="font-medium text-xs tracking-wide uppercase ">
+              Model prediction
+            </span>
+            <div className="h-px px bg-white/10 flex-1"/>
           </div>
         )}
 
@@ -166,7 +163,7 @@ const MMA = () => {
         )}
 
         {result && (
-          <div className="mt-8 flex flex-col items-center gap-6 sm:flex-row sm:gap-12 sm:justify-center items-center">
+          <div className="mt-9 flex flex-col items-center gap-6 sm:flex-row sm:gap-12 sm:justify-center items-center">
             <FighterCard
               fighterName={fighterA}
               isWinner={result.winner === fighterA}
