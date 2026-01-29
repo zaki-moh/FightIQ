@@ -2,6 +2,7 @@
 import Button from '@/components/ui/Button'
 import FighterCard from '@/components/ui/FighterCard'
 import FighterSelector from '@/components/ui/FighterSelector'
+import KeyAdvantagesDelta from '@/components/ui/KeyAdvantagesDelta'
 import PredictionExplanation from '@/components/ui/PredictionExplanation'
 import React, { useState, useEffect } from 'react'
 
@@ -187,6 +188,12 @@ const MMA = () => {
         )}
         {result && !error && (
           <div className="mt-10 px-2 sm:px-0 max-w-3xl mx-auto">
+            <KeyAdvantagesDelta 
+              strikeDelta={4.6}
+              grapplingDelta={-3.5}
+              reach={2.3}
+              age={8}
+            />
             <PredictionExplanation
               name={result.winner}
               explanation={result.explanation}

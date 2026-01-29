@@ -34,8 +34,29 @@ const Footer = () => {
           <FooterItems />
         </div>
 
-        <div className="flex justify-center md:justify-start opacity-80">
-          <Socials />
+        <div className="flex flex-col gap-1">
+          <div className="flex justify-center md:justify-start opacity-80">
+            <Socials />
+          </div>
+          <div className="mt-1">
+            <a
+              href='/creator'
+              className="
+                inline-block
+                text-white/50 text-[10px]
+                cursor-pointer
+                transition-all duration-200
+                hover:text-white/80
+                hover:underline
+                hover:underline-offset-2
+                hover:decoration-white/60
+                focus:outline-none
+                focus:text-white
+              "
+            >
+              Built by Zakaria Mohamed →
+            </a>
+          </div>
         </div>
       </div>
     </footer>

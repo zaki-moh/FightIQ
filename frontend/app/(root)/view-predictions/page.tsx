@@ -16,7 +16,6 @@ const Page = () => {
       </h1>
 
       <section className="mt-10 w-full max-w-4xl flex flex-col gap-6">
-        {/* Top row */}
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <Card
             onClick={() => go('ufc')}
@@ -55,7 +54,6 @@ const Page = () => {
           />
         </div>
 
-        {/* Bottom row */}
         <div className="flex justify-center sm:mt-2">
           <Card
             onClick={() => go('toprank')}

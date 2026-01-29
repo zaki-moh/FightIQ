@@ -47,7 +47,7 @@ const NavItems = () => {
           href="/toprank"
           className="flex items-center justify-center h-8 w-8 sm:h-10 sm:w-10
                     opacity-85 transition-opacity
-                    hover:opacity-100 hover:fill-[#D20A0A] active:opacity-85 translate-y-[1px]"
+                    hover:opacity-100 active:opacity-85 translate-y-[1px]"
           aria-label="Top Rank predictions"
         >
           <Image
