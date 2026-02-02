@@ -30,22 +30,31 @@ class Matchup(BaseModel):
 class ExplanationFactor(BaseModel):
     type: str
     description: str
-    importance: int
     advantage: float
     
 class Explanation(BaseModel):
     summary: str
     factors: list[ExplanationFactor]
 
+class Fighter(BaseModel):
+    name: str
+    gender: str
+
 class PredictionResponse(BaseModel):
-    fighterA: str
-    fighterB: str
+    fighterA: Fighter
+    fighterB: Fighter
     winner: str
     confidence: float
     probabilities: dict[str, float]
     edge: Edge
     is_historic: bool
     explanation: Explanation
+    strikeDelta: float
+    grappleDelta: float
+    reachDelta: float
+    ageDelta: float
+    weightDelta: float
+    heightDelta: float
 
 @app.post("/predict", response_model=PredictionResponse)
 def predict(data: Matchup):

@@ -4,19 +4,25 @@ import fs from "fs"
 import path from "path"
 import csv from "csv-parser"
 
-const fighters: { id: number; name: string }[] = []
+type FighterRow = {
+  name?: string
+  gender?: string
+}
+
+const fighters: { id: number; name: string; gender: string }[] = []
 
 const root = process.cwd()
 
 const csvPath = path.join(
   root,
+  "backend",
   "data",
-  "ufc-fighters-statistics.csv"
+  "ufc-fighters-statistics-with-gender.csv"
 )
 
 const outputPath = path.join(
   root,
-  "sports-predictor-frontend",
+  "frontend",
   "data",
   "fighters.ts"
 )
@@ -25,18 +31,28 @@ let id = 1
 
 fs.createReadStream(csvPath)
   .pipe(csv())
-  .on("data", (row) => {
-    if (row.name) {
-      fighters.push({
-        id: id++,
-        name: row.name.trim(),
-      })
-    }
+  .on("data", (row: FighterRow) => {
+    if (!row.name) return
+
+    const name = row.name.trim()
+
+    // normalize gender values
+    const gender =
+      row.gender?.toLowerCase().startsWith("f")
+        ? "female"
+        : "male"
+
+    fighters.push({
+      id: id++,
+      name,
+      gender,
+    })
   })
   .on("end", () => {
     const fileContents = `export interface Fighter {
   id: number
   name: string
+  gender: "male" | "female"
 }
 
 export const fighters: Fighter[] = ${JSON.stringify(fighters, null, 2)}

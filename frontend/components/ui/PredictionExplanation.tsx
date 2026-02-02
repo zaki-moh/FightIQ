@@ -15,7 +15,6 @@ const PredictionExplanations = ({
     explanation?.factors?.map(f => ({
       label: f.type,
       description: f.description,
-      importance: f.importance,
       advantage: f.advantage,
     })) ?? []
 
@@ -60,7 +59,7 @@ const PredictionExplanations = ({
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-[11px] text-white/35 text-center italic">
+        <p className="mt-6 text-[11px] text-white/55 text-center italic">
           Factors are ranked by importance and relative magnitude.
         </p>
       </div>

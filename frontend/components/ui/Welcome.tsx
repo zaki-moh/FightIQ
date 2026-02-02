@@ -80,7 +80,9 @@ const Welcome = () => {
         </div>
       </section>
 
-      <section className="mt-20 px-6 flex flex-col items-center"> 
+      <div className="w-2/3 sm:w-3/4 max-w-4xl h-px bg-gradient-to-r from-transparent via-white/15 to-transparent mt-10" />
+
+      <section className="mt-10 px-6 flex flex-col items-center"> 
         <h1 className="text-2xl sm:text-3xl font-semibold text-white">
           How FightIQ works
         </h1>

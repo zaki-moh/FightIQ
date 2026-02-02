@@ -9,7 +9,7 @@ interface FighterCardProps {
   fighterName: string
   isWinner: boolean
   confidence?: number 
-  edgeType?: "striking" | "grappling" | "no_clear_advantage" | "weight" | "division"
+  edgeType?: "striking" | "grappling" | "no_clear_advantage" | "weight"
   subtitle?: string
   className?: string
 }

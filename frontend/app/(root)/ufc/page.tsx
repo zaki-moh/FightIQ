@@ -6,22 +6,51 @@ import KeyAdvantagesDelta from '@/components/ui/KeyAdvantagesDelta'
 import PredictionExplanation from '@/components/ui/PredictionExplanation'
 import React, { useState, useEffect } from 'react'
 
+type FighterInput = {
+  name: string
+  gender: string | null
+}
+
 type PredictionResult = {
-  fighterA: string
-  fighterB: string
+  fighterA: {
+    name: string
+    gender: string
+  }
+  fighterB: {
+    name: string
+    gender: string
+  }
   winner: string
   confidence: number
   probabilities: Record<string, number>
   edge: {
-    type: 'striking' | 'grappling' | 'no_clear_advantage' | 'weight' | 'division'
+    type:
+      | 'striking'
+      | 'grappling'
+      | 'no_clear_advantage'
+      | 'weight'
   }
   is_historic: boolean
   explanation: PredictionExplanation
+  strikeDelta: number
+  grappleDelta: number
+  reachDelta: number
+  ageDelta: number
+  weightDelta: number
+  heightDelta: number
 }
 
 const MMA = () => {
-  const [fighterA, setFighterA] = useState('')
-  const [fighterB, setFighterB] = useState('')
+  const [fighterA, setFighterA] = useState<FighterInput>({
+    name: '',
+    gender: null,
+  })
+
+  const [fighterB, setFighterB] = useState<FighterInput>({
+    name: '',
+    gender: null,
+  })
+
   const [error, setError] = useState<string | null>(null)
 
   const [selectedA, setSelectedA] = useState<string | null>(null)
@@ -39,23 +68,23 @@ const MMA = () => {
   }, [fighterA, fighterB])
 
   const handleChangeA = (text: string) => {
-    setFighterA(text)
-    setSelectedA(null) 
-  }
-
-  const handleSelectA = (name: string) => {
-    setFighterA(name)
-    setSelectedA(name) 
+    setFighterA({ name: text, gender: null })
+    setSelectedA(null)
   }
 
   const handleChangeB = (text: string) => {
-    setFighterB(text)
-    setSelectedB(null) 
+    setFighterB({ name: text, gender: null })
+    setSelectedB(null)
   }
 
-  const handleSelectB = (name: string) => {
-    setFighterB(name)
-    setSelectedB(name) 
+  const handleSelectA = (name: string, gender: string) => {
+    setFighterA({ name, gender })
+    setSelectedA(name)
+  }
+
+  const handleSelectB = (name: string, gender: string) => {
+    setFighterB({ name, gender })
+    setSelectedB(name)
   }
 
   const inputsFilled =
@@ -63,11 +92,7 @@ const MMA = () => {
     selectedB !== null &&
     selectedA !== selectedB
 
-  const canPredict =
-    inputsFilled &&
-    isDirty &&
-    !loading
-
+  const canPredict = inputsFilled && isDirty && !loading
 
   const handlePredict = async () => {
     setLoading(true)
@@ -80,7 +105,10 @@ const MMA = () => {
       const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fighterA, fighterB }),
+        body: JSON.stringify({
+          fighterA: fighterA.name,
+          fighterB: fighterB.name,
+        }),
       })
 
       if (!response.ok) {
@@ -90,7 +118,6 @@ const MMA = () => {
       const data = await response.json()
       setResult(data)
       setIsDirty(false)
-
     } catch (err) {
       console.error('Prediction request failed:', err)
 
@@ -118,15 +145,12 @@ const MMA = () => {
         </p>
 
         <FighterSelector
-          fighterA={fighterA}
-          fighterB={fighterB}
-
+          fighterA={fighterA.name}
+          fighterB={fighterB.name}
           onChangeA={handleChangeA}
           onSelectA={handleSelectA}
-
           onChangeB={handleChangeB}
           onSelectB={handleSelectB}
-
         />
 
         <Button
@@ -139,43 +163,45 @@ const MMA = () => {
           {loading
             ? 'Predicting...'
             : isDirty
-              ? 'Predict'
-              : 'Change fighters to re-predict'}
+            ? 'Predict'
+            : 'Change fighters to re-predict'}
         </Button>
 
         {result && (
           <div className="mt-9 items-center flex text-white/60 gap-3">
-            <div className="h-px px bg-white/10 flex-1"/>
+            <div className="h-px px bg-white/10 flex-1" />
             <span className="font-medium text-xs tracking-wide uppercase ">
               Model prediction
             </span>
-            <div className="h-px px bg-white/10 flex-1"/>
+            <div className="h-px px bg-white/10 flex-1" />
           </div>
         )}
 
         {result?.is_historic && (
           <div className="mt-3 max-w-xl mx-auto rounded-md border-l-2 border-yellow-400/40 bg-yellow-400/5 px-3 py-2">
             <p className="text-xs leading-relaxed text-yellow-300/60">
-              <span className="font-medium text-yellow-300/80">⚠️ Historical matchup</span>{" "}
-              This fight occurred during FightIQ’s training era.
-              Shown for exploration and not included in accuracy metrics.
+              <span className="font-medium text-yellow-300/80">
+                ⚠️ Historical matchup
+              </span>{' '}
+              This fight occurred during FightIQ’s training era. Shown for
+              exploration and not included in accuracy metrics.
             </p>
           </div>
         )}
 
         {result && (
-          <div className="mt-9 flex flex-col items-center gap-6 sm:flex-row sm:gap-12 sm:justify-center items-center">
+          <div className="mt-9 flex flex-col items-center gap-6 sm:flex-row sm:gap-12 sm:justify-center">
             <FighterCard
-              fighterName={fighterA}
-              isWinner={result.winner === fighterA}
-              confidence={result.probabilities[fighterA]}
+              fighterName={fighterA.name}
+              isWinner={result.winner === fighterA.name}
+              confidence={result.probabilities[fighterA.name]}
               edgeType={result.edge.type}
             />
 
             <FighterCard
-              fighterName={fighterB}
-              isWinner={result.winner === fighterB}
-              confidence={result.probabilities[fighterB]}
+              fighterName={fighterB.name}
+              isWinner={result.winner === fighterB.name}
+              confidence={result.probabilities[fighterB.name]}
               edgeType={result.edge.type}
             />
           </div>
@@ -186,14 +212,19 @@ const MMA = () => {
             {error}
           </p>
         )}
+
         {result && !error && (
           <div className="mt-10 px-2 sm:px-0 max-w-3xl mx-auto">
-            <KeyAdvantagesDelta 
-              strikeDelta={4.6}
-              grapplingDelta={-3.5}
-              reach={2.3}
-              age={8}
+            <KeyAdvantagesDelta
+              strikeDelta={result.strikeDelta}
+              grapplingDelta={result.grappleDelta}
+              reachDelta={result.reachDelta}
+              ageDelta={result.ageDelta}
+              weightDelta={result.weightDelta}
+              heightDelta={result.heightDelta}
+              winnerName={result.winner}
             />
+
             <PredictionExplanation
               name={result.winner}
               explanation={result.explanation}

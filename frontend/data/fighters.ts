@@ -1,16451 +1,20563 @@
-export type Fighter = {
+export interface Fighter {
   id: number
   name: string
+  gender: "male" | "female"
 }
 
 export const fighters: Fighter[] = [
   {
     "id": 1,
-    "name": "Robert Drysdale"
+    "name": "Robert Drysdale",
+    "gender": "male"
   },
   {
     "id": 2,
-    "name": "Daniel McWilliams"
+    "name": "Daniel McWilliams",
+    "gender": "male"
   },
   {
     "id": 3,
-    "name": "Dan Molina"
+    "name": "Dan Molina",
+    "gender": "male"
   },
   {
     "id": 4,
-    "name": "Paul Ruiz"
+    "name": "Paul Ruiz",
+    "gender": "male"
   },
   {
     "id": 5,
-    "name": "Collin Huckbody"
+    "name": "Collin Huckbody",
+    "gender": "male"
   },
   {
     "id": 6,
-    "name": "Gerald Strebendt"
+    "name": "Gerald Strebendt",
+    "gender": "male"
   },
   {
     "id": 7,
-    "name": "Isaiah Hill"
+    "name": "Isaiah Hill",
+    "gender": "male"
   },
   {
     "id": 8,
-    "name": "Kenneth Seegrist"
+    "name": "Kenneth Seegrist",
+    "gender": "male"
   },
   {
     "id": 9,
-    "name": "Will Kerr"
+    "name": "Will Kerr",
+    "gender": "male"
   },
   {
     "id": 10,
-    "name": "Neil Grove"
+    "name": "Neil Grove",
+    "gender": "male"
   },
   {
     "id": 11,
-    "name": "Raphael Butler"
+    "name": "Raphael Butler",
+    "gender": "male"
   },
   {
     "id": 12,
-    "name": "Bo Nickal"
+    "name": "Bo Nickal",
+    "gender": "male"
   },
   {
     "id": 13,
-    "name": "Ian Entwistle"
+    "name": "Ian Entwistle",
+    "gender": "male"
   },
   {
     "id": 14,
-    "name": "Megumi Fujii"
+    "name": "Megumi Fujii",
+    "gender": "male"
   },
   {
     "id": 15,
-    "name": "Gaston Reyno"
+    "name": "Gaston Reyno",
+    "gender": "male"
   },
   {
     "id": 16,
-    "name": "Kenny Ento"
+    "name": "Kenny Ento",
+    "gender": "male"
   },
   {
     "id": 17,
-    "name": "AJ McKee"
+    "name": "AJ McKee",
+    "gender": "male"
   },
   {
     "id": 18,
-    "name": "Westin Wilson"
+    "name": "Westin Wilson",
+    "gender": "male"
   },
   {
     "id": 19,
-    "name": "Philip Perez"
+    "name": "Philip Perez",
+    "gender": "male"
   },
   {
     "id": 20,
-    "name": "Brandon Shuey"
+    "name": "Brandon Shuey",
+    "gender": "male"
   },
   {
     "id": 21,
-    "name": "Dave Phillips"
+    "name": "Dave Phillips",
+    "gender": "male"
   },
   {
     "id": 22,
-    "name": "Johnny Sampaio"
+    "name": "Johnny Sampaio",
+    "gender": "male"
   },
   {
     "id": 23,
-    "name": "Dione Barbosa"
+    "name": "Dione Barbosa",
+    "gender": "male"
   },
   {
     "id": 24,
-    "name": "Zach Reese"
+    "name": "Zach Reese",
+    "gender": "male"
   },
   {
     "id": 25,
-    "name": "Rodrigo Gripp de Sousa"
+    "name": "Rodrigo Gripp de Sousa",
+    "gender": "male"
   },
   {
     "id": 26,
-    "name": "Justin Burlinson"
+    "name": "Justin Burlinson",
+    "gender": "male"
   },
   {
     "id": 27,
-    "name": "Poppies Martinez"
+    "name": "Poppies Martinez",
+    "gender": "male"
   },
   {
     "id": 28,
-    "name": "Josh Rafferty"
+    "name": "Josh Rafferty",
+    "gender": "male"
   },
   {
     "id": 29,
-    "name": "Daniel Puder"
+    "name": "Daniel Puder",
+    "gender": "male"
   },
   {
     "id": 30,
-    "name": "Yukio Sakaguchi"
+    "name": "Yukio Sakaguchi",
+    "gender": "male"
   },
   {
     "id": 31,
-    "name": "Magomed Sultanakhmedov"
+    "name": "Magomed Sultanakhmedov",
+    "gender": "male"
   },
   {
     "id": 32,
-    "name": "Jeff Newton"
+    "name": "Jeff Newton",
+    "gender": "male"
   },
   {
     "id": 33,
-    "name": "Emiliano Sordi"
+    "name": "Emiliano Sordi",
+    "gender": "male"
   },
   {
     "id": 34,
-    "name": "Erik Apple"
+    "name": "Erik Apple",
+    "gender": "male"
   },
   {
     "id": 35,
-    "name": "Fazlo Mulabitinovic"
+    "name": "Fazlo Mulabitinovic",
+    "gender": "male"
   },
   {
     "id": 36,
-    "name": "J.T Taylor"
+    "name": "J.T Taylor",
+    "gender": "male"
   },
   {
     "id": 37,
-    "name": "Adam Meredith"
+    "name": "Adam Meredith",
+    "gender": "male"
   },
   {
     "id": 38,
-    "name": "Klayton Mai"
+    "name": "Klayton Mai",
+    "gender": "male"
   },
   {
     "id": 39,
-    "name": "Ron Keslar"
+    "name": "Ron Keslar",
+    "gender": "male"
   },
   {
     "id": 40,
-    "name": "Bobby McAndrews"
+    "name": "Bobby McAndrews",
+    "gender": "male"
   },
   {
     "id": 41,
-    "name": "Ansar Chalangov"
+    "name": "Ansar Chalangov",
+    "gender": "male"
   },
   {
     "id": 42,
-    "name": "Jeremiah Constant"
+    "name": "Jeremiah Constant",
+    "gender": "male"
   },
   {
     "id": 43,
-    "name": "Paul Sass"
+    "name": "Paul Sass",
+    "gender": "male"
   },
   {
     "id": 44,
-    "name": "Eddy Millis"
+    "name": "Eddy Millis",
+    "gender": "male"
   },
   {
     "id": 45,
-    "name": "James Lee"
+    "name": "James Lee",
+    "gender": "male"
   },
   {
     "id": 46,
-    "name": "Mikhail Iloukhine"
+    "name": "Mikhail Iloukhine",
+    "gender": "male"
   },
   {
     "id": 47,
-    "name": "Kyle Jensen"
+    "name": "Kyle Jensen",
+    "gender": "male"
   },
   {
     "id": 48,
-    "name": "Ilya Kotau"
+    "name": "Ilya Kotau",
+    "gender": "male"
   },
   {
     "id": 49,
-    "name": "Trevor Harris"
+    "name": "Trevor Harris",
+    "gender": "male"
   },
   {
     "id": 50,
-    "name": "Jinnosuke Kashimura"
+    "name": "Jinnosuke Kashimura",
+    "gender": "male"
   },
   {
     "id": 51,
-    "name": "Tom Erikson"
+    "name": "Tom Erikson",
+    "gender": "male"
   },
   {
     "id": 52,
-    "name": "Jason Black"
+    "name": "Jason Black",
+    "gender": "male"
   },
   {
     "id": 53,
-    "name": "Francisco France"
+    "name": "Francisco France",
+    "gender": "male"
   },
   {
     "id": 54,
-    "name": "John Albert"
+    "name": "John Albert",
+    "gender": "male"
   },
   {
     "id": 55,
-    "name": "Daniel Swain"
+    "name": "Daniel Swain",
+    "gender": "male"
   },
   {
     "id": 56,
-    "name": "Neiman Gracie"
+    "name": "Neiman Gracie",
+    "gender": "male"
   },
   {
     "id": 57,
-    "name": "Shamil Gaziev"
+    "name": "Shamil Gaziev",
+    "gender": "male"
   },
   {
     "id": 58,
-    "name": "Masakatsu Funaki"
+    "name": "Masakatsu Funaki",
+    "gender": "male"
   },
   {
     "id": 59,
-    "name": "David Terrell"
+    "name": "David Terrell",
+    "gender": "male"
   },
   {
     "id": 60,
-    "name": "Rob MacDonald"
+    "name": "Rob MacDonald",
+    "gender": "male"
   },
   {
     "id": 61,
-    "name": "Nick Barnes"
+    "name": "Nick Barnes",
+    "gender": "male"
   },
   {
     "id": 62,
-    "name": "Matt Arroyo"
+    "name": "Matt Arroyo",
+    "gender": "male"
   },
   {
     "id": 63,
-    "name": "Diego Lopes"
+    "name": "Diego Lopes",
+    "gender": "male"
   },
   {
     "id": 64,
-    "name": "Colin Robinson"
+    "name": "Colin Robinson",
+    "gender": "male"
   },
   {
     "id": 65,
-    "name": "Nick Garcia"
+    "name": "Nick Garcia",
+    "gender": "male"
   },
   {
     "id": 66,
-    "name": "Justin Levens"
+    "name": "Justin Levens",
+    "gender": "male"
   },
   {
     "id": 67,
-    "name": "Mike Ciesnolevicz"
+    "name": "Mike Ciesnolevicz",
+    "gender": "male"
   },
   {
     "id": 68,
-    "name": "Magno Almeida"
+    "name": "Magno Almeida",
+    "gender": "male"
   },
   {
     "id": 69,
-    "name": "George Pacurariu"
+    "name": "George Pacurariu",
+    "gender": "male"
   },
   {
     "id": 70,
-    "name": "Ronaldo Candido"
+    "name": "Ronaldo Candido",
+    "gender": "male"
   },
   {
     "id": 71,
-    "name": "Alex Schoenauer"
+    "name": "Alex Schoenauer",
+    "gender": "male"
   },
   {
     "id": 72,
-    "name": "Justin Guthrie"
+    "name": "Justin Guthrie",
+    "gender": "male"
   },
   {
     "id": 73,
-    "name": "Billy Pasulatan"
+    "name": "Billy Pasulatan",
+    "gender": "male"
   },
   {
     "id": 74,
-    "name": "Aaron Ely"
+    "name": "Aaron Ely",
+    "gender": "male"
   },
   {
     "id": 75,
-    "name": "Shohei Nose"
+    "name": "Shohei Nose",
+    "gender": "male"
   },
   {
     "id": 76,
-    "name": "TJ Waldburger"
+    "name": "TJ Waldburger",
+    "gender": "male"
   },
   {
     "id": 77,
-    "name": "Ronda Rousey"
+    "name": "Ronda Rousey",
+    "gender": "female"
   },
   {
     "id": 78,
-    "name": "Nik Theotikos"
+    "name": "Nik Theotikos",
+    "gender": "male"
   },
   {
     "id": 79,
-    "name": "Valentijn Overeem"
+    "name": "Valentijn Overeem",
+    "gender": "male"
   },
   {
     "id": 80,
-    "name": "Keith Rockel"
+    "name": "Keith Rockel",
+    "gender": "male"
   },
   {
     "id": 81,
-    "name": "Mark Hughes"
+    "name": "Mark Hughes",
+    "gender": "male"
   },
   {
     "id": 82,
-    "name": "Jimmy Flick"
+    "name": "Jimmy Flick",
+    "gender": "male"
   },
   {
     "id": 83,
-    "name": "Kaline Medeiros"
+    "name": "Kaline Medeiros",
+    "gender": "male"
   },
   {
     "id": 84,
-    "name": "Takeru Uchida"
+    "name": "Takeru Uchida",
+    "gender": "male"
   },
   {
     "id": 85,
-    "name": "Joe Pearson"
+    "name": "Joe Pearson",
+    "gender": "male"
   },
   {
     "id": 86,
-    "name": "Jordan Bailey"
+    "name": "Jordan Bailey",
+    "gender": "male"
   },
   {
     "id": 87,
-    "name": "Branden Lee Hinkle"
+    "name": "Branden Lee Hinkle",
+    "gender": "male"
   },
   {
     "id": 88,
-    "name": "Goiti Yamauchi"
+    "name": "Goiti Yamauchi",
+    "gender": "male"
   },
   {
     "id": 89,
-    "name": "Masakatsu Okuda"
+    "name": "Masakatsu Okuda",
+    "gender": "male"
   },
   {
     "id": 90,
-    "name": "Wayne Cole"
+    "name": "Wayne Cole",
+    "gender": "male"
   },
   {
     "id": 91,
-    "name": "Jason Glaza"
+    "name": "Jason Glaza",
+    "gender": "male"
   },
   {
     "id": 92,
-    "name": "Bret Bergmark"
+    "name": "Bret Bergmark",
+    "gender": "male"
   },
   {
     "id": 93,
-    "name": "Genki Sudo"
+    "name": "Genki Sudo",
+    "gender": "male"
   },
   {
     "id": 94,
-    "name": "Yasuhito Namekawa"
+    "name": "Yasuhito Namekawa",
+    "gender": "male"
   },
   {
     "id": 95,
-    "name": "Sean McCorkle"
+    "name": "Sean McCorkle",
+    "gender": "male"
   },
   {
     "id": 96,
-    "name": "Jeremy Lang"
+    "name": "Jeremy Lang",
+    "gender": "male"
   },
   {
     "id": 97,
-    "name": "Rene Kronvold"
+    "name": "Rene Kronvold",
+    "gender": "male"
   },
   {
     "id": 98,
-    "name": "Victor Hugo"
+    "name": "Victor Hugo",
+    "gender": "male"
   },
   {
     "id": 99,
-    "name": "Kain Royer"
+    "name": "Kain Royer",
+    "gender": "male"
   },
   {
     "id": 100,
-    "name": "Rousimar Palhares"
+    "name": "Rousimar Palhares",
+    "gender": "male"
   },
   {
     "id": 101,
-    "name": "Clay Mitchell"
+    "name": "Clay Mitchell",
+    "gender": "male"
   },
   {
     "id": 102,
-    "name": "Karine Silva"
+    "name": "Karine Silva",
+    "gender": "male"
   },
   {
     "id": 103,
-    "name": "Dustin Hazelett"
+    "name": "Dustin Hazelett",
+    "gender": "male"
   },
   {
     "id": 104,
-    "name": "HanSeul Kim"
+    "name": "HanSeul Kim",
+    "gender": "male"
   },
   {
     "id": 105,
-    "name": "Shinya Aoki"
+    "name": "Shinya Aoki",
+    "gender": "male"
   },
   {
     "id": 106,
-    "name": "Marcus Hicks"
+    "name": "Marcus Hicks",
+    "gender": "male"
   },
   {
     "id": 107,
-    "name": "Dan Evensen"
+    "name": "Dan Evensen",
+    "gender": "male"
   },
   {
     "id": 108,
-    "name": "Ralph Gracie"
+    "name": "Ralph Gracie",
+    "gender": "male"
   },
   {
     "id": 109,
-    "name": "Charlie Kohler"
+    "name": "Charlie Kohler",
+    "gender": "male"
   },
   {
     "id": 110,
-    "name": "Alberto Crane"
+    "name": "Alberto Crane",
+    "gender": "male"
   },
   {
     "id": 111,
-    "name": "Mike Hayes"
+    "name": "Mike Hayes",
+    "gender": "male"
   },
   {
     "id": 112,
-    "name": "Bruno Carvalho"
+    "name": "Bruno Carvalho",
+    "gender": "male"
   },
   {
     "id": 113,
-    "name": "Steve Byrnes"
+    "name": "Steve Byrnes",
+    "gender": "male"
   },
   {
     "id": 114,
-    "name": "Aliaskhab Khizriev"
+    "name": "Aliaskhab Khizriev",
+    "gender": "male"
   },
   {
     "id": 115,
-    "name": "Torrez Finney"
+    "name": "Torrez Finney",
+    "gender": "male"
   },
   {
     "id": 116,
-    "name": "Bill Mahood"
+    "name": "Bill Mahood",
+    "gender": "male"
   },
   {
     "id": 117,
-    "name": "Marius Enache"
+    "name": "Marius Enache",
+    "gender": "male"
   },
   {
     "id": 118,
-    "name": "Abongo Humphrey"
+    "name": "Abongo Humphrey",
+    "gender": "male"
   },
   {
     "id": 119,
-    "name": "Antonio Trocoli"
+    "name": "Antonio Trocoli",
+    "gender": "male"
   },
   {
     "id": 120,
-    "name": "Hector Urbina"
+    "name": "Hector Urbina",
+    "gender": "male"
   },
   {
     "id": 121,
-    "name": "Gabriel Bonfim"
+    "name": "Gabriel Bonfim",
+    "gender": "male"
   },
   {
     "id": 122,
-    "name": "James Wilks"
+    "name": "James Wilks",
+    "gender": "male"
   },
   {
     "id": 123,
-    "name": "Assu Almabayev"
+    "name": "Assu Almabayev",
+    "gender": "male"
   },
   {
     "id": 124,
-    "name": "Nyamjargal Tumendemberel"
+    "name": "Nyamjargal Tumendemberel",
+    "gender": "male"
   },
   {
     "id": 125,
-    "name": "Jaqueline Amorim"
+    "name": "Jaqueline Amorim",
+    "gender": "male"
   },
   {
     "id": 126,
-    "name": "HyunSung Park"
+    "name": "HyunSung Park",
+    "gender": "male"
   },
   {
     "id": 127,
-    "name": "Igor Gracie"
+    "name": "Igor Gracie",
+    "gender": "male"
   },
   {
     "id": 128,
-    "name": "Brady Fink"
+    "name": "Brady Fink",
+    "gender": "male"
   },
   {
     "id": 129,
-    "name": "Tatsuya Mizuno"
+    "name": "Tatsuya Mizuno",
+    "gender": "male"
   },
   {
     "id": 130,
-    "name": "Per Eklund"
+    "name": "Per Eklund",
+    "gender": "male"
   },
   {
     "id": 131,
-    "name": "Daisuke Nakamura"
+    "name": "Daisuke Nakamura",
+    "gender": "male"
   },
   {
     "id": 132,
-    "name": "Brennan Ward"
+    "name": "Brennan Ward",
+    "gender": "male"
   },
   {
     "id": 133,
-    "name": "Ken Kaneko"
+    "name": "Ken Kaneko",
+    "gender": "male"
   },
   {
     "id": 134,
-    "name": "Rolando Delgado"
+    "name": "Rolando Delgado",
+    "gender": "male"
   },
   {
     "id": 135,
-    "name": "Mike King"
+    "name": "Mike King",
+    "gender": "male"
   },
   {
     "id": 136,
-    "name": "Kit Cope"
+    "name": "Kit Cope",
+    "gender": "male"
   },
   {
     "id": 137,
-    "name": "Chris Sanford"
+    "name": "Chris Sanford",
+    "gender": "male"
   },
   {
     "id": 138,
-    "name": "Junie Browning"
+    "name": "Junie Browning",
+    "gender": "male"
   },
   {
     "id": 139,
-    "name": "Preston Parsons"
+    "name": "Preston Parsons",
+    "gender": "male"
   },
   {
     "id": 140,
-    "name": "Mike Budnik"
+    "name": "Mike Budnik",
+    "gender": "male"
   },
   {
     "id": 141,
-    "name": "Zhang Tiequan"
+    "name": "Zhang Tiequan",
+    "gender": "female"
   },
   {
     "id": 142,
-    "name": "Shannon Gugerty"
+    "name": "Shannon Gugerty",
+    "gender": "male"
   },
   {
     "id": 143,
-    "name": "Allen Berube"
+    "name": "Allen Berube",
+    "gender": "male"
   },
   {
     "id": 144,
-    "name": "Tim Credeur"
+    "name": "Tim Credeur",
+    "gender": "male"
   },
   {
     "id": 145,
-    "name": "Daisuke Sugie"
+    "name": "Daisuke Sugie",
+    "gender": "male"
   },
   {
     "id": 146,
-    "name": "Herbert Burns"
+    "name": "Herbert Burns",
+    "gender": "male"
   },
   {
     "id": 147,
-    "name": "Edwin DeWees"
+    "name": "Edwin DeWees",
+    "gender": "male"
   },
   {
     "id": 148,
-    "name": "Ricardo Romero"
+    "name": "Ricardo Romero",
+    "gender": "male"
   },
   {
     "id": 149,
-    "name": "Rob Broughton"
+    "name": "Rob Broughton",
+    "gender": "male"
   },
   {
     "id": 150,
-    "name": "Ryuichi Murata"
+    "name": "Ryuichi Murata",
+    "gender": "male"
   },
   {
     "id": 151,
-    "name": "Roman Zentsov"
+    "name": "Roman Zentsov",
+    "gender": "male"
   },
   {
     "id": 152,
-    "name": "Dmitry Sosnovskiy"
+    "name": "Dmitry Sosnovskiy",
+    "gender": "male"
   },
   {
     "id": 153,
-    "name": "Jesse Taylor"
+    "name": "Jesse Taylor",
+    "gender": "male"
   },
   {
     "id": 154,
-    "name": "Alexandre Dantas"
+    "name": "Alexandre Dantas",
+    "gender": "male"
   },
   {
     "id": 155,
-    "name": "Kevin Jousset"
+    "name": "Kevin Jousset",
+    "gender": "male"
   },
   {
     "id": 156,
-    "name": "Manny Bermudez"
+    "name": "Manny Bermudez",
+    "gender": "male"
   },
   {
     "id": 157,
-    "name": "Eric Lawson"
+    "name": "Eric Lawson",
+    "gender": "male"
   },
   {
     "id": 158,
-    "name": "Sidney Outlaw"
+    "name": "Sidney Outlaw",
+    "gender": "male"
   },
   {
     "id": 159,
-    "name": "Maiquel Falcao"
+    "name": "Maiquel Falcao",
+    "gender": "male"
   },
   {
     "id": 160,
-    "name": "Samandar Murodov"
+    "name": "Samandar Murodov",
+    "gender": "male"
   },
   {
     "id": 161,
-    "name": "Katsuaki Furuki"
+    "name": "Katsuaki Furuki",
+    "gender": "male"
   },
   {
     "id": 162,
-    "name": "Matt Secor"
+    "name": "Matt Secor",
+    "gender": "male"
   },
   {
     "id": 163,
-    "name": "Danny Mitchell"
+    "name": "Danny Mitchell",
+    "gender": "male"
   },
   {
     "id": 164,
-    "name": "Adam Piccolotti"
+    "name": "Adam Piccolotti",
+    "gender": "male"
   },
   {
     "id": 165,
-    "name": "Scott Shaffer"
+    "name": "Scott Shaffer",
+    "gender": "male"
   },
   {
     "id": 166,
-    "name": "Raymond Daniels"
+    "name": "Raymond Daniels",
+    "gender": "male"
   },
   {
     "id": 167,
-    "name": "Fabiano Iha"
+    "name": "Fabiano Iha",
+    "gender": "male"
   },
   {
     "id": 168,
-    "name": "Jan Nortje"
+    "name": "Jan Nortje",
+    "gender": "male"
   },
   {
     "id": 169,
-    "name": "Will Ribeiro"
+    "name": "Will Ribeiro",
+    "gender": "male"
   },
   {
     "id": 170,
-    "name": "Anthony Hernandez"
+    "name": "Anthony Hernandez",
+    "gender": "male"
   },
   {
     "id": 171,
-    "name": "Marcus Jones"
+    "name": "Marcus Jones",
+    "gender": "male"
   },
   {
     "id": 172,
-    "name": "Tatsuro Taira"
+    "name": "Tatsuro Taira",
+    "gender": "male"
   },
   {
     "id": 173,
-    "name": "Jason High"
+    "name": "Jason High",
+    "gender": "male"
   },
   {
     "id": 174,
-    "name": "Mike Nickels"
+    "name": "Mike Nickels",
+    "gender": "male"
   },
   {
     "id": 175,
-    "name": "Shaheen Santana"
+    "name": "Shaheen Santana",
+    "gender": "male"
   },
   {
     "id": 176,
-    "name": "Sam Patterson"
+    "name": "Sam Patterson",
+    "gender": "male"
   },
   {
     "id": 177,
-    "name": "Rei Tsuruya"
+    "name": "Rei Tsuruya",
+    "gender": "male"
   },
   {
     "id": 178,
-    "name": "Yoshiyuki Yoshida"
+    "name": "Yoshiyuki Yoshida",
+    "gender": "male"
   },
   {
     "id": 179,
-    "name": "Nadia Kassem"
+    "name": "Nadia Kassem",
+    "gender": "male"
   },
   {
     "id": 180,
-    "name": "Rinya Nakamura"
+    "name": "Rinya Nakamura",
+    "gender": "male"
   },
   {
     "id": 181,
-    "name": "Ron Waterman"
+    "name": "Ron Waterman",
+    "gender": "male"
   },
   {
     "id": 182,
-    "name": "Abel Cullum"
+    "name": "Abel Cullum",
+    "gender": "male"
   },
   {
     "id": 183,
-    "name": "Andre Galvao"
+    "name": "Andre Galvao",
+    "gender": "male"
   },
   {
     "id": 184,
-    "name": "Dan Lauzon"
+    "name": "Dan Lauzon",
+    "gender": "male"
   },
   {
     "id": 185,
-    "name": "Darrick Minner"
+    "name": "Darrick Minner",
+    "gender": "male"
   },
   {
     "id": 186,
-    "name": "Edson Berto"
+    "name": "Edson Berto",
+    "gender": "male"
   },
   {
     "id": 187,
-    "name": "Khamzat Chimaev"
+    "name": "Khamzat Chimaev",
+    "gender": "male"
   },
   {
     "id": 188,
-    "name": "Carlton Jones"
+    "name": "Carlton Jones",
+    "gender": "male"
   },
   {
     "id": 189,
-    "name": "Charles Oliveira"
+    "name": "Charles Oliveira",
+    "gender": "male"
   },
   {
     "id": 190,
-    "name": "Matt Horwich"
+    "name": "Matt Horwich",
+    "gender": "male"
   },
   {
     "id": 191,
-    "name": "Charles McCarthy"
+    "name": "Charles McCarthy",
+    "gender": "male"
   },
   {
     "id": 192,
-    "name": "Jeff Bedard"
+    "name": "Jeff Bedard",
+    "gender": "male"
   },
   {
     "id": 193,
-    "name": "Roybert Echeverria"
+    "name": "Roybert Echeverria",
+    "gender": "male"
   },
   {
     "id": 194,
-    "name": "Julian Marquez"
+    "name": "Julian Marquez",
+    "gender": "male"
   },
   {
     "id": 195,
-    "name": "Allan Goes"
+    "name": "Allan Goes",
+    "gender": "male"
   },
   {
     "id": 196,
-    "name": "Joseph Morales"
+    "name": "Joseph Morales",
+    "gender": "male"
   },
   {
     "id": 197,
-    "name": "Nick Thompson"
+    "name": "Nick Thompson",
+    "gender": "male"
   },
   {
     "id": 198,
-    "name": "Dustin Pague"
+    "name": "Dustin Pague",
+    "gender": "male"
   },
   {
     "id": 199,
-    "name": "Coty Wheeler"
+    "name": "Coty Wheeler",
+    "gender": "male"
   },
   {
     "id": 200,
-    "name": "Lu Kai"
+    "name": "Lu Kai",
+    "gender": "male"
   },
   {
     "id": 201,
-    "name": "Renato Sobral"
+    "name": "Renato Sobral",
+    "gender": "male"
   },
   {
     "id": 202,
-    "name": "Daniel Roberts"
+    "name": "Daniel Roberts",
+    "gender": "male"
   },
   {
     "id": 203,
-    "name": "Keigo Kunihara"
+    "name": "Keigo Kunihara",
+    "gender": "male"
   },
   {
     "id": 204,
-    "name": "Jeimeson Saudino"
+    "name": "Jeimeson Saudino",
+    "gender": "male"
   },
   {
     "id": 205,
-    "name": "Marloes Coenen"
+    "name": "Marloes Coenen",
+    "gender": "male"
   },
   {
     "id": 206,
-    "name": "Daniel Spohn"
+    "name": "Daniel Spohn",
+    "gender": "male"
   },
   {
     "id": 207,
-    "name": "Andre Petroski"
+    "name": "Andre Petroski",
+    "gender": "male"
   },
   {
     "id": 208,
-    "name": "Dave Menne"
+    "name": "Dave Menne",
+    "gender": "male"
   },
   {
     "id": 209,
-    "name": "Kyle Kurtz"
+    "name": "Kyle Kurtz",
+    "gender": "male"
   },
   {
     "id": 210,
-    "name": "Renato Verissimo"
+    "name": "Renato Verissimo",
+    "gender": "male"
   },
   {
     "id": 211,
-    "name": "Ken Shamrock"
+    "name": "Ken Shamrock",
+    "gender": "male"
   },
   {
     "id": 212,
-    "name": "Lumumba Sayers"
+    "name": "Lumumba Sayers",
+    "gender": "male"
   },
   {
     "id": 213,
-    "name": "Dale Hartt"
+    "name": "Dale Hartt",
+    "gender": "male"
   },
   {
     "id": 214,
-    "name": "Thomas Petersen"
+    "name": "Thomas Petersen",
+    "gender": "male"
   },
   {
     "id": 215,
-    "name": "Tom Murphy"
+    "name": "Tom Murphy",
+    "gender": "male"
   },
   {
     "id": 216,
-    "name": "Naoki Inoue"
+    "name": "Naoki Inoue",
+    "gender": "male"
   },
   {
     "id": 217,
-    "name": "Phil Cardella"
+    "name": "Phil Cardella",
+    "gender": "male"
   },
   {
     "id": 218,
-    "name": "Clayton Carpenter"
+    "name": "Clayton Carpenter",
+    "gender": "male"
   },
   {
     "id": 219,
-    "name": "Ivan Salaverry"
+    "name": "Ivan Salaverry",
+    "gender": "male"
   },
   {
     "id": 220,
-    "name": "Keisuke Fujiwara"
+    "name": "Keisuke Fujiwara",
+    "gender": "male"
   },
   {
     "id": 221,
-    "name": "Cody McKenzie"
+    "name": "Cody McKenzie",
+    "gender": "male"
   },
   {
     "id": 222,
-    "name": "Tamdan McCrory"
+    "name": "Tamdan McCrory",
+    "gender": "male"
   },
   {
     "id": 223,
-    "name": "Liam McGeary"
+    "name": "Liam McGeary",
+    "gender": "male"
   },
   {
     "id": 224,
-    "name": "Jailton Almeida"
+    "name": "Jailton Almeida",
+    "gender": "male"
   },
   {
     "id": 225,
-    "name": "Doug Marshall"
+    "name": "Doug Marshall",
+    "gender": "male"
   },
   {
     "id": 226,
-    "name": "Mark Weir"
+    "name": "Mark Weir",
+    "gender": "male"
   },
   {
     "id": 227,
-    "name": "Shane del Rosario"
+    "name": "Shane del Rosario",
+    "gender": "male"
   },
   {
     "id": 228,
-    "name": "Juan Espino"
+    "name": "Juan Espino",
+    "gender": "male"
   },
   {
     "id": 229,
-    "name": "Jason Lambert"
+    "name": "Jason Lambert",
+    "gender": "male"
   },
   {
     "id": 230,
-    "name": "Noad Lahat"
+    "name": "Noad Lahat",
+    "gender": "male"
   },
   {
     "id": 231,
-    "name": "Paddy Pimblett"
+    "name": "Paddy Pimblett",
+    "gender": "male"
   },
   {
     "id": 232,
-    "name": "Gabriel Miranda"
+    "name": "Gabriel Miranda",
+    "gender": "male"
   },
   {
     "id": 233,
-    "name": "Rob Kimmons"
+    "name": "Rob Kimmons",
+    "gender": "male"
   },
   {
     "id": 234,
-    "name": "Hermes Franca"
+    "name": "Hermes Franca",
+    "gender": "male"
   },
   {
     "id": 235,
-    "name": "Cesar Arzamendia"
+    "name": "Cesar Arzamendia",
+    "gender": "male"
   },
   {
     "id": 236,
-    "name": "Antonio Rodrigo Nogueira"
+    "name": "Antonio Rodrigo Nogueira",
+    "gender": "male"
   },
   {
     "id": 237,
-    "name": "Chris Lytle"
+    "name": "Chris Lytle",
+    "gender": "male"
   },
   {
     "id": 238,
-    "name": "Ramiz Brahimaj"
+    "name": "Ramiz Brahimaj",
+    "gender": "male"
   },
   {
     "id": 239,
-    "name": "Eugene Jackson"
+    "name": "Eugene Jackson",
+    "gender": "male"
   },
   {
     "id": 240,
-    "name": "Joe Doerksen"
+    "name": "Joe Doerksen",
+    "gender": "male"
   },
   {
     "id": 241,
-    "name": "Wes Sims"
+    "name": "Wes Sims",
+    "gender": "male"
   },
   {
     "id": 242,
-    "name": "JP Buys"
+    "name": "JP Buys",
+    "gender": "male"
   },
   {
     "id": 243,
-    "name": "Brandon Royval"
+    "name": "Brandon Royval",
+    "gender": "male"
   },
   {
     "id": 244,
-    "name": "Nate Smith"
+    "name": "Nate Smith",
+    "gender": "male"
   },
   {
     "id": 245,
-    "name": "Mats Nilsson"
+    "name": "Mats Nilsson",
+    "gender": "male"
   },
   {
     "id": 246,
-    "name": "Hideo Tokoro"
+    "name": "Hideo Tokoro",
+    "gender": "male"
   },
   {
     "id": 247,
-    "name": "Jose Maria"
+    "name": "Jose Maria",
+    "gender": "male"
   },
   {
     "id": 248,
-    "name": "Yoshiki Takahashi"
+    "name": "Yoshiki Takahashi",
+    "gender": "male"
   },
   {
     "id": 249,
-    "name": "Ikram Aliskerov"
+    "name": "Ikram Aliskerov",
+    "gender": "male"
   },
   {
     "id": 250,
-    "name": "Mike Joy"
+    "name": "Mike Joy",
+    "gender": "male"
   },
   {
     "id": 251,
-    "name": "Kimo Leopoldo"
+    "name": "Kimo Leopoldo",
+    "gender": "male"
   },
   {
     "id": 252,
-    "name": "Chas Skelly"
+    "name": "Chas Skelly",
+    "gender": "male"
   },
   {
     "id": 253,
-    "name": "Ruan Potts"
+    "name": "Ruan Potts",
+    "gender": "male"
   },
   {
     "id": 254,
-    "name": "Mark Holst"
+    "name": "Mark Holst",
+    "gender": "male"
   },
   {
     "id": 255,
-    "name": "Seth Petruzelli"
+    "name": "Seth Petruzelli",
+    "gender": "male"
   },
   {
     "id": 256,
-    "name": "Christian Morecraft"
+    "name": "Christian Morecraft",
+    "gender": "male"
   },
   {
     "id": 257,
-    "name": "Niklas Backstrom"
+    "name": "Niklas Backstrom",
+    "gender": "male"
   },
   {
     "id": 258,
-    "name": "Kaynan Kruschewsky"
+    "name": "Kaynan Kruschewsky",
+    "gender": "male"
   },
   {
     "id": 259,
-    "name": "Drew Fickett"
+    "name": "Drew Fickett",
+    "gender": "male"
   },
   {
     "id": 260,
-    "name": "Ryan Thomas"
+    "name": "Ryan Thomas",
+    "gender": "male"
   },
   {
     "id": 261,
-    "name": "Ryan Hall"
+    "name": "Ryan Hall",
+    "gender": "male"
   },
   {
     "id": 262,
-    "name": "Dustin Kimura"
+    "name": "Dustin Kimura",
+    "gender": "male"
   },
   {
     "id": 263,
-    "name": "Alex Gilpin"
+    "name": "Alex Gilpin",
+    "gender": "male"
   },
   {
     "id": 264,
-    "name": "Josh Grispi"
+    "name": "Josh Grispi",
+    "gender": "male"
   },
   {
     "id": 265,
-    "name": "Anthony Torres"
+    "name": "Anthony Torres",
+    "gender": "male"
   },
   {
     "id": 266,
-    "name": "Danny Henry"
+    "name": "Danny Henry",
+    "gender": "male"
   },
   {
     "id": 267,
-    "name": "Hidehiko Yoshida"
+    "name": "Hidehiko Yoshida",
+    "gender": "male"
   },
   {
     "id": 268,
-    "name": "Joe Stevenson"
+    "name": "Joe Stevenson",
+    "gender": "male"
   },
   {
     "id": 269,
-    "name": "Everett Cummings"
+    "name": "Everett Cummings",
+    "gender": "male"
   },
   {
     "id": 270,
-    "name": "Jose Landi-Jons"
+    "name": "Jose Landi-Jons",
+    "gender": "male"
   },
   {
     "id": 271,
-    "name": "Wilson Gouveia"
+    "name": "Wilson Gouveia",
+    "gender": "male"
   },
   {
     "id": 272,
-    "name": "Chris Price"
+    "name": "Chris Price",
+    "gender": "male"
   },
   {
     "id": 273,
-    "name": "Fredson Paixao"
+    "name": "Fredson Paixao",
+    "gender": "male"
   },
   {
     "id": 274,
-    "name": "Jake Hadley"
+    "name": "Jake Hadley",
+    "gender": "male"
   },
   {
     "id": 275,
-    "name": "Chase Hooper"
+    "name": "Chase Hooper",
+    "gender": "male"
   },
   {
     "id": 276,
-    "name": "Daniel Gracie"
+    "name": "Daniel Gracie",
+    "gender": "male"
   },
   {
     "id": 277,
-    "name": "Masakazu Imanari"
+    "name": "Masakazu Imanari",
+    "gender": "male"
   },
   {
     "id": 278,
-    "name": "Andrew Holbrook"
+    "name": "Andrew Holbrook",
+    "gender": "male"
   },
   {
     "id": 279,
-    "name": "Mike Cook"
+    "name": "Mike Cook",
+    "gender": "male"
   },
   {
     "id": 280,
-    "name": "Polyana Viana"
+    "name": "Polyana Viana",
+    "gender": "female"
   },
   {
     "id": 281,
-    "name": "Logan Clark"
+    "name": "Logan Clark",
+    "gender": "male"
   },
   {
     "id": 282,
-    "name": "Nate Loughran"
+    "name": "Nate Loughran",
+    "gender": "male"
   },
   {
     "id": 283,
-    "name": "Tim McKenzie"
+    "name": "Tim McKenzie",
+    "gender": "male"
   },
   {
     "id": 284,
-    "name": "Mackens Semerzier"
+    "name": "Mackens Semerzier",
+    "gender": "male"
   },
   {
     "id": 285,
-    "name": "Dennis Hallman"
+    "name": "Dennis Hallman",
+    "gender": "male"
   },
   {
     "id": 286,
-    "name": "Chris Brennan"
+    "name": "Chris Brennan",
+    "gender": "male"
   },
   {
     "id": 287,
-    "name": "Josh Sampo"
+    "name": "Josh Sampo",
+    "gender": "male"
   },
   {
     "id": 288,
-    "name": "Katsuhisa Fujii"
+    "name": "Katsuhisa Fujii",
+    "gender": "male"
   },
   {
     "id": 289,
-    "name": "Brooke Mayo"
+    "name": "Brooke Mayo",
+    "gender": "male"
   },
   {
     "id": 290,
-    "name": "Satoru Kitaoka"
+    "name": "Satoru Kitaoka",
+    "gender": "male"
   },
   {
     "id": 291,
-    "name": "Daermisi Zhawupasi"
+    "name": "Daermisi Zhawupasi",
+    "gender": "male"
   },
   {
     "id": 292,
-    "name": "Jeremiah Metcalf"
+    "name": "Jeremiah Metcalf",
+    "gender": "male"
   },
   {
     "id": 293,
-    "name": "Harry Hunsucker"
+    "name": "Harry Hunsucker",
+    "gender": "male"
   },
   {
     "id": 294,
-    "name": "Charles Bennett"
+    "name": "Charles Bennett",
+    "gender": "male"
   },
   {
     "id": 295,
-    "name": "Kevin Syler"
+    "name": "Kevin Syler",
+    "gender": "male"
   },
   {
     "id": 296,
-    "name": "Mike Zichelle"
+    "name": "Mike Zichelle",
+    "gender": "male"
   },
   {
     "id": 297,
-    "name": "Dave Galera"
+    "name": "Dave Galera",
+    "gender": "male"
   },
   {
     "id": 298,
-    "name": "Kaik Brito"
+    "name": "Kaik Brito",
+    "gender": "male"
   },
   {
     "id": 299,
-    "name": "Josh Thornburg"
+    "name": "Josh Thornburg",
+    "gender": "male"
   },
   {
     "id": 300,
-    "name": "Chad Reiner"
+    "name": "Chad Reiner",
+    "gender": "male"
   },
   {
     "id": 301,
-    "name": "Jacob Volkmann"
+    "name": "Jacob Volkmann",
+    "gender": "male"
   },
   {
     "id": 302,
-    "name": "Brock Larson"
+    "name": "Brock Larson",
+    "gender": "male"
   },
   {
     "id": 303,
-    "name": "Christian Lohsen"
+    "name": "Christian Lohsen",
+    "gender": "male"
   },
   {
     "id": 304,
-    "name": "Brent Primus"
+    "name": "Brent Primus",
+    "gender": "male"
   },
   {
     "id": 305,
-    "name": "Nick Serra"
+    "name": "Nick Serra",
+    "gender": "male"
   },
   {
     "id": 306,
-    "name": "Chris Holdsworth"
+    "name": "Chris Holdsworth",
+    "gender": "male"
   },
   {
     "id": 307,
-    "name": "David Mitchell"
+    "name": "David Mitchell",
+    "gender": "male"
   },
   {
     "id": 308,
-    "name": "John Halverson"
+    "name": "John Halverson",
+    "gender": "male"
   },
   {
     "id": 309,
-    "name": "Sean Holden"
+    "name": "Sean Holden",
+    "gender": "male"
   },
   {
     "id": 310,
-    "name": "Eric Wray"
+    "name": "Eric Wray",
+    "gender": "male"
   },
   {
     "id": 311,
-    "name": "Kevin Haley"
+    "name": "Kevin Haley",
+    "gender": "male"
   },
   {
     "id": 312,
-    "name": "Mariusz Ksiazkiewicz"
+    "name": "Mariusz Ksiazkiewicz",
+    "gender": "male"
   },
   {
     "id": 313,
-    "name": "Young Sam Jung"
+    "name": "Young Sam Jung",
+    "gender": "male"
   },
   {
     "id": 314,
-    "name": "Luis Rodriguez"
+    "name": "Luis Rodriguez",
+    "gender": "male"
   },
   {
     "id": 315,
-    "name": "Jarrod Kwitty"
+    "name": "Jarrod Kwitty",
+    "gender": "male"
   },
   {
     "id": 316,
-    "name": "Jimmy Crute"
+    "name": "Jimmy Crute",
+    "gender": "male"
   },
   {
     "id": 317,
-    "name": "Joe Lauzon"
+    "name": "Joe Lauzon",
+    "gender": "male"
   },
   {
     "id": 318,
-    "name": "Tomoya Miyashita"
+    "name": "Tomoya Miyashita",
+    "gender": "male"
   },
   {
     "id": 319,
-    "name": "Jack Cartwright"
+    "name": "Jack Cartwright",
+    "gender": "male"
   },
   {
     "id": 320,
-    "name": "Jafel Filho"
+    "name": "Jafel Filho",
+    "gender": "male"
   },
   {
     "id": 321,
-    "name": "Mark Scanlon"
+    "name": "Mark Scanlon",
+    "gender": "male"
   },
   {
     "id": 322,
-    "name": "Eric Esch"
+    "name": "Eric Esch",
+    "gender": "male"
   },
   {
     "id": 323,
-    "name": "Chris Tickle"
+    "name": "Chris Tickle",
+    "gender": "male"
   },
   {
     "id": 324,
-    "name": "Ivana Petrovic"
+    "name": "Ivana Petrovic",
+    "gender": "male"
   },
   {
     "id": 325,
-    "name": "Kazuki Okubo"
+    "name": "Kazuki Okubo",
+    "gender": "male"
   },
   {
     "id": 326,
-    "name": "Abdul-Kerim Edilov"
+    "name": "Abdul-Kerim Edilov",
+    "gender": "male"
   },
   {
     "id": 327,
-    "name": "Eddy Ellis"
+    "name": "Eddy Ellis",
+    "gender": "male"
   },
   {
     "id": 328,
-    "name": "Jason MacDonald"
+    "name": "Jason MacDonald",
+    "gender": "male"
   },
   {
     "id": 329,
-    "name": "Micah Miller"
+    "name": "Micah Miller",
+    "gender": "male"
   },
   {
     "id": 330,
-    "name": "Allan Begosso"
+    "name": "Allan Begosso",
+    "gender": "male"
   },
   {
     "id": 331,
-    "name": "Yuma Horiuchi"
+    "name": "Yuma Horiuchi",
+    "gender": "male"
   },
   {
     "id": 332,
-    "name": "John Gunderson"
+    "name": "John Gunderson",
+    "gender": "male"
   },
   {
     "id": 333,
-    "name": "Chris Haseman"
+    "name": "Chris Haseman",
+    "gender": "male"
   },
   {
     "id": 334,
-    "name": "Josh Smith"
+    "name": "Josh Smith",
+    "gender": "male"
   },
   {
     "id": 335,
-    "name": "Martin Kampmann"
+    "name": "Martin Kampmann",
+    "gender": "male"
   },
   {
     "id": 336,
-    "name": "Frank Mir"
+    "name": "Frank Mir",
+    "gender": "male"
   },
   {
     "id": 337,
-    "name": "Mitch Gagnon"
+    "name": "Mitch Gagnon",
+    "gender": "male"
   },
   {
     "id": 338,
-    "name": "Lucio Linhares"
+    "name": "Lucio Linhares",
+    "gender": "male"
   },
   {
     "id": 339,
-    "name": "Roger Gracie"
+    "name": "Roger Gracie",
+    "gender": "male"
   },
   {
     "id": 340,
-    "name": "Saidyokub Kakhramonov"
+    "name": "Saidyokub Kakhramonov",
+    "gender": "male"
   },
   {
     "id": 341,
-    "name": "Mickey Gall"
+    "name": "Mickey Gall",
+    "gender": "male"
   },
   {
     "id": 342,
-    "name": "Joe Soto"
+    "name": "Joe Soto",
+    "gender": "male"
   },
   {
     "id": 343,
-    "name": "Austin Vanderford"
+    "name": "Austin Vanderford",
+    "gender": "male"
   },
   {
     "id": 344,
-    "name": "Pat Sabatini"
+    "name": "Pat Sabatini",
+    "gender": "male"
   },
   {
     "id": 345,
-    "name": "Jessamyn Duke"
+    "name": "Jessamyn Duke",
+    "gender": "male"
   },
   {
     "id": 346,
-    "name": "Ryan Jensen"
+    "name": "Ryan Jensen",
+    "gender": "male"
   },
   {
     "id": 347,
-    "name": "Roman Mitichyan"
+    "name": "Roman Mitichyan",
+    "gender": "male"
   },
   {
     "id": 348,
-    "name": "Georgi Karakhanyan"
+    "name": "Georgi Karakhanyan",
+    "gender": "male"
   },
   {
     "id": 349,
-    "name": "Brad Mitchell"
+    "name": "Brad Mitchell",
+    "gender": "male"
   },
   {
     "id": 350,
-    "name": "Ikuhisa Minowa"
+    "name": "Ikuhisa Minowa",
+    "gender": "male"
   },
   {
     "id": 351,
-    "name": "Joachim Hansen"
+    "name": "Joachim Hansen",
+    "gender": "male"
   },
   {
     "id": 352,
-    "name": "Jordan Griffin"
+    "name": "Jordan Griffin",
+    "gender": "male"
   },
   {
     "id": 353,
-    "name": "Jon Delos Reyes"
+    "name": "Jon Delos Reyes",
+    "gender": "male"
   },
   {
     "id": 354,
-    "name": "Luke Stewart"
+    "name": "Luke Stewart",
+    "gender": "male"
   },
   {
     "id": 355,
-    "name": "Vagner Rocha"
+    "name": "Vagner Rocha",
+    "gender": "male"
   },
   {
     "id": 356,
-    "name": "Kyle Daukaus"
+    "name": "Kyle Daukaus",
+    "gender": "male"
   },
   {
     "id": 357,
-    "name": "Fedor Emelianenko"
+    "name": "Fedor Emelianenko",
+    "gender": "male"
   },
   {
     "id": 358,
-    "name": "Stephen Banaszak"
+    "name": "Stephen Banaszak",
+    "gender": "male"
   },
   {
     "id": 359,
-    "name": "Rani Yahya"
+    "name": "Rani Yahya",
+    "gender": "male"
   },
   {
     "id": 360,
-    "name": "Erick Wanderlei"
+    "name": "Erick Wanderlei",
+    "gender": "male"
   },
   {
     "id": 361,
-    "name": "Shane Roller"
+    "name": "Shane Roller",
+    "gender": "male"
   },
   {
     "id": 362,
-    "name": "Aleksei Oleinik"
+    "name": "Aleksei Oleinik",
+    "gender": "male"
   },
   {
     "id": 363,
-    "name": "Ryan Quinn"
+    "name": "Ryan Quinn",
+    "gender": "male"
   },
   {
     "id": 364,
-    "name": "Keisuke Sasu"
+    "name": "Keisuke Sasu",
+    "gender": "male"
   },
   {
     "id": 365,
-    "name": "Don Shainis"
+    "name": "Don Shainis",
+    "gender": "male"
   },
   {
     "id": 366,
-    "name": "Dan Argueta"
+    "name": "Dan Argueta",
+    "gender": "male"
   },
   {
     "id": 367,
-    "name": "Jeremy  Freitag"
+    "name": "Jeremy  Freitag",
+    "gender": "male"
   },
   {
     "id": 368,
-    "name": "Raul Rosas Jr."
+    "name": "Raul Rosas Jr.",
+    "gender": "male"
   },
   {
     "id": 369,
-    "name": "Rodolfo Marques Diniz"
+    "name": "Rodolfo Marques Diniz",
+    "gender": "male"
   },
   {
     "id": 370,
-    "name": "Miguel Baeza"
+    "name": "Miguel Baeza",
+    "gender": "male"
   },
   {
     "id": 371,
-    "name": "Joe Proctor"
+    "name": "Joe Proctor",
+    "gender": "male"
   },
   {
     "id": 372,
-    "name": "Luc Bondole"
+    "name": "Luc Bondole",
+    "gender": "male"
   },
   {
     "id": 373,
-    "name": "Amanda Cooper"
+    "name": "Amanda Cooper",
+    "gender": "female"
   },
   {
     "id": 374,
-    "name": "Juliana Miller"
+    "name": "Juliana Miller",
+    "gender": "male"
   },
   {
     "id": 375,
-    "name": "Louis Smolka"
+    "name": "Louis Smolka",
+    "gender": "male"
   },
   {
     "id": 376,
-    "name": "Assuerio Silva"
+    "name": "Assuerio Silva",
+    "gender": "male"
   },
   {
     "id": 377,
-    "name": "Johnny Munoz"
+    "name": "Johnny Munoz",
+    "gender": "male"
   },
   {
     "id": 378,
-    "name": "Jake Rosholt"
+    "name": "Jake Rosholt",
+    "gender": "male"
   },
   {
     "id": 379,
-    "name": "Sanae Kikuta"
+    "name": "Sanae Kikuta",
+    "gender": "male"
   },
   {
     "id": 380,
-    "name": "Eric Schafer"
+    "name": "Eric Schafer",
+    "gender": "male"
   },
   {
     "id": 381,
-    "name": "Dan Miller"
+    "name": "Dan Miller",
+    "gender": "male"
   },
   {
     "id": 382,
-    "name": "Jim Miller"
+    "name": "Jim Miller",
+    "gender": "male"
   },
   {
     "id": 383,
-    "name": "Jesus Aguilar"
+    "name": "Jesus Aguilar",
+    "gender": "male"
   },
   {
     "id": 384,
-    "name": "Alex Serdyukov"
+    "name": "Alex Serdyukov",
+    "gender": "male"
   },
   {
     "id": 385,
-    "name": "Brian Foster"
+    "name": "Brian Foster",
+    "gender": "male"
   },
   {
     "id": 386,
-    "name": "Lee Murray"
+    "name": "Lee Murray",
+    "gender": "male"
   },
   {
     "id": 387,
-    "name": "Blas Avena"
+    "name": "Blas Avena",
+    "gender": "male"
   },
   {
     "id": 388,
-    "name": "Joe Pyfer"
+    "name": "Joe Pyfer",
+    "gender": "male"
   },
   {
     "id": 389,
-    "name": "Sam Spengler"
+    "name": "Sam Spengler",
+    "gender": "male"
   },
   {
     "id": 390,
-    "name": "Cole Miller"
+    "name": "Cole Miller",
+    "gender": "male"
   },
   {
     "id": 391,
-    "name": "Casey Olson"
+    "name": "Casey Olson",
+    "gender": "male"
   },
   {
     "id": 392,
-    "name": "Daniel Pineda"
+    "name": "Daniel Pineda",
+    "gender": "male"
   },
   {
     "id": 393,
-    "name": "Kendall Grove"
+    "name": "Kendall Grove",
+    "gender": "male"
   },
   {
     "id": 394,
-    "name": "Danillo Villefort"
+    "name": "Danillo Villefort",
+    "gender": "male"
   },
   {
     "id": 395,
-    "name": "Karlos Vemola"
+    "name": "Karlos Vemola",
+    "gender": "male"
   },
   {
     "id": 396,
-    "name": "Jose Palacios"
+    "name": "Jose Palacios",
+    "gender": "male"
   },
   {
     "id": 397,
-    "name": "Cristina Stanciu"
+    "name": "Cristina Stanciu",
+    "gender": "male"
   },
   {
     "id": 398,
-    "name": "Tom Aspinall"
+    "name": "Tom Aspinall",
+    "gender": "male"
   },
   {
     "id": 399,
-    "name": "Dean Hancock"
+    "name": "Dean Hancock",
+    "gender": "male"
   },
   {
     "id": 400,
-    "name": "Nassourdine Imavov"
+    "name": "Nassourdine Imavov",
+    "gender": "male"
   },
   {
     "id": 401,
-    "name": "Roman Dolidze"
+    "name": "Roman Dolidze",
+    "gender": "male"
   },
   {
     "id": 402,
-    "name": "Brendan Allen"
+    "name": "Brendan Allen",
+    "gender": "male"
   },
   {
     "id": 403,
-    "name": "Steve Berger"
+    "name": "Steve Berger",
+    "gender": "male"
   },
   {
     "id": 404,
-    "name": "David Zawada"
+    "name": "David Zawada",
+    "gender": "male"
   },
   {
     "id": 405,
-    "name": "Kin Moy"
+    "name": "Kin Moy",
+    "gender": "male"
   },
   {
     "id": 406,
-    "name": "Erisson Ferreira"
+    "name": "Erisson Ferreira",
+    "gender": "male"
   },
   {
     "id": 407,
-    "name": "Billy Giovanella"
+    "name": "Billy Giovanella",
+    "gender": "male"
   },
   {
     "id": 408,
-    "name": "Charlene Gellner"
+    "name": "Charlene Gellner",
+    "gender": "male"
   },
   {
     "id": 409,
-    "name": "Stefan Struve"
+    "name": "Stefan Struve",
+    "gender": "male"
   },
   {
     "id": 410,
-    "name": "Donny Walker"
+    "name": "Donny Walker",
+    "gender": "male"
   },
   {
     "id": 411,
-    "name": "Jason Knight"
+    "name": "Jason Knight",
+    "gender": "male"
   },
   {
     "id": 412,
-    "name": "Cole Smith"
+    "name": "Cole Smith",
+    "gender": "male"
   },
   {
     "id": 413,
-    "name": "Misha Cirkunov"
+    "name": "Misha Cirkunov",
+    "gender": "male"
   },
   {
     "id": 414,
-    "name": "Ralek Gracie"
+    "name": "Ralek Gracie",
+    "gender": "male"
   },
   {
     "id": 415,
-    "name": "Kazushi Sakuraba"
+    "name": "Kazushi Sakuraba",
+    "gender": "male"
   },
   {
     "id": 416,
-    "name": "Dustin Neace"
+    "name": "Dustin Neace",
+    "gender": "male"
   },
   {
     "id": 417,
-    "name": "Claude Patrick"
+    "name": "Claude Patrick",
+    "gender": "male"
   },
   {
     "id": 418,
-    "name": "Simeon Thoresen"
+    "name": "Simeon Thoresen",
+    "gender": "male"
   },
   {
     "id": 419,
-    "name": "Cody Donovan"
+    "name": "Cody Donovan",
+    "gender": "male"
   },
   {
     "id": 420,
-    "name": "Carlo Prater"
+    "name": "Carlo Prater",
+    "gender": "male"
   },
   {
     "id": 421,
-    "name": "Damon Jackson"
+    "name": "Damon Jackson",
+    "gender": "male"
   },
   {
     "id": 422,
-    "name": "Gina Carano"
+    "name": "Gina Carano",
+    "gender": "male"
   },
   {
     "id": 423,
-    "name": "Bobby Nash"
+    "name": "Bobby Nash",
+    "gender": "male"
   },
   {
     "id": 424,
-    "name": "Paulo Filho"
+    "name": "Paulo Filho",
+    "gender": "male"
   },
   {
     "id": 425,
-    "name": "Roland Delorme"
+    "name": "Roland Delorme",
+    "gender": "male"
   },
   {
     "id": 426,
-    "name": "Myktybek Orolbai"
+    "name": "Myktybek Orolbai",
+    "gender": "male"
   },
   {
     "id": 427,
-    "name": "Daniel Barez"
+    "name": "Daniel Barez",
+    "gender": "male"
   },
   {
     "id": 428,
-    "name": "Mateusz Rebecki"
+    "name": "Mateusz Rebecki",
+    "gender": "male"
   },
   {
     "id": 429,
-    "name": "Miguel Torres"
+    "name": "Miguel Torres",
+    "gender": "male"
   },
   {
     "id": 430,
-    "name": "George Sotiropoulos"
+    "name": "George Sotiropoulos",
+    "gender": "male"
   },
   {
     "id": 431,
-    "name": "Deiveson Figueiredo"
+    "name": "Deiveson Figueiredo",
+    "gender": "male"
   },
   {
     "id": 432,
-    "name": "Dan Bobish"
+    "name": "Dan Bobish",
+    "gender": "male"
   },
   {
     "id": 433,
-    "name": "Chris Wilson"
+    "name": "Chris Wilson",
+    "gender": "male"
   },
   {
     "id": 434,
-    "name": "Jess Liaudin"
+    "name": "Jess Liaudin",
+    "gender": "male"
   },
   {
     "id": 435,
-    "name": "Kestutis Smirnovas"
+    "name": "Kestutis Smirnovas",
+    "gender": "male"
   },
   {
     "id": 436,
-    "name": "Marcio Cruz"
+    "name": "Marcio Cruz",
+    "gender": "male"
   },
   {
     "id": 437,
-    "name": "Paul Craig"
+    "name": "Paul Craig",
+    "gender": "male"
   },
   {
     "id": 438,
-    "name": "Neil Seery"
+    "name": "Neil Seery",
+    "gender": "male"
   },
   {
     "id": 439,
-    "name": "Ryuta Sakurai"
+    "name": "Ryuta Sakurai",
+    "gender": "male"
   },
   {
     "id": 440,
-    "name": "Shane Nelson"
+    "name": "Shane Nelson",
+    "gender": "male"
   },
   {
     "id": 441,
-    "name": "Steven Siler"
+    "name": "Steven Siler",
+    "gender": "male"
   },
   {
     "id": 442,
-    "name": "Bryce Mitchell"
+    "name": "Bryce Mitchell",
+    "gender": "male"
   },
   {
     "id": 443,
-    "name": "Marcus McGhee"
+    "name": "Marcus McGhee",
+    "gender": "male"
   },
   {
     "id": 444,
-    "name": "Eiji Mitsuoka"
+    "name": "Eiji Mitsuoka",
+    "gender": "male"
   },
   {
     "id": 445,
-    "name": "Jamie Colleen"
+    "name": "Jamie Colleen",
+    "gender": "male"
   },
   {
     "id": 446,
-    "name": "Mayra Bueno Silva"
+    "name": "Mayra Bueno Silva",
+    "gender": "male"
   },
   {
     "id": 447,
-    "name": "Rafaello Oliveira"
+    "name": "Rafaello Oliveira",
+    "gender": "male"
   },
   {
     "id": 448,
-    "name": "Caio Magalhaes"
+    "name": "Caio Magalhaes",
+    "gender": "male"
   },
   {
     "id": 449,
-    "name": "Satoshi Ishii"
+    "name": "Satoshi Ishii",
+    "gender": "male"
   },
   {
     "id": 450,
-    "name": "Justin James"
+    "name": "Justin James",
+    "gender": "male"
   },
   {
     "id": 451,
-    "name": "Jerrod Sanders"
+    "name": "Jerrod Sanders",
+    "gender": "male"
   },
   {
     "id": 452,
-    "name": "Saimon Oliveira"
+    "name": "Saimon Oliveira",
+    "gender": "male"
   },
   {
     "id": 453,
-    "name": "Fabricio Camoes"
+    "name": "Fabricio Camoes",
+    "gender": "male"
   },
   {
     "id": 454,
-    "name": "Pawel Nastula"
+    "name": "Pawel Nastula",
+    "gender": "male"
   },
   {
     "id": 455,
-    "name": "Shavkat Rakhmonov"
+    "name": "Shavkat Rakhmonov",
+    "gender": "male"
   },
   {
     "id": 456,
-    "name": "Dileno Lopes"
+    "name": "Dileno Lopes",
+    "gender": "male"
   },
   {
     "id": 457,
-    "name": "Mike Pyle"
+    "name": "Mike Pyle",
+    "gender": "male"
   },
   {
     "id": 458,
-    "name": "Thomas Denny"
+    "name": "Thomas Denny",
+    "gender": "male"
   },
   {
     "id": 459,
-    "name": "Matt Veach"
+    "name": "Matt Veach",
+    "gender": "male"
   },
   {
     "id": 460,
-    "name": "Bu-Kyung Jung"
+    "name": "Bu-Kyung Jung",
+    "gender": "male"
   },
   {
     "id": 461,
-    "name": "Ryan Spann"
+    "name": "Ryan Spann",
+    "gender": "male"
   },
   {
     "id": 462,
-    "name": "Godofredo Pepey"
+    "name": "Godofredo Pepey",
+    "gender": "male"
   },
   {
     "id": 463,
-    "name": "Gerald Meerschaert"
+    "name": "Gerald Meerschaert",
+    "gender": "male"
   },
   {
     "id": 464,
-    "name": "Max Rohskopf"
+    "name": "Max Rohskopf",
+    "gender": "male"
   },
   {
     "id": 465,
-    "name": "Joe Solecki"
+    "name": "Joe Solecki",
+    "gender": "male"
   },
   {
     "id": 466,
-    "name": "Javier Vazquez"
+    "name": "Javier Vazquez",
+    "gender": "male"
   },
   {
     "id": 467,
-    "name": "Chris Indich"
+    "name": "Chris Indich",
+    "gender": "male"
   },
   {
     "id": 468,
-    "name": "Gavin Tucker"
+    "name": "Gavin Tucker",
+    "gender": "male"
   },
   {
     "id": 469,
-    "name": "Mike Malott"
+    "name": "Mike Malott",
+    "gender": "male"
   },
   {
     "id": 470,
-    "name": "Oskar Piechota"
+    "name": "Oskar Piechota",
+    "gender": "male"
   },
   {
     "id": 471,
-    "name": "Jason Von Flue"
+    "name": "Jason Von Flue",
+    "gender": "male"
   },
   {
     "id": 472,
-    "name": "Tony DeSouza"
+    "name": "Tony DeSouza",
+    "gender": "male"
   },
   {
     "id": 473,
-    "name": "Ilia Topuria"
+    "name": "Ilia Topuria",
+    "gender": "male"
   },
   {
     "id": 474,
-    "name": "Ryuki Ueyama"
+    "name": "Ryuki Ueyama",
+    "gender": "male"
   },
   {
     "id": 475,
-    "name": "Charles Byrd"
+    "name": "Charles Byrd",
+    "gender": "male"
   },
   {
     "id": 476,
-    "name": "Teemu Packalen"
+    "name": "Teemu Packalen",
+    "gender": "male"
   },
   {
     "id": 477,
-    "name": "Rafael Alves"
+    "name": "Rafael Alves",
+    "gender": "male"
   },
   {
     "id": 478,
-    "name": "Thiago Tavares"
+    "name": "Thiago Tavares",
+    "gender": "male"
   },
   {
     "id": 479,
-    "name": "Andre Muniz"
+    "name": "Andre Muniz",
+    "gender": "male"
   },
   {
     "id": 480,
-    "name": "Matt Wiman"
+    "name": "Matt Wiman",
+    "gender": "male"
   },
   {
     "id": 481,
-    "name": "Patrick Walsh"
+    "name": "Patrick Walsh",
+    "gender": "male"
   },
   {
     "id": 482,
-    "name": "Michihiro Omigawa"
+    "name": "Michihiro Omigawa",
+    "gender": "male"
   },
   {
     "id": 483,
-    "name": "Paul Kelly"
+    "name": "Paul Kelly",
+    "gender": "male"
   },
   {
     "id": 484,
-    "name": "Grant Dawson"
+    "name": "Grant Dawson",
+    "gender": "male"
   },
   {
     "id": 485,
-    "name": "Gadzhimurad Antigulov"
+    "name": "Gadzhimurad Antigulov",
+    "gender": "male"
   },
   {
     "id": 486,
-    "name": "Said Nurmagomedov"
+    "name": "Said Nurmagomedov",
+    "gender": "male"
   },
   {
     "id": 487,
-    "name": "Brian Bowles"
+    "name": "Brian Bowles",
+    "gender": "male"
   },
   {
     "id": 488,
-    "name": "Dokonjonosuke Mishima"
+    "name": "Dokonjonosuke Mishima",
+    "gender": "male"
   },
   {
     "id": 489,
-    "name": "Luke Cummo"
+    "name": "Luke Cummo",
+    "gender": "male"
   },
   {
     "id": 490,
-    "name": "Joe Taimanglo"
+    "name": "Joe Taimanglo",
+    "gender": "male"
   },
   {
     "id": 491,
-    "name": "Terry Etim"
+    "name": "Terry Etim",
+    "gender": "male"
   },
   {
     "id": 492,
-    "name": "Bobby Moffett"
+    "name": "Bobby Moffett",
+    "gender": "male"
   },
   {
     "id": 493,
-    "name": "Josh Barnett"
+    "name": "Josh Barnett",
+    "gender": "male"
   },
   {
     "id": 494,
-    "name": "Mackenzie Dern"
+    "name": "Mackenzie Dern",
+    "gender": "female"
   },
   {
     "id": 495,
-    "name": "Chel Erwin-Davis"
+    "name": "Chel Erwin-Davis",
+    "gender": "male"
   },
   {
     "id": 496,
-    "name": "Colton Smith"
+    "name": "Colton Smith",
+    "gender": "male"
   },
   {
     "id": 497,
-    "name": "Tony Kelley"
+    "name": "Tony Kelley",
+    "gender": "male"
   },
   {
     "id": 498,
-    "name": "Darrell Montague"
+    "name": "Darrell Montague",
+    "gender": "male"
   },
   {
     "id": 499,
-    "name": "Rodolfo Vieira"
+    "name": "Rodolfo Vieira",
+    "gender": "male"
   },
   {
     "id": 500,
-    "name": "Carlos Eduardo Rocha"
+    "name": "Carlos Eduardo Rocha",
+    "gender": "male"
   },
   {
     "id": 501,
-    "name": "Tom Lawlor"
+    "name": "Tom Lawlor",
+    "gender": "male"
   },
   {
     "id": 502,
-    "name": "Michael McDonald"
+    "name": "Michael McDonald",
+    "gender": "male"
   },
   {
     "id": 503,
-    "name": "Walel Watson"
+    "name": "Walel Watson",
+    "gender": "male"
   },
   {
     "id": 504,
-    "name": "Mike Massenzio"
+    "name": "Mike Massenzio",
+    "gender": "male"
   },
   {
     "id": 505,
-    "name": "Roan Carneiro"
+    "name": "Roan Carneiro",
+    "gender": "male"
   },
   {
     "id": 506,
-    "name": "Hector Sandoval"
+    "name": "Hector Sandoval",
+    "gender": "male"
   },
   {
     "id": 507,
-    "name": "Mario Sperry"
+    "name": "Mario Sperry",
+    "gender": "male"
   },
   {
     "id": 508,
-    "name": "Livinha Souza"
+    "name": "Livinha Souza",
+    "gender": "male"
   },
   {
     "id": 509,
-    "name": "Nikita Krylov"
+    "name": "Nikita Krylov",
+    "gender": "male"
   },
   {
     "id": 510,
-    "name": "Robert McDaniel"
+    "name": "Robert McDaniel",
+    "gender": "male"
   },
   {
     "id": 511,
-    "name": "Jason Dent"
+    "name": "Jason Dent",
+    "gender": "male"
   },
   {
     "id": 512,
-    "name": "Fernando Gonzalez"
+    "name": "Fernando Gonzalez",
+    "gender": "male"
   },
   {
     "id": 513,
-    "name": "Yaotzin Meza"
+    "name": "Yaotzin Meza",
+    "gender": "male"
   },
   {
     "id": 514,
-    "name": "Kengo Ura"
+    "name": "Kengo Ura",
+    "gender": "male"
   },
   {
     "id": 515,
-    "name": "Jimy Hettes"
+    "name": "Jimy Hettes",
+    "gender": "male"
   },
   {
     "id": 516,
-    "name": "Erick Silva"
+    "name": "Erick Silva",
+    "gender": "male"
   },
   {
     "id": 517,
-    "name": "Claudio Puelles"
+    "name": "Claudio Puelles",
+    "gender": "male"
   },
   {
     "id": 518,
-    "name": "Benoit Saint Denis"
+    "name": "Benoit Saint Denis",
+    "gender": "male"
   },
   {
     "id": 519,
-    "name": "Roger Zapata"
+    "name": "Roger Zapata",
+    "gender": "male"
   },
   {
     "id": 520,
-    "name": "Elias Garcia"
+    "name": "Elias Garcia",
+    "gender": "male"
   },
   {
     "id": 521,
-    "name": "Julija Stoliarenko"
+    "name": "Julija Stoliarenko",
+    "gender": "male"
   },
   {
     "id": 522,
-    "name": "Christian Rodriguez"
+    "name": "Christian Rodriguez",
+    "gender": "male"
   },
   {
     "id": 523,
-    "name": "Josh Fremd"
+    "name": "Josh Fremd",
+    "gender": "male"
   },
   {
     "id": 524,
-    "name": "Marcus Davis"
+    "name": "Marcus Davis",
+    "gender": "male"
   },
   {
     "id": 525,
-    "name": "Chris Fishgold"
+    "name": "Chris Fishgold",
+    "gender": "male"
   },
   {
     "id": 526,
-    "name": "Mario Bautista"
+    "name": "Mario Bautista",
+    "gender": "male"
   },
   {
     "id": 527,
-    "name": "Travis Galbraith"
+    "name": "Travis Galbraith",
+    "gender": "male"
   },
   {
     "id": 528,
-    "name": "Kenny Florian"
+    "name": "Kenny Florian",
+    "gender": "male"
   },
   {
     "id": 529,
-    "name": "Muhammad Mokaev"
+    "name": "Muhammad Mokaev",
+    "gender": "male"
   },
   {
     "id": 530,
-    "name": "Hunter Azure"
+    "name": "Hunter Azure",
+    "gender": "male"
   },
   {
     "id": 531,
-    "name": "Papy Abedi"
+    "name": "Papy Abedi",
+    "gender": "male"
   },
   {
     "id": 532,
-    "name": "Rodrigo de Lima"
+    "name": "Rodrigo de Lima",
+    "gender": "male"
   },
   {
     "id": 533,
-    "name": "Daniel Lacerda"
+    "name": "Daniel Lacerda",
+    "gender": "male"
   },
   {
     "id": 534,
-    "name": "TJ Brown"
+    "name": "TJ Brown",
+    "gender": "male"
   },
   {
     "id": 535,
-    "name": "Nate Diaz"
+    "name": "Nate Diaz",
+    "gender": "male"
   },
   {
     "id": 536,
-    "name": "James Thompson"
+    "name": "James Thompson",
+    "gender": "male"
   },
   {
     "id": 537,
-    "name": "Mark Bocek"
+    "name": "Mark Bocek",
+    "gender": "male"
   },
   {
     "id": 538,
-    "name": "Liana Jojua"
+    "name": "Liana Jojua",
+    "gender": "male"
   },
   {
     "id": 539,
-    "name": "Ben Saunders"
+    "name": "Ben Saunders",
+    "gender": "male"
   },
   {
     "id": 540,
-    "name": "Matthew Lopez"
+    "name": "Matthew Lopez",
+    "gender": "male"
   },
   {
     "id": 541,
-    "name": "Josh Thomson"
+    "name": "Josh Thomson",
+    "gender": "male"
   },
   {
     "id": 542,
-    "name": "Pablo Garza"
+    "name": "Pablo Garza",
+    "gender": "male"
   },
   {
     "id": 543,
-    "name": "Alex Perez"
+    "name": "Alex Perez",
+    "gender": "male"
   },
   {
     "id": 544,
-    "name": "Richard Crunkilton"
+    "name": "Richard Crunkilton",
+    "gender": "male"
   },
   {
     "id": 545,
-    "name": "Evan Tanner"
+    "name": "Evan Tanner",
+    "gender": "male"
   },
   {
     "id": 546,
-    "name": "Jacare Souza"
+    "name": "Jacare Souza",
+    "gender": "male"
   },
   {
     "id": 547,
-    "name": "Matt Brown"
+    "name": "Matt Brown",
+    "gender": "male"
   },
   {
     "id": 548,
-    "name": "Barb Honchak"
+    "name": "Barb Honchak",
+    "gender": "male"
   },
   {
     "id": 549,
-    "name": "Joel Alvarez"
+    "name": "Joel Alvarez",
+    "gender": "male"
   },
   {
     "id": 550,
-    "name": "Jason Brilz"
+    "name": "Jason Brilz",
+    "gender": "male"
   },
   {
     "id": 551,
-    "name": "Noah Thomas"
+    "name": "Noah Thomas",
+    "gender": "male"
   },
   {
     "id": 552,
-    "name": "Eduarda Moura"
+    "name": "Eduarda Moura",
+    "gender": "male"
   },
   {
     "id": 553,
-    "name": "Josh Neer"
+    "name": "Josh Neer",
+    "gender": "male"
   },
   {
     "id": 554,
-    "name": "Matt Lindland"
+    "name": "Matt Lindland",
+    "gender": "male"
   },
   {
     "id": 555,
-    "name": "Ryan Couture"
+    "name": "Ryan Couture",
+    "gender": "male"
   },
   {
     "id": 556,
-    "name": "Bobby Southworth"
+    "name": "Bobby Southworth",
+    "gender": "male"
   },
   {
     "id": 557,
-    "name": "Nissen Osterneck"
+    "name": "Nissen Osterneck",
+    "gender": "male"
   },
   {
     "id": 558,
-    "name": "Paddy Holohan"
+    "name": "Paddy Holohan",
+    "gender": "male"
   },
   {
     "id": 559,
-    "name": "Zelg Galesic"
+    "name": "Zelg Galesic",
+    "gender": "male"
   },
   {
     "id": 560,
-    "name": "Vinicius Moreira"
+    "name": "Vinicius Moreira",
+    "gender": "male"
   },
   {
     "id": 561,
-    "name": "Marcus Aurelio"
+    "name": "Marcus Aurelio",
+    "gender": "male"
   },
   {
     "id": 562,
-    "name": "Clay Harvison"
+    "name": "Clay Harvison",
+    "gender": "male"
   },
   {
     "id": 563,
-    "name": "Marcin Held"
+    "name": "Marcin Held",
+    "gender": "male"
   },
   {
     "id": 564,
-    "name": "Edgar Chairez"
+    "name": "Edgar Chairez",
+    "gender": "male"
   },
   {
     "id": 565,
-    "name": "Adam Cella"
+    "name": "Adam Cella",
+    "gender": "male"
   },
   {
     "id": 566,
-    "name": "Shayna Baszler"
+    "name": "Shayna Baszler",
+    "gender": "male"
   },
   {
     "id": 567,
-    "name": "Miesha Tate"
+    "name": "Miesha Tate",
+    "gender": "female"
   },
   {
     "id": 568,
-    "name": "Thiago Moises"
+    "name": "Thiago Moises",
+    "gender": "male"
   },
   {
     "id": 569,
-    "name": "Jason Miller"
+    "name": "Jason Miller",
+    "gender": "male"
   },
   {
     "id": 570,
-    "name": "Chad George"
+    "name": "Chad George",
+    "gender": "male"
   },
   {
     "id": 571,
-    "name": "Dong Sik Yoon"
+    "name": "Dong Sik Yoon",
+    "gender": "male"
   },
   {
     "id": 572,
-    "name": "Sam Hoger"
+    "name": "Sam Hoger",
+    "gender": "male"
   },
   {
     "id": 573,
-    "name": "Everett Sims"
+    "name": "Everett Sims",
+    "gender": "male"
   },
   {
     "id": 574,
-    "name": "Brian Ortega"
+    "name": "Brian Ortega",
+    "gender": "male"
   },
   {
     "id": 575,
-    "name": "Ricardo Almeida"
+    "name": "Ricardo Almeida",
+    "gender": "male"
   },
   {
     "id": 576,
-    "name": "John Alessio"
+    "name": "John Alessio",
+    "gender": "male"
   },
   {
     "id": 577,
-    "name": "Daiju Takase"
+    "name": "Daiju Takase",
+    "gender": "male"
   },
   {
     "id": 578,
-    "name": "Fabricio Werdum"
+    "name": "Fabricio Werdum",
+    "gender": "male"
   },
   {
     "id": 579,
-    "name": "Greg Nagy"
+    "name": "Greg Nagy",
+    "gender": "male"
   },
   {
     "id": 580,
-    "name": "Billy Quarantillo"
+    "name": "Billy Quarantillo",
+    "gender": "male"
   },
   {
     "id": 581,
-    "name": "Denis Kang"
+    "name": "Denis Kang",
+    "gender": "male"
   },
   {
     "id": 582,
-    "name": "Rafael Dias"
+    "name": "Rafael Dias",
+    "gender": "male"
   },
   {
     "id": 583,
-    "name": "Bobby Hoffman"
+    "name": "Bobby Hoffman",
+    "gender": "male"
   },
   {
     "id": 584,
-    "name": "Luke Flores"
+    "name": "Luke Flores",
+    "gender": "male"
   },
   {
     "id": 585,
-    "name": "Alvin Robinson"
+    "name": "Alvin Robinson",
+    "gender": "male"
   },
   {
     "id": 586,
-    "name": "Michael McBride"
+    "name": "Michael McBride",
+    "gender": "male"
   },
   {
     "id": 587,
-    "name": "CB Dollaway"
+    "name": "CB Dollaway",
+    "gender": "male"
   },
   {
     "id": 588,
-    "name": "Jeremiah Wells"
+    "name": "Jeremiah Wells",
+    "gender": "male"
   },
   {
     "id": 589,
-    "name": "Kevin Ferguson"
+    "name": "Kevin Ferguson",
+    "gender": "male"
   },
   {
     "id": 590,
-    "name": "Joao Paulo Faria"
+    "name": "Joao Paulo Faria",
+    "gender": "male"
   },
   {
     "id": 591,
-    "name": "Paulo Thiago"
+    "name": "Paulo Thiago",
+    "gender": "male"
   },
   {
     "id": 592,
-    "name": "Elvis Sinosic"
+    "name": "Elvis Sinosic",
+    "gender": "male"
   },
   {
     "id": 593,
-    "name": "Sean Brady"
+    "name": "Sean Brady",
+    "gender": "male"
   },
   {
     "id": 594,
-    "name": "Yuta Sasaki"
+    "name": "Yuta Sasaki",
+    "gender": "male"
   },
   {
     "id": 595,
-    "name": "Ricardo Arona"
+    "name": "Ricardo Arona",
+    "gender": "male"
   },
   {
     "id": 596,
-    "name": "Vitor Ribeiro"
+    "name": "Vitor Ribeiro",
+    "gender": "male"
   },
   {
     "id": 597,
-    "name": "Murilo Rua"
+    "name": "Murilo Rua",
+    "gender": "male"
   },
   {
     "id": 598,
-    "name": "Yizha"
+    "name": "Yizha",
+    "gender": "male"
   },
   {
     "id": 599,
-    "name": "Leandro Issa"
+    "name": "Leandro Issa",
+    "gender": "male"
   },
   {
     "id": 600,
-    "name": "Travis Wiuff"
+    "name": "Travis Wiuff",
+    "gender": "male"
   },
   {
     "id": 601,
-    "name": "Jordan Johnson"
+    "name": "Jordan Johnson",
+    "gender": "male"
   },
   {
     "id": 602,
-    "name": "Tresean Gore"
+    "name": "Tresean Gore",
+    "gender": "male"
   },
   {
     "id": 603,
-    "name": "Gilbert Smith"
+    "name": "Gilbert Smith",
+    "gender": "male"
   },
   {
     "id": 604,
-    "name": "Jake Shields"
+    "name": "Jake Shields",
+    "gender": "male"
   },
   {
     "id": 605,
-    "name": "Naoya Ogawa"
+    "name": "Naoya Ogawa",
+    "gender": "male"
   },
   {
     "id": 606,
-    "name": "Jeff Curran"
+    "name": "Jeff Curran",
+    "gender": "male"
   },
   {
     "id": 607,
-    "name": "Gabriel Santos"
+    "name": "Gabriel Santos",
+    "gender": "male"
   },
   {
     "id": 608,
-    "name": "Donald Cerrone"
+    "name": "Donald Cerrone",
+    "gender": "male"
   },
   {
     "id": 609,
-    "name": "Donnie Liles"
+    "name": "Donnie Liles",
+    "gender": "male"
   },
   {
     "id": 610,
-    "name": "Jason Ireland"
+    "name": "Jason Ireland",
+    "gender": "male"
   },
   {
     "id": 611,
-    "name": "Jalin Turner"
+    "name": "Jalin Turner",
+    "gender": "male"
   },
   {
     "id": 612,
-    "name": "Yan Cabral"
+    "name": "Yan Cabral",
+    "gender": "female"
   },
   {
     "id": 613,
-    "name": "Jesse Forbes"
+    "name": "Jesse Forbes",
+    "gender": "male"
   },
   {
     "id": 614,
-    "name": "Jared Rollins"
+    "name": "Jared Rollins",
+    "gender": "male"
   },
   {
     "id": 615,
-    "name": "Kamuela Kirk"
+    "name": "Kamuela Kirk",
+    "gender": "male"
   },
   {
     "id": 616,
-    "name": "Brandon Halsey"
+    "name": "Brandon Halsey",
+    "gender": "male"
   },
   {
     "id": 617,
-    "name": "Murilo Bustamante"
+    "name": "Murilo Bustamante",
+    "gender": "male"
   },
   {
     "id": 618,
-    "name": "Dustin Poirier"
+    "name": "Dustin Poirier",
+    "gender": "male"
   },
   {
     "id": 619,
-    "name": "Jordan Rinaldi"
+    "name": "Jordan Rinaldi",
+    "gender": "male"
   },
   {
     "id": 620,
-    "name": "Nik Lentz"
+    "name": "Nik Lentz",
+    "gender": "male"
   },
   {
     "id": 621,
-    "name": "Din Thomas"
+    "name": "Din Thomas",
+    "gender": "male"
   },
   {
     "id": 622,
-    "name": "Christian Wellisch"
+    "name": "Christian Wellisch",
+    "gender": "male"
   },
   {
     "id": 623,
-    "name": "Erin Blanchfield"
+    "name": "Erin Blanchfield",
+    "gender": "male"
   },
   {
     "id": 624,
-    "name": "Luis Pena"
+    "name": "Luis Pena",
+    "gender": "male"
   },
   {
     "id": 625,
-    "name": "JunYong Park"
+    "name": "JunYong Park",
+    "gender": "male"
   },
   {
     "id": 626,
-    "name": "Allen Crowder"
+    "name": "Allen Crowder",
+    "gender": "male"
   },
   {
     "id": 627,
-    "name": "Matt Hughes"
+    "name": "Matt Hughes",
+    "gender": "male"
   },
   {
     "id": 628,
-    "name": "Mike Guymon"
+    "name": "Mike Guymon",
+    "gender": "male"
   },
   {
     "id": 629,
-    "name": "Dylan Lockard"
+    "name": "Dylan Lockard",
+    "gender": "male"
   },
   {
     "id": 630,
-    "name": "Dan Christison"
+    "name": "Dan Christison",
+    "gender": "male"
   },
   {
     "id": 631,
-    "name": "Darren Elkins"
+    "name": "Darren Elkins",
+    "gender": "male"
   },
   {
     "id": 632,
-    "name": "Alvaro Herrera Mendoza"
+    "name": "Alvaro Herrera Mendoza",
+    "gender": "male"
   },
   {
     "id": 633,
-    "name": "Justin Jaynes"
+    "name": "Justin Jaynes",
+    "gender": "male"
   },
   {
     "id": 634,
-    "name": "Steven Koslow"
+    "name": "Steven Koslow",
+    "gender": "male"
   },
   {
     "id": 635,
-    "name": "Jordan Leavitt"
+    "name": "Jordan Leavitt",
+    "gender": "male"
   },
   {
     "id": 636,
-    "name": "Rubens Xavier"
+    "name": "Rubens Xavier",
+    "gender": "male"
   },
   {
     "id": 637,
-    "name": "Mike Santiago"
+    "name": "Mike Santiago",
+    "gender": "male"
   },
   {
     "id": 638,
-    "name": "James McSweeney"
+    "name": "James McSweeney",
+    "gender": "male"
   },
   {
     "id": 639,
-    "name": "Dricus Du Plessis"
+    "name": "Dricus Du Plessis",
+    "gender": "male"
   },
   {
     "id": 640,
-    "name": "Gabriel Gonzaga"
+    "name": "Gabriel Gonzaga",
+    "gender": "male"
   },
   {
     "id": 641,
-    "name": "John Maguire"
+    "name": "John Maguire",
+    "gender": "male"
   },
   {
     "id": 642,
-    "name": "Anthony Perosh"
+    "name": "Anthony Perosh",
+    "gender": "male"
   },
   {
     "id": 643,
-    "name": "Dennis Bermudez"
+    "name": "Dennis Bermudez",
+    "gender": "male"
   },
   {
     "id": 644,
-    "name": "Cody Brundage"
+    "name": "Cody Brundage",
+    "gender": "male"
   },
   {
     "id": 645,
-    "name": "Rich Clementi"
+    "name": "Rich Clementi",
+    "gender": "male"
   },
   {
     "id": 646,
-    "name": "Gabriel Benitez"
+    "name": "Gabriel Benitez",
+    "gender": "male"
   },
   {
     "id": 647,
-    "name": "Daniel Straus"
+    "name": "Daniel Straus",
+    "gender": "male"
   },
   {
     "id": 648,
-    "name": "Makwan Amirkhani"
+    "name": "Makwan Amirkhani",
+    "gender": "male"
   },
   {
     "id": 649,
-    "name": "Georges St-Pierre"
+    "name": "Georges St-Pierre",
+    "gender": "male"
   },
   {
     "id": 650,
-    "name": "Goran Reljic"
+    "name": "Goran Reljic",
+    "gender": "male"
   },
   {
     "id": 651,
-    "name": "Pat Healy"
+    "name": "Pat Healy",
+    "gender": "male"
   },
   {
     "id": 652,
-    "name": "Loopy Godinez"
+    "name": "Loopy Godinez",
+    "gender": "male"
   },
   {
     "id": 653,
-    "name": "Youssef Zalal"
+    "name": "Youssef Zalal",
+    "gender": "male"
   },
   {
     "id": 654,
-    "name": "John Moraga"
+    "name": "John Moraga",
+    "gender": "male"
   },
   {
     "id": 655,
-    "name": "Gesias Cavalcante"
+    "name": "Gesias Cavalcante",
+    "gender": "male"
   },
   {
     "id": 656,
-    "name": "Julius Anglickas"
+    "name": "Julius Anglickas",
+    "gender": "male"
   },
   {
     "id": 657,
-    "name": "Tom Breese"
+    "name": "Tom Breese",
+    "gender": "male"
   },
   {
     "id": 658,
-    "name": "Makoto Takimoto"
+    "name": "Makoto Takimoto",
+    "gender": "male"
   },
   {
     "id": 659,
-    "name": "Nate Landwehr"
+    "name": "Nate Landwehr",
+    "gender": "male"
   },
   {
     "id": 660,
-    "name": "Frank Shamrock"
+    "name": "Frank Shamrock",
+    "gender": "male"
   },
   {
     "id": 661,
-    "name": "Gegard Mousasi"
+    "name": "Gegard Mousasi",
+    "gender": "male"
   },
   {
     "id": 662,
-    "name": "Semmy Schilt"
+    "name": "Semmy Schilt",
+    "gender": "male"
   },
   {
     "id": 663,
-    "name": "Joe Ellenberger"
+    "name": "Joe Ellenberger",
+    "gender": "male"
   },
   {
     "id": 664,
-    "name": "Trenell Young"
+    "name": "Trenell Young",
+    "gender": "male"
   },
   {
     "id": 665,
-    "name": "Bea Malecki"
+    "name": "Bea Malecki",
+    "gender": "male"
   },
   {
     "id": 666,
-    "name": "Louis Gaudinot"
+    "name": "Louis Gaudinot",
+    "gender": "male"
   },
   {
     "id": 667,
-    "name": "Ramsey Nijem"
+    "name": "Ramsey Nijem",
+    "gender": "male"
   },
   {
     "id": 668,
-    "name": "Claudio Silva"
+    "name": "Claudio Silva",
+    "gender": "male"
   },
   {
     "id": 669,
-    "name": "Marcos Galvao"
+    "name": "Marcos Galvao",
+    "gender": "male"
   },
   {
     "id": 670,
-    "name": "Joey Villasenor"
+    "name": "Joey Villasenor",
+    "gender": "male"
   },
   {
     "id": 671,
-    "name": "Taila Santos"
+    "name": "Taila Santos",
+    "gender": "male"
   },
   {
     "id": 672,
-    "name": "Matt Schnell"
+    "name": "Matt Schnell",
+    "gender": "male"
   },
   {
     "id": 673,
-    "name": "Anthony Pettis"
+    "name": "Anthony Pettis",
+    "gender": "male"
   },
   {
     "id": 674,
-    "name": "Darrill Schoonover"
+    "name": "Darrill Schoonover",
+    "gender": "male"
   },
   {
     "id": 675,
-    "name": "Jeff Hougland"
+    "name": "Jeff Hougland",
+    "gender": "male"
   },
   {
     "id": 676,
-    "name": "Jeremy Horn"
+    "name": "Jeremy Horn",
+    "gender": "male"
   },
   {
     "id": 677,
-    "name": "Thales Leites"
+    "name": "Thales Leites",
+    "gender": "male"
   },
   {
     "id": 678,
-    "name": "Dean Lister"
+    "name": "Dean Lister",
+    "gender": "male"
   },
   {
     "id": 679,
-    "name": "Kurt Holobaugh"
+    "name": "Kurt Holobaugh",
+    "gender": "male"
   },
   {
     "id": 680,
-    "name": "Chris Wade"
+    "name": "Chris Wade",
+    "gender": "male"
   },
   {
     "id": 681,
-    "name": "Dylan Potter"
+    "name": "Dylan Potter",
+    "gender": "male"
   },
   {
     "id": 682,
-    "name": "Tatsuya Kawajiri"
+    "name": "Tatsuya Kawajiri",
+    "gender": "male"
   },
   {
     "id": 683,
-    "name": "Trevor Prangley"
+    "name": "Trevor Prangley",
+    "gender": "male"
   },
   {
     "id": 684,
-    "name": "Karolina Wojcik"
+    "name": "Karolina Wojcik",
+    "gender": "female"
   },
   {
     "id": 685,
-    "name": "Pat Miletich"
+    "name": "Pat Miletich",
+    "gender": "male"
   },
   {
     "id": 686,
-    "name": "Steve Erceg"
+    "name": "Steve Erceg",
+    "gender": "male"
   },
   {
     "id": 687,
-    "name": "Evan Dunham"
+    "name": "Evan Dunham",
+    "gender": "male"
   },
   {
     "id": 688,
-    "name": "Josh Stansbury"
+    "name": "Josh Stansbury",
+    "gender": "male"
   },
   {
     "id": 689,
-    "name": "Ed Herman"
+    "name": "Ed Herman",
+    "gender": "male"
   },
   {
     "id": 690,
-    "name": "Ali AlQaisi"
+    "name": "Ali AlQaisi",
+    "gender": "male"
   },
   {
     "id": 691,
-    "name": "Elaina Maxwell"
+    "name": "Elaina Maxwell",
+    "gender": "male"
   },
   {
     "id": 692,
-    "name": "Mando Gutierrez"
+    "name": "Mando Gutierrez",
+    "gender": "male"
   },
   {
     "id": 693,
-    "name": "Claudia Leite"
+    "name": "Claudia Leite",
+    "gender": "female"
   },
   {
     "id": 694,
-    "name": "Ray Borg"
+    "name": "Ray Borg",
+    "gender": "male"
   },
   {
     "id": 695,
-    "name": "Chad Hanekom"
+    "name": "Chad Hanekom",
+    "gender": "male"
   },
   {
     "id": 696,
-    "name": "Zach Skinner"
+    "name": "Zach Skinner",
+    "gender": "male"
   },
   {
     "id": 697,
-    "name": "Jay Silva"
+    "name": "Jay Silva",
+    "gender": "male"
   },
   {
     "id": 698,
-    "name": "Tim Elliott"
+    "name": "Tim Elliott",
+    "gender": "male"
   },
   {
     "id": 699,
-    "name": "Jason Guida"
+    "name": "Jason Guida",
+    "gender": "male"
   },
   {
     "id": 700,
-    "name": "Carlos Condit"
+    "name": "Carlos Condit",
+    "gender": "male"
   },
   {
     "id": 701,
-    "name": "Gunnar Nelson"
+    "name": "Gunnar Nelson",
+    "gender": "male"
   },
   {
     "id": 702,
-    "name": "Pingyuan Liu"
+    "name": "Pingyuan Liu",
+    "gender": "male"
   },
   {
     "id": 703,
-    "name": "Mohammad Yahya"
+    "name": "Mohammad Yahya",
+    "gender": "male"
   },
   {
     "id": 704,
-    "name": "Yusup Saadulaev"
+    "name": "Yusup Saadulaev",
+    "gender": "male"
   },
   {
     "id": 705,
-    "name": "Enrique Marin"
+    "name": "Enrique Marin",
+    "gender": "male"
   },
   {
     "id": 706,
-    "name": "Allan Zuniga"
+    "name": "Allan Zuniga",
+    "gender": "male"
   },
   {
     "id": 707,
-    "name": "Takeshi Yamazaki"
+    "name": "Takeshi Yamazaki",
+    "gender": "male"
   },
   {
     "id": 708,
-    "name": "Johnny Walker"
+    "name": "Johnny Walker",
+    "gender": "male"
   },
   {
     "id": 709,
-    "name": "Nick Osipczak"
+    "name": "Nick Osipczak",
+    "gender": "male"
   },
   {
     "id": 710,
-    "name": "Jonavin Webb"
+    "name": "Jonavin Webb",
+    "gender": "male"
   },
   {
     "id": 711,
-    "name": "Brian Schwartz"
+    "name": "Brian Schwartz",
+    "gender": "male"
   },
   {
     "id": 712,
-    "name": "Eddie Yagin"
+    "name": "Eddie Yagin",
+    "gender": "male"
   },
   {
     "id": 713,
-    "name": "Karo Parisyan"
+    "name": "Karo Parisyan",
+    "gender": "male"
   },
   {
     "id": 714,
-    "name": "Marco Tulio"
+    "name": "Marco Tulio",
+    "gender": "male"
   },
   {
     "id": 715,
-    "name": "Carlos Mota"
+    "name": "Carlos Mota",
+    "gender": "male"
   },
   {
     "id": 716,
-    "name": "Charles Rosa"
+    "name": "Charles Rosa",
+    "gender": "male"
   },
   {
     "id": 717,
-    "name": "Bobby Cooper"
+    "name": "Bobby Cooper",
+    "gender": "male"
   },
   {
     "id": 718,
-    "name": "Nayara Maia"
+    "name": "Nayara Maia",
+    "gender": "male"
   },
   {
     "id": 719,
-    "name": "Oscar Cota"
+    "name": "Oscar Cota",
+    "gender": "male"
   },
   {
     "id": 720,
-    "name": "Gabrielle Holloway"
+    "name": "Gabrielle Holloway",
+    "gender": "male"
   },
   {
     "id": 721,
-    "name": "Erik Koch"
+    "name": "Erik Koch",
+    "gender": "male"
   },
   {
     "id": 722,
-    "name": "Anthony Rocco Martin"
+    "name": "Anthony Rocco Martin",
+    "gender": "male"
   },
   {
     "id": 723,
-    "name": "Gilbert Urbina"
+    "name": "Gilbert Urbina",
+    "gender": "male"
   },
   {
     "id": 724,
-    "name": "Sam Watford"
+    "name": "Sam Watford",
+    "gender": "male"
   },
   {
     "id": 725,
-    "name": "Dylan Budka"
+    "name": "Dylan Budka",
+    "gender": "male"
   },
   {
     "id": 726,
-    "name": "Kaleio Romero"
+    "name": "Kaleio Romero",
+    "gender": "male"
   },
   {
     "id": 727,
-    "name": "Cameron Church"
+    "name": "Cameron Church",
+    "gender": "male"
   },
   {
     "id": 728,
-    "name": "Anton Berzin"
+    "name": "Anton Berzin",
+    "gender": "male"
   },
   {
     "id": 729,
-    "name": "Jason Gonzalez"
+    "name": "Jason Gonzalez",
+    "gender": "male"
   },
   {
     "id": 730,
-    "name": "Manny Vazquez"
+    "name": "Manny Vazquez",
+    "gender": "male"
   },
   {
     "id": 731,
-    "name": "Jeff Crotty"
+    "name": "Jeff Crotty",
+    "gender": "male"
   },
   {
     "id": 732,
-    "name": "Sam Greco"
+    "name": "Sam Greco",
+    "gender": "male"
   },
   {
     "id": 733,
-    "name": "Ricco Rodriguez"
+    "name": "Ricco Rodriguez",
+    "gender": "male"
   },
   {
     "id": 734,
-    "name": "Jay Hieron"
+    "name": "Jay Hieron",
+    "gender": "male"
   },
   {
     "id": 735,
-    "name": "Sung Bin Jo"
+    "name": "Sung Bin Jo",
+    "gender": "male"
   },
   {
     "id": 736,
-    "name": "Art Arciniega"
+    "name": "Art Arciniega",
+    "gender": "male"
   },
   {
     "id": 737,
-    "name": "Isabela de Padua"
+    "name": "Isabela de Padua",
+    "gender": "male"
   },
   {
     "id": 738,
-    "name": "Lucas Fernando"
+    "name": "Lucas Fernando",
+    "gender": "male"
   },
   {
     "id": 739,
-    "name": "Rafael Silva"
+    "name": "Rafael Silva",
+    "gender": "male"
   },
   {
     "id": 740,
-    "name": "Hyder Amil"
+    "name": "Hyder Amil",
+    "gender": "male"
   },
   {
     "id": 741,
-    "name": "Vaughan Lee"
+    "name": "Vaughan Lee",
+    "gender": "male"
   },
   {
     "id": 742,
-    "name": "Ryan Healy"
+    "name": "Ryan Healy",
+    "gender": "male"
   },
   {
     "id": 743,
-    "name": "Joao Zeferino"
+    "name": "Joao Zeferino",
+    "gender": "male"
   },
   {
     "id": 744,
-    "name": "Virna Jandiroba"
+    "name": "Virna Jandiroba",
+    "gender": "male"
   },
   {
     "id": 745,
-    "name": "Miles McDonald"
+    "name": "Miles McDonald",
+    "gender": "male"
   },
   {
     "id": 746,
-    "name": "Korey Kuppe"
+    "name": "Korey Kuppe",
+    "gender": "male"
   },
   {
     "id": 747,
-    "name": "Patrick Murphy"
+    "name": "Patrick Murphy",
+    "gender": "male"
   },
   {
     "id": 748,
-    "name": "Nick Diaz"
+    "name": "Nick Diaz",
+    "gender": "male"
   },
   {
     "id": 749,
-    "name": "Akitoshi Tamura"
+    "name": "Akitoshi Tamura",
+    "gender": "male"
   },
   {
     "id": 750,
-    "name": "Eric Schambari"
+    "name": "Eric Schambari",
+    "gender": "male"
   },
   {
     "id": 751,
-    "name": "Markus Perez"
+    "name": "Markus Perez",
+    "gender": "male"
   },
   {
     "id": 752,
-    "name": "Greg Soto"
+    "name": "Greg Soto",
+    "gender": "male"
   },
   {
     "id": 753,
-    "name": "Mike French"
+    "name": "Mike French",
+    "gender": "male"
   },
   {
     "id": 754,
-    "name": "Karl Amoussou"
+    "name": "Karl Amoussou",
+    "gender": "male"
   },
   {
     "id": 755,
-    "name": "Luke Rockhold"
+    "name": "Luke Rockhold",
+    "gender": "male"
   },
   {
     "id": 756,
-    "name": "Brett Johns"
+    "name": "Brett Johns",
+    "gender": "male"
   },
   {
     "id": 757,
-    "name": "Rogerio Bontorin"
+    "name": "Rogerio Bontorin",
+    "gender": "male"
   },
   {
     "id": 758,
-    "name": "Chris Mierzwiak"
+    "name": "Chris Mierzwiak",
+    "gender": "male"
   },
   {
     "id": 759,
-    "name": "Sergei Kharitonov"
+    "name": "Sergei Kharitonov",
+    "gender": "male"
   },
   {
     "id": 760,
-    "name": "Emil Meek"
+    "name": "Emil Meek",
+    "gender": "male"
   },
   {
     "id": 761,
-    "name": "Yoshihiro Akiyama"
+    "name": "Yoshihiro Akiyama",
+    "gender": "male"
   },
   {
     "id": 762,
-    "name": "Saul Elizondo"
+    "name": "Saul Elizondo",
+    "gender": "male"
   },
   {
     "id": 763,
-    "name": "Islam Makhachev"
+    "name": "Islam Makhachev",
+    "gender": "male"
   },
   {
     "id": 764,
-    "name": "Luis Henrique"
+    "name": "Luis Henrique",
+    "gender": "male"
   },
   {
     "id": 765,
-    "name": "Ben Nguyen"
+    "name": "Ben Nguyen",
+    "gender": "male"
   },
   {
     "id": 766,
-    "name": "Marilia Santos"
+    "name": "Marilia Santos",
+    "gender": "male"
   },
   {
     "id": 767,
-    "name": "James Hammortree"
+    "name": "James Hammortree",
+    "gender": "male"
   },
   {
     "id": 768,
-    "name": "Michael Chiesa"
+    "name": "Michael Chiesa",
+    "gender": "male"
   },
   {
     "id": 769,
-    "name": "Cole Province"
+    "name": "Cole Province",
+    "gender": "male"
   },
   {
     "id": 770,
-    "name": "Ivan Menjivar"
+    "name": "Ivan Menjivar",
+    "gender": "male"
   },
   {
     "id": 771,
-    "name": "Joe Duarte"
+    "name": "Joe Duarte",
+    "gender": "male"
   },
   {
     "id": 772,
-    "name": "Chris de la Rocha"
+    "name": "Chris de la Rocha",
+    "gender": "male"
   },
   {
     "id": 773,
-    "name": "Justin Edwards"
+    "name": "Justin Edwards",
+    "gender": "male"
   },
   {
     "id": 774,
-    "name": "DeAnna Bennett"
+    "name": "DeAnna Bennett",
+    "gender": "male"
   },
   {
     "id": 775,
-    "name": "Mu Bae Choi"
+    "name": "Mu Bae Choi",
+    "gender": "male"
   },
   {
     "id": 776,
-    "name": "Connor Matthews"
+    "name": "Connor Matthews",
+    "gender": "male"
   },
   {
     "id": 777,
-    "name": "Chalid Arrab"
+    "name": "Chalid Arrab",
+    "gender": "male"
   },
   {
     "id": 778,
-    "name": "Lemont Davis"
+    "name": "Lemont Davis",
+    "gender": "male"
   },
   {
     "id": 779,
-    "name": "Gilbert Yvel"
+    "name": "Gilbert Yvel",
+    "gender": "male"
   },
   {
     "id": 780,
-    "name": "Vitor Petrino"
+    "name": "Vitor Petrino",
+    "gender": "male"
   },
   {
     "id": 781,
-    "name": "Richie Vaculik"
+    "name": "Richie Vaculik",
+    "gender": "male"
   },
   {
     "id": 782,
-    "name": "Demian Maia"
+    "name": "Demian Maia",
+    "gender": "male"
   },
   {
     "id": 783,
-    "name": "Phil Caracappa"
+    "name": "Phil Caracappa",
+    "gender": "male"
   },
   {
     "id": 784,
-    "name": "Denis Stojnic"
+    "name": "Denis Stojnic",
+    "gender": "male"
   },
   {
     "id": 785,
-    "name": "Mike Rio"
+    "name": "Mike Rio",
+    "gender": "male"
   },
   {
     "id": 786,
-    "name": "Cameron Olson"
+    "name": "Cameron Olson",
+    "gender": "male"
   },
   {
     "id": 787,
-    "name": "Dwight Joseph"
+    "name": "Dwight Joseph",
+    "gender": "male"
   },
   {
     "id": 788,
-    "name": "Alex Chambers"
+    "name": "Alex Chambers",
+    "gender": "male"
   },
   {
     "id": 789,
-    "name": "Magnus Cedenblad"
+    "name": "Magnus Cedenblad",
+    "gender": "male"
   },
   {
     "id": 790,
-    "name": "Danny Sabatello"
+    "name": "Danny Sabatello",
+    "gender": "male"
   },
   {
     "id": 791,
-    "name": "Jon Tuck"
+    "name": "Jon Tuck",
+    "gender": "male"
   },
   {
     "id": 792,
-    "name": "Stephan Bonnar"
+    "name": "Stephan Bonnar",
+    "gender": "male"
   },
   {
     "id": 793,
-    "name": "Ilima Macfarlane"
+    "name": "Ilima Macfarlane",
+    "gender": "male"
   },
   {
     "id": 794,
-    "name": "Eric Spicely"
+    "name": "Eric Spicely",
+    "gender": "male"
   },
   {
     "id": 795,
-    "name": "Chase Gormley"
+    "name": "Chase Gormley",
+    "gender": "male"
   },
   {
     "id": 796,
-    "name": "Paige VanZant"
+    "name": "Paige VanZant",
+    "gender": "male"
   },
   {
     "id": 797,
-    "name": "Bruno Assis"
+    "name": "Bruno Assis",
+    "gender": "male"
   },
   {
     "id": 798,
-    "name": "Alexandre Pantoja"
+    "name": "Alexandre Pantoja",
+    "gender": "male"
   },
   {
     "id": 799,
-    "name": "Krzysztof Soszynski"
+    "name": "Krzysztof Soszynski",
+    "gender": "male"
   },
   {
     "id": 800,
-    "name": "Leonardo Guimaraes"
+    "name": "Leonardo Guimaraes",
+    "gender": "male"
   },
   {
     "id": 801,
-    "name": "Terrance McKinney"
+    "name": "Terrance McKinney",
+    "gender": "male"
   },
   {
     "id": 802,
-    "name": "Jordan Parsons"
+    "name": "Jordan Parsons",
+    "gender": "male"
   },
   {
     "id": 803,
-    "name": "Rodney Wallace"
+    "name": "Rodney Wallace",
+    "gender": "male"
   },
   {
     "id": 804,
-    "name": "Brad Imes"
+    "name": "Brad Imes",
+    "gender": "male"
   },
   {
     "id": 805,
-    "name": "David Heath"
+    "name": "David Heath",
+    "gender": "male"
   },
   {
     "id": 806,
-    "name": "Alexandr Romanov"
+    "name": "Alexandr Romanov",
+    "gender": "male"
   },
   {
     "id": 807,
-    "name": "Allan Nascimento"
+    "name": "Allan Nascimento",
+    "gender": "male"
   },
   {
     "id": 808,
-    "name": "Eliot Marshall"
+    "name": "Eliot Marshall",
+    "gender": "male"
   },
   {
     "id": 809,
-    "name": "Warlley Alves"
+    "name": "Warlley Alves",
+    "gender": "male"
   },
   {
     "id": 810,
-    "name": "Chris Horodecki"
+    "name": "Chris Horodecki",
+    "gender": "male"
   },
   {
     "id": 811,
-    "name": "AJ Fletcher"
+    "name": "AJ Fletcher",
+    "gender": "male"
   },
   {
     "id": 812,
-    "name": "Tyson Pedro"
+    "name": "Tyson Pedro",
+    "gender": "male"
   },
   {
     "id": 813,
-    "name": "Lerone Murphy"
+    "name": "Lerone Murphy",
+    "gender": "male"
   },
   {
     "id": 814,
-    "name": "Tagir Ulanbekov"
+    "name": "Tagir Ulanbekov",
+    "gender": "male"
   },
   {
     "id": 815,
-    "name": "Aisling Daly"
+    "name": "Aisling Daly",
+    "gender": "male"
   },
   {
     "id": 816,
-    "name": "JeongYeong Lee"
+    "name": "JeongYeong Lee",
+    "gender": "male"
   },
   {
     "id": 817,
-    "name": "Seth Dikun"
+    "name": "Seth Dikun",
+    "gender": "male"
   },
   {
     "id": 818,
-    "name": "Ben Askren"
+    "name": "Ben Askren",
+    "gender": "male"
   },
   {
     "id": 819,
-    "name": "Beneil Dariush"
+    "name": "Beneil Dariush",
+    "gender": "male"
   },
   {
     "id": 820,
-    "name": "Luiz Firmino"
+    "name": "Luiz Firmino",
+    "gender": "male"
   },
   {
     "id": 821,
-    "name": "Gillian Robertson"
+    "name": "Gillian Robertson",
+    "gender": "male"
   },
   {
     "id": 822,
-    "name": "Pete Williams"
+    "name": "Pete Williams",
+    "gender": "male"
   },
   {
     "id": 823,
-    "name": "Rameau Thierry Sokoudjou"
+    "name": "Rameau Thierry Sokoudjou",
+    "gender": "male"
   },
   {
     "id": 824,
-    "name": "John Hathaway"
+    "name": "John Hathaway",
+    "gender": "male"
   },
   {
     "id": 825,
-    "name": "Cristiano Marcello"
+    "name": "Cristiano Marcello",
+    "gender": "male"
   },
   {
     "id": 826,
-    "name": "Antoni Hardonk"
+    "name": "Antoni Hardonk",
+    "gender": "male"
   },
   {
     "id": 827,
-    "name": "Matt Serra"
+    "name": "Matt Serra",
+    "gender": "male"
   },
   {
     "id": 828,
-    "name": "Michael Chandler"
+    "name": "Michael Chandler",
+    "gender": "male"
   },
   {
     "id": 829,
-    "name": "Eric Wisely"
+    "name": "Eric Wisely",
+    "gender": "male"
   },
   {
     "id": 830,
-    "name": "Pascal Krauss"
+    "name": "Pascal Krauss",
+    "gender": "male"
   },
   {
     "id": 831,
-    "name": "Alan Belcher"
+    "name": "Alan Belcher",
+    "gender": "male"
   },
   {
     "id": 832,
-    "name": "Tyson Griffin"
+    "name": "Tyson Griffin",
+    "gender": "male"
   },
   {
     "id": 833,
-    "name": "Sam Sicilia"
+    "name": "Sam Sicilia",
+    "gender": "male"
   },
   {
     "id": 834,
-    "name": "Ryan Gracie"
+    "name": "Ryan Gracie",
+    "gender": "male"
   },
   {
     "id": 835,
-    "name": "Damacio Page"
+    "name": "Damacio Page",
+    "gender": "male"
   },
   {
     "id": 836,
-    "name": "Aleksander Emelianenko"
+    "name": "Aleksander Emelianenko",
+    "gender": "male"
   },
   {
     "id": 837,
-    "name": "Samy Schiavo"
+    "name": "Samy Schiavo",
+    "gender": "male"
   },
   {
     "id": 838,
-    "name": "Brodie Farber"
+    "name": "Brodie Farber",
+    "gender": "male"
   },
   {
     "id": 839,
-    "name": "Pete Sell"
+    "name": "Pete Sell",
+    "gender": "male"
   },
   {
     "id": 840,
-    "name": "Jason Witt"
+    "name": "Jason Witt",
+    "gender": "male"
   },
   {
     "id": 841,
-    "name": "Garett Whiteley"
+    "name": "Garett Whiteley",
+    "gender": "male"
   },
   {
     "id": 842,
-    "name": "Maciej Jewtuszko"
+    "name": "Maciej Jewtuszko",
+    "gender": "male"
   },
   {
     "id": 843,
-    "name": "Cyril Asker"
+    "name": "Cyril Asker",
+    "gender": "male"
   },
   {
     "id": 844,
-    "name": "Jumabieke Tuerxun"
+    "name": "Jumabieke Tuerxun",
+    "gender": "male"
   },
   {
     "id": 845,
-    "name": "Roosevelt Roberts"
+    "name": "Roosevelt Roberts",
+    "gender": "male"
   },
   {
     "id": 846,
-    "name": "Maurice Smith"
+    "name": "Maurice Smith",
+    "gender": "male"
   },
   {
     "id": 847,
-    "name": "Bryan Baker"
+    "name": "Bryan Baker",
+    "gender": "male"
   },
   {
     "id": 848,
-    "name": "Glover Teixeira"
+    "name": "Glover Teixeira",
+    "gender": "male"
   },
   {
     "id": 849,
-    "name": "Matheus Nicolau"
+    "name": "Matheus Nicolau",
+    "gender": "male"
   },
   {
     "id": 850,
-    "name": "James Krause"
+    "name": "James Krause",
+    "gender": "male"
   },
   {
     "id": 851,
-    "name": "Roger Narvaez"
+    "name": "Roger Narvaez",
+    "gender": "male"
   },
   {
     "id": 852,
-    "name": "Umar Nurmagomedov"
+    "name": "Umar Nurmagomedov",
+    "gender": "male"
   },
   {
     "id": 853,
-    "name": "Irina Alekseeva"
+    "name": "Irina Alekseeva",
+    "gender": "male"
   },
   {
     "id": 854,
-    "name": "Chris Spang"
+    "name": "Chris Spang",
+    "gender": "male"
   },
   {
     "id": 855,
-    "name": "Tony Ferguson"
+    "name": "Tony Ferguson",
+    "gender": "male"
   },
   {
     "id": 856,
-    "name": "Carmelo Marrero"
+    "name": "Carmelo Marrero",
+    "gender": "male"
   },
   {
     "id": 857,
-    "name": "Roger Bowling"
+    "name": "Roger Bowling",
+    "gender": "male"
   },
   {
     "id": 858,
-    "name": "Ildemar Alcantara"
+    "name": "Ildemar Alcantara",
+    "gender": "male"
   },
   {
     "id": 859,
-    "name": "Chase Beebe"
+    "name": "Chase Beebe",
+    "gender": "male"
   },
   {
     "id": 860,
-    "name": "Ricardo Lamas"
+    "name": "Ricardo Lamas",
+    "gender": "male"
   },
   {
     "id": 861,
-    "name": "Marlon Vera"
+    "name": "Marlon Vera",
+    "gender": "male"
   },
   {
     "id": 862,
-    "name": "Alex Karalexis"
+    "name": "Alex Karalexis",
+    "gender": "male"
   },
   {
     "id": 863,
-    "name": "Curt Warburton"
+    "name": "Curt Warburton",
+    "gender": "male"
   },
   {
     "id": 864,
-    "name": "Matt Frevola"
+    "name": "Matt Frevola",
+    "gender": "male"
   },
   {
     "id": 865,
-    "name": "Blake Bilder"
+    "name": "Blake Bilder",
+    "gender": "male"
   },
   {
     "id": 866,
-    "name": "Tonya Evinger"
+    "name": "Tonya Evinger",
+    "gender": "male"
   },
   {
     "id": 867,
-    "name": "Mike Wilkinson"
+    "name": "Mike Wilkinson",
+    "gender": "male"
   },
   {
     "id": 868,
-    "name": "Diego Rivas"
+    "name": "Diego Rivas",
+    "gender": "male"
   },
   {
     "id": 869,
-    "name": "Mark Hominick"
+    "name": "Mark Hominick",
+    "gender": "male"
   },
   {
     "id": 870,
-    "name": "Rick Story"
+    "name": "Rick Story",
+    "gender": "male"
   },
   {
     "id": 871,
-    "name": "Garreth McLellan"
+    "name": "Garreth McLellan",
+    "gender": "male"
   },
   {
     "id": 872,
-    "name": "Dave Jansen"
+    "name": "Dave Jansen",
+    "gender": "male"
   },
   {
     "id": 873,
-    "name": "Mariya Agapova"
+    "name": "Mariya Agapova",
+    "gender": "male"
   },
   {
     "id": 874,
-    "name": "Alex Huddleston"
+    "name": "Alex Huddleston",
+    "gender": "male"
   },
   {
     "id": 875,
-    "name": "Tim Hague"
+    "name": "Tim Hague",
+    "gender": "male"
   },
   {
     "id": 876,
-    "name": "Masanori Kanehara"
+    "name": "Masanori Kanehara",
+    "gender": "male"
   },
   {
     "id": 877,
-    "name": "Tatiana Suarez"
+    "name": "Tatiana Suarez",
+    "gender": "female"
   },
   {
     "id": 878,
-    "name": "Luigi Fioravanti"
+    "name": "Luigi Fioravanti",
+    "gender": "male"
   },
   {
     "id": 879,
-    "name": "Carlos Newton"
+    "name": "Carlos Newton",
+    "gender": "male"
   },
   {
     "id": 880,
-    "name": "Danilo Marques"
+    "name": "Danilo Marques",
+    "gender": "male"
   },
   {
     "id": 881,
-    "name": "Renzo Gracie"
+    "name": "Renzo Gracie",
+    "gender": "male"
   },
   {
     "id": 882,
-    "name": "Stephanie Egger"
+    "name": "Stephanie Egger",
+    "gender": "male"
   },
   {
     "id": 883,
-    "name": "Austin Springer"
+    "name": "Austin Springer",
+    "gender": "male"
   },
   {
     "id": 884,
-    "name": "Iuri Alcantara"
+    "name": "Iuri Alcantara",
+    "gender": "male"
   },
   {
     "id": 885,
-    "name": "Da'Mon Blackshear"
+    "name": "Da'Mon Blackshear",
+    "gender": "male"
   },
   {
     "id": 886,
-    "name": "Spencer Fisher"
+    "name": "Spencer Fisher",
+    "gender": "male"
   },
   {
     "id": 887,
-    "name": "Kurt Pellegrino"
+    "name": "Kurt Pellegrino",
+    "gender": "male"
   },
   {
     "id": 888,
-    "name": "Trey Ogden"
+    "name": "Trey Ogden",
+    "gender": "male"
   },
   {
     "id": 889,
-    "name": "Anderson Silva"
+    "name": "Anderson Silva",
+    "gender": "male"
   },
   {
     "id": 890,
-    "name": "Carlston Harris"
+    "name": "Carlston Harris",
+    "gender": "male"
   },
   {
     "id": 891,
-    "name": "Jorge Santiago"
+    "name": "Jorge Santiago",
+    "gender": "male"
   },
   {
     "id": 892,
-    "name": "Gleison Tibau"
+    "name": "Gleison Tibau",
+    "gender": "male"
   },
   {
     "id": 893,
-    "name": "Josh Shockley"
+    "name": "Josh Shockley",
+    "gender": "male"
   },
   {
     "id": 894,
-    "name": "Mark Coleman"
+    "name": "Mark Coleman",
+    "gender": "male"
   },
   {
     "id": 895,
-    "name": "Sarah Moras"
+    "name": "Sarah Moras",
+    "gender": "male"
   },
   {
     "id": 896,
-    "name": "Jimmy Ambriz"
+    "name": "Jimmy Ambriz",
+    "gender": "male"
   },
   {
     "id": 897,
-    "name": "Chris Cariaso"
+    "name": "Chris Cariaso",
+    "gender": "male"
   },
   {
     "id": 898,
-    "name": "Rogerio Nogueira"
+    "name": "Rogerio Nogueira",
+    "gender": "male"
   },
   {
     "id": 899,
-    "name": "Russell Doane"
+    "name": "Russell Doane",
+    "gender": "male"
   },
   {
     "id": 900,
-    "name": "Rony Jason"
+    "name": "Rony Jason",
+    "gender": "male"
   },
   {
     "id": 901,
-    "name": "Maki Pitolo"
+    "name": "Maki Pitolo",
+    "gender": "male"
   },
   {
     "id": 902,
-    "name": "Joanderson Brito"
+    "name": "Joanderson Brito",
+    "gender": "male"
   },
   {
     "id": 903,
-    "name": "Zhang Lipeng"
+    "name": "Zhang Lipeng",
+    "gender": "female"
   },
   {
     "id": 904,
-    "name": "Francisco Prado"
+    "name": "Francisco Prado",
+    "gender": "male"
   },
   {
     "id": 905,
-    "name": "Amanda Lemos"
+    "name": "Amanda Lemos",
+    "gender": "female"
   },
   {
     "id": 906,
-    "name": "Jamie Varner"
+    "name": "Jamie Varner",
+    "gender": "male"
   },
   {
     "id": 907,
-    "name": "Seth Baczynski"
+    "name": "Seth Baczynski",
+    "gender": "male"
   },
   {
     "id": 908,
-    "name": "Jonathan Pearce"
+    "name": "Jonathan Pearce",
+    "gender": "male"
   },
   {
     "id": 909,
-    "name": "Kenny Robertson"
+    "name": "Kenny Robertson",
+    "gender": "male"
   },
   {
     "id": 910,
-    "name": "Montserrat Conejo Ruiz"
+    "name": "Montserrat Conejo Ruiz",
+    "gender": "male"
   },
   {
     "id": 911,
-    "name": "Khabib Nurmagomedov"
+    "name": "Khabib Nurmagomedov",
+    "gender": "male"
   },
   {
     "id": 912,
-    "name": "Gary Goodridge"
+    "name": "Gary Goodridge",
+    "gender": "male"
   },
   {
     "id": 913,
-    "name": "Justin Buchholz"
+    "name": "Justin Buchholz",
+    "gender": "male"
   },
   {
     "id": 914,
-    "name": "Malcolm Gordon"
+    "name": "Malcolm Gordon",
+    "gender": "male"
   },
   {
     "id": 915,
-    "name": "Achmed Labasanov"
+    "name": "Achmed Labasanov",
+    "gender": "male"
   },
   {
     "id": 916,
-    "name": "Joseph Gigliotti"
+    "name": "Joseph Gigliotti",
+    "gender": "male"
   },
   {
     "id": 917,
-    "name": "Liang Na"
+    "name": "Liang Na",
+    "gender": "male"
   },
   {
     "id": 918,
-    "name": "Mike Stumpf"
+    "name": "Mike Stumpf",
+    "gender": "male"
   },
   {
     "id": 919,
-    "name": "Aljamain Sterling"
+    "name": "Aljamain Sterling",
+    "gender": "male"
   },
   {
     "id": 920,
-    "name": "Kevin Randleman"
+    "name": "Kevin Randleman",
+    "gender": "male"
   },
   {
     "id": 921,
-    "name": "Rory Singer"
+    "name": "Rory Singer",
+    "gender": "male"
   },
   {
     "id": 922,
-    "name": "Darrion Caldwell"
+    "name": "Darrion Caldwell",
+    "gender": "male"
   },
   {
     "id": 923,
-    "name": "Alex Andrade"
+    "name": "Alex Andrade",
+    "gender": "male"
   },
   {
     "id": 924,
-    "name": "Antonio Silva"
+    "name": "Antonio Silva",
+    "gender": "male"
   },
   {
     "id": 925,
-    "name": "Nate Marquardt"
+    "name": "Nate Marquardt",
+    "gender": "male"
   },
   {
     "id": 926,
-    "name": "Kevin Burns"
+    "name": "Kevin Burns",
+    "gender": "male"
   },
   {
     "id": 927,
-    "name": "Vinny Magalhaes"
+    "name": "Vinny Magalhaes",
+    "gender": "male"
   },
   {
     "id": 928,
-    "name": "Frank Trigg"
+    "name": "Frank Trigg",
+    "gender": "male"
   },
   {
     "id": 929,
-    "name": "Montana De La Rosa"
+    "name": "Montana De La Rosa",
+    "gender": "male"
   },
   {
     "id": 930,
-    "name": "Cynthia Calvillo"
+    "name": "Cynthia Calvillo",
+    "gender": "female"
   },
   {
     "id": 931,
-    "name": "Brock Jardine"
+    "name": "Brock Jardine",
+    "gender": "male"
   },
   {
     "id": 932,
-    "name": "Cameron Saaiman"
+    "name": "Cameron Saaiman",
+    "gender": "male"
   },
   {
     "id": 933,
-    "name": "Cat Zingano"
+    "name": "Cat Zingano",
+    "gender": "male"
   },
   {
     "id": 934,
-    "name": "Trey Waters"
+    "name": "Trey Waters",
+    "gender": "male"
   },
   {
     "id": 935,
-    "name": "Sangwook Kim"
+    "name": "Sangwook Kim",
+    "gender": "male"
   },
   {
     "id": 936,
-    "name": "Efrain Escudero"
+    "name": "Efrain Escudero",
+    "gender": "male"
   },
   {
     "id": 937,
-    "name": "John Allan"
+    "name": "John Allan",
+    "gender": "male"
   },
   {
     "id": 938,
-    "name": "Royce Gracie"
+    "name": "Royce Gracie",
+    "gender": "male"
   },
   {
     "id": 939,
-    "name": "James Head"
+    "name": "James Head",
+    "gender": "male"
   },
   {
     "id": 940,
-    "name": "Jessica Rakoczy"
+    "name": "Jessica Rakoczy",
+    "gender": "female"
   },
   {
     "id": 941,
-    "name": "Kevin Lee"
+    "name": "Kevin Lee",
+    "gender": "male"
   },
   {
     "id": 942,
-    "name": "Naoyuki Kotani"
+    "name": "Naoyuki Kotani",
+    "gender": "male"
   },
   {
     "id": 943,
-    "name": "Joseph Holmes"
+    "name": "Joseph Holmes",
+    "gender": "male"
   },
   {
     "id": 944,
-    "name": "Dashon Johnson"
+    "name": "Dashon Johnson",
+    "gender": "male"
   },
   {
     "id": 945,
-    "name": "Domingo Pilarte"
+    "name": "Domingo Pilarte",
+    "gender": "male"
   },
   {
     "id": 946,
-    "name": "Takanori Gomi"
+    "name": "Takanori Gomi",
+    "gender": "male"
   },
   {
     "id": 947,
-    "name": "TJ Dillashaw"
+    "name": "TJ Dillashaw",
+    "gender": "male"
   },
   {
     "id": 948,
-    "name": "Denise Gomes"
+    "name": "Denise Gomes",
+    "gender": "male"
   },
   {
     "id": 949,
-    "name": "Derrick Krantz"
+    "name": "Derrick Krantz",
+    "gender": "male"
   },
   {
     "id": 950,
-    "name": "Mark Vorgeas"
+    "name": "Mark Vorgeas",
+    "gender": "male"
   },
   {
     "id": 951,
-    "name": "Gregor Gillespie"
+    "name": "Gregor Gillespie",
+    "gender": "male"
   },
   {
     "id": 952,
-    "name": "Tim Boetsch"
+    "name": "Tim Boetsch",
+    "gender": "male"
   },
   {
     "id": 953,
-    "name": "Mike Kyle"
+    "name": "Mike Kyle",
+    "gender": "male"
   },
   {
     "id": 954,
-    "name": "Marion Reneau"
+    "name": "Marion Reneau",
+    "gender": "male"
   },
   {
     "id": 955,
-    "name": "Justin Haskins"
+    "name": "Justin Haskins",
+    "gender": "male"
   },
   {
     "id": 956,
-    "name": "Kleydson Rodrigues"
+    "name": "Kleydson Rodrigues",
+    "gender": "male"
   },
   {
     "id": 957,
-    "name": "Jenel Lausa"
+    "name": "Jenel Lausa",
+    "gender": "male"
   },
   {
     "id": 958,
-    "name": "Rachael Ostovich"
+    "name": "Rachael Ostovich",
+    "gender": "male"
   },
   {
     "id": 959,
-    "name": "Zabit Magomedsharipov"
+    "name": "Zabit Magomedsharipov",
+    "gender": "male"
   },
   {
     "id": 960,
-    "name": "Kay Hansen"
+    "name": "Kay Hansen",
+    "gender": "male"
   },
   {
     "id": 961,
-    "name": "Jon Fitch"
+    "name": "Jon Fitch",
+    "gender": "male"
   },
   {
     "id": 962,
-    "name": "Felice Herrig"
+    "name": "Felice Herrig",
+    "gender": "female"
   },
   {
     "id": 963,
-    "name": "Joey Gambino"
+    "name": "Joey Gambino",
+    "gender": "male"
   },
   {
     "id": 964,
-    "name": "Kyung Ho Kang"
+    "name": "Kyung Ho Kang",
+    "gender": "male"
   },
   {
     "id": 965,
-    "name": "Benson Henderson"
+    "name": "Benson Henderson",
+    "gender": "male"
   },
   {
     "id": 966,
-    "name": "Alexander Otsuka"
+    "name": "Alexander Otsuka",
+    "gender": "male"
   },
   {
     "id": 967,
-    "name": "Chris Weidman"
+    "name": "Chris Weidman",
+    "gender": "male"
   },
   {
     "id": 968,
-    "name": "Bryan Caraway"
+    "name": "Bryan Caraway",
+    "gender": "male"
   },
   {
     "id": 969,
-    "name": "Amanda Ribas"
+    "name": "Amanda Ribas",
+    "gender": "female"
   },
   {
     "id": 970,
-    "name": "Reginaldo Vieira"
+    "name": "Reginaldo Vieira",
+    "gender": "male"
   },
   {
     "id": 971,
-    "name": "Tamires Vidal"
+    "name": "Tamires Vidal",
+    "gender": "male"
   },
   {
     "id": 972,
-    "name": "Antonio Carlos Junior"
+    "name": "Antonio Carlos Junior",
+    "gender": "male"
   },
   {
     "id": 973,
-    "name": "Craig White"
+    "name": "Craig White",
+    "gender": "male"
   },
   {
     "id": 974,
-    "name": "Urijah Faber"
+    "name": "Urijah Faber",
+    "gender": "male"
   },
   {
     "id": 975,
-    "name": "Fabio Nascimento"
+    "name": "Fabio Nascimento",
+    "gender": "male"
   },
   {
     "id": 976,
-    "name": "Frank Gomez"
+    "name": "Frank Gomez",
+    "gender": "male"
   },
   {
     "id": 977,
-    "name": "Chad Anheliger"
+    "name": "Chad Anheliger",
+    "gender": "male"
   },
   {
     "id": 978,
-    "name": "Diego Sanchez"
+    "name": "Diego Sanchez",
+    "gender": "male"
   },
   {
     "id": 979,
-    "name": "Chris Leben"
+    "name": "Chris Leben",
+    "gender": "male"
   },
   {
     "id": 980,
-    "name": "Julianna Pena"
+    "name": "Julianna Pena",
+    "gender": "female"
   },
   {
     "id": 981,
-    "name": "Katsunori Kikuno"
+    "name": "Katsunori Kikuno",
+    "gender": "male"
   },
   {
     "id": 982,
-    "name": "Wellington Turman"
+    "name": "Wellington Turman",
+    "gender": "male"
   },
   {
     "id": 983,
-    "name": "Kyle Noke"
+    "name": "Kyle Noke",
+    "gender": "male"
   },
   {
     "id": 984,
-    "name": "Kanako Murata"
+    "name": "Kanako Murata",
+    "gender": "male"
   },
   {
     "id": 985,
-    "name": "Alistair Overeem"
+    "name": "Alistair Overeem",
+    "gender": "male"
   },
   {
     "id": 986,
-    "name": "John Teixeira"
+    "name": "John Teixeira",
+    "gender": "male"
   },
   {
     "id": 987,
-    "name": "Tony Sims"
+    "name": "Tony Sims",
+    "gender": "male"
   },
   {
     "id": 988,
-    "name": "Renato Moicano"
+    "name": "Renato Moicano",
+    "gender": "male"
   },
   {
     "id": 989,
-    "name": "Khama Worthy"
+    "name": "Khama Worthy",
+    "gender": "male"
   },
   {
     "id": 990,
-    "name": "Jack Shore"
+    "name": "Jack Shore",
+    "gender": "male"
   },
   {
     "id": 991,
-    "name": "Felipe Arantes"
+    "name": "Felipe Arantes",
+    "gender": "male"
   },
   {
     "id": 992,
-    "name": "Claudia Gadelha"
+    "name": "Claudia Gadelha",
+    "gender": "female"
   },
   {
     "id": 993,
-    "name": "Joaquim Silva"
+    "name": "Joaquim Silva",
+    "gender": "male"
   },
   {
     "id": 994,
-    "name": "Daiki Hata"
+    "name": "Daiki Hata",
+    "gender": "male"
   },
   {
     "id": 995,
-    "name": "George Sullivan"
+    "name": "George Sullivan",
+    "gender": "male"
   },
   {
     "id": 996,
-    "name": "Ramazan Emeev"
+    "name": "Ramazan Emeev",
+    "gender": "male"
   },
   {
     "id": 997,
-    "name": "Mitsuhiro Ishida"
+    "name": "Mitsuhiro Ishida",
+    "gender": "male"
   },
   {
     "id": 998,
-    "name": "Yair Rodriguez"
+    "name": "Yair Rodriguez",
+    "gender": "male"
   },
   {
     "id": 999,
-    "name": "Scott Jorgensen"
+    "name": "Scott Jorgensen",
+    "gender": "male"
   },
   {
     "id": 1000,
-    "name": "Casey O'Neill"
+    "name": "Casey O'Neill",
+    "gender": "male"
   },
   {
     "id": 1001,
-    "name": "Ian Freeman"
+    "name": "Ian Freeman",
+    "gender": "male"
   },
   {
     "id": 1002,
-    "name": "Diego Saraiva"
+    "name": "Diego Saraiva",
+    "gender": "male"
   },
   {
     "id": 1003,
-    "name": "Alexis Davis"
+    "name": "Alexis Davis",
+    "gender": "male"
   },
   {
     "id": 1004,
-    "name": "Brian Camozzi"
+    "name": "Brian Camozzi",
+    "gender": "male"
   },
   {
     "id": 1005,
-    "name": "Lucie Pudilova"
+    "name": "Lucie Pudilova",
+    "gender": "male"
   },
   {
     "id": 1006,
-    "name": "Ricardo Ramos"
+    "name": "Ricardo Ramos",
+    "gender": "male"
   },
   {
     "id": 1007,
-    "name": "Matt Mitrione"
+    "name": "Matt Mitrione",
+    "gender": "male"
   },
   {
     "id": 1008,
-    "name": "Joe Duffy"
+    "name": "Joe Duffy",
+    "gender": "male"
   },
   {
     "id": 1009,
-    "name": "Anderson Dos Santos"
+    "name": "Anderson Dos Santos",
+    "gender": "male"
   },
   {
     "id": 1010,
-    "name": "Milton Vieira"
+    "name": "Milton Vieira",
+    "gender": "male"
   },
   {
     "id": 1011,
-    "name": "David Kaplan"
+    "name": "David Kaplan",
+    "gender": "male"
   },
   {
     "id": 1012,
-    "name": "Amanda Nunes"
+    "name": "Amanda Nunes",
+    "gender": "female"
   },
   {
     "id": 1013,
-    "name": "Robert Sanchez"
+    "name": "Robert Sanchez",
+    "gender": "male"
   },
   {
     "id": 1014,
-    "name": "Rich Franklin"
+    "name": "Rich Franklin",
+    "gender": "male"
   },
   {
     "id": 1015,
-    "name": "Manvel Gamburyan"
+    "name": "Manvel Gamburyan",
+    "gender": "male"
   },
   {
     "id": 1016,
-    "name": "Don Madge"
+    "name": "Don Madge",
+    "gender": "male"
   },
   {
     "id": 1017,
-    "name": "Brad Scott"
+    "name": "Brad Scott",
+    "gender": "male"
   },
   {
     "id": 1018,
-    "name": "Mandy Bohm"
+    "name": "Mandy Bohm",
+    "gender": "male"
   },
   {
     "id": 1019,
-    "name": "Michelle Waterson-Gomez"
+    "name": "Michelle Waterson-Gomez",
+    "gender": "female"
   },
   {
     "id": 1020,
-    "name": "Rafael Estevam"
+    "name": "Rafael Estevam",
+    "gender": "male"
   },
   {
     "id": 1021,
-    "name": "Matt Sayles"
+    "name": "Matt Sayles",
+    "gender": "male"
   },
   {
     "id": 1022,
-    "name": "Mauricio Rua"
+    "name": "Mauricio Rua",
+    "gender": "male"
   },
   {
     "id": 1023,
-    "name": "Steven Peterson"
+    "name": "Steven Peterson",
+    "gender": "male"
   },
   {
     "id": 1024,
-    "name": "Amir Albazi"
+    "name": "Amir Albazi",
+    "gender": "male"
   },
   {
     "id": 1025,
-    "name": "Niklas Stolze"
+    "name": "Niklas Stolze",
+    "gender": "male"
   },
   {
     "id": 1026,
-    "name": "Darren Uyenoyama"
+    "name": "Darren Uyenoyama",
+    "gender": "male"
   },
   {
     "id": 1027,
-    "name": "Drew McFedries"
+    "name": "Drew McFedries",
+    "gender": "male"
   },
   {
     "id": 1028,
-    "name": "Niko Price"
+    "name": "Niko Price",
+    "gender": "male"
   },
   {
     "id": 1029,
-    "name": "Marcio Alexandre Junior"
+    "name": "Marcio Alexandre Junior",
+    "gender": "male"
   },
   {
     "id": 1030,
-    "name": "Olaf Alfonso"
+    "name": "Olaf Alfonso",
+    "gender": "male"
   },
   {
     "id": 1031,
-    "name": "Alex Caceres"
+    "name": "Alex Caceres",
+    "gender": "male"
   },
   {
     "id": 1032,
-    "name": "Trevor Smith"
+    "name": "Trevor Smith",
+    "gender": "male"
   },
   {
     "id": 1033,
-    "name": "Daniel Sarafian"
+    "name": "Daniel Sarafian",
+    "gender": "male"
   },
   {
     "id": 1034,
-    "name": "Heath Herring"
+    "name": "Heath Herring",
+    "gender": "male"
   },
   {
     "id": 1035,
-    "name": "Viviane Araujo"
+    "name": "Viviane Araujo",
+    "gender": "female"
   },
   {
     "id": 1036,
-    "name": "Dustin Stoltzfus"
+    "name": "Dustin Stoltzfus",
+    "gender": "male"
   },
   {
     "id": 1037,
-    "name": "Francis Marshall"
+    "name": "Francis Marshall",
+    "gender": "male"
   },
   {
     "id": 1038,
-    "name": "Phillipe Nover"
+    "name": "Phillipe Nover",
+    "gender": "male"
   },
   {
     "id": 1039,
-    "name": "Chris Heatherly"
+    "name": "Chris Heatherly",
+    "gender": "male"
   },
   {
     "id": 1040,
-    "name": "Rodrigo Nascimento"
+    "name": "Rodrigo Nascimento",
+    "gender": "male"
   },
   {
     "id": 1041,
-    "name": "Brandon Thatch"
+    "name": "Brandon Thatch",
+    "gender": "male"
   },
   {
     "id": 1042,
-    "name": "William Gomis"
+    "name": "William Gomis",
+    "gender": "male"
   },
   {
     "id": 1043,
-    "name": "Mike Russow"
+    "name": "Mike Russow",
+    "gender": "male"
   },
   {
     "id": 1044,
-    "name": "Buddy Roberts"
+    "name": "Buddy Roberts",
+    "gender": "male"
   },
   {
     "id": 1045,
-    "name": "Drako Rodriguez"
+    "name": "Drako Rodriguez",
+    "gender": "male"
   },
   {
     "id": 1046,
-    "name": "Vinicius Queiroz"
+    "name": "Vinicius Queiroz",
+    "gender": "male"
   },
   {
     "id": 1047,
-    "name": "Tereza Bleda"
+    "name": "Tereza Bleda",
+    "gender": "male"
   },
   {
     "id": 1048,
-    "name": "Forrest Griffin"
+    "name": "Forrest Griffin",
+    "gender": "male"
   },
   {
     "id": 1049,
-    "name": "Don Frye"
+    "name": "Don Frye",
+    "gender": "male"
   },
   {
     "id": 1050,
-    "name": "Junior Assuncao"
+    "name": "Junior Assuncao",
+    "gender": "male"
   },
   {
     "id": 1051,
-    "name": "Reuben Duran"
+    "name": "Reuben Duran",
+    "gender": "male"
   },
   {
     "id": 1052,
-    "name": "Gray Maynard"
+    "name": "Gray Maynard",
+    "gender": "male"
   },
   {
     "id": 1053,
-    "name": "James Vick"
+    "name": "James Vick",
+    "gender": "male"
   },
   {
     "id": 1054,
-    "name": "Brian Kelleher"
+    "name": "Brian Kelleher",
+    "gender": "male"
   },
   {
     "id": 1055,
-    "name": "Diego Ferreira"
+    "name": "Diego Ferreira",
+    "gender": "male"
   },
   {
     "id": 1056,
-    "name": "Alex Stiebling"
+    "name": "Alex Stiebling",
+    "gender": "male"
   },
   {
     "id": 1057,
-    "name": "Scott Askham"
+    "name": "Scott Askham",
+    "gender": "male"
   },
   {
     "id": 1058,
-    "name": "Kalindra Faria"
+    "name": "Kalindra Faria",
+    "gender": "male"
   },
   {
     "id": 1059,
-    "name": "Keith Jardine"
+    "name": "Keith Jardine",
+    "gender": "male"
   },
   {
     "id": 1060,
-    "name": "David Michaud"
+    "name": "David Michaud",
+    "gender": "male"
   },
   {
     "id": 1061,
-    "name": "Luana Carolina"
+    "name": "Luana Carolina",
+    "gender": "male"
   },
   {
     "id": 1062,
-    "name": "Travis Lutter"
+    "name": "Travis Lutter",
+    "gender": "male"
   },
   {
     "id": 1063,
-    "name": "Anthony Smith"
+    "name": "Anthony Smith",
+    "gender": "male"
   },
   {
     "id": 1064,
-    "name": "John Polakowski"
+    "name": "John Polakowski",
+    "gender": "male"
   },
   {
     "id": 1065,
-    "name": "Vicente Luque"
+    "name": "Vicente Luque",
+    "gender": "male"
   },
   {
     "id": 1066,
-    "name": "David Baron"
+    "name": "David Baron",
+    "gender": "male"
   },
   {
     "id": 1067,
-    "name": "Ricardo Abreu"
+    "name": "Ricardo Abreu",
+    "gender": "male"
   },
   {
     "id": 1068,
-    "name": "DaMarques Johnson"
+    "name": "DaMarques Johnson",
+    "gender": "male"
   },
   {
     "id": 1069,
-    "name": "Darrell Horcher"
+    "name": "Darrell Horcher",
+    "gender": "male"
   },
   {
     "id": 1070,
-    "name": "Kyle Nelson"
+    "name": "Kyle Nelson",
+    "gender": "male"
   },
   {
     "id": 1071,
-    "name": "Damien Brown"
+    "name": "Damien Brown",
+    "gender": "male"
   },
   {
     "id": 1072,
-    "name": "Tim Kennedy"
+    "name": "Tim Kennedy",
+    "gender": "male"
   },
   {
     "id": 1073,
-    "name": "Gustavo Lopez"
+    "name": "Gustavo Lopez",
+    "gender": "male"
   },
   {
     "id": 1074,
-    "name": "Yoshiro Maeda"
+    "name": "Yoshiro Maeda",
+    "gender": "male"
   },
   {
     "id": 1075,
-    "name": "Kenji Osawa"
+    "name": "Kenji Osawa",
+    "gender": "male"
   },
   {
     "id": 1076,
-    "name": "Yves Edwards"
+    "name": "Yves Edwards",
+    "gender": "male"
   },
   {
     "id": 1077,
-    "name": "Maryna Moroz"
+    "name": "Maryna Moroz",
+    "gender": "male"
   },
   {
     "id": 1078,
-    "name": "Thiago Silva"
+    "name": "Thiago Silva",
+    "gender": "male"
   },
   {
     "id": 1079,
-    "name": "Brad Blackburn"
+    "name": "Brad Blackburn",
+    "gender": "male"
   },
   {
     "id": 1080,
-    "name": "Yancy Medeiros"
+    "name": "Yancy Medeiros",
+    "gender": "male"
   },
   {
     "id": 1081,
-    "name": "Jameel Massouh"
+    "name": "Jameel Massouh",
+    "gender": "male"
   },
   {
     "id": 1082,
-    "name": "Ian Heinisch"
+    "name": "Ian Heinisch",
+    "gender": "male"
   },
   {
     "id": 1083,
-    "name": "Katsuyori Shibata"
+    "name": "Katsuyori Shibata",
+    "gender": "male"
   },
   {
     "id": 1084,
-    "name": "Steve Cantwell"
+    "name": "Steve Cantwell",
+    "gender": "male"
   },
   {
     "id": 1085,
-    "name": "Vanessa Demopoulos"
+    "name": "Vanessa Demopoulos",
+    "gender": "male"
   },
   {
     "id": 1086,
-    "name": "Jeff Monson"
+    "name": "Jeff Monson",
+    "gender": "male"
   },
   {
     "id": 1087,
-    "name": "Guto Inocente"
+    "name": "Guto Inocente",
+    "gender": "male"
   },
   {
     "id": 1088,
-    "name": "Leo Kuntz"
+    "name": "Leo Kuntz",
+    "gender": "male"
   },
   {
     "id": 1089,
-    "name": "Devin Powell"
+    "name": "Devin Powell",
+    "gender": "male"
   },
   {
     "id": 1090,
-    "name": "Marcus LeVesseur"
+    "name": "Marcus LeVesseur",
+    "gender": "male"
   },
   {
     "id": 1091,
-    "name": "Vitor Belfort"
+    "name": "Vitor Belfort",
+    "gender": "male"
   },
   {
     "id": 1092,
-    "name": "Tito Ortiz"
+    "name": "Tito Ortiz",
+    "gender": "male"
   },
   {
     "id": 1093,
-    "name": "Francisco Rivera"
+    "name": "Francisco Rivera",
+    "gender": "male"
   },
   {
     "id": 1094,
-    "name": "Jarred Brooks"
+    "name": "Jarred Brooks",
+    "gender": "male"
   },
   {
     "id": 1095,
-    "name": "Diego Nunes"
+    "name": "Diego Nunes",
+    "gender": "male"
   },
   {
     "id": 1096,
-    "name": "Joseph Benavidez"
+    "name": "Joseph Benavidez",
+    "gender": "male"
   },
   {
     "id": 1097,
-    "name": "Bryan Battle"
+    "name": "Bryan Battle",
+    "gender": "male"
   },
   {
     "id": 1098,
-    "name": "Mike Lullo"
+    "name": "Mike Lullo",
+    "gender": "male"
   },
   {
     "id": 1099,
-    "name": "Doug Evans"
+    "name": "Doug Evans",
+    "gender": "male"
   },
   {
     "id": 1100,
-    "name": "Chris Tuchscherer"
+    "name": "Chris Tuchscherer",
+    "gender": "male"
   },
   {
     "id": 1101,
-    "name": "Yoshihisa Yamamoto"
+    "name": "Yoshihisa Yamamoto",
+    "gender": "male"
   },
   {
     "id": 1102,
-    "name": "Jessica Penne"
+    "name": "Jessica Penne",
+    "gender": "female"
   },
   {
     "id": 1103,
-    "name": "Geane Herrera"
+    "name": "Geane Herrera",
+    "gender": "male"
   },
   {
     "id": 1104,
-    "name": "Nick Aguirre"
+    "name": "Nick Aguirre",
+    "gender": "male"
   },
   {
     "id": 1105,
-    "name": "Julia Polastri"
+    "name": "Julia Polastri",
+    "gender": "male"
   },
   {
     "id": 1106,
-    "name": "Joe Riggs"
+    "name": "Joe Riggs",
+    "gender": "male"
   },
   {
     "id": 1107,
-    "name": "Kazuyuki Fujita"
+    "name": "Kazuyuki Fujita",
+    "gender": "male"
   },
   {
     "id": 1108,
-    "name": "Jonathan Goulet"
+    "name": "Jonathan Goulet",
+    "gender": "male"
   },
   {
     "id": 1109,
-    "name": "Ebenezer Fontes Braga"
+    "name": "Ebenezer Fontes Braga",
+    "gender": "male"
   },
   {
     "id": 1110,
-    "name": "Luigi Vendramini"
+    "name": "Luigi Vendramini",
+    "gender": "male"
   },
   {
     "id": 1111,
-    "name": "Jeka Saragih"
+    "name": "Jeka Saragih",
+    "gender": "male"
   },
   {
     "id": 1112,
-    "name": "Clay Guida"
+    "name": "Clay Guida",
+    "gender": "male"
   },
   {
     "id": 1113,
-    "name": "Chepe Mariscal"
+    "name": "Chepe Mariscal",
+    "gender": "male"
   },
   {
     "id": 1114,
-    "name": "Phil Davis"
+    "name": "Phil Davis",
+    "gender": "male"
   },
   {
     "id": 1115,
-    "name": "Kalib Starnes"
+    "name": "Kalib Starnes",
+    "gender": "male"
   },
   {
     "id": 1116,
-    "name": "Kazuhiro Nakamura"
+    "name": "Kazuhiro Nakamura",
+    "gender": "male"
   },
   {
     "id": 1117,
-    "name": "Phillip Miller"
+    "name": "Phillip Miller",
+    "gender": "male"
   },
   {
     "id": 1118,
-    "name": "Edgar Garcia"
+    "name": "Edgar Garcia",
+    "gender": "male"
   },
   {
     "id": 1119,
-    "name": "Kuniyoshi Hironaka"
+    "name": "Kuniyoshi Hironaka",
+    "gender": "male"
   },
   {
     "id": 1120,
-    "name": "Raquel Pennington"
+    "name": "Raquel Pennington",
+    "gender": "female"
   },
   {
     "id": 1121,
-    "name": "Kyler Phillips"
+    "name": "Kyler Phillips",
+    "gender": "male"
   },
   {
     "id": 1122,
-    "name": "Chan Sung Jung"
+    "name": "Chan Sung Jung",
+    "gender": "male"
   },
   {
     "id": 1123,
-    "name": "Crosley Gracie"
+    "name": "Crosley Gracie",
+    "gender": "male"
   },
   {
     "id": 1124,
-    "name": "Igor Araujo"
+    "name": "Igor Araujo",
+    "gender": "male"
   },
   {
     "id": 1125,
-    "name": "Shanna Young"
+    "name": "Shanna Young",
+    "gender": "male"
   },
   {
     "id": 1126,
-    "name": "Kailin Curran"
+    "name": "Kailin Curran",
+    "gender": "male"
   },
   {
     "id": 1127,
-    "name": "Mark Munoz"
+    "name": "Mark Munoz",
+    "gender": "male"
   },
   {
     "id": 1128,
-    "name": "Derek Brunson"
+    "name": "Derek Brunson",
+    "gender": "male"
   },
   {
     "id": 1129,
-    "name": "Michel Prazeres"
+    "name": "Michel Prazeres",
+    "gender": "male"
   },
   {
     "id": 1130,
-    "name": "TJ Grant"
+    "name": "TJ Grant",
+    "gender": "male"
   },
   {
     "id": 1131,
-    "name": "Ashley Yoder"
+    "name": "Ashley Yoder",
+    "gender": "male"
   },
   {
     "id": 1132,
-    "name": "Jake Collier"
+    "name": "Jake Collier",
+    "gender": "male"
   },
   {
     "id": 1133,
-    "name": "Aspen Ladd"
+    "name": "Aspen Ladd",
+    "gender": "female"
   },
   {
     "id": 1134,
-    "name": "Patricio Freire"
+    "name": "Patricio Freire",
+    "gender": "male"
   },
   {
     "id": 1135,
-    "name": "Payton Talbott"
+    "name": "Payton Talbott",
+    "gender": "male"
   },
   {
     "id": 1136,
-    "name": "John Lineker"
+    "name": "John Lineker",
+    "gender": "male"
   },
   {
     "id": 1137,
-    "name": "Philip De Fries"
+    "name": "Philip De Fries",
+    "gender": "male"
   },
   {
     "id": 1138,
-    "name": "Davi Ramos"
+    "name": "Davi Ramos",
+    "gender": "male"
   },
   {
     "id": 1139,
-    "name": "Edmen Shahbazyan"
+    "name": "Edmen Shahbazyan",
+    "gender": "male"
   },
   {
     "id": 1140,
-    "name": "Brian Rogers"
+    "name": "Brian Rogers",
+    "gender": "male"
   },
   {
     "id": 1141,
-    "name": "Victor Henry"
+    "name": "Victor Henry",
+    "gender": "male"
   },
   {
     "id": 1142,
-    "name": "Fernie Garcia"
+    "name": "Fernie Garcia",
+    "gender": "male"
   },
   {
     "id": 1143,
-    "name": "Brendan O'Reilly"
+    "name": "Brendan O'Reilly",
+    "gender": "male"
   },
   {
     "id": 1144,
-    "name": "Dong Hyun Kim"
+    "name": "Dong Hyun Kim",
+    "gender": "male"
   },
   {
     "id": 1145,
-    "name": "Edwin Figueroa"
+    "name": "Edwin Figueroa",
+    "gender": "male"
   },
   {
     "id": 1146,
-    "name": "Damian Stasiak"
+    "name": "Damian Stasiak",
+    "gender": "male"
   },
   {
     "id": 1147,
-    "name": "Julian Erosa"
+    "name": "Julian Erosa",
+    "gender": "male"
   },
   {
     "id": 1148,
-    "name": "Hiromitsu Miura"
+    "name": "Hiromitsu Miura",
+    "gender": "male"
   },
   {
     "id": 1149,
-    "name": "Stevie Ray"
+    "name": "Stevie Ray",
+    "gender": "male"
   },
   {
     "id": 1150,
-    "name": "Wanderlei Silva"
+    "name": "Wanderlei Silva",
+    "gender": "male"
   },
   {
     "id": 1151,
-    "name": "Rose Namajunas"
+    "name": "Rose Namajunas",
+    "gender": "female"
   },
   {
     "id": 1152,
-    "name": "Mike Swick"
+    "name": "Mike Swick",
+    "gender": "male"
   },
   {
     "id": 1153,
-    "name": "Dhiego Lima"
+    "name": "Dhiego Lima",
+    "gender": "male"
   },
   {
     "id": 1154,
-    "name": "Jake Matthews"
+    "name": "Jake Matthews",
+    "gender": "male"
   },
   {
     "id": 1155,
-    "name": "Andrea Lee"
+    "name": "Andrea Lee",
+    "gender": "male"
   },
   {
     "id": 1156,
-    "name": "Jose Quinonez"
+    "name": "Jose Quinonez",
+    "gender": "male"
   },
   {
     "id": 1157,
-    "name": "Diego Brandao"
+    "name": "Diego Brandao",
+    "gender": "male"
   },
   {
     "id": 1158,
-    "name": "Ketlen Vieira"
+    "name": "Ketlen Vieira",
+    "gender": "female"
   },
   {
     "id": 1159,
-    "name": "Ivan Jorge"
+    "name": "Ivan Jorge",
+    "gender": "male"
   },
   {
     "id": 1160,
-    "name": "Lavar Johnson"
+    "name": "Lavar Johnson",
+    "gender": "male"
   },
   {
     "id": 1161,
-    "name": "Ken Stone"
+    "name": "Ken Stone",
+    "gender": "male"
   },
   {
     "id": 1162,
-    "name": "Francis Carmont"
+    "name": "Francis Carmont",
+    "gender": "male"
   },
   {
     "id": 1163,
-    "name": "Lukasz Brzeski"
+    "name": "Lukasz Brzeski",
+    "gender": "male"
   },
   {
     "id": 1164,
-    "name": "Hatsu Hioki"
+    "name": "Hatsu Hioki",
+    "gender": "male"
   },
   {
     "id": 1165,
-    "name": "Zak Cummings"
+    "name": "Zak Cummings",
+    "gender": "male"
   },
   {
     "id": 1166,
-    "name": "Albert Duraev"
+    "name": "Albert Duraev",
+    "gender": "male"
   },
   {
     "id": 1167,
-    "name": "Melquizael Costa"
+    "name": "Melquizael Costa",
+    "gender": "male"
   },
   {
     "id": 1168,
-    "name": "Arlene Blencowe"
+    "name": "Arlene Blencowe",
+    "gender": "male"
   },
   {
     "id": 1169,
-    "name": "Kevin Jordan"
+    "name": "Kevin Jordan",
+    "gender": "male"
   },
   {
     "id": 1170,
-    "name": "Johil de Oliveira"
+    "name": "Johil de Oliveira",
+    "gender": "male"
   },
   {
     "id": 1171,
-    "name": "Fabio Maldonado"
+    "name": "Fabio Maldonado",
+    "gender": "male"
   },
   {
     "id": 1172,
-    "name": "Sumudaerji"
+    "name": "Sumudaerji",
+    "gender": "male"
   },
   {
     "id": 1173,
-    "name": "Henry Briones"
+    "name": "Henry Briones",
+    "gender": "male"
   },
   {
     "id": 1174,
-    "name": "Rafael Dos Anjos"
+    "name": "Rafael Dos Anjos",
+    "gender": "male"
   },
   {
     "id": 1175,
-    "name": "Alex Oliveira"
+    "name": "Alex Oliveira",
+    "gender": "male"
   },
   {
     "id": 1176,
-    "name": "Wilson Reis"
+    "name": "Wilson Reis",
+    "gender": "male"
   },
   {
     "id": 1177,
-    "name": "Alexa Grasso"
+    "name": "Alexa Grasso",
+    "gender": "female"
   },
   {
     "id": 1178,
-    "name": "Jose Johnson"
+    "name": "Jose Johnson",
+    "gender": "male"
   },
   {
     "id": 1179,
-    "name": "Michel Pereira"
+    "name": "Michel Pereira",
+    "gender": "male"
   },
   {
     "id": 1180,
-    "name": "Aaron Phillips"
+    "name": "Aaron Phillips",
+    "gender": "male"
   },
   {
     "id": 1181,
-    "name": "Luan Lacerda"
+    "name": "Luan Lacerda",
+    "gender": "male"
   },
   {
     "id": 1182,
-    "name": "Mac Danzig"
+    "name": "Mac Danzig",
+    "gender": "male"
   },
   {
     "id": 1183,
-    "name": "Bibiano Fernandes"
+    "name": "Bibiano Fernandes",
+    "gender": "male"
   },
   {
     "id": 1184,
-    "name": "Jussier Formiga"
+    "name": "Jussier Formiga",
+    "gender": "male"
   },
   {
     "id": 1185,
-    "name": "Mike Brown"
+    "name": "Mike Brown",
+    "gender": "male"
   },
   {
     "id": 1186,
-    "name": "Jacob Rosales"
+    "name": "Jacob Rosales",
+    "gender": "male"
   },
   {
     "id": 1187,
-    "name": "Lisa Ellis"
+    "name": "Lisa Ellis",
+    "gender": "male"
   },
   {
     "id": 1188,
-    "name": "Kazuo Misaki"
+    "name": "Kazuo Misaki",
+    "gender": "male"
   },
   {
     "id": 1189,
-    "name": "Anthony Johnson"
+    "name": "Anthony Johnson",
+    "gender": "male"
   },
   {
     "id": 1190,
-    "name": "Sage Northcutt"
+    "name": "Sage Northcutt",
+    "gender": "male"
   },
   {
     "id": 1191,
-    "name": "Martin Day"
+    "name": "Martin Day",
+    "gender": "male"
   },
   {
     "id": 1192,
-    "name": "Mana Martinez"
+    "name": "Mana Martinez",
+    "gender": "male"
   },
   {
     "id": 1193,
-    "name": "Taylor Lapilus"
+    "name": "Taylor Lapilus",
+    "gender": "male"
   },
   {
     "id": 1194,
-    "name": "Eddie Alvarez"
+    "name": "Eddie Alvarez",
+    "gender": "male"
   },
   {
     "id": 1195,
-    "name": "Tom DeBlass"
+    "name": "Tom DeBlass",
+    "gender": "male"
   },
   {
     "id": 1196,
-    "name": "Pearl Gonzalez"
+    "name": "Pearl Gonzalez",
+    "gender": "male"
   },
   {
     "id": 1197,
-    "name": "Mike Rhodes"
+    "name": "Mike Rhodes",
+    "gender": "male"
   },
   {
     "id": 1198,
-    "name": "Randy Couture"
+    "name": "Randy Couture",
+    "gender": "male"
   },
   {
     "id": 1199,
-    "name": "Gilbert Burns"
+    "name": "Gilbert Burns",
+    "gender": "male"
   },
   {
     "id": 1200,
-    "name": "Parker Porter"
+    "name": "Parker Porter",
+    "gender": "male"
   },
   {
     "id": 1201,
-    "name": "Randy Brown"
+    "name": "Randy Brown",
+    "gender": "male"
   },
   {
     "id": 1202,
-    "name": "Alex White"
+    "name": "Alex White",
+    "gender": "male"
   },
   {
     "id": 1203,
-    "name": "Tainara Lisboa"
+    "name": "Tainara Lisboa",
+    "gender": "male"
   },
   {
     "id": 1204,
-    "name": "Anthony Birchak"
+    "name": "Anthony Birchak",
+    "gender": "male"
   },
   {
     "id": 1205,
-    "name": "Oli Thompson"
+    "name": "Oli Thompson",
+    "gender": "male"
   },
   {
     "id": 1206,
-    "name": "Gregory Rodrigues"
+    "name": "Gregory Rodrigues",
+    "gender": "male"
   },
   {
     "id": 1207,
-    "name": "Olivier Aubin-Mercier"
+    "name": "Olivier Aubin-Mercier",
+    "gender": "male"
   },
   {
     "id": 1208,
-    "name": "Rodolfo Bellato"
+    "name": "Rodolfo Bellato",
+    "gender": "male"
   },
   {
     "id": 1209,
-    "name": "Marcel Fortuna"
+    "name": "Marcel Fortuna",
+    "gender": "male"
   },
   {
     "id": 1210,
-    "name": "Scott Smith"
+    "name": "Scott Smith",
+    "gender": "male"
   },
   {
     "id": 1211,
-    "name": "Motonobu Tezuka"
+    "name": "Motonobu Tezuka",
+    "gender": "male"
   },
   {
     "id": 1212,
-    "name": "Felipe Colares"
+    "name": "Felipe Colares",
+    "gender": "male"
   },
   {
     "id": 1213,
-    "name": "Pedro Munhoz"
+    "name": "Pedro Munhoz",
+    "gender": "male"
   },
   {
     "id": 1214,
-    "name": "Esteban Ribovics"
+    "name": "Esteban Ribovics",
+    "gender": "male"
   },
   {
     "id": 1215,
-    "name": "Phil Baroni"
+    "name": "Phil Baroni",
+    "gender": "male"
   },
   {
     "id": 1216,
-    "name": "Justin Scoggins"
+    "name": "Justin Scoggins",
+    "gender": "male"
   },
   {
     "id": 1217,
-    "name": "Cory McKenna"
+    "name": "Cory McKenna",
+    "gender": "male"
   },
   {
     "id": 1218,
-    "name": "Clay Collard"
+    "name": "Clay Collard",
+    "gender": "male"
   },
   {
     "id": 1219,
-    "name": "Jorge Gurgel"
+    "name": "Jorge Gurgel",
+    "gender": "male"
   },
   {
     "id": 1220,
-    "name": "Marcos Rogerio de Lima"
+    "name": "Marcos Rogerio de Lima",
+    "gender": "male"
   },
   {
     "id": 1221,
-    "name": "Molly McCann"
+    "name": "Molly McCann",
+    "gender": "male"
   },
   {
     "id": 1222,
-    "name": "BJ Penn"
+    "name": "BJ Penn",
+    "gender": "male"
   },
   {
     "id": 1223,
-    "name": "Danny Downes"
+    "name": "Danny Downes",
+    "gender": "male"
   },
   {
     "id": 1224,
-    "name": "Paul Taylor"
+    "name": "Paul Taylor",
+    "gender": "male"
   },
   {
     "id": 1225,
-    "name": "Gadzhi Omargadzhiev"
+    "name": "Gadzhi Omargadzhiev",
+    "gender": "male"
   },
   {
     "id": 1226,
-    "name": "Brandon Moreno"
+    "name": "Brandon Moreno",
+    "gender": "male"
   },
   {
     "id": 1227,
-    "name": "Vince Cachero"
+    "name": "Vince Cachero",
+    "gender": "male"
   },
   {
     "id": 1228,
-    "name": "Dongi Yang"
+    "name": "Dongi Yang",
+    "gender": "male"
   },
   {
     "id": 1229,
-    "name": "Hitomi Akano"
+    "name": "Hitomi Akano",
+    "gender": "male"
   },
   {
     "id": 1230,
-    "name": "Megan Anderson"
+    "name": "Megan Anderson",
+    "gender": "male"
   },
   {
     "id": 1231,
-    "name": "Jacob Malkoun"
+    "name": "Jacob Malkoun",
+    "gender": "male"
   },
   {
     "id": 1232,
-    "name": "Hacran Dias"
+    "name": "Hacran Dias",
+    "gender": "male"
   },
   {
     "id": 1233,
-    "name": "Shungo Oyama"
+    "name": "Shungo Oyama",
+    "gender": "male"
   },
   {
     "id": 1234,
-    "name": "Jarno Errens"
+    "name": "Jarno Errens",
+    "gender": "male"
   },
   {
     "id": 1235,
-    "name": "Brock Lesnar"
+    "name": "Brock Lesnar",
+    "gender": "male"
   },
   {
     "id": 1236,
-    "name": "Michael Trizano"
+    "name": "Michael Trizano",
+    "gender": "male"
   },
   {
     "id": 1237,
-    "name": "Emily Whitmire"
+    "name": "Emily Whitmire",
+    "gender": "male"
   },
   {
     "id": 1238,
-    "name": "Antonio Braga Neto"
+    "name": "Antonio Braga Neto",
+    "gender": "male"
   },
   {
     "id": 1239,
-    "name": "Zarrukh Adashev"
+    "name": "Zarrukh Adashev",
+    "gender": "male"
   },
   {
     "id": 1240,
-    "name": "Sammy Morgan"
+    "name": "Sammy Morgan",
+    "gender": "male"
   },
   {
     "id": 1241,
-    "name": "Bernardo Magalhaes"
+    "name": "Bernardo Magalhaes",
+    "gender": "male"
   },
   {
     "id": 1242,
-    "name": "Caol Uno"
+    "name": "Caol Uno",
+    "gender": "male"
   },
   {
     "id": 1243,
-    "name": "Matthew Riddle"
+    "name": "Matthew Riddle",
+    "gender": "male"
   },
   {
     "id": 1244,
-    "name": "Shuya Kamikubo"
+    "name": "Shuya Kamikubo",
+    "gender": "male"
   },
   {
     "id": 1245,
-    "name": "Charles Jourdain"
+    "name": "Charles Jourdain",
+    "gender": "male"
   },
   {
     "id": 1246,
-    "name": "Leonard Garcia"
+    "name": "Leonard Garcia",
+    "gender": "male"
   },
   {
     "id": 1247,
-    "name": "Igor Vovchanchyn"
+    "name": "Igor Vovchanchyn",
+    "gender": "male"
   },
   {
     "id": 1248,
-    "name": "Gabriel Silva"
+    "name": "Gabriel Silva",
+    "gender": "male"
   },
   {
     "id": 1249,
-    "name": "SangHoon Yoo"
+    "name": "SangHoon Yoo",
+    "gender": "male"
   },
   {
     "id": 1250,
-    "name": "Kevin Croom"
+    "name": "Kevin Croom",
+    "gender": "male"
   },
   {
     "id": 1251,
-    "name": "Matt Grice"
+    "name": "Matt Grice",
+    "gender": "male"
   },
   {
     "id": 1252,
-    "name": "Caio Borralho"
+    "name": "Caio Borralho",
+    "gender": "male"
   },
   {
     "id": 1253,
-    "name": "Karl Roberson"
+    "name": "Karl Roberson",
+    "gender": "male"
   },
   {
     "id": 1254,
-    "name": "Spike Carlyle"
+    "name": "Spike Carlyle",
+    "gender": "male"
   },
   {
     "id": 1255,
-    "name": "Tom Niinimaki"
+    "name": "Tom Niinimaki",
+    "gender": "male"
   },
   {
     "id": 1256,
-    "name": "Nick Pace"
+    "name": "Nick Pace",
+    "gender": "male"
   },
   {
     "id": 1257,
-    "name": "John Salter"
+    "name": "John Salter",
+    "gender": "male"
   },
   {
     "id": 1258,
-    "name": "Rafael Rebello"
+    "name": "Rafael Rebello",
+    "gender": "male"
   },
   {
     "id": 1259,
-    "name": "Chris Camozzi"
+    "name": "Chris Camozzi",
+    "gender": "male"
   },
   {
     "id": 1260,
-    "name": "Bart Palaszewski"
+    "name": "Bart Palaszewski",
+    "gender": "male"
   },
   {
     "id": 1261,
-    "name": "Sean Woodson"
+    "name": "Sean Woodson",
+    "gender": "male"
   },
   {
     "id": 1262,
-    "name": "Nobuhiro Obiya"
+    "name": "Nobuhiro Obiya",
+    "gender": "male"
   },
   {
     "id": 1263,
-    "name": "Ciryl Gane"
+    "name": "Ciryl Gane",
+    "gender": "male"
   },
   {
     "id": 1264,
-    "name": "Miranda Maverick"
+    "name": "Miranda Maverick",
+    "gender": "male"
   },
   {
     "id": 1265,
-    "name": "Lucas Martins"
+    "name": "Lucas Martins",
+    "gender": "male"
   },
   {
     "id": 1266,
-    "name": "Renan Barao"
+    "name": "Renan Barao",
+    "gender": "male"
   },
   {
     "id": 1267,
-    "name": "Hernani Perpetuo"
+    "name": "Hernani Perpetuo",
+    "gender": "male"
   },
   {
     "id": 1268,
-    "name": "James Zikic"
+    "name": "James Zikic",
+    "gender": "male"
   },
   {
     "id": 1269,
-    "name": "Mario Sousa"
+    "name": "Mario Sousa",
+    "gender": "male"
   },
   {
     "id": 1270,
-    "name": "Yuki Kondo"
+    "name": "Yuki Kondo",
+    "gender": "male"
   },
   {
     "id": 1271,
-    "name": "Jacob Kilburn"
+    "name": "Jacob Kilburn",
+    "gender": "male"
   },
   {
     "id": 1272,
-    "name": "Talita Bernardo"
+    "name": "Talita Bernardo",
+    "gender": "male"
   },
   {
     "id": 1273,
-    "name": "Yoshihiro Nakao"
+    "name": "Yoshihiro Nakao",
+    "gender": "male"
   },
   {
     "id": 1274,
-    "name": "Maria Silva"
+    "name": "Maria Silva",
+    "gender": "male"
   },
   {
     "id": 1275,
-    "name": "Nick Catone"
+    "name": "Nick Catone",
+    "gender": "male"
   },
   {
     "id": 1276,
-    "name": "Julio Paulino"
+    "name": "Julio Paulino",
+    "gender": "male"
   },
   {
     "id": 1277,
-    "name": "Roger Huerta"
+    "name": "Roger Huerta",
+    "gender": "male"
   },
   {
     "id": 1278,
-    "name": "Saad Awad"
+    "name": "Saad Awad",
+    "gender": "male"
   },
   {
     "id": 1279,
-    "name": "Yushin Okami"
+    "name": "Yushin Okami",
+    "gender": "male"
   },
   {
     "id": 1280,
-    "name": "Natan Levy"
+    "name": "Natan Levy",
+    "gender": "male"
   },
   {
     "id": 1281,
-    "name": "Humberto Bandenay"
+    "name": "Humberto Bandenay",
+    "gender": "male"
   },
   {
     "id": 1282,
-    "name": "Peter Sobotta"
+    "name": "Peter Sobotta",
+    "gender": "male"
   },
   {
     "id": 1283,
-    "name": "Louis Cosce"
+    "name": "Louis Cosce",
+    "gender": "male"
   },
   {
     "id": 1284,
-    "name": "Marcelo Golm"
+    "name": "Marcelo Golm",
+    "gender": "male"
   },
   {
     "id": 1285,
-    "name": "Francisco Trinaldo"
+    "name": "Francisco Trinaldo",
+    "gender": "male"
   },
   {
     "id": 1286,
-    "name": "Emmanuel Sanchez"
+    "name": "Emmanuel Sanchez",
+    "gender": "male"
   },
   {
     "id": 1287,
-    "name": "Tae Hyun Bang"
+    "name": "Tae Hyun Bang",
+    "gender": "male"
   },
   {
     "id": 1288,
-    "name": "Hector Lombard"
+    "name": "Hector Lombard",
+    "gender": "male"
   },
   {
     "id": 1289,
-    "name": "Charlie Valencia"
+    "name": "Charlie Valencia",
+    "gender": "male"
   },
   {
     "id": 1290,
-    "name": "Demetrious Johnson"
+    "name": "Demetrious Johnson",
+    "gender": "male"
   },
   {
     "id": 1291,
-    "name": "Jon Jones"
+    "name": "Jon Jones",
+    "gender": "male"
   },
   {
     "id": 1292,
-    "name": "Fernando Bruno"
+    "name": "Fernando Bruno",
+    "gender": "male"
   },
   {
     "id": 1293,
-    "name": "Marvin Vettori"
+    "name": "Marvin Vettori",
+    "gender": "male"
   },
   {
     "id": 1294,
-    "name": "Aaron Simpson"
+    "name": "Aaron Simpson",
+    "gender": "male"
   },
   {
     "id": 1295,
-    "name": "Alex Nicholson"
+    "name": "Alex Nicholson",
+    "gender": "male"
   },
   {
     "id": 1296,
-    "name": "Ovince Saint Preux"
+    "name": "Ovince Saint Preux",
+    "gender": "male"
   },
   {
     "id": 1297,
-    "name": "Jessica Eye"
+    "name": "Jessica Eye",
+    "gender": "female"
   },
   {
     "id": 1298,
-    "name": "Sean O'Connell"
+    "name": "Sean O'Connell",
+    "gender": "male"
   },
   {
     "id": 1299,
-    "name": "Tetsuji Kato"
+    "name": "Tetsuji Kato",
+    "gender": "male"
   },
   {
     "id": 1300,
-    "name": "Nina Nunes"
+    "name": "Nina Nunes",
+    "gender": "female"
   },
   {
     "id": 1301,
-    "name": "Bojan Velickovic"
+    "name": "Bojan Velickovic",
+    "gender": "male"
   },
   {
     "id": 1302,
-    "name": "Jesse Ronson"
+    "name": "Jesse Ronson",
+    "gender": "male"
   },
   {
     "id": 1303,
-    "name": "James Irvin"
+    "name": "James Irvin",
+    "gender": "male"
   },
   {
     "id": 1304,
-    "name": "Ronys Torres"
+    "name": "Ronys Torres",
+    "gender": "male"
   },
   {
     "id": 1305,
-    "name": "Justin Jones"
+    "name": "Justin Jones",
+    "gender": "male"
   },
   {
     "id": 1306,
-    "name": "Wallid Ismail"
+    "name": "Wallid Ismail",
+    "gender": "male"
   },
   {
     "id": 1307,
-    "name": "Danyelle Wolf"
+    "name": "Danyelle Wolf",
+    "gender": "male"
   },
   {
     "id": 1308,
-    "name": "Mick Parkin"
+    "name": "Mick Parkin",
+    "gender": "male"
   },
   {
     "id": 1309,
-    "name": "Kron Gracie"
+    "name": "Kron Gracie",
+    "gender": "male"
   },
   {
     "id": 1310,
-    "name": "Reza Madadi"
+    "name": "Reza Madadi",
+    "gender": "male"
   },
   {
     "id": 1311,
-    "name": "Tony Fryklund"
+    "name": "Tony Fryklund",
+    "gender": "male"
   },
   {
     "id": 1312,
-    "name": "Kevin Holland"
+    "name": "Kevin Holland",
+    "gender": "male"
   },
   {
     "id": 1313,
-    "name": "Nathaniel Wood"
+    "name": "Nathaniel Wood",
+    "gender": "male"
   },
   {
     "id": 1314,
-    "name": "Gloria de Paula"
+    "name": "Gloria de Paula",
+    "gender": "male"
   },
   {
     "id": 1315,
-    "name": "Dan Cramer"
+    "name": "Dan Cramer",
+    "gender": "male"
   },
   {
     "id": 1316,
-    "name": "Akihiro Gono"
+    "name": "Akihiro Gono",
+    "gender": "male"
   },
   {
     "id": 1317,
-    "name": "Rafael Natal"
+    "name": "Rafael Natal",
+    "gender": "male"
   },
   {
     "id": 1318,
-    "name": "Tyler Stinson"
+    "name": "Tyler Stinson",
+    "gender": "male"
   },
   {
     "id": 1319,
-    "name": "Cezar Ferreira"
+    "name": "Cezar Ferreira",
+    "gender": "male"
   },
   {
     "id": 1320,
-    "name": "Hiroshi Izumi"
+    "name": "Hiroshi Izumi",
+    "gender": "male"
   },
   {
     "id": 1321,
-    "name": "Marcos Vinicius"
+    "name": "Marcos Vinicius",
+    "gender": "male"
   },
   {
     "id": 1322,
-    "name": "Patrick Williams"
+    "name": "Patrick Williams",
+    "gender": "male"
   },
   {
     "id": 1323,
-    "name": "Yohan Lainesse"
+    "name": "Yohan Lainesse",
+    "gender": "male"
   },
   {
     "id": 1324,
-    "name": "Rin Nakai"
+    "name": "Rin Nakai",
+    "gender": "male"
   },
   {
     "id": 1325,
-    "name": "Serghei Spivac"
+    "name": "Serghei Spivac",
+    "gender": "male"
   },
   {
     "id": 1326,
-    "name": "Cortney Casey"
+    "name": "Cortney Casey",
+    "gender": "male"
   },
   {
     "id": 1327,
-    "name": "Sara McMann"
+    "name": "Sara McMann",
+    "gender": "male"
   },
   {
     "id": 1328,
-    "name": "Hector Ramirez"
+    "name": "Hector Ramirez",
+    "gender": "male"
   },
   {
     "id": 1329,
-    "name": "Ronny Markes"
+    "name": "Ronny Markes",
+    "gender": "male"
   },
   {
     "id": 1330,
-    "name": "Jeff Joslin"
+    "name": "Jeff Joslin",
+    "gender": "male"
   },
   {
     "id": 1331,
-    "name": "Stefan Sekulic"
+    "name": "Stefan Sekulic",
+    "gender": "male"
   },
   {
     "id": 1332,
-    "name": "Sedriques Dumas"
+    "name": "Sedriques Dumas",
+    "gender": "male"
   },
   {
     "id": 1333,
-    "name": "Josh Culibao"
+    "name": "Josh Culibao",
+    "gender": "male"
   },
   {
     "id": 1334,
-    "name": "Cathal Pendred"
+    "name": "Cathal Pendred",
+    "gender": "male"
   },
   {
     "id": 1335,
-    "name": "Anshul Jubli"
+    "name": "Anshul Jubli",
+    "gender": "male"
   },
   {
     "id": 1336,
-    "name": "Tsuyoshi Kohsaka"
+    "name": "Tsuyoshi Kohsaka",
+    "gender": "male"
   },
   {
     "id": 1337,
-    "name": "Daijiro Matsui"
+    "name": "Daijiro Matsui",
+    "gender": "male"
   },
   {
     "id": 1338,
-    "name": "Steve Garcia"
+    "name": "Steve Garcia",
+    "gender": "male"
   },
   {
     "id": 1339,
-    "name": "Francisco Figueiredo"
+    "name": "Francisco Figueiredo",
+    "gender": "male"
   },
   {
     "id": 1340,
-    "name": "Shane Burgos"
+    "name": "Shane Burgos",
+    "gender": "male"
   },
   {
     "id": 1341,
-    "name": "Jimi Manuwa"
+    "name": "Jimi Manuwa",
+    "gender": "male"
   },
   {
     "id": 1342,
-    "name": "Cody Durden"
+    "name": "Cody Durden",
+    "gender": "male"
   },
   {
     "id": 1343,
-    "name": "Estevan Payan"
+    "name": "Estevan Payan",
+    "gender": "male"
   },
   {
     "id": 1344,
-    "name": "Andrei Semenov"
+    "name": "Andrei Semenov",
+    "gender": "male"
   },
   {
     "id": 1345,
-    "name": "Brendan Schaub"
+    "name": "Brendan Schaub",
+    "gender": "male"
   },
   {
     "id": 1346,
-    "name": "Iasmin Lucindo"
+    "name": "Iasmin Lucindo",
+    "gender": "male"
   },
   {
     "id": 1347,
-    "name": "Mirsad Bektic"
+    "name": "Mirsad Bektic",
+    "gender": "male"
   },
   {
     "id": 1348,
-    "name": "Evangelista Santos"
+    "name": "Evangelista Santos",
+    "gender": "male"
   },
   {
     "id": 1349,
-    "name": "Christos Giagos"
+    "name": "Christos Giagos",
+    "gender": "male"
   },
   {
     "id": 1350,
-    "name": "Sarah Alpar"
+    "name": "Sarah Alpar",
+    "gender": "male"
   },
   {
     "id": 1351,
-    "name": "Hu Yaozong"
+    "name": "Hu Yaozong",
+    "gender": "male"
   },
   {
     "id": 1352,
-    "name": "Manel Kape"
+    "name": "Manel Kape",
+    "gender": "male"
   },
   {
     "id": 1353,
-    "name": "Wagnney Fabiano"
+    "name": "Wagnney Fabiano",
+    "gender": "male"
   },
   {
     "id": 1354,
-    "name": "Willie Gates"
+    "name": "Willie Gates",
+    "gender": "male"
   },
   {
     "id": 1355,
-    "name": "Andrews Nakahara"
+    "name": "Andrews Nakahara",
+    "gender": "male"
   },
   {
     "id": 1356,
-    "name": "Roque Martinez"
+    "name": "Roque Martinez",
+    "gender": "male"
   },
   {
     "id": 1357,
-    "name": "Daniel Cormier"
+    "name": "Daniel Cormier",
+    "gender": "male"
   },
   {
     "id": 1358,
-    "name": "Casey Kenney"
+    "name": "Casey Kenney",
+    "gender": "male"
   },
   {
     "id": 1359,
-    "name": "Hirotaka Yokoi"
+    "name": "Hirotaka Yokoi",
+    "gender": "male"
   },
   {
     "id": 1360,
-    "name": "Alexander Gustafsson"
+    "name": "Alexander Gustafsson",
+    "gender": "male"
   },
   {
     "id": 1361,
-    "name": "Antonio Banuelos"
+    "name": "Antonio Banuelos",
+    "gender": "male"
   },
   {
     "id": 1362,
-    "name": "Rodrigo Gracie"
+    "name": "Rodrigo Gracie",
+    "gender": "male"
   },
   {
     "id": 1363,
-    "name": "Kevin Casey"
+    "name": "Kevin Casey",
+    "gender": "male"
   },
   {
     "id": 1364,
-    "name": "Chael Sonnen"
+    "name": "Chael Sonnen",
+    "gender": "male"
   },
   {
     "id": 1365,
-    "name": "Sergio Pettis"
+    "name": "Sergio Pettis",
+    "gender": "male"
   },
   {
     "id": 1366,
-    "name": "Dylan Andrews"
+    "name": "Dylan Andrews",
+    "gender": "male"
   },
   {
     "id": 1367,
-    "name": "Josh Samman"
+    "name": "Josh Samman",
+    "gender": "male"
   },
   {
     "id": 1368,
-    "name": "Bec Rawlings"
+    "name": "Bec Rawlings",
+    "gender": "male"
   },
   {
     "id": 1369,
-    "name": "Luke Barnatt"
+    "name": "Luke Barnatt",
+    "gender": "male"
   },
   {
     "id": 1370,
-    "name": "John Cholish"
+    "name": "John Cholish",
+    "gender": "male"
   },
   {
     "id": 1371,
-    "name": "Benji Radach"
+    "name": "Benji Radach",
+    "gender": "male"
   },
   {
     "id": 1372,
-    "name": "Rory MacDonald"
+    "name": "Rory MacDonald",
+    "gender": "male"
   },
   {
     "id": 1373,
-    "name": "Evan Elder"
+    "name": "Evan Elder",
+    "gender": "male"
   },
   {
     "id": 1374,
-    "name": "Ryan Bader"
+    "name": "Ryan Bader",
+    "gender": "male"
   },
   {
     "id": 1375,
-    "name": "Chico Camus"
+    "name": "Chico Camus",
+    "gender": "male"
   },
   {
     "id": 1376,
-    "name": "Rob Emerson"
+    "name": "Rob Emerson",
+    "gender": "male"
   },
   {
     "id": 1377,
-    "name": "Magomed Mustafaev"
+    "name": "Magomed Mustafaev",
+    "gender": "male"
   },
   {
     "id": 1378,
-    "name": "Sergio Moraes"
+    "name": "Sergio Moraes",
+    "gender": "male"
   },
   {
     "id": 1379,
-    "name": "Johnny Eduardo"
+    "name": "Johnny Eduardo",
+    "gender": "male"
   },
   {
     "id": 1380,
-    "name": "Abel Trujillo"
+    "name": "Abel Trujillo",
+    "gender": "male"
   },
   {
     "id": 1381,
-    "name": "Aleksandra Albu"
+    "name": "Aleksandra Albu",
+    "gender": "male"
   },
   {
     "id": 1382,
-    "name": "Mads Burnell"
+    "name": "Mads Burnell",
+    "gender": "male"
   },
   {
     "id": 1383,
-    "name": "Kazula Vargas"
+    "name": "Kazula Vargas",
+    "gender": "male"
   },
   {
     "id": 1384,
-    "name": "Dominick Reyes"
+    "name": "Dominick Reyes",
+    "gender": "male"
   },
   {
     "id": 1385,
-    "name": "John Marsh"
+    "name": "John Marsh",
+    "gender": "male"
   },
   {
     "id": 1386,
-    "name": "Brad Pickett"
+    "name": "Brad Pickett",
+    "gender": "male"
   },
   {
     "id": 1387,
-    "name": "Genaro Valdez"
+    "name": "Genaro Valdez",
+    "gender": "male"
   },
   {
     "id": 1388,
-    "name": "Lyoto Machida"
+    "name": "Lyoto Machida",
+    "gender": "male"
   },
   {
     "id": 1389,
-    "name": "Michael Graves"
+    "name": "Michael Graves",
+    "gender": "male"
   },
   {
     "id": 1390,
-    "name": "Paul Buentello"
+    "name": "Paul Buentello",
+    "gender": "male"
   },
   {
     "id": 1391,
-    "name": "Maurice Greene"
+    "name": "Maurice Greene",
+    "gender": "male"
   },
   {
     "id": 1392,
-    "name": "Jeremy Stephens"
+    "name": "Jeremy Stephens",
+    "gender": "male"
   },
   {
     "id": 1393,
-    "name": "Antonio Schembri"
+    "name": "Antonio Schembri",
+    "gender": "male"
   },
   {
     "id": 1394,
-    "name": "Ricky Simon"
+    "name": "Ricky Simon",
+    "gender": "male"
   },
   {
     "id": 1395,
-    "name": "Mark Kerr"
+    "name": "Mark Kerr",
+    "gender": "male"
   },
   {
     "id": 1396,
-    "name": "Hiromitsu Kanehara"
+    "name": "Hiromitsu Kanehara",
+    "gender": "male"
   },
   {
     "id": 1397,
-    "name": "Vik Grujic"
+    "name": "Vik Grujic",
+    "gender": "male"
   },
   {
     "id": 1398,
-    "name": "Joby Sanchez"
+    "name": "Joby Sanchez",
+    "gender": "male"
   },
   {
     "id": 1399,
-    "name": "Leandro Silva"
+    "name": "Leandro Silva",
+    "gender": "male"
   },
   {
     "id": 1400,
-    "name": "Raoni Barcelos"
+    "name": "Raoni Barcelos",
+    "gender": "male"
   },
   {
     "id": 1401,
-    "name": "Court McGee"
+    "name": "Court McGee",
+    "gender": "male"
   },
   {
     "id": 1402,
-    "name": "Antonina Shevchenko"
+    "name": "Antonina Shevchenko",
+    "gender": "male"
   },
   {
     "id": 1403,
-    "name": "Adriano Martins"
+    "name": "Adriano Martins",
+    "gender": "male"
   },
   {
     "id": 1404,
-    "name": "Leonardo Mafra"
+    "name": "Leonardo Mafra",
+    "gender": "male"
   },
   {
     "id": 1405,
-    "name": "Anton Kuivanen"
+    "name": "Anton Kuivanen",
+    "gender": "male"
   },
   {
     "id": 1406,
-    "name": "William Knight"
+    "name": "William Knight",
+    "gender": "male"
   },
   {
     "id": 1407,
-    "name": "Brok Weaver"
+    "name": "Brok Weaver",
+    "gender": "male"
   },
   {
     "id": 1408,
-    "name": "Julio Arce"
+    "name": "Julio Arce",
+    "gender": "male"
   },
   {
     "id": 1409,
-    "name": "Askar Askarov"
+    "name": "Askar Askarov",
+    "gender": "male"
   },
   {
     "id": 1410,
-    "name": "Mitch Clarke"
+    "name": "Mitch Clarke",
+    "gender": "male"
   },
   {
     "id": 1411,
-    "name": "Adam Wieczorek"
+    "name": "Adam Wieczorek",
+    "gender": "male"
   },
   {
     "id": 1412,
-    "name": "Dan Hardy"
+    "name": "Dan Hardy",
+    "gender": "male"
   },
   {
     "id": 1413,
-    "name": "Cain Velasquez"
+    "name": "Cain Velasquez",
+    "gender": "male"
   },
   {
     "id": 1414,
-    "name": "Mike Grundy"
+    "name": "Mike Grundy",
+    "gender": "male"
   },
   {
     "id": 1415,
-    "name": "Wulijiburen"
+    "name": "Wulijiburen",
+    "gender": "male"
   },
   {
     "id": 1416,
-    "name": "Phil Rowe"
+    "name": "Phil Rowe",
+    "gender": "male"
   },
   {
     "id": 1417,
-    "name": "Farid Basharat"
+    "name": "Farid Basharat",
+    "gender": "male"
   },
   {
     "id": 1418,
-    "name": "Tyler Toner"
+    "name": "Tyler Toner",
+    "gender": "male"
   },
   {
     "id": 1419,
-    "name": "Jessica Andrade"
+    "name": "Jessica Andrade",
+    "gender": "female"
   },
   {
     "id": 1420,
-    "name": "Sean Sherk"
+    "name": "Sean Sherk",
+    "gender": "male"
   },
   {
     "id": 1421,
-    "name": "Ryan Benoit"
+    "name": "Ryan Benoit",
+    "gender": "male"
   },
   {
     "id": 1422,
-    "name": "Akbarh Arreola"
+    "name": "Akbarh Arreola",
+    "gender": "male"
   },
   {
     "id": 1423,
-    "name": "Zak Ottow"
+    "name": "Zak Ottow",
+    "gender": "male"
   },
   {
     "id": 1424,
-    "name": "Angela Magana"
+    "name": "Angela Magana",
+    "gender": "female"
   },
   {
     "id": 1425,
-    "name": "Valentina Shevchenko"
+    "name": "Valentina Shevchenko",
+    "gender": "female"
   },
   {
     "id": 1426,
-    "name": "Tomasz Drwal"
+    "name": "Tomasz Drwal",
+    "gender": "male"
   },
   {
     "id": 1427,
-    "name": "Akira Shoji"
+    "name": "Akira Shoji",
+    "gender": "male"
   },
   {
     "id": 1428,
-    "name": "Sean O'Malley"
+    "name": "Sean O'Malley",
+    "gender": "male"
   },
   {
     "id": 1429,
-    "name": "Guido Cannetti"
+    "name": "Guido Cannetti",
+    "gender": "male"
   },
   {
     "id": 1430,
-    "name": "Muhsin Corbbrey"
+    "name": "Muhsin Corbbrey",
+    "gender": "male"
   },
   {
     "id": 1431,
-    "name": "Josh Koscheck"
+    "name": "Josh Koscheck",
+    "gender": "male"
   },
   {
     "id": 1432,
-    "name": "Jake Ellenberger"
+    "name": "Jake Ellenberger",
+    "gender": "male"
   },
   {
     "id": 1433,
-    "name": "Ben Rothwell"
+    "name": "Ben Rothwell",
+    "gender": "male"
   },
   {
     "id": 1434,
-    "name": "Alex Pereira"
+    "name": "Alex Pereira",
+    "gender": "male"
   },
   {
     "id": 1435,
-    "name": "Ignacio Bahamondes"
+    "name": "Ignacio Bahamondes",
+    "gender": "male"
   },
   {
     "id": 1436,
-    "name": "Veronica Hardy"
+    "name": "Veronica Hardy",
+    "gender": "male"
   },
   {
     "id": 1437,
-    "name": "Tyron Woodley"
+    "name": "Tyron Woodley",
+    "gender": "male"
   },
   {
     "id": 1438,
-    "name": "Steve Bruno"
+    "name": "Steve Bruno",
+    "gender": "male"
   },
   {
     "id": 1439,
-    "name": "Jordan Wright"
+    "name": "Jordan Wright",
+    "gender": "male"
   },
   {
     "id": 1440,
-    "name": "Elizeu Zaleski dos Santos"
+    "name": "Elizeu Zaleski dos Santos",
+    "gender": "male"
   },
   {
     "id": 1441,
-    "name": "Piotr Hallmann"
+    "name": "Piotr Hallmann",
+    "gender": "male"
   },
   {
     "id": 1442,
-    "name": "Jack Hermansson"
+    "name": "Jack Hermansson",
+    "gender": "male"
   },
   {
     "id": 1443,
-    "name": "Germaine de Randamie"
+    "name": "Germaine de Randamie",
+    "gender": "female"
   },
   {
     "id": 1444,
-    "name": "John Howard"
+    "name": "John Howard",
+    "gender": "male"
   },
   {
     "id": 1445,
-    "name": "Nicco Montano"
+    "name": "Nicco Montano",
+    "gender": "male"
   },
   {
     "id": 1446,
-    "name": "Paulo Cesar Silva"
+    "name": "Paulo Cesar Silva",
+    "gender": "male"
   },
   {
     "id": 1447,
-    "name": "Dan Moret"
+    "name": "Dan Moret",
+    "gender": "male"
   },
   {
     "id": 1448,
-    "name": "Ricky Glenn"
+    "name": "Ricky Glenn",
+    "gender": "male"
   },
   {
     "id": 1449,
-    "name": "Sodiq Yusuff"
+    "name": "Sodiq Yusuff",
+    "gender": "male"
   },
   {
     "id": 1450,
-    "name": "Cub Swanson"
+    "name": "Cub Swanson",
+    "gender": "male"
   },
   {
     "id": 1451,
-    "name": "Zhang Weili"
+    "name": "Zhang Weili",
+    "gender": "female"
   },
   {
     "id": 1452,
-    "name": "Cristiane Justino"
+    "name": "Cristiane Justino",
+    "gender": "male"
   },
   {
     "id": 1453,
-    "name": "Sean Pierson"
+    "name": "Sean Pierson",
+    "gender": "male"
   },
   {
     "id": 1454,
-    "name": "Dan Hooker"
+    "name": "Dan Hooker",
+    "gender": "male"
   },
   {
     "id": 1455,
-    "name": "Aaron Rosa"
+    "name": "Aaron Rosa",
+    "gender": "male"
   },
   {
     "id": 1456,
-    "name": "Mike Whitehead"
+    "name": "Mike Whitehead",
+    "gender": "male"
   },
   {
     "id": 1457,
-    "name": "Yosdenis Cedeno"
+    "name": "Yosdenis Cedeno",
+    "gender": "male"
   },
   {
     "id": 1458,
-    "name": "Chris Kelades"
+    "name": "Chris Kelades",
+    "gender": "male"
   },
   {
     "id": 1459,
-    "name": "Leon Edwards"
+    "name": "Leon Edwards",
+    "gender": "male"
   },
   {
     "id": 1460,
-    "name": "Montel Jackson"
+    "name": "Montel Jackson",
+    "gender": "male"
   },
   {
     "id": 1461,
-    "name": "Jack Della Maddalena"
+    "name": "Jack Della Maddalena",
+    "gender": "male"
   },
   {
     "id": 1462,
-    "name": "Will Brooks"
+    "name": "Will Brooks",
+    "gender": "male"
   },
   {
     "id": 1463,
-    "name": "Rafa Garcia"
+    "name": "Rafa Garcia",
+    "gender": "male"
   },
   {
     "id": 1464,
-    "name": "Mallory Martin"
+    "name": "Mallory Martin",
+    "gender": "male"
   },
   {
     "id": 1465,
-    "name": "Irene Aldana"
+    "name": "Irene Aldana",
+    "gender": "female"
   },
   {
     "id": 1466,
-    "name": "Dennis Buzukja"
+    "name": "Dennis Buzukja",
+    "gender": "male"
   },
   {
     "id": 1467,
-    "name": "Merab Dvalishvili"
+    "name": "Merab Dvalishvili",
+    "gender": "male"
   },
   {
     "id": 1468,
-    "name": "Lara Procopio"
+    "name": "Lara Procopio",
+    "gender": "male"
   },
   {
     "id": 1469,
-    "name": "Jens Pulver"
+    "name": "Jens Pulver",
+    "gender": "male"
   },
   {
     "id": 1470,
-    "name": "Maximo Blanco"
+    "name": "Maximo Blanco",
+    "gender": "male"
   },
   {
     "id": 1471,
-    "name": "Mirko Filipovic"
+    "name": "Mirko Filipovic",
+    "gender": "male"
   },
   {
     "id": 1472,
-    "name": "Jinh Yu Frey"
+    "name": "Jinh Yu Frey",
+    "gender": "male"
   },
   {
     "id": 1473,
-    "name": "Dan Henderson"
+    "name": "Dan Henderson",
+    "gender": "male"
   },
   {
     "id": 1474,
-    "name": "Ryo Chonan"
+    "name": "Ryo Chonan",
+    "gender": "male"
   },
   {
     "id": 1475,
-    "name": "Alonzo Menifield"
+    "name": "Alonzo Menifield",
+    "gender": "male"
   },
   {
     "id": 1476,
-    "name": "Luiz Azeredo"
+    "name": "Luiz Azeredo",
+    "gender": "male"
   },
   {
     "id": 1477,
-    "name": "Nate Maness"
+    "name": "Nate Maness",
+    "gender": "male"
   },
   {
     "id": 1478,
-    "name": "Bobby Green"
+    "name": "Bobby Green",
+    "gender": "male"
   },
   {
     "id": 1479,
-    "name": "Bruno Silva"
+    "name": "Bruno Silva",
+    "gender": "male"
   },
   {
     "id": 1480,
-    "name": "Akiyo Nishiura"
+    "name": "Akiyo Nishiura",
+    "gender": "male"
   },
   {
     "id": 1481,
-    "name": "Ariane Lipski"
+    "name": "Ariane Lipski",
+    "gender": "female"
   },
   {
     "id": 1482,
-    "name": "Keith Wisniewski"
+    "name": "Keith Wisniewski",
+    "gender": "male"
   },
   {
     "id": 1483,
-    "name": "Melissa Gatto"
+    "name": "Melissa Gatto",
+    "gender": "male"
   },
   {
     "id": 1484,
-    "name": "Carlos Ulberg"
+    "name": "Carlos Ulberg",
+    "gender": "male"
   },
   {
     "id": 1485,
-    "name": "Yui Chul Nam"
+    "name": "Yui Chul Nam",
+    "gender": "male"
   },
   {
     "id": 1486,
-    "name": "Rob Font"
+    "name": "Rob Font",
+    "gender": "male"
   },
   {
     "id": 1487,
-    "name": "Liz Carmouche"
+    "name": "Liz Carmouche",
+    "gender": "male"
   },
   {
     "id": 1488,
-    "name": "Constantinos Philippou"
+    "name": "Constantinos Philippou",
+    "gender": "male"
   },
   {
     "id": 1489,
-    "name": "Cung Le"
+    "name": "Cung Le",
+    "gender": "male"
   },
   {
     "id": 1490,
-    "name": "Lyle Beerbohm"
+    "name": "Lyle Beerbohm",
+    "gender": "male"
   },
   {
     "id": 1491,
-    "name": "Myles Jury"
+    "name": "Myles Jury",
+    "gender": "male"
   },
   {
     "id": 1492,
-    "name": "Joshua Burkman"
+    "name": "Joshua Burkman",
+    "gender": "male"
   },
   {
     "id": 1493,
-    "name": "Ali Bagautinov"
+    "name": "Ali Bagautinov",
+    "gender": "male"
   },
   {
     "id": 1494,
-    "name": "Ilir Latifi"
+    "name": "Ilir Latifi",
+    "gender": "male"
   },
   {
     "id": 1495,
-    "name": "Katlyn Chookagian"
+    "name": "Katlyn Chookagian",
+    "gender": "male"
   },
   {
     "id": 1496,
-    "name": "Francis Ngannou"
+    "name": "Francis Ngannou",
+    "gender": "male"
   },
   {
     "id": 1497,
-    "name": "Tristan Connelly"
+    "name": "Tristan Connelly",
+    "gender": "male"
   },
   {
     "id": 1498,
-    "name": "Journey Newson"
+    "name": "Journey Newson",
+    "gender": "male"
   },
   {
     "id": 1499,
-    "name": "Ariane Carnelossi"
+    "name": "Ariane Carnelossi",
+    "gender": "female"
   },
   {
     "id": 1500,
-    "name": "Thibault Gouti"
+    "name": "Thibault Gouti",
+    "gender": "male"
   },
   {
     "id": 1501,
-    "name": "Marlon Moraes"
+    "name": "Marlon Moraes",
+    "gender": "male"
   },
   {
     "id": 1502,
-    "name": "Kiichi Kunimoto"
+    "name": "Kiichi Kunimoto",
+    "gender": "male"
   },
   {
     "id": 1503,
-    "name": "Luana Pinheiro"
+    "name": "Luana Pinheiro",
+    "gender": "male"
   },
   {
     "id": 1504,
-    "name": "Jessica-Rose Clark"
+    "name": "Jessica-Rose Clark",
+    "gender": "male"
   },
   {
     "id": 1505,
-    "name": "AJ Dobson"
+    "name": "AJ Dobson",
+    "gender": "male"
   },
   {
     "id": 1506,
-    "name": "Chidi Njokuani"
+    "name": "Chidi Njokuani",
+    "gender": "male"
   },
   {
     "id": 1507,
-    "name": "Jonathan Brookins"
+    "name": "Jonathan Brookins",
+    "gender": "male"
   },
   {
     "id": 1508,
-    "name": "Jiri Prochazka"
+    "name": "Jiri Prochazka",
+    "gender": "male"
   },
   {
     "id": 1509,
-    "name": "Kennedy Nzechukwu"
+    "name": "Kennedy Nzechukwu",
+    "gender": "male"
   },
   {
     "id": 1510,
-    "name": "Luiz Cane"
+    "name": "Luiz Cane",
+    "gender": "male"
   },
   {
     "id": 1511,
-    "name": "Lando Vannata"
+    "name": "Lando Vannata",
+    "gender": "male"
   },
   {
     "id": 1512,
-    "name": "Kenichi Yamamoto"
+    "name": "Kenichi Yamamoto",
+    "gender": "male"
   },
   {
     "id": 1513,
-    "name": "Tor Troeng"
+    "name": "Tor Troeng",
+    "gender": "male"
   },
   {
     "id": 1514,
-    "name": "David Onama"
+    "name": "David Onama",
+    "gender": "male"
   },
   {
     "id": 1515,
-    "name": "Hayato Sakurai"
+    "name": "Hayato Sakurai",
+    "gender": "male"
   },
   {
     "id": 1516,
-    "name": "Chris Clements"
+    "name": "Chris Clements",
+    "gender": "male"
   },
   {
     "id": 1517,
-    "name": "Siyar Bahadurzada"
+    "name": "Siyar Bahadurzada",
+    "gender": "male"
   },
   {
     "id": 1518,
-    "name": "Valerie Letourneau"
+    "name": "Valerie Letourneau",
+    "gender": "male"
   },
   {
     "id": 1519,
-    "name": "Bryan Barberena"
+    "name": "Bryan Barberena",
+    "gender": "male"
   },
   {
     "id": 1520,
-    "name": "Guangyou Ning"
+    "name": "Guangyou Ning",
+    "gender": "male"
   },
   {
     "id": 1521,
-    "name": "Timur Valiev"
+    "name": "Timur Valiev",
+    "gender": "male"
   },
   {
     "id": 1522,
-    "name": "Alejandro Perez"
+    "name": "Alejandro Perez",
+    "gender": "male"
   },
   {
     "id": 1523,
-    "name": "Arnold Allen"
+    "name": "Arnold Allen",
+    "gender": "male"
   },
   {
     "id": 1524,
-    "name": "Macy Chiasson"
+    "name": "Macy Chiasson",
+    "gender": "male"
   },
   {
     "id": 1525,
-    "name": "Khadis Ibragimov"
+    "name": "Khadis Ibragimov",
+    "gender": "male"
   },
   {
     "id": 1526,
-    "name": "Chad Mendes"
+    "name": "Chad Mendes",
+    "gender": "male"
   },
   {
     "id": 1527,
-    "name": "Rodrigo Damm"
+    "name": "Rodrigo Damm",
+    "gender": "male"
   },
   {
     "id": 1528,
-    "name": "Cody Gibson"
+    "name": "Cody Gibson",
+    "gender": "male"
   },
   {
     "id": 1529,
-    "name": "Yuri Villefort"
+    "name": "Yuri Villefort",
+    "gender": "male"
   },
   {
     "id": 1530,
-    "name": "Max Holloway"
+    "name": "Max Holloway",
+    "gender": "male"
   },
   {
     "id": 1531,
-    "name": "Jorge Masvidal"
+    "name": "Jorge Masvidal",
+    "gender": "male"
   },
   {
     "id": 1532,
-    "name": "Alex Morono"
+    "name": "Alex Morono",
+    "gender": "male"
   },
   {
     "id": 1533,
-    "name": "Alan Patrick"
+    "name": "Alan Patrick",
+    "gender": "male"
   },
   {
     "id": 1534,
-    "name": "Jim Alers"
+    "name": "Jim Alers",
+    "gender": "male"
   },
   {
     "id": 1535,
-    "name": "Matt Bessette"
+    "name": "Matt Bessette",
+    "gender": "male"
   },
   {
     "id": 1536,
-    "name": "Alan Jouban"
+    "name": "Alan Jouban",
+    "gender": "male"
   },
   {
     "id": 1537,
-    "name": "Tony Gravely"
+    "name": "Tony Gravely",
+    "gender": "male"
   },
   {
     "id": 1538,
-    "name": "Viscardi Andrade"
+    "name": "Viscardi Andrade",
+    "gender": "male"
   },
   {
     "id": 1539,
-    "name": "Daniel Kelly"
+    "name": "Daniel Kelly",
+    "gender": "male"
   },
   {
     "id": 1540,
-    "name": "Chance Rencountre"
+    "name": "Chance Rencountre",
+    "gender": "male"
   },
   {
     "id": 1541,
-    "name": "Kai Kamaka"
+    "name": "Kai Kamaka",
+    "gender": "male"
   },
   {
     "id": 1542,
-    "name": "Sijara Eubanks"
+    "name": "Sijara Eubanks",
+    "gender": "male"
   },
   {
     "id": 1543,
-    "name": "Glaico Franca Moreira"
+    "name": "Glaico Franca Moreira",
+    "gender": "male"
   },
   {
     "id": 1544,
-    "name": "Devonte Smith"
+    "name": "Devonte Smith",
+    "gender": "male"
   },
   {
     "id": 1545,
-    "name": "Luan Chagas"
+    "name": "Luan Chagas",
+    "gender": "male"
   },
   {
     "id": 1546,
-    "name": "Jesse Lennox"
+    "name": "Jesse Lennox",
+    "gender": "male"
   },
   {
     "id": 1547,
-    "name": "Syuri Kondo"
+    "name": "Syuri Kondo",
+    "gender": "male"
   },
   {
     "id": 1548,
-    "name": "Brady Hiestand"
+    "name": "Brady Hiestand",
+    "gender": "male"
   },
   {
     "id": 1549,
-    "name": "Ode Osbourne"
+    "name": "Ode Osbourne",
+    "gender": "male"
   },
   {
     "id": 1550,
-    "name": "Zach Makovsky"
+    "name": "Zach Makovsky",
+    "gender": "male"
   },
   {
     "id": 1551,
-    "name": "Brian Stann"
+    "name": "Brian Stann",
+    "gender": "male"
   },
   {
     "id": 1552,
-    "name": "Johny Hendricks"
+    "name": "Johny Hendricks",
+    "gender": "male"
   },
   {
     "id": 1553,
-    "name": "Thiago Alves"
+    "name": "Thiago Alves",
+    "gender": "male"
   },
   {
     "id": 1554,
-    "name": "Waylon Lowe"
+    "name": "Waylon Lowe",
+    "gender": "male"
   },
   {
     "id": 1555,
-    "name": "Gabe Green"
+    "name": "Gabe Green",
+    "gender": "male"
   },
   {
     "id": 1556,
-    "name": "Keita Nakamura"
+    "name": "Keita Nakamura",
+    "gender": "male"
   },
   {
     "id": 1557,
-    "name": "Joselyne Edwards"
+    "name": "Joselyne Edwards",
+    "gender": "male"
   },
   {
     "id": 1558,
-    "name": "Daniel Zellhuber"
+    "name": "Daniel Zellhuber",
+    "gender": "male"
   },
   {
     "id": 1559,
-    "name": "Heather Clark"
+    "name": "Heather Clark",
+    "gender": "male"
   },
   {
     "id": 1560,
-    "name": "Amar Suloev"
+    "name": "Amar Suloev",
+    "gender": "male"
   },
   {
     "id": 1561,
-    "name": "Pete Spratt"
+    "name": "Pete Spratt",
+    "gender": "male"
   },
   {
     "id": 1562,
-    "name": "John Franchi"
+    "name": "John Franchi",
+    "gender": "male"
   },
   {
     "id": 1563,
-    "name": "Tiago dos Santos e Silva"
+    "name": "Tiago dos Santos e Silva",
+    "gender": "male"
   },
   {
     "id": 1564,
-    "name": "Rinat Fakhretdinov"
+    "name": "Rinat Fakhretdinov",
+    "gender": "male"
   },
   {
     "id": 1565,
-    "name": "Frankie Edgar"
+    "name": "Frankie Edgar",
+    "gender": "male"
   },
   {
     "id": 1566,
-    "name": "Martin Buday"
+    "name": "Martin Buday",
+    "gender": "male"
   },
   {
     "id": 1567,
-    "name": "Conor Heun"
+    "name": "Conor Heun",
+    "gender": "male"
   },
   {
     "id": 1568,
-    "name": "Hannah Cifers"
+    "name": "Hannah Cifers",
+    "gender": "male"
   },
   {
     "id": 1569,
-    "name": "Jan Blachowicz"
+    "name": "Jan Blachowicz",
+    "gender": "male"
   },
   {
     "id": 1570,
-    "name": "Ian Loveland"
+    "name": "Ian Loveland",
+    "gender": "male"
   },
   {
     "id": 1571,
-    "name": "Carlos Candelario"
+    "name": "Carlos Candelario",
+    "gender": "male"
   },
   {
     "id": 1572,
-    "name": "Max Griffin"
+    "name": "Max Griffin",
+    "gender": "male"
   },
   {
     "id": 1573,
-    "name": "Neil Magny"
+    "name": "Neil Magny",
+    "gender": "male"
   },
   {
     "id": 1574,
-    "name": "Nazim Sadykhov"
+    "name": "Nazim Sadykhov",
+    "gender": "male"
   },
   {
     "id": 1575,
-    "name": "Cory Sandhagen"
+    "name": "Cory Sandhagen",
+    "gender": "male"
   },
   {
     "id": 1576,
-    "name": "Trevin Giles"
+    "name": "Trevin Giles",
+    "gender": "male"
   },
   {
     "id": 1577,
-    "name": "Frankie Perez"
+    "name": "Frankie Perez",
+    "gender": "male"
   },
   {
     "id": 1578,
-    "name": "Dan Ige"
+    "name": "Dan Ige",
+    "gender": "male"
   },
   {
     "id": 1579,
-    "name": "Nah-Shon Burrell"
+    "name": "Nah-Shon Burrell",
+    "gender": "male"
   },
   {
     "id": 1580,
-    "name": "Alex Da Silva"
+    "name": "Alex Da Silva",
+    "gender": "male"
   },
   {
     "id": 1581,
-    "name": "Bruno Santos"
+    "name": "Bruno Santos",
+    "gender": "male"
   },
   {
     "id": 1582,
-    "name": "Andre Fili"
+    "name": "Andre Fili",
+    "gender": "male"
   },
   {
     "id": 1583,
-    "name": "Carlos Hernandez"
+    "name": "Carlos Hernandez",
+    "gender": "male"
   },
   {
     "id": 1584,
-    "name": "Julia Avila"
+    "name": "Julia Avila",
+    "gender": "male"
   },
   {
     "id": 1585,
-    "name": "Tracy Cortez"
+    "name": "Tracy Cortez",
+    "gender": "male"
   },
   {
     "id": 1586,
-    "name": "Deividas Taurosevicius"
+    "name": "Deividas Taurosevicius",
+    "gender": "male"
   },
   {
     "id": 1587,
-    "name": "Enrique Barzola"
+    "name": "Enrique Barzola",
+    "gender": "male"
   },
   {
     "id": 1588,
-    "name": "Nick Ring"
+    "name": "Nick Ring",
+    "gender": "male"
   },
   {
     "id": 1589,
-    "name": "Amir Sadollah"
+    "name": "Amir Sadollah",
+    "gender": "male"
   },
   {
     "id": 1590,
-    "name": "Carla Esparza"
+    "name": "Carla Esparza",
+    "gender": "female"
   },
   {
     "id": 1591,
-    "name": "Joanne Wood"
+    "name": "Joanne Wood",
+    "gender": "male"
   },
   {
     "id": 1592,
-    "name": "Benito Lopez"
+    "name": "Benito Lopez",
+    "gender": "male"
   },
   {
     "id": 1593,
-    "name": "Daniel Teymur"
+    "name": "Daniel Teymur",
+    "gender": "male"
   },
   {
     "id": 1594,
-    "name": "Dennis Siver"
+    "name": "Dennis Siver",
+    "gender": "male"
   },
   {
     "id": 1595,
-    "name": "Jessin Ayari"
+    "name": "Jessin Ayari",
+    "gender": "male"
   },
   {
     "id": 1596,
-    "name": "Michael Bisping"
+    "name": "Michael Bisping",
+    "gender": "male"
   },
   {
     "id": 1597,
-    "name": "Movsar Evloev"
+    "name": "Movsar Evloev",
+    "gender": "male"
   },
   {
     "id": 1598,
-    "name": "Gilbert Melendez"
+    "name": "Gilbert Melendez",
+    "gender": "male"
   },
   {
     "id": 1599,
-    "name": "Mike Davis"
+    "name": "Mike Davis",
+    "gender": "male"
   },
   {
     "id": 1600,
-    "name": "Henrique da Silva"
+    "name": "Henrique da Silva",
+    "gender": "male"
   },
   {
     "id": 1601,
-    "name": "Will Campuzano"
+    "name": "Will Campuzano",
+    "gender": "male"
   },
   {
     "id": 1602,
-    "name": "Vitor Miranda"
+    "name": "Vitor Miranda",
+    "gender": "male"
   },
   {
     "id": 1603,
-    "name": "Khalid Taha"
+    "name": "Khalid Taha",
+    "gender": "male"
   },
   {
     "id": 1604,
-    "name": "Manny Tapia"
+    "name": "Manny Tapia",
+    "gender": "male"
   },
   {
     "id": 1605,
-    "name": "Nam Phan"
+    "name": "Nam Phan",
+    "gender": "male"
   },
   {
     "id": 1606,
-    "name": "Gina Mazany"
+    "name": "Gina Mazany",
+    "gender": "male"
   },
   {
     "id": 1607,
-    "name": "Omari Akhmedov"
+    "name": "Omari Akhmedov",
+    "gender": "male"
   },
   {
     "id": 1608,
-    "name": "Mike Perry"
+    "name": "Mike Perry",
+    "gender": "male"
   },
   {
     "id": 1609,
-    "name": "Douglas Silva de Andrade"
+    "name": "Douglas Silva de Andrade",
+    "gender": "male"
   },
   {
     "id": 1610,
-    "name": "Paul Felder"
+    "name": "Paul Felder",
+    "gender": "male"
   },
   {
     "id": 1611,
-    "name": "Trevin Jones"
+    "name": "Trevin Jones",
+    "gender": "male"
   },
   {
     "id": 1612,
-    "name": "Hyun Gyu Lim"
+    "name": "Hyun Gyu Lim",
+    "gender": "male"
   },
   {
     "id": 1613,
-    "name": "LC Davis"
+    "name": "LC Davis",
+    "gender": "male"
   },
   {
     "id": 1614,
-    "name": "Nicholas Musoke"
+    "name": "Nicholas Musoke",
+    "gender": "male"
   },
   {
     "id": 1615,
-    "name": "Eric Shelton"
+    "name": "Eric Shelton",
+    "gender": "male"
   },
   {
     "id": 1616,
-    "name": "Mara Romero Borella"
+    "name": "Mara Romero Borella",
+    "gender": "male"
   },
   {
     "id": 1617,
-    "name": "Nick Maximov"
+    "name": "Nick Maximov",
+    "gender": "male"
   },
   {
     "id": 1618,
-    "name": "Danielle Taylor"
+    "name": "Danielle Taylor",
+    "gender": "male"
   },
   {
     "id": 1619,
-    "name": "Andrei Arlovski"
+    "name": "Andrei Arlovski",
+    "gender": "male"
   },
   {
     "id": 1620,
-    "name": "Chris Beal"
+    "name": "Chris Beal",
+    "gender": "male"
   },
   {
     "id": 1621,
-    "name": "Hannah Goldy"
+    "name": "Hannah Goldy",
+    "gender": "male"
   },
   {
     "id": 1622,
-    "name": "Danny Castillo"
+    "name": "Danny Castillo",
+    "gender": "male"
   },
   {
     "id": 1623,
-    "name": "Karolina Kowalkiewicz"
+    "name": "Karolina Kowalkiewicz",
+    "gender": "female"
   },
   {
     "id": 1624,
-    "name": "Michinori Tanaka"
+    "name": "Michinori Tanaka",
+    "gender": "male"
   },
   {
     "id": 1625,
-    "name": "Randa Markos"
+    "name": "Randa Markos",
+    "gender": "male"
   },
   {
     "id": 1626,
-    "name": "Jared Gooden"
+    "name": "Jared Gooden",
+    "gender": "male"
   },
   {
     "id": 1627,
-    "name": "Makhmud Muradov"
+    "name": "Makhmud Muradov",
+    "gender": "male"
   },
   {
     "id": 1628,
-    "name": "Seo Hee Ham"
+    "name": "Seo Hee Ham",
+    "gender": "male"
   },
   {
     "id": 1629,
-    "name": "Richard Walsh"
+    "name": "Richard Walsh",
+    "gender": "male"
   },
   {
     "id": 1630,
-    "name": "Ismail Naurdiev"
+    "name": "Ismail Naurdiev",
+    "gender": "male"
   },
   {
     "id": 1631,
-    "name": "Mark Hunt"
+    "name": "Mark Hunt",
+    "gender": "male"
   },
   {
     "id": 1632,
-    "name": "Charles Johnson"
+    "name": "Charles Johnson",
+    "gender": "male"
   },
   {
     "id": 1633,
-    "name": "Scott Holtzman"
+    "name": "Scott Holtzman",
+    "gender": "male"
   },
   {
     "id": 1634,
-    "name": "Felicia Spencer"
+    "name": "Felicia Spencer",
+    "gender": "male"
   },
   {
     "id": 1635,
-    "name": "Giga Chikadze"
+    "name": "Giga Chikadze",
+    "gender": "male"
   },
   {
     "id": 1636,
-    "name": "Colby Covington"
+    "name": "Colby Covington",
+    "gender": "male"
   },
   {
     "id": 1637,
-    "name": "Melvin Guillard"
+    "name": "Melvin Guillard",
+    "gender": "male"
   },
   {
     "id": 1638,
-    "name": "Aleksandar Rakic"
+    "name": "Aleksandar Rakic",
+    "gender": "male"
   },
   {
     "id": 1639,
-    "name": "Tim Means"
+    "name": "Tim Means",
+    "gender": "male"
   },
   {
     "id": 1640,
-    "name": "Zhalgas Zhumagulov"
+    "name": "Zhalgas Zhumagulov",
+    "gender": "male"
   },
   {
     "id": 1641,
-    "name": "Tucker Lutz"
+    "name": "Tucker Lutz",
+    "gender": "male"
   },
   {
     "id": 1642,
-    "name": "Impa Kasanganay"
+    "name": "Impa Kasanganay",
+    "gender": "male"
   },
   {
     "id": 1643,
-    "name": "Mike Pierce"
+    "name": "Mike Pierce",
+    "gender": "male"
   },
   {
     "id": 1644,
-    "name": "CJ Vergara"
+    "name": "CJ Vergara",
+    "gender": "male"
   },
   {
     "id": 1645,
-    "name": "Luke Sanders"
+    "name": "Luke Sanders",
+    "gender": "male"
   },
   {
     "id": 1646,
-    "name": "David Dvorak"
+    "name": "David Dvorak",
+    "gender": "male"
   },
   {
     "id": 1647,
-    "name": "Javid Basharat"
+    "name": "Javid Basharat",
+    "gender": "male"
   },
   {
     "id": 1648,
-    "name": "Tabatha Ricci"
+    "name": "Tabatha Ricci",
+    "gender": "male"
   },
   {
     "id": 1649,
-    "name": "Kajan Johnson"
+    "name": "Kajan Johnson",
+    "gender": "male"
   },
   {
     "id": 1650,
-    "name": "Danny Roberts"
+    "name": "Danny Roberts",
+    "gender": "male"
   },
   {
     "id": 1651,
-    "name": "Daron Cruickshank"
+    "name": "Daron Cruickshank",
+    "gender": "male"
   },
   {
     "id": 1652,
-    "name": "Ange Loosa"
+    "name": "Ange Loosa",
+    "gender": "male"
   },
   {
     "id": 1653,
-    "name": "Al Iaquinta"
+    "name": "Al Iaquinta",
+    "gender": "male"
   },
   {
     "id": 1654,
-    "name": "Billy Evangelista"
+    "name": "Billy Evangelista",
+    "gender": "male"
   },
   {
     "id": 1655,
-    "name": "Anthony Njokuani"
+    "name": "Anthony Njokuani",
+    "gender": "male"
   },
   {
     "id": 1656,
-    "name": "Henry Cejudo"
+    "name": "Henry Cejudo",
+    "gender": "male"
   },
   {
     "id": 1657,
-    "name": "Elias Silverio"
+    "name": "Elias Silverio",
+    "gender": "male"
   },
   {
     "id": 1658,
-    "name": "Pat Barry"
+    "name": "Pat Barry",
+    "gender": "male"
   },
   {
     "id": 1659,
-    "name": "Jordan Espinosa"
+    "name": "Jordan Espinosa",
+    "gender": "male"
   },
   {
     "id": 1660,
-    "name": "Jake O'Brien"
+    "name": "Jake O'Brien",
+    "gender": "male"
   },
   {
     "id": 1661,
-    "name": "Jessica Aguilar"
+    "name": "Jessica Aguilar",
+    "gender": "female"
   },
   {
     "id": 1662,
-    "name": "Cheyanne Vlismas"
+    "name": "Cheyanne Vlismas",
+    "gender": "male"
   },
   {
     "id": 1663,
-    "name": "James Moontasri"
+    "name": "James Moontasri",
+    "gender": "male"
   },
   {
     "id": 1664,
-    "name": "Raphael Assuncao"
+    "name": "Raphael Assuncao",
+    "gender": "male"
   },
   {
     "id": 1665,
-    "name": "Wu Yanan"
+    "name": "Wu Yanan",
+    "gender": "male"
   },
   {
     "id": 1666,
-    "name": "Erik Perez"
+    "name": "Erik Perez",
+    "gender": "male"
   },
   {
     "id": 1667,
-    "name": "Davey Grant"
+    "name": "Davey Grant",
+    "gender": "male"
   },
   {
     "id": 1668,
-    "name": "Mark De La Rosa"
+    "name": "Mark De La Rosa",
+    "gender": "male"
   },
   {
     "id": 1669,
-    "name": "Sabina Mazo"
+    "name": "Sabina Mazo",
+    "gender": "male"
   },
   {
     "id": 1670,
-    "name": "Rashid Magomedov"
+    "name": "Rashid Magomedov",
+    "gender": "male"
   },
   {
     "id": 1671,
-    "name": "Antonio Arroyo"
+    "name": "Antonio Arroyo",
+    "gender": "male"
   },
   {
     "id": 1672,
-    "name": "Kiyoshi Tamura"
+    "name": "Kiyoshi Tamura",
+    "gender": "male"
   },
   {
     "id": 1673,
-    "name": "Justin Ledet"
+    "name": "Justin Ledet",
+    "gender": "male"
   },
   {
     "id": 1674,
-    "name": "Josh Parisian"
+    "name": "Josh Parisian",
+    "gender": "male"
   },
   {
     "id": 1675,
-    "name": "Vinc Pichel"
+    "name": "Vinc Pichel",
+    "gender": "male"
   },
   {
     "id": 1676,
-    "name": "James Te Huna"
+    "name": "James Te Huna",
+    "gender": "male"
   },
   {
     "id": 1677,
-    "name": "John Castaneda"
+    "name": "John Castaneda",
+    "gender": "male"
   },
   {
     "id": 1678,
-    "name": "Belal Muhammad"
+    "name": "Belal Muhammad",
+    "gender": "male"
   },
   {
     "id": 1679,
-    "name": "Leonardo Santos"
+    "name": "Leonardo Santos",
+    "gender": "male"
   },
   {
     "id": 1680,
-    "name": "Luis Saldana"
+    "name": "Luis Saldana",
+    "gender": "male"
   },
   {
     "id": 1681,
-    "name": "Andre Soukhamthath"
+    "name": "Andre Soukhamthath",
+    "gender": "male"
   },
   {
     "id": 1682,
-    "name": "Travis Browne"
+    "name": "Travis Browne",
+    "gender": "male"
   },
   {
     "id": 1683,
-    "name": "Marina Rodriguez"
+    "name": "Marina Rodriguez",
+    "gender": "female"
   },
   {
     "id": 1684,
-    "name": "Cyrille Diabate"
+    "name": "Cyrille Diabate",
+    "gender": "male"
   },
   {
     "id": 1685,
-    "name": "Abdul Razak Alhassan"
+    "name": "Abdul Razak Alhassan",
+    "gender": "male"
   },
   {
     "id": 1686,
-    "name": "Elizabeth Phillips"
+    "name": "Elizabeth Phillips",
+    "gender": "male"
   },
   {
     "id": 1687,
-    "name": "Alexander Volkanovski"
+    "name": "Alexander Volkanovski",
+    "gender": "male"
   },
   {
     "id": 1688,
-    "name": "Damir Hadzovic"
+    "name": "Damir Hadzovic",
+    "gender": "male"
   },
   {
     "id": 1689,
-    "name": "Johnny Case"
+    "name": "Johnny Case",
+    "gender": "male"
   },
   {
     "id": 1690,
-    "name": "Loma Lookboonmee"
+    "name": "Loma Lookboonmee",
+    "gender": "male"
   },
   {
     "id": 1691,
-    "name": "Cheick Kongo"
+    "name": "Cheick Kongo",
+    "gender": "male"
   },
   {
     "id": 1692,
-    "name": "Raulian Paiva"
+    "name": "Raulian Paiva",
+    "gender": "male"
   },
   {
     "id": 1693,
-    "name": "Brandon Vera"
+    "name": "Brandon Vera",
+    "gender": "male"
   },
   {
     "id": 1694,
-    "name": "Song Yadong"
+    "name": "Song Yadong",
+    "gender": "male"
   },
   {
     "id": 1695,
-    "name": "Marco Beltran"
+    "name": "Marco Beltran",
+    "gender": "male"
   },
   {
     "id": 1696,
-    "name": "Sean Strickland"
+    "name": "Sean Strickland",
+    "gender": "male"
   },
   {
     "id": 1697,
-    "name": "Patrick Cote"
+    "name": "Patrick Cote",
+    "gender": "male"
   },
   {
     "id": 1698,
-    "name": "Austin Arnett"
+    "name": "Austin Arnett",
+    "gender": "male"
   },
   {
     "id": 1699,
-    "name": "Ricky Turcios"
+    "name": "Ricky Turcios",
+    "gender": "male"
   },
   {
     "id": 1700,
-    "name": "Phil Hawes"
+    "name": "Phil Hawes",
+    "gender": "male"
   },
   {
     "id": 1701,
-    "name": "Jordan Mein"
+    "name": "Jordan Mein",
+    "gender": "male"
   },
   {
     "id": 1702,
-    "name": "Ryan LaFlare"
+    "name": "Ryan LaFlare",
+    "gender": "male"
   },
   {
     "id": 1703,
-    "name": "Ronnie Lawrence"
+    "name": "Ronnie Lawrence",
+    "gender": "male"
   },
   {
     "id": 1704,
-    "name": "Albert Morales"
+    "name": "Albert Morales",
+    "gender": "male"
   },
   {
     "id": 1705,
-    "name": "Viviane Pereira"
+    "name": "Viviane Pereira",
+    "gender": "female"
   },
   {
     "id": 1706,
-    "name": "Mateusz Gamrot"
+    "name": "Mateusz Gamrot",
+    "gender": "male"
   },
   {
     "id": 1707,
-    "name": "Da Woon Jung"
+    "name": "Da Woon Jung",
+    "gender": "male"
   },
   {
     "id": 1708,
-    "name": "Jamall Emmers"
+    "name": "Jamall Emmers",
+    "gender": "male"
   },
   {
     "id": 1709,
-    "name": "Alexander Volkov"
+    "name": "Alexander Volkov",
+    "gender": "male"
   },
   {
     "id": 1710,
-    "name": "Igor Pokrajac"
+    "name": "Igor Pokrajac",
+    "gender": "male"
   },
   {
     "id": 1711,
-    "name": "Eryk Anders"
+    "name": "Eryk Anders",
+    "gender": "male"
   },
   {
     "id": 1712,
-    "name": "Sam Stout"
+    "name": "Sam Stout",
+    "gender": "male"
   },
   {
     "id": 1713,
-    "name": "George Roop"
+    "name": "George Roop",
+    "gender": "male"
   },
   {
     "id": 1714,
-    "name": "Alex Garcia"
+    "name": "Alex Garcia",
+    "gender": "male"
   },
   {
     "id": 1715,
-    "name": "Matthew Semelsberger"
+    "name": "Matthew Semelsberger",
+    "gender": "male"
   },
   {
     "id": 1716,
-    "name": "Aaron Riley"
+    "name": "Aaron Riley",
+    "gender": "male"
   },
   {
     "id": 1717,
-    "name": "Mizuto Hirota"
+    "name": "Mizuto Hirota",
+    "gender": "male"
   },
   {
     "id": 1718,
-    "name": "Tecia Torres"
+    "name": "Tecia Torres",
+    "gender": "female"
   },
   {
     "id": 1719,
-    "name": "Marcin Tybura"
+    "name": "Marcin Tybura",
+    "gender": "male"
   },
   {
     "id": 1720,
-    "name": "Rustam Khabilov"
+    "name": "Rustam Khabilov",
+    "gender": "male"
   },
   {
     "id": 1721,
-    "name": "Duane Ludwig"
+    "name": "Duane Ludwig",
+    "gender": "male"
   },
   {
     "id": 1722,
-    "name": "Frankie Saenz"
+    "name": "Frankie Saenz",
+    "gender": "male"
   },
   {
     "id": 1723,
-    "name": "Daniel Rodriguez"
+    "name": "Daniel Rodriguez",
+    "gender": "male"
   },
   {
     "id": 1724,
-    "name": "Lorenz Larkin"
+    "name": "Lorenz Larkin",
+    "gender": "male"
   },
   {
     "id": 1725,
-    "name": "Blagoy Ivanov"
+    "name": "Blagoy Ivanov",
+    "gender": "male"
   },
   {
     "id": 1726,
-    "name": "Eddie Wineland"
+    "name": "Eddie Wineland",
+    "gender": "male"
   },
   {
     "id": 1727,
-    "name": "Justine Kish"
+    "name": "Justine Kish",
+    "gender": "male"
   },
   {
     "id": 1728,
-    "name": "Brian Ebersole"
+    "name": "Brian Ebersole",
+    "gender": "male"
   },
   {
     "id": 1729,
-    "name": "Patrick Cummins"
+    "name": "Patrick Cummins",
+    "gender": "male"
   },
   {
     "id": 1730,
-    "name": "Holly Holm"
+    "name": "Holly Holm",
+    "gender": "female"
   },
   {
     "id": 1731,
-    "name": "Israel Adesanya"
+    "name": "Israel Adesanya",
+    "gender": "male"
   },
   {
     "id": 1732,
-    "name": "Uriah Hall"
+    "name": "Uriah Hall",
+    "gender": "male"
   },
   {
     "id": 1733,
-    "name": "Kelvin Gastelum"
+    "name": "Kelvin Gastelum",
+    "gender": "male"
   },
   {
     "id": 1734,
-    "name": "Maycee Barber"
+    "name": "Maycee Barber",
+    "gender": "female"
   },
   {
     "id": 1735,
-    "name": "Roxanne Modafferi"
+    "name": "Roxanne Modafferi",
+    "gender": "male"
   },
   {
     "id": 1736,
-    "name": "Jimmie Rivera"
+    "name": "Jimmie Rivera",
+    "gender": "male"
   },
   {
     "id": 1737,
-    "name": "Yana Santos"
+    "name": "Yana Santos",
+    "gender": "male"
   },
   {
     "id": 1738,
-    "name": "Dominick Cruz"
+    "name": "Dominick Cruz",
+    "gender": "male"
   },
   {
     "id": 1739,
-    "name": "Jamie Mullarkey"
+    "name": "Jamie Mullarkey",
+    "gender": "male"
   },
   {
     "id": 1740,
-    "name": "Lauren Murphy"
+    "name": "Lauren Murphy",
+    "gender": "female"
   },
   {
     "id": 1741,
-    "name": "Jorge Rivera"
+    "name": "Jorge Rivera",
+    "gender": "male"
   },
   {
     "id": 1742,
-    "name": "Jonathan Martinez"
+    "name": "Jonathan Martinez",
+    "gender": "male"
   },
   {
     "id": 1743,
-    "name": "Volkan Oezdemir"
+    "name": "Volkan Oezdemir",
+    "gender": "male"
   },
   {
     "id": 1744,
-    "name": "Marc-Andre Barriault"
+    "name": "Marc-Andre Barriault",
+    "gender": "male"
   },
   {
     "id": 1745,
-    "name": "Jared Rosholt"
+    "name": "Jared Rosholt",
+    "gender": "male"
   },
   {
     "id": 1746,
-    "name": "Daniel Omielanczuk"
+    "name": "Daniel Omielanczuk",
+    "gender": "male"
   },
   {
     "id": 1747,
-    "name": "Thiago Santos"
+    "name": "Thiago Santos",
+    "gender": "male"
   },
   {
     "id": 1748,
-    "name": "Pannie Kianzad"
+    "name": "Pannie Kianzad",
+    "gender": "male"
   },
   {
     "id": 1749,
-    "name": "Calvin Kattar"
+    "name": "Calvin Kattar",
+    "gender": "male"
   },
   {
     "id": 1750,
-    "name": "Shamil Abdurakhimov"
+    "name": "Shamil Abdurakhimov",
+    "gender": "male"
   },
   {
     "id": 1751,
-    "name": "Josh Emmett"
+    "name": "Josh Emmett",
+    "gender": "male"
   },
   {
     "id": 1752,
-    "name": "Rafael Cavalcante"
+    "name": "Rafael Cavalcante",
+    "gender": "male"
   },
   {
     "id": 1753,
-    "name": "Dustin Ortiz"
+    "name": "Dustin Ortiz",
+    "gender": "male"
   },
   {
     "id": 1754,
-    "name": "Drew Dober"
+    "name": "Drew Dober",
+    "gender": "male"
   },
   {
     "id": 1755,
-    "name": "Alexander Hernandez"
+    "name": "Alexander Hernandez",
+    "gender": "male"
   },
   {
     "id": 1756,
-    "name": "Takeya Mizugaki"
+    "name": "Takeya Mizugaki",
+    "gender": "male"
   },
   {
     "id": 1757,
-    "name": "Jose Aldo"
+    "name": "Jose Aldo",
+    "gender": "male"
   },
   {
     "id": 1758,
-    "name": "Darren Stewart"
+    "name": "Darren Stewart",
+    "gender": "male"
   },
   {
     "id": 1759,
-    "name": "Walt Harris"
+    "name": "Walt Harris",
+    "gender": "male"
   },
   {
     "id": 1760,
-    "name": "Alexander Yakovlev"
+    "name": "Alexander Yakovlev",
+    "gender": "male"
   },
   {
     "id": 1761,
-    "name": "Lina Lansberg"
+    "name": "Lina Lansberg",
+    "gender": "male"
   },
   {
     "id": 1762,
-    "name": "Ji Yeon Kim"
+    "name": "Ji Yeon Kim",
+    "gender": "male"
   },
   {
     "id": 1763,
-    "name": "Andre Ewell"
+    "name": "Andre Ewell",
+    "gender": "male"
   },
   {
     "id": 1764,
-    "name": "Tarec Saffiedine"
+    "name": "Tarec Saffiedine",
+    "gender": "male"
   },
   {
     "id": 1765,
-    "name": "Shawn Jordan"
+    "name": "Shawn Jordan",
+    "gender": "male"
   },
   {
     "id": 1766,
-    "name": "Chris Gutierrez"
+    "name": "Chris Gutierrez",
+    "gender": "male"
   },
   {
     "id": 1767,
-    "name": "Devin Clark"
+    "name": "Devin Clark",
+    "gender": "male"
   },
   {
     "id": 1768,
-    "name": "Yves Jabouin"
+    "name": "Yves Jabouin",
+    "gender": "male"
   },
   {
     "id": 1769,
-    "name": "Brandon Davis"
+    "name": "Brandon Davis",
+    "gender": "male"
   },
   {
     "id": 1770,
-    "name": "Nicolas Dalby"
+    "name": "Nicolas Dalby",
+    "gender": "male"
   },
   {
     "id": 1771,
-    "name": "Petr Yan"
+    "name": "Petr Yan",
+    "gender": "male"
   },
   {
     "id": 1772,
-    "name": "Bill Algeo"
+    "name": "Bill Algeo",
+    "gender": "male"
   },
   {
     "id": 1773,
-    "name": "David Loiseau"
+    "name": "David Loiseau",
+    "gender": "male"
   },
   {
     "id": 1774,
-    "name": "Edson Barboza"
+    "name": "Edson Barboza",
+    "gender": "male"
   },
   {
     "id": 1775,
-    "name": "Roy Nelson"
+    "name": "Roy Nelson",
+    "gender": "male"
   },
   {
     "id": 1776,
-    "name": "Conor McGregor"
+    "name": "Conor McGregor",
+    "gender": "male"
   },
   {
     "id": 1777,
-    "name": "Geoff Neal"
+    "name": "Geoff Neal",
+    "gender": "male"
   },
   {
     "id": 1778,
-    "name": "Khalil Rountree Jr."
+    "name": "Khalil Rountree Jr.",
+    "gender": "male"
   },
   {
     "id": 1779,
-    "name": "Junior Dos Santos"
+    "name": "Junior Dos Santos",
+    "gender": "male"
   },
   {
     "id": 1780,
-    "name": "Krzysztof Jotko"
+    "name": "Krzysztof Jotko",
+    "gender": "male"
   },
   {
     "id": 1781,
-    "name": "Joanna Jedrzejczyk"
+    "name": "Joanna Jedrzejczyk",
+    "gender": "female"
   },
   {
     "id": 1782,
-    "name": "Quinton Jackson"
+    "name": "Quinton Jackson",
+    "gender": "male"
   },
   {
     "id": 1783,
-    "name": "Sam Alvey"
+    "name": "Sam Alvey",
+    "gender": "male"
   },
   {
     "id": 1784,
-    "name": "Angela Hill"
+    "name": "Angela Hill",
+    "gender": "female"
   },
   {
     "id": 1785,
-    "name": "Tim Sylvia"
+    "name": "Tim Sylvia",
+    "gender": "male"
   },
   {
     "id": 1786,
-    "name": "Jennifer Maia"
+    "name": "Jennifer Maia",
+    "gender": "male"
   },
   {
     "id": 1787,
-    "name": "Michael Johnson"
+    "name": "Michael Johnson",
+    "gender": "male"
   },
   {
     "id": 1788,
-    "name": "Kamaru Usman"
+    "name": "Kamaru Usman",
+    "gender": "male"
   },
   {
     "id": 1789,
-    "name": "Vladimir Matyushenko"
+    "name": "Vladimir Matyushenko",
+    "gender": "male"
   },
   {
     "id": 1790,
-    "name": "Jamie Pickett"
+    "name": "Jamie Pickett",
+    "gender": "male"
   },
   {
     "id": 1791,
-    "name": "Sean Santella"
+    "name": "Sean Santella",
+    "gender": "male"
   },
   {
     "id": 1792,
-    "name": "Kristof Midoux"
+    "name": "Kristof Midoux",
+    "gender": "male"
   },
   {
     "id": 1793,
-    "name": "John Gunther"
+    "name": "John Gunther",
+    "gender": "male"
   },
   {
     "id": 1794,
-    "name": "Anatoly Tokov"
+    "name": "Anatoly Tokov",
+    "gender": "male"
   },
   {
     "id": 1795,
-    "name": "Tom Tuggle"
+    "name": "Tom Tuggle",
+    "gender": "male"
   },
   {
     "id": 1796,
-    "name": "Iony Razafiarison"
+    "name": "Iony Razafiarison",
+    "gender": "male"
   },
   {
     "id": 1797,
-    "name": "Kiril Sidelnikov"
+    "name": "Kiril Sidelnikov",
+    "gender": "male"
   },
   {
     "id": 1798,
-    "name": "Michael Byrnes"
+    "name": "Michael Byrnes",
+    "gender": "male"
   },
   {
     "id": 1799,
-    "name": "Geraldo de Freitas"
+    "name": "Geraldo de Freitas",
+    "gender": "male"
   },
   {
     "id": 1800,
-    "name": "Buck Meredith"
+    "name": "Buck Meredith",
+    "gender": "male"
   },
   {
     "id": 1801,
-    "name": "Tony Bonello"
+    "name": "Tony Bonello",
+    "gender": "male"
   },
   {
     "id": 1802,
-    "name": "Adam Khaliev"
+    "name": "Adam Khaliev",
+    "gender": "male"
   },
   {
     "id": 1803,
-    "name": "Dakota Cochrane"
+    "name": "Dakota Cochrane",
+    "gender": "male"
   },
   {
     "id": 1804,
-    "name": "Donald Sanchez"
+    "name": "Donald Sanchez",
+    "gender": "male"
   },
   {
     "id": 1805,
-    "name": "Felipe dos Santos"
+    "name": "Felipe dos Santos",
+    "gender": "male"
   },
   {
     "id": 1806,
-    "name": "Eric Schwartz"
+    "name": "Eric Schwartz",
+    "gender": "male"
   },
   {
     "id": 1807,
-    "name": "Matt Lee"
+    "name": "Matt Lee",
+    "gender": "male"
   },
   {
     "id": 1808,
-    "name": "Antwain Britt"
+    "name": "Antwain Britt",
+    "gender": "male"
   },
   {
     "id": 1809,
-    "name": "Mike Minniger"
+    "name": "Mike Minniger",
+    "gender": "male"
   },
   {
     "id": 1810,
-    "name": "Chris Barnett"
+    "name": "Chris Barnett",
+    "gender": "male"
   },
   {
     "id": 1811,
-    "name": "Ray Seraille"
+    "name": "Ray Seraille",
+    "gender": "male"
   },
   {
     "id": 1812,
-    "name": "Jason Sharp"
+    "name": "Jason Sharp",
+    "gender": "male"
   },
   {
     "id": 1813,
-    "name": "Adam Yandiev"
+    "name": "Adam Yandiev",
+    "gender": "male"
   },
   {
     "id": 1814,
-    "name": "JW Wright"
+    "name": "JW Wright",
+    "gender": "male"
   },
   {
     "id": 1815,
-    "name": "Andrew Valladerez"
+    "name": "Andrew Valladerez",
+    "gender": "male"
   },
   {
     "id": 1816,
-    "name": "Bahatebole Batebolati"
+    "name": "Bahatebole Batebolati",
+    "gender": "male"
   },
   {
     "id": 1817,
-    "name": "Andre Mussi"
+    "name": "Andre Mussi",
+    "gender": "male"
   },
   {
     "id": 1818,
-    "name": "Helena Crevar"
+    "name": "Helena Crevar",
+    "gender": "male"
   },
   {
     "id": 1819,
-    "name": "Al Matavao"
+    "name": "Al Matavao",
+    "gender": "male"
   },
   {
     "id": 1820,
-    "name": "Thomas Longacre"
+    "name": "Thomas Longacre",
+    "gender": "male"
   },
   {
     "id": 1821,
-    "name": "Marcus Kowal"
+    "name": "Marcus Kowal",
+    "gender": "male"
   },
   {
     "id": 1822,
-    "name": "Joey Gilbert"
+    "name": "Joey Gilbert",
+    "gender": "male"
   },
   {
     "id": 1823,
-    "name": "Lucrezia Ria"
+    "name": "Lucrezia Ria",
+    "gender": "male"
   },
   {
     "id": 1824,
-    "name": "Sean Bassett"
+    "name": "Sean Bassett",
+    "gender": "male"
   },
   {
     "id": 1825,
-    "name": "Jonathan  Mix"
+    "name": "Jonathan  Mix",
+    "gender": "male"
   },
   {
     "id": 1826,
-    "name": "Chad Laprise"
+    "name": "Chad Laprise",
+    "gender": "male"
   },
   {
     "id": 1827,
-    "name": "Quillan Salkilld"
+    "name": "Quillan Salkilld",
+    "gender": "male"
   },
   {
     "id": 1828,
-    "name": "Reza Arianto"
+    "name": "Reza Arianto",
+    "gender": "male"
   },
   {
     "id": 1829,
-    "name": "Ryan Jimmo"
+    "name": "Ryan Jimmo",
+    "gender": "male"
   },
   {
     "id": 1830,
-    "name": "Jean Silva"
+    "name": "Jean Silva",
+    "gender": "male"
   },
   {
     "id": 1831,
-    "name": "Larry Cureton"
+    "name": "Larry Cureton",
+    "gender": "male"
   },
   {
     "id": 1832,
-    "name": "Jansey Silva"
+    "name": "Jansey Silva",
+    "gender": "male"
   },
   {
     "id": 1833,
-    "name": "Brad Tavares"
+    "name": "Brad Tavares",
+    "gender": "male"
   },
   {
     "id": 1834,
-    "name": "Sumit Kumar"
+    "name": "Sumit Kumar",
+    "gender": "male"
   },
   {
     "id": 1835,
-    "name": "Yuhi Sano"
+    "name": "Yuhi Sano",
+    "gender": "male"
   },
   {
     "id": 1836,
-    "name": "Chris Brown"
+    "name": "Chris Brown",
+    "gender": "male"
   },
   {
     "id": 1837,
-    "name": "Nick Fiore"
+    "name": "Nick Fiore",
+    "gender": "male"
   },
   {
     "id": 1838,
-    "name": "Andy Anderson"
+    "name": "Andy Anderson",
+    "gender": "male"
   },
   {
     "id": 1839,
-    "name": "Fabiola Pidroni"
+    "name": "Fabiola Pidroni",
+    "gender": "male"
   },
   {
     "id": 1840,
-    "name": "Satoshi Honma"
+    "name": "Satoshi Honma",
+    "gender": "male"
   },
   {
     "id": 1841,
-    "name": "Eduardo Garagorri"
+    "name": "Eduardo Garagorri",
+    "gender": "male"
   },
   {
     "id": 1842,
-    "name": "Bruno Oliveira"
+    "name": "Bruno Oliveira",
+    "gender": "male"
   },
   {
     "id": 1843,
-    "name": "Rolles Gracie"
+    "name": "Rolles Gracie",
+    "gender": "male"
   },
   {
     "id": 1844,
-    "name": "Emily Fernandez"
+    "name": "Emily Fernandez",
+    "gender": "male"
   },
   {
     "id": 1845,
-    "name": "Lacey Schuckman"
+    "name": "Lacey Schuckman",
+    "gender": "male"
   },
   {
     "id": 1846,
-    "name": "Ottman Azaitar"
+    "name": "Ottman Azaitar",
+    "gender": "male"
   },
   {
     "id": 1847,
-    "name": "Mike Campbell"
+    "name": "Mike Campbell",
+    "gender": "male"
   },
   {
     "id": 1848,
-    "name": "Chad Corvin"
+    "name": "Chad Corvin",
+    "gender": "male"
   },
   {
     "id": 1849,
-    "name": "Ray Perales"
+    "name": "Ray Perales",
+    "gender": "male"
   },
   {
     "id": 1850,
-    "name": "Anvar Boynazarov"
+    "name": "Anvar Boynazarov",
+    "gender": "male"
   },
   {
     "id": 1851,
-    "name": "Anthony Morrison"
+    "name": "Anthony Morrison",
+    "gender": "male"
   },
   {
     "id": 1852,
-    "name": "David Douglas"
+    "name": "David Douglas",
+    "gender": "male"
   },
   {
     "id": 1853,
-    "name": "Tyson Nam"
+    "name": "Tyson Nam",
+    "gender": "male"
   },
   {
     "id": 1854,
-    "name": "Peter Danesoe"
+    "name": "Peter Danesoe",
+    "gender": "male"
   },
   {
     "id": 1855,
-    "name": "Hamdy Abdelwahab"
+    "name": "Hamdy Abdelwahab",
+    "gender": "male"
   },
   {
     "id": 1856,
-    "name": "Nick Meregali"
+    "name": "Nick Meregali",
+    "gender": "male"
   },
   {
     "id": 1857,
-    "name": "Juan Andres Luna"
+    "name": "Juan Andres Luna",
+    "gender": "male"
   },
   {
     "id": 1858,
-    "name": "Leon Shahbazyan"
+    "name": "Leon Shahbazyan",
+    "gender": "male"
   },
   {
     "id": 1859,
-    "name": "Gokhan Saki"
+    "name": "Gokhan Saki",
+    "gender": "male"
   },
   {
     "id": 1860,
-    "name": "Justin Smitley"
+    "name": "Justin Smitley",
+    "gender": "male"
   },
   {
     "id": 1861,
-    "name": "Steve Ramirez"
+    "name": "Steve Ramirez",
+    "gender": "male"
   },
   {
     "id": 1862,
-    "name": "Bill Cooper"
+    "name": "Bill Cooper",
+    "gender": "male"
   },
   {
     "id": 1863,
-    "name": "Scott Graham"
+    "name": "Scott Graham",
+    "gender": "male"
   },
   {
     "id": 1864,
-    "name": "Enson Inoue"
+    "name": "Enson Inoue",
+    "gender": "male"
   },
   {
     "id": 1865,
-    "name": "Antonio McKee"
+    "name": "Antonio McKee",
+    "gender": "male"
   },
   {
     "id": 1866,
-    "name": "Brandon Saling"
+    "name": "Brandon Saling",
+    "gender": "male"
   },
   {
     "id": 1867,
-    "name": "Bertrand Amoussou"
+    "name": "Bertrand Amoussou",
+    "gender": "male"
   },
   {
     "id": 1868,
-    "name": "Razak Al-Hassan"
+    "name": "Razak Al-Hassan",
+    "gender": "male"
   },
   {
     "id": 1869,
-    "name": "Julian Sanchez"
+    "name": "Julian Sanchez",
+    "gender": "male"
   },
   {
     "id": 1870,
-    "name": "Israel Albuquerque"
+    "name": "Israel Albuquerque",
+    "gender": "male"
   },
   {
     "id": 1871,
-    "name": "Helio Dipp"
+    "name": "Helio Dipp",
+    "gender": "male"
   },
   {
     "id": 1872,
-    "name": "Brad Katona"
+    "name": "Brad Katona",
+    "gender": "male"
   },
   {
     "id": 1873,
-    "name": "Santo Curatolo"
+    "name": "Santo Curatolo",
+    "gender": "male"
   },
   {
     "id": 1874,
-    "name": "Houston Dorr"
+    "name": "Houston Dorr",
+    "gender": "male"
   },
   {
     "id": 1875,
-    "name": "Alan Omer"
+    "name": "Alan Omer",
+    "gender": "male"
   },
   {
     "id": 1876,
-    "name": "John Reedy"
+    "name": "John Reedy",
+    "gender": "male"
   },
   {
     "id": 1877,
-    "name": "Fernando Padilla"
+    "name": "Fernando Padilla",
+    "gender": "male"
   },
   {
     "id": 1878,
-    "name": "Brandon Jenkins"
+    "name": "Brandon Jenkins",
+    "gender": "male"
   },
   {
     "id": 1879,
-    "name": "Muin Gafurov"
+    "name": "Muin Gafurov",
+    "gender": "male"
   },
   {
     "id": 1880,
-    "name": "Eric Martin"
+    "name": "Eric Martin",
+    "gender": "male"
   },
   {
     "id": 1881,
-    "name": "Dashawn Boatwright"
+    "name": "Dashawn Boatwright",
+    "gender": "male"
   },
   {
     "id": 1882,
-    "name": "Shane Campbell"
+    "name": "Shane Campbell",
+    "gender": "male"
   },
   {
     "id": 1883,
-    "name": "Justin Patterson"
+    "name": "Justin Patterson",
+    "gender": "male"
   },
   {
     "id": 1884,
-    "name": "Roger Carroll"
+    "name": "Roger Carroll",
+    "gender": "male"
   },
   {
     "id": 1885,
-    "name": "Todd Moore"
+    "name": "Todd Moore",
+    "gender": "male"
   },
   {
     "id": 1886,
-    "name": "Jeremy Larsen"
+    "name": "Jeremy Larsen",
+    "gender": "male"
   },
   {
     "id": 1887,
-    "name": "Zach Zane"
+    "name": "Zach Zane",
+    "gender": "male"
   },
   {
     "id": 1888,
-    "name": "Jared Chaffee"
+    "name": "Jared Chaffee",
+    "gender": "male"
   },
   {
     "id": 1889,
-    "name": "Takafumi Otsuka"
+    "name": "Takafumi Otsuka",
+    "gender": "male"
   },
   {
     "id": 1890,
-    "name": "Anthony Taylor"
+    "name": "Anthony Taylor",
+    "gender": "male"
   },
   {
     "id": 1891,
-    "name": "Adam Antolin"
+    "name": "Adam Antolin",
+    "gender": "male"
   },
   {
     "id": 1892,
-    "name": "Todd Lally"
+    "name": "Todd Lally",
+    "gender": "male"
   },
   {
     "id": 1893,
-    "name": "James Wallace"
+    "name": "James Wallace",
+    "gender": "male"
   },
   {
     "id": 1894,
-    "name": "CM Punk"
+    "name": "CM Punk",
+    "gender": "male"
   },
   {
     "id": 1895,
-    "name": "Cleber Luciano"
+    "name": "Cleber Luciano",
+    "gender": "male"
   },
   {
     "id": 1896,
-    "name": "Denis Tiuliulin"
+    "name": "Denis Tiuliulin",
+    "gender": "male"
   },
   {
     "id": 1897,
-    "name": "Daniel Marcos"
+    "name": "Daniel Marcos",
+    "gender": "male"
   },
   {
     "id": 1898,
-    "name": "Austen Lane"
+    "name": "Austen Lane",
+    "gender": "male"
   },
   {
     "id": 1899,
-    "name": "Carli Judice"
+    "name": "Carli Judice",
+    "gender": "male"
   },
   {
     "id": 1900,
-    "name": "Juan Mott"
+    "name": "Juan Mott",
+    "gender": "male"
   },
   {
     "id": 1901,
-    "name": "Kevin Aguilar"
+    "name": "Kevin Aguilar",
+    "gender": "male"
   },
   {
     "id": 1902,
-    "name": "Elise Reed"
+    "name": "Elise Reed",
+    "gender": "male"
   },
   {
     "id": 1903,
-    "name": "Rashad Evans"
+    "name": "Rashad Evans",
+    "gender": "male"
   },
   {
     "id": 1904,
-    "name": "Lionel Lanham"
+    "name": "Lionel Lanham",
+    "gender": "male"
   },
   {
     "id": 1905,
-    "name": "Mike de la Torre"
+    "name": "Mike de la Torre",
+    "gender": "male"
   },
   {
     "id": 1906,
-    "name": "Alberto Uda"
+    "name": "Alberto Uda",
+    "gender": "male"
   },
   {
     "id": 1907,
-    "name": "Chase Gibson"
+    "name": "Chase Gibson",
+    "gender": "male"
   },
   {
     "id": 1908,
-    "name": "Jose Augusto"
+    "name": "Jose Augusto",
+    "gender": "male"
   },
   {
     "id": 1909,
-    "name": "Joao Elias"
+    "name": "Joao Elias",
+    "gender": "male"
   },
   {
     "id": 1910,
-    "name": "Joe Giannetti"
+    "name": "Joe Giannetti",
+    "gender": "male"
   },
   {
     "id": 1911,
-    "name": "Marcos Bonilla"
+    "name": "Marcos Bonilla",
+    "gender": "male"
   },
   {
     "id": 1912,
-    "name": "Tedd Williams"
+    "name": "Tedd Williams",
+    "gender": "male"
   },
   {
     "id": 1913,
-    "name": "Arman Ashimov"
+    "name": "Arman Ashimov",
+    "gender": "male"
   },
   {
     "id": 1914,
-    "name": "Daniel Allen"
+    "name": "Daniel Allen",
+    "gender": "male"
   },
   {
     "id": 1915,
-    "name": "Rana Rudra Pratap Singh"
+    "name": "Rana Rudra Pratap Singh",
+    "gender": "male"
   },
   {
     "id": 1916,
-    "name": "Cindy Dandois"
+    "name": "Cindy Dandois",
+    "gender": "male"
   },
   {
     "id": 1917,
-    "name": "Errol Zimmerman"
+    "name": "Errol Zimmerman",
+    "gender": "male"
   },
   {
     "id": 1918,
-    "name": "Kyle Sturgeon"
+    "name": "Kyle Sturgeon",
+    "gender": "male"
   },
   {
     "id": 1919,
-    "name": "Jorge Gonzalez"
+    "name": "Jorge Gonzalez",
+    "gender": "male"
   },
   {
     "id": 1920,
-    "name": "Philipe Lins"
+    "name": "Philipe Lins",
+    "gender": "male"
   },
   {
     "id": 1921,
-    "name": "Yao Zhikui"
+    "name": "Yao Zhikui",
+    "gender": "male"
   },
   {
     "id": 1922,
-    "name": "Andrei Kopylov"
+    "name": "Andrei Kopylov",
+    "gender": "male"
   },
   {
     "id": 1923,
-    "name": "Larissa Pacheco"
+    "name": "Larissa Pacheco",
+    "gender": "male"
   },
   {
     "id": 1924,
-    "name": "Chad Sutton"
+    "name": "Chad Sutton",
+    "gender": "male"
   },
   {
     "id": 1925,
-    "name": "Anna Elmose"
+    "name": "Anna Elmose",
+    "gender": "male"
   },
   {
     "id": 1926,
-    "name": "Merritt Warren"
+    "name": "Merritt Warren",
+    "gender": "male"
   },
   {
     "id": 1927,
-    "name": "Chris Yee"
+    "name": "Chris Yee",
+    "gender": "male"
   },
   {
     "id": 1928,
-    "name": "Johnny Bedford"
+    "name": "Johnny Bedford",
+    "gender": "male"
   },
   {
     "id": 1929,
-    "name": "Josh Hendricks"
+    "name": "Josh Hendricks",
+    "gender": "male"
   },
   {
     "id": 1930,
-    "name": "Fabian Gonzalez"
+    "name": "Fabian Gonzalez",
+    "gender": "male"
   },
   {
     "id": 1931,
-    "name": "Leonardo Silva de Oliveira"
+    "name": "Leonardo Silva de Oliveira",
+    "gender": "male"
   },
   {
     "id": 1932,
-    "name": "Garrett Armfield"
+    "name": "Garrett Armfield",
+    "gender": "male"
   },
   {
     "id": 1933,
-    "name": "Joey Gomez"
+    "name": "Joey Gomez",
+    "gender": "male"
   },
   {
     "id": 1934,
-    "name": "Takahiro Oba"
+    "name": "Takahiro Oba",
+    "gender": "male"
   },
   {
     "id": 1935,
-    "name": "Toby Misech"
+    "name": "Toby Misech",
+    "gender": "male"
   },
   {
     "id": 1936,
-    "name": "Manon Fiorot"
+    "name": "Manon Fiorot",
+    "gender": "male"
   },
   {
     "id": 1937,
-    "name": "Tai Bowden"
+    "name": "Tai Bowden",
+    "gender": "male"
   },
   {
     "id": 1938,
-    "name": "Zach Underwood"
+    "name": "Zach Underwood",
+    "gender": "male"
   },
   {
     "id": 1939,
-    "name": "Josh Bumgarner"
+    "name": "Josh Bumgarner",
+    "gender": "male"
   },
   {
     "id": 1940,
-    "name": "Jonathan Santa Maria"
+    "name": "Jonathan Santa Maria",
+    "gender": "male"
   },
   {
     "id": 1941,
-    "name": "Kyle Levinton"
+    "name": "Kyle Levinton",
+    "gender": "male"
   },
   {
     "id": 1942,
-    "name": "Falaniko Vitale"
+    "name": "Falaniko Vitale",
+    "gender": "male"
   },
   {
     "id": 1943,
-    "name": "Tom Duquesnoy"
+    "name": "Tom Duquesnoy",
+    "gender": "male"
   },
   {
     "id": 1944,
-    "name": "Jim Wallhead"
+    "name": "Jim Wallhead",
+    "gender": "male"
   },
   {
     "id": 1945,
-    "name": "Darryl Cobb"
+    "name": "Darryl Cobb",
+    "gender": "male"
   },
   {
     "id": 1946,
-    "name": "Moise Rimbon"
+    "name": "Moise Rimbon",
+    "gender": "male"
   },
   {
     "id": 1947,
-    "name": "Alfonso Alcarez"
+    "name": "Alfonso Alcarez",
+    "gender": "male"
   },
   {
     "id": 1948,
-    "name": "Ben Lagman"
+    "name": "Ben Lagman",
+    "gender": "male"
   },
   {
     "id": 1949,
-    "name": "John Renken"
+    "name": "John Renken",
+    "gender": "male"
   },
   {
     "id": 1950,
-    "name": "Brandon Sene"
+    "name": "Brandon Sene",
+    "gender": "male"
   },
   {
     "id": 1951,
-    "name": "James Llontop"
+    "name": "James Llontop",
+    "gender": "male"
   },
   {
     "id": 1952,
-    "name": "Scott Fiedler"
+    "name": "Scott Fiedler",
+    "gender": "male"
   },
   {
     "id": 1953,
-    "name": "Liliya Shakirova"
+    "name": "Liliya Shakirova",
+    "gender": "male"
   },
   {
     "id": 1954,
-    "name": "Kaue Fernandes"
+    "name": "Kaue Fernandes",
+    "gender": "male"
   },
   {
     "id": 1955,
-    "name": "Andre Walker"
+    "name": "Andre Walker",
+    "gender": "male"
   },
   {
     "id": 1956,
-    "name": "Leiticia Pestova"
+    "name": "Leiticia Pestova",
+    "gender": "male"
   },
   {
     "id": 1957,
-    "name": "Kelly Velasco"
+    "name": "Kelly Velasco",
+    "gender": "male"
   },
   {
     "id": 1958,
-    "name": "Sheldon Westcott"
+    "name": "Sheldon Westcott",
+    "gender": "male"
   },
   {
     "id": 1959,
-    "name": "Anthony Leone"
+    "name": "Anthony Leone",
+    "gender": "male"
   },
   {
     "id": 1960,
-    "name": "Darko Stosic"
+    "name": "Darko Stosic",
+    "gender": "male"
   },
   {
     "id": 1961,
-    "name": "Melissa Martinez"
+    "name": "Melissa Martinez",
+    "gender": "male"
   },
   {
     "id": 1962,
-    "name": "Ben Jones"
+    "name": "Ben Jones",
+    "gender": "male"
   },
   {
     "id": 1963,
-    "name": "Jason Medina"
+    "name": "Jason Medina",
+    "gender": "male"
   },
   {
     "id": 1964,
-    "name": "Nandor Guelmino"
+    "name": "Nandor Guelmino",
+    "gender": "male"
   },
   {
     "id": 1965,
-    "name": "Nick Gibbons"
+    "name": "Nick Gibbons",
+    "gender": "male"
   },
   {
     "id": 1966,
-    "name": "Andy Ogle"
+    "name": "Andy Ogle",
+    "gender": "male"
   },
   {
     "id": 1967,
-    "name": "Askar Askar"
+    "name": "Askar Askar",
+    "gender": "male"
   },
   {
     "id": 1968,
-    "name": "Paul Redmond"
+    "name": "Paul Redmond",
+    "gender": "male"
   },
   {
     "id": 1969,
-    "name": "Alex Torres"
+    "name": "Alex Torres",
+    "gender": "male"
   },
   {
     "id": 1970,
-    "name": "Ednaldo Oliveira"
+    "name": "Ednaldo Oliveira",
+    "gender": "male"
   },
   {
     "id": 1971,
-    "name": "Rudyard Moncayo"
+    "name": "Rudyard Moncayo",
+    "gender": "male"
   },
   {
     "id": 1972,
-    "name": "Desmond Torres"
+    "name": "Desmond Torres",
+    "gender": "male"
   },
   {
     "id": 1973,
-    "name": "Gerry Harris"
+    "name": "Gerry Harris",
+    "gender": "male"
   },
   {
     "id": 1974,
-    "name": "Ronal Siahaan"
+    "name": "Ronal Siahaan",
+    "gender": "male"
   },
   {
     "id": 1975,
-    "name": "Masanori Tonooka"
+    "name": "Masanori Tonooka",
+    "gender": "male"
   },
   {
     "id": 1976,
-    "name": "Hidehiko Hasegawa"
+    "name": "Hidehiko Hasegawa",
+    "gender": "male"
   },
   {
     "id": 1977,
-    "name": "Lodune Sincaid"
+    "name": "Lodune Sincaid",
+    "gender": "male"
   },
   {
     "id": 1978,
-    "name": "Sarah Kaufman"
+    "name": "Sarah Kaufman",
+    "gender": "male"
   },
   {
     "id": 1979,
-    "name": "Gideon Ray"
+    "name": "Gideon Ray",
+    "gender": "male"
   },
   {
     "id": 1980,
-    "name": "Gary Padilla"
+    "name": "Gary Padilla",
+    "gender": "male"
   },
   {
     "id": 1981,
-    "name": "Kwan Ho Kwak"
+    "name": "Kwan Ho Kwak",
+    "gender": "male"
   },
   {
     "id": 1982,
-    "name": "Mark Robinson"
+    "name": "Mark Robinson",
+    "gender": "male"
   },
   {
     "id": 1983,
-    "name": "David Blanco"
+    "name": "David Blanco",
+    "gender": "male"
   },
   {
     "id": 1984,
-    "name": "Alessio Sakara"
+    "name": "Alessio Sakara",
+    "gender": "male"
   },
   {
     "id": 1985,
-    "name": "Jesse Finney"
+    "name": "Jesse Finney",
+    "gender": "male"
   },
   {
     "id": 1986,
-    "name": "Joe Vedepo"
+    "name": "Joe Vedepo",
+    "gender": "male"
   },
   {
     "id": 1987,
-    "name": "John Phillips"
+    "name": "John Phillips",
+    "gender": "male"
   },
   {
     "id": 1988,
-    "name": "Neal Ewing"
+    "name": "Neal Ewing",
+    "gender": "male"
   },
   {
     "id": 1989,
-    "name": "Remco Pardoel"
+    "name": "Remco Pardoel",
+    "gender": "male"
   },
   {
     "id": 1990,
-    "name": "Alexandre Ferreira"
+    "name": "Alexandre Ferreira",
+    "gender": "male"
   },
   {
     "id": 1991,
-    "name": "Vernon Ramos Ho"
+    "name": "Vernon Ramos Ho",
+    "gender": "male"
   },
   {
     "id": 1992,
-    "name": "Angelo Trevino"
+    "name": "Angelo Trevino",
+    "gender": "male"
   },
   {
     "id": 1993,
-    "name": "Ross Ebanez"
+    "name": "Ross Ebanez",
+    "gender": "male"
   },
   {
     "id": 1994,
-    "name": "Stanislav Nedkov"
+    "name": "Stanislav Nedkov",
+    "gender": "male"
   },
   {
     "id": 1995,
-    "name": "Mike Breeden"
+    "name": "Mike Breeden",
+    "gender": "male"
   },
   {
     "id": 1996,
-    "name": "Melsik Baghdasaryan"
+    "name": "Melsik Baghdasaryan",
+    "gender": "male"
   },
   {
     "id": 1997,
-    "name": "Gabriel Miglioli"
+    "name": "Gabriel Miglioli",
+    "gender": "male"
   },
   {
     "id": 1998,
-    "name": "Wendell Oliveira Marques"
+    "name": "Wendell Oliveira Marques",
+    "gender": "male"
   },
   {
     "id": 1999,
-    "name": "Artem Lobov"
+    "name": "Artem Lobov",
+    "gender": "male"
   },
   {
     "id": 2000,
-    "name": "Sai Wang"
+    "name": "Sai Wang",
+    "gender": "male"
   },
   {
     "id": 2001,
-    "name": "Alen Amedovski"
+    "name": "Alen Amedovski",
+    "gender": "male"
   },
   {
     "id": 2002,
-    "name": "Koji Kitao"
+    "name": "Koji Kitao",
+    "gender": "male"
   },
   {
     "id": 2003,
-    "name": "Dalcha Lungiambula"
+    "name": "Dalcha Lungiambula",
+    "gender": "male"
   },
   {
     "id": 2004,
-    "name": "Irwin Rivera"
+    "name": "Irwin Rivera",
+    "gender": "male"
   },
   {
     "id": 2005,
-    "name": "Adam Lynn"
+    "name": "Adam Lynn",
+    "gender": "male"
   },
   {
     "id": 2006,
-    "name": "Chad Vance"
+    "name": "Chad Vance",
+    "gender": "male"
   },
   {
     "id": 2007,
-    "name": "Igor Zinoviev"
+    "name": "Igor Zinoviev",
+    "gender": "male"
   },
   {
     "id": 2008,
-    "name": "Sam Hughes"
+    "name": "Sam Hughes",
+    "gender": "male"
   },
   {
     "id": 2009,
-    "name": "Pawel Pawlak"
+    "name": "Pawel Pawlak",
+    "gender": "male"
   },
   {
     "id": 2010,
-    "name": "Ricky Johnson"
+    "name": "Ricky Johnson",
+    "gender": "male"
   },
   {
     "id": 2011,
-    "name": "Oumar Sy"
+    "name": "Oumar Sy",
+    "gender": "male"
   },
   {
     "id": 2012,
-    "name": "Jong Wang Kim"
+    "name": "Jong Wang Kim",
+    "gender": "male"
   },
   {
     "id": 2013,
-    "name": "Dan Charles"
+    "name": "Dan Charles",
+    "gender": "male"
   },
   {
     "id": 2014,
-    "name": "Mike Aina"
+    "name": "Mike Aina",
+    "gender": "male"
   },
   {
     "id": 2015,
-    "name": "Jeremiah Labiano"
+    "name": "Jeremiah Labiano",
+    "gender": "male"
   },
   {
     "id": 2016,
-    "name": "Cyrillo Padilha"
+    "name": "Cyrillo Padilha",
+    "gender": "male"
   },
   {
     "id": 2017,
-    "name": "Artur Oumakhanov"
+    "name": "Artur Oumakhanov",
+    "gender": "male"
   },
   {
     "id": 2018,
-    "name": "Darrel Gholar"
+    "name": "Darrel Gholar",
+    "gender": "male"
   },
   {
     "id": 2019,
-    "name": "Dennis Reed"
+    "name": "Dennis Reed",
+    "gender": "male"
   },
   {
     "id": 2020,
-    "name": "Logan Nail"
+    "name": "Logan Nail",
+    "gender": "male"
   },
   {
     "id": 2021,
-    "name": "Armando Villarreal"
+    "name": "Armando Villarreal",
+    "gender": "male"
   },
   {
     "id": 2022,
-    "name": "Joaquin Buckley"
+    "name": "Joaquin Buckley",
+    "gender": "male"
   },
   {
     "id": 2023,
-    "name": "Robert Bryczek"
+    "name": "Robert Bryczek",
+    "gender": "male"
   },
   {
     "id": 2024,
-    "name": "Derek Anderson"
+    "name": "Derek Anderson",
+    "gender": "male"
   },
   {
     "id": 2025,
-    "name": "Bethe Correia"
+    "name": "Bethe Correia",
+    "gender": "male"
   },
   {
     "id": 2026,
-    "name": "Shannon Ross"
+    "name": "Shannon Ross",
+    "gender": "male"
   },
   {
     "id": 2027,
-    "name": "Orlando Wiet"
+    "name": "Orlando Wiet",
+    "gender": "male"
   },
   {
     "id": 2028,
-    "name": "Adrian Yanez"
+    "name": "Adrian Yanez",
+    "gender": "male"
   },
   {
     "id": 2029,
-    "name": "Brandon Cash"
+    "name": "Brandon Cash",
+    "gender": "male"
   },
   {
     "id": 2030,
-    "name": "Jamie Yager"
+    "name": "Jamie Yager",
+    "gender": "male"
   },
   {
     "id": 2031,
-    "name": "Ben Alloway"
+    "name": "Ben Alloway",
+    "gender": "male"
   },
   {
     "id": 2032,
-    "name": "Kurt Osiander"
+    "name": "Kurt Osiander",
+    "gender": "male"
   },
   {
     "id": 2033,
-    "name": "Trevor Peek"
+    "name": "Trevor Peek",
+    "gender": "male"
   },
   {
     "id": 2034,
-    "name": "AJ Siscoe"
+    "name": "AJ Siscoe",
+    "gender": "male"
   },
   {
     "id": 2035,
-    "name": "Chris Drumm"
+    "name": "Chris Drumm",
+    "gender": "male"
   },
   {
     "id": 2036,
-    "name": "Federico Lopez"
+    "name": "Federico Lopez",
+    "gender": "male"
   },
   {
     "id": 2037,
-    "name": "John Dowdy"
+    "name": "John Dowdy",
+    "gender": "male"
   },
   {
     "id": 2038,
-    "name": "Jared Hamman"
+    "name": "Jared Hamman",
+    "gender": "male"
   },
   {
     "id": 2039,
-    "name": "Henry Martinez"
+    "name": "Henry Martinez",
+    "gender": "male"
   },
   {
     "id": 2040,
-    "name": "Jim Mullen"
+    "name": "Jim Mullen",
+    "gender": "male"
   },
   {
     "id": 2041,
-    "name": "Cody Pfister"
+    "name": "Cody Pfister",
+    "gender": "male"
   },
   {
     "id": 2042,
-    "name": "Cale Yarbrough"
+    "name": "Cale Yarbrough",
+    "gender": "male"
   },
   {
     "id": 2043,
-    "name": "Jeremy Umphries"
+    "name": "Jeremy Umphries",
+    "gender": "male"
   },
   {
     "id": 2044,
-    "name": "Alex Hunter"
+    "name": "Alex Hunter",
+    "gender": "male"
   },
   {
     "id": 2045,
-    "name": "Bryan Travers"
+    "name": "Bryan Travers",
+    "gender": "male"
   },
   {
     "id": 2046,
-    "name": "Todd Medina"
+    "name": "Todd Medina",
+    "gender": "male"
   },
   {
     "id": 2047,
-    "name": "Jeremy Malaterre"
+    "name": "Jeremy Malaterre",
+    "gender": "male"
   },
   {
     "id": 2048,
-    "name": "Yan Pellerin"
+    "name": "Yan Pellerin",
+    "gender": "female"
   },
   {
     "id": 2049,
-    "name": "Danny Martinez"
+    "name": "Danny Martinez",
+    "gender": "male"
   },
   {
     "id": 2050,
-    "name": "Jorge Patino"
+    "name": "Jorge Patino",
+    "gender": "male"
   },
   {
     "id": 2051,
-    "name": "Paul Herrera"
+    "name": "Paul Herrera",
+    "gender": "male"
   },
   {
     "id": 2052,
-    "name": "Hector Aldana"
+    "name": "Hector Aldana",
+    "gender": "male"
   },
   {
     "id": 2053,
-    "name": "Keith Berry"
+    "name": "Keith Berry",
+    "gender": "male"
   },
   {
     "id": 2054,
-    "name": "Ryan Diaz"
+    "name": "Ryan Diaz",
+    "gender": "male"
   },
   {
     "id": 2055,
-    "name": "Chad Robichaux"
+    "name": "Chad Robichaux",
+    "gender": "male"
   },
   {
     "id": 2056,
-    "name": "Shana Olsen"
+    "name": "Shana Olsen",
+    "gender": "male"
   },
   {
     "id": 2057,
-    "name": "Caolan Loughran"
+    "name": "Caolan Loughran",
+    "gender": "male"
   },
   {
     "id": 2058,
-    "name": "Harold Howard"
+    "name": "Harold Howard",
+    "gender": "male"
   },
   {
     "id": 2059,
-    "name": "Giacomo Lemos"
+    "name": "Giacomo Lemos",
+    "gender": "male"
   },
   {
     "id": 2060,
-    "name": "Eduardo Dantas"
+    "name": "Eduardo Dantas",
+    "gender": "male"
   },
   {
     "id": 2061,
-    "name": "Marcin Prachnio"
+    "name": "Marcin Prachnio",
+    "gender": "male"
   },
   {
     "id": 2062,
-    "name": "Dino Pezao"
+    "name": "Dino Pezao",
+    "gender": "male"
   },
   {
     "id": 2063,
-    "name": "Mairbek Taisumov"
+    "name": "Mairbek Taisumov",
+    "gender": "male"
   },
   {
     "id": 2064,
-    "name": "Brandon Lowe"
+    "name": "Brandon Lowe",
+    "gender": "male"
   },
   {
     "id": 2065,
-    "name": "Qiu Lun"
+    "name": "Qiu Lun",
+    "gender": "male"
   },
   {
     "id": 2066,
-    "name": "Mike Richman"
+    "name": "Mike Richman",
+    "gender": "male"
   },
   {
     "id": 2067,
-    "name": "Chris Daukaus"
+    "name": "Chris Daukaus",
+    "gender": "male"
   },
   {
     "id": 2068,
-    "name": "Kris McCray"
+    "name": "Kris McCray",
+    "gender": "male"
   },
   {
     "id": 2069,
-    "name": "Brandon Michaels"
+    "name": "Brandon Michaels",
+    "gender": "male"
   },
   {
     "id": 2070,
-    "name": "Bruno Lopes"
+    "name": "Bruno Lopes",
+    "gender": "male"
   },
   {
     "id": 2071,
-    "name": "Stoney Hale"
+    "name": "Stoney Hale",
+    "gender": "male"
   },
   {
     "id": 2072,
-    "name": "Yoel Romero"
+    "name": "Yoel Romero",
+    "gender": "male"
   },
   {
     "id": 2073,
-    "name": "Jesse Butler"
+    "name": "Jesse Butler",
+    "gender": "male"
   },
   {
     "id": 2074,
-    "name": "Louis Jauregui"
+    "name": "Louis Jauregui",
+    "gender": "male"
   },
   {
     "id": 2075,
-    "name": "Jerrel Venetiaan"
+    "name": "Jerrel Venetiaan",
+    "gender": "male"
   },
   {
     "id": 2076,
-    "name": "Lv Zhenhong"
+    "name": "Lv Zhenhong",
+    "gender": "male"
   },
   {
     "id": 2077,
-    "name": "Armen Petrosyan"
+    "name": "Armen Petrosyan",
+    "gender": "male"
   },
   {
     "id": 2078,
-    "name": "Vinicius Magalhaes"
+    "name": "Vinicius Magalhaes",
+    "gender": "male"
   },
   {
     "id": 2079,
-    "name": "Shang Zhifa"
+    "name": "Shang Zhifa",
+    "gender": "male"
   },
   {
     "id": 2080,
-    "name": "James Reese"
+    "name": "James Reese",
+    "gender": "male"
   },
   {
     "id": 2081,
-    "name": "David Abbott"
+    "name": "David Abbott",
+    "gender": "male"
   },
   {
     "id": 2082,
-    "name": "Steven Ciaccio"
+    "name": "Steven Ciaccio",
+    "gender": "male"
   },
   {
     "id": 2083,
-    "name": "Charlie Campbell"
+    "name": "Charlie Campbell",
+    "gender": "male"
   },
   {
     "id": 2084,
-    "name": "Nazareno Malegarie"
+    "name": "Nazareno Malegarie",
+    "gender": "male"
   },
   {
     "id": 2085,
-    "name": "Christian Colombo"
+    "name": "Christian Colombo",
+    "gender": "male"
   },
   {
     "id": 2086,
-    "name": "Mike Glenn"
+    "name": "Mike Glenn",
+    "gender": "male"
   },
   {
     "id": 2087,
-    "name": "Craig Zellner"
+    "name": "Craig Zellner",
+    "gender": "male"
   },
   {
     "id": 2088,
-    "name": "Sergio Gomez"
+    "name": "Sergio Gomez",
+    "gender": "male"
   },
   {
     "id": 2089,
-    "name": "Roshaun Jones"
+    "name": "Roshaun Jones",
+    "gender": "male"
   },
   {
     "id": 2090,
-    "name": "Joey Gomez"
+    "name": "Joey Gomez",
+    "gender": "male"
   },
   {
     "id": 2091,
-    "name": "Brad Kohler"
+    "name": "Brad Kohler",
+    "gender": "male"
   },
   {
     "id": 2092,
-    "name": "Rashad Coulter"
+    "name": "Rashad Coulter",
+    "gender": "male"
   },
   {
     "id": 2093,
-    "name": "Antonio Carvalho"
+    "name": "Antonio Carvalho",
+    "gender": "male"
   },
   {
     "id": 2094,
-    "name": "Zubaira Tukhugov"
+    "name": "Zubaira Tukhugov",
+    "gender": "male"
   },
   {
     "id": 2095,
-    "name": "Manuel Torres"
+    "name": "Manuel Torres",
+    "gender": "male"
   },
   {
     "id": 2096,
-    "name": "Raphael Pessoa"
+    "name": "Raphael Pessoa",
+    "gender": "male"
   },
   {
     "id": 2097,
-    "name": "Jason Novelli"
+    "name": "Jason Novelli",
+    "gender": "male"
   },
   {
     "id": 2098,
-    "name": "Magomed Gadzhiyasulov"
+    "name": "Magomed Gadzhiyasulov",
+    "gender": "male"
   },
   {
     "id": 2099,
-    "name": "Lance Gibson"
+    "name": "Lance Gibson",
+    "gender": "male"
   },
   {
     "id": 2100,
-    "name": "TJ Cook"
+    "name": "TJ Cook",
+    "gender": "male"
   },
   {
     "id": 2101,
-    "name": "Chris Cope"
+    "name": "Chris Cope",
+    "gender": "male"
   },
   {
     "id": 2102,
-    "name": "Martin Svensson"
+    "name": "Martin Svensson",
+    "gender": "male"
   },
   {
     "id": 2103,
-    "name": "Matt Helm"
+    "name": "Matt Helm",
+    "gender": "male"
   },
   {
     "id": 2104,
-    "name": "Hilarie Rose"
+    "name": "Hilarie Rose",
+    "gender": "male"
   },
   {
     "id": 2105,
-    "name": "Viacheslav Borshchev"
+    "name": "Viacheslav Borshchev",
+    "gender": "male"
   },
   {
     "id": 2106,
-    "name": "Tyra Parker"
+    "name": "Tyra Parker",
+    "gender": "male"
   },
   {
     "id": 2107,
-    "name": "Humberto DeLeon"
+    "name": "Humberto DeLeon",
+    "gender": "male"
   },
   {
     "id": 2108,
-    "name": "Katsuya Inoue"
+    "name": "Katsuya Inoue",
+    "gender": "male"
   },
   {
     "id": 2109,
-    "name": "Robert Breslin"
+    "name": "Robert Breslin",
+    "gender": "male"
   },
   {
     "id": 2110,
-    "name": "Takashi Sato"
+    "name": "Takashi Sato",
+    "gender": "male"
   },
   {
     "id": 2111,
-    "name": "Jason Blackford"
+    "name": "Jason Blackford",
+    "gender": "male"
   },
   {
     "id": 2112,
-    "name": "Roshan Mainam"
+    "name": "Roshan Mainam",
+    "gender": "male"
   },
   {
     "id": 2113,
-    "name": "Daichi Abe"
+    "name": "Daichi Abe",
+    "gender": "male"
   },
   {
     "id": 2114,
-    "name": "Aaron Jeffery"
+    "name": "Aaron Jeffery",
+    "gender": "male"
   },
   {
     "id": 2115,
-    "name": "YeDam Seo"
+    "name": "YeDam Seo",
+    "gender": "male"
   },
   {
     "id": 2116,
-    "name": "Charlie Ontiveros"
+    "name": "Charlie Ontiveros",
+    "gender": "male"
   },
   {
     "id": 2117,
-    "name": "Rob Yundt"
+    "name": "Rob Yundt",
+    "gender": "male"
   },
   {
     "id": 2118,
-    "name": "Salvador Becerra"
+    "name": "Salvador Becerra",
+    "gender": "male"
   },
   {
     "id": 2119,
-    "name": "Lee Higgins"
+    "name": "Lee Higgins",
+    "gender": "male"
   },
   {
     "id": 2120,
-    "name": "Andre Gusmao"
+    "name": "Andre Gusmao",
+    "gender": "male"
   },
   {
     "id": 2121,
-    "name": "Kazuhiro Hamanaka"
+    "name": "Kazuhiro Hamanaka",
+    "gender": "male"
   },
   {
     "id": 2122,
-    "name": "Joshua Van"
+    "name": "Joshua Van",
+    "gender": "male"
   },
   {
     "id": 2123,
-    "name": "Edgar Cardenas"
+    "name": "Edgar Cardenas",
+    "gender": "male"
   },
   {
     "id": 2124,
-    "name": "Soa Palelei"
+    "name": "Soa Palelei",
+    "gender": "male"
   },
   {
     "id": 2125,
-    "name": "Krishaun Gilmore"
+    "name": "Krishaun Gilmore",
+    "gender": "male"
   },
   {
     "id": 2126,
-    "name": "John Lober"
+    "name": "John Lober",
+    "gender": "male"
   },
   {
     "id": 2127,
-    "name": "Kyosuke Sasaki"
+    "name": "Kyosuke Sasaki",
+    "gender": "male"
   },
   {
     "id": 2128,
-    "name": "Li Jingliang"
+    "name": "Li Jingliang",
+    "gender": "male"
   },
   {
     "id": 2129,
-    "name": "Alptekin Ozkilic"
+    "name": "Alptekin Ozkilic",
+    "gender": "male"
   },
   {
     "id": 2130,
-    "name": "Jacqueline Cavalcanti"
+    "name": "Jacqueline Cavalcanti",
+    "gender": "male"
   },
   {
     "id": 2131,
-    "name": "Victor Rodriguez"
+    "name": "Victor Rodriguez",
+    "gender": "male"
   },
   {
     "id": 2132,
-    "name": "Brett Tillis"
+    "name": "Brett Tillis",
+    "gender": "male"
   },
   {
     "id": 2133,
-    "name": "Orion Cosce"
+    "name": "Orion Cosce",
+    "gender": "male"
   },
   {
     "id": 2134,
-    "name": "Josh Copeland"
+    "name": "Josh Copeland",
+    "gender": "male"
   },
   {
     "id": 2135,
-    "name": "Shannon Ritch"
+    "name": "Shannon Ritch",
+    "gender": "male"
   },
   {
     "id": 2136,
-    "name": "Katsuhiko Nagata"
+    "name": "Katsuhiko Nagata",
+    "gender": "male"
   },
   {
     "id": 2137,
-    "name": "Saparbeg Safarov"
+    "name": "Saparbeg Safarov",
+    "gender": "male"
   },
   {
     "id": 2138,
-    "name": "CJ Marsh"
+    "name": "CJ Marsh",
+    "gender": "male"
   },
   {
     "id": 2139,
-    "name": "Eli Tamez"
+    "name": "Eli Tamez",
+    "gender": "male"
   },
   {
     "id": 2140,
-    "name": "George Allen"
+    "name": "George Allen",
+    "gender": "male"
   },
   {
     "id": 2141,
-    "name": "Gabriel Checco"
+    "name": "Gabriel Checco",
+    "gender": "male"
   },
   {
     "id": 2142,
-    "name": "Wesley Little"
+    "name": "Wesley Little",
+    "gender": "male"
   },
   {
     "id": 2143,
-    "name": "Chad Leonhardt"
+    "name": "Chad Leonhardt",
+    "gender": "male"
   },
   {
     "id": 2144,
-    "name": "Derek Campos"
+    "name": "Derek Campos",
+    "gender": "male"
   },
   {
     "id": 2145,
-    "name": "Jorge Oliveira"
+    "name": "Jorge Oliveira",
+    "gender": "male"
   },
   {
     "id": 2146,
-    "name": "Gigo Jara"
+    "name": "Gigo Jara",
+    "gender": "male"
   },
   {
     "id": 2147,
-    "name": "Aleksei Kunchenko"
+    "name": "Aleksei Kunchenko",
+    "gender": "male"
   },
   {
     "id": 2148,
-    "name": "Kemran Lachinov"
+    "name": "Kemran Lachinov",
+    "gender": "male"
   },
   {
     "id": 2149,
-    "name": "Mabelly Lima"
+    "name": "Mabelly Lima",
+    "gender": "male"
   },
   {
     "id": 2150,
-    "name": "James Terry"
+    "name": "James Terry",
+    "gender": "male"
   },
   {
     "id": 2151,
-    "name": "Dave Berry"
+    "name": "Dave Berry",
+    "gender": "male"
   },
   {
     "id": 2152,
-    "name": "Patricia Alujas"
+    "name": "Patricia Alujas",
+    "gender": "male"
   },
   {
     "id": 2153,
-    "name": "Marcos Brigagao"
+    "name": "Marcos Brigagao",
+    "gender": "male"
   },
   {
     "id": 2154,
-    "name": "Tetsuya Seki"
+    "name": "Tetsuya Seki",
+    "gender": "male"
   },
   {
     "id": 2155,
-    "name": "Neil Wain"
+    "name": "Neil Wain",
+    "gender": "male"
   },
   {
     "id": 2156,
-    "name": "Micol Di Segni"
+    "name": "Micol Di Segni",
+    "gender": "male"
   },
   {
     "id": 2157,
-    "name": "Anistavio Medeiros"
+    "name": "Anistavio Medeiros",
+    "gender": "male"
   },
   {
     "id": 2158,
-    "name": "Josh LaBerge"
+    "name": "Josh LaBerge",
+    "gender": "male"
   },
   {
     "id": 2159,
-    "name": "Azamat Gashimov"
+    "name": "Azamat Gashimov",
+    "gender": "male"
   },
   {
     "id": 2160,
-    "name": "Mike van Arsdale"
+    "name": "Mike van Arsdale",
+    "gender": "male"
   },
   {
     "id": 2161,
-    "name": "Teruto Ishihara"
+    "name": "Teruto Ishihara",
+    "gender": "male"
   },
   {
     "id": 2162,
-    "name": "Joey Beltran"
+    "name": "Joey Beltran",
+    "gender": "male"
   },
   {
     "id": 2163,
-    "name": "Shane Carwin"
+    "name": "Shane Carwin",
+    "gender": "male"
   },
   {
     "id": 2164,
-    "name": "TJ Laramie"
+    "name": "TJ Laramie",
+    "gender": "male"
   },
   {
     "id": 2165,
-    "name": "John Richard"
+    "name": "John Richard",
+    "gender": "male"
   },
   {
     "id": 2166,
-    "name": "Lucas Stark"
+    "name": "Lucas Stark",
+    "gender": "male"
   },
   {
     "id": 2167,
-    "name": "Kazuki Tokudome"
+    "name": "Kazuki Tokudome",
+    "gender": "male"
   },
   {
     "id": 2168,
-    "name": "Alexander Trevino"
+    "name": "Alexander Trevino",
+    "gender": "male"
   },
   {
     "id": 2169,
-    "name": "Justin Wren"
+    "name": "Justin Wren",
+    "gender": "male"
   },
   {
     "id": 2170,
-    "name": "Frederick Brown"
+    "name": "Frederick Brown",
+    "gender": "male"
   },
   {
     "id": 2171,
-    "name": "Kyoji Horiguchi"
+    "name": "Kyoji Horiguchi",
+    "gender": "male"
   },
   {
     "id": 2172,
-    "name": "Edson Gomez"
+    "name": "Edson Gomez",
+    "gender": "male"
   },
   {
     "id": 2173,
-    "name": "Alexandre Franca Nogueira"
+    "name": "Alexandre Franca Nogueira",
+    "gender": "male"
   },
   {
     "id": 2174,
-    "name": "Kim Couture"
+    "name": "Kim Couture",
+    "gender": "male"
   },
   {
     "id": 2175,
-    "name": "Jason Fairn"
+    "name": "Jason Fairn",
+    "gender": "male"
   },
   {
     "id": 2176,
-    "name": "Lukasz Les"
+    "name": "Lukasz Les",
+    "gender": "male"
   },
   {
     "id": 2177,
-    "name": "Joe Ray"
+    "name": "Joe Ray",
+    "gender": "male"
   },
   {
     "id": 2178,
-    "name": "Jan Finney"
+    "name": "Jan Finney",
+    "gender": "male"
   },
   {
     "id": 2179,
-    "name": "Mason Jones"
+    "name": "Mason Jones",
+    "gender": "male"
   },
   {
     "id": 2180,
-    "name": "Bojan Mihajlovic"
+    "name": "Bojan Mihajlovic",
+    "gender": "male"
   },
   {
     "id": 2181,
-    "name": "Codale Ford"
+    "name": "Codale Ford",
+    "gender": "male"
   },
   {
     "id": 2182,
-    "name": "Christophe Leninger"
+    "name": "Christophe Leninger",
+    "gender": "male"
   },
   {
     "id": 2183,
-    "name": "Cory Walmsley"
+    "name": "Cory Walmsley",
+    "gender": "male"
   },
   {
     "id": 2184,
-    "name": "Tyler Hill"
+    "name": "Tyler Hill",
+    "gender": "male"
   },
   {
     "id": 2185,
-    "name": "Jean Francois Lenogue"
+    "name": "Jean Francois Lenogue",
+    "gender": "male"
   },
   {
     "id": 2186,
-    "name": "Brendan Seguin"
+    "name": "Brendan Seguin",
+    "gender": "male"
   },
   {
     "id": 2187,
-    "name": "Felipe Bunes"
+    "name": "Felipe Bunes",
+    "gender": "male"
   },
   {
     "id": 2188,
-    "name": "Steve Steinbeiss"
+    "name": "Steve Steinbeiss",
+    "gender": "male"
   },
   {
     "id": 2189,
-    "name": "James Bochnovic"
+    "name": "James Bochnovic",
+    "gender": "male"
   },
   {
     "id": 2190,
-    "name": "Carlos Barreto"
+    "name": "Carlos Barreto",
+    "gender": "male"
   },
   {
     "id": 2191,
-    "name": "Joe Veres"
+    "name": "Joe Veres",
+    "gender": "male"
   },
   {
     "id": 2192,
-    "name": "Paul Daley"
+    "name": "Paul Daley",
+    "gender": "male"
   },
   {
     "id": 2193,
-    "name": "Curtis Blaydes"
+    "name": "Curtis Blaydes",
+    "gender": "male"
   },
   {
     "id": 2194,
-    "name": "Terry Martin"
+    "name": "Terry Martin",
+    "gender": "male"
   },
   {
     "id": 2195,
-    "name": "Tyler Diamond"
+    "name": "Tyler Diamond",
+    "gender": "male"
   },
   {
     "id": 2196,
-    "name": "Martin Sano"
+    "name": "Martin Sano",
+    "gender": "male"
   },
   {
     "id": 2197,
-    "name": "Chris Birchler"
+    "name": "Chris Birchler",
+    "gender": "male"
   },
   {
     "id": 2198,
-    "name": "John Adajar"
+    "name": "John Adajar",
+    "gender": "male"
   },
   {
     "id": 2199,
-    "name": "Richard Odoms"
+    "name": "Richard Odoms",
+    "gender": "male"
   },
   {
     "id": 2200,
-    "name": "Martin Bravo"
+    "name": "Martin Bravo",
+    "gender": "male"
   },
   {
     "id": 2201,
-    "name": "Jacobi Jones"
+    "name": "Jacobi Jones",
+    "gender": "male"
   },
   {
     "id": 2202,
-    "name": "Dominique Steele"
+    "name": "Dominique Steele",
+    "gender": "male"
   },
   {
     "id": 2203,
-    "name": "Jared Vanderaa"
+    "name": "Jared Vanderaa",
+    "gender": "male"
   },
   {
     "id": 2204,
-    "name": "Herman Renting"
+    "name": "Herman Renting",
+    "gender": "male"
   },
   {
     "id": 2205,
-    "name": "Kazuyuki Miyata"
+    "name": "Kazuyuki Miyata",
+    "gender": "male"
   },
   {
     "id": 2206,
-    "name": "Suman Mokhtarian"
+    "name": "Suman Mokhtarian",
+    "gender": "male"
   },
   {
     "id": 2207,
-    "name": "Yusuke Kawaguchi"
+    "name": "Yusuke Kawaguchi",
+    "gender": "male"
   },
   {
     "id": 2208,
-    "name": "Adin Duenas"
+    "name": "Adin Duenas",
+    "gender": "male"
   },
   {
     "id": 2209,
-    "name": "Noe Hernandez"
+    "name": "Noe Hernandez",
+    "gender": "male"
   },
   {
     "id": 2210,
-    "name": "Mark Hall"
+    "name": "Mark Hall",
+    "gender": "male"
   },
   {
     "id": 2211,
-    "name": "KyeungPyo Kim"
+    "name": "KyeungPyo Kim",
+    "gender": "male"
   },
   {
     "id": 2212,
-    "name": "David Levicki"
+    "name": "David Levicki",
+    "gender": "male"
   },
   {
     "id": 2213,
-    "name": "George Bush"
+    "name": "George Bush",
+    "gender": "male"
   },
   {
     "id": 2214,
-    "name": "Sean O'Haire"
+    "name": "Sean O'Haire",
+    "gender": "male"
   },
   {
     "id": 2215,
-    "name": "Tommy Hayden"
+    "name": "Tommy Hayden",
+    "gender": "male"
   },
   {
     "id": 2216,
-    "name": "Yusuke Imamura"
+    "name": "Yusuke Imamura",
+    "gender": "male"
   },
   {
     "id": 2217,
-    "name": "Han Ten Yun"
+    "name": "Han Ten Yun",
+    "gender": "male"
   },
   {
     "id": 2218,
-    "name": "Chad W. Saunders"
+    "name": "Chad W. Saunders",
+    "gender": "male"
   },
   {
     "id": 2219,
-    "name": "Tom Egan"
+    "name": "Tom Egan",
+    "gender": "male"
   },
   {
     "id": 2220,
-    "name": "Curtis Millender"
+    "name": "Curtis Millender",
+    "gender": "male"
   },
   {
     "id": 2221,
-    "name": "Jose Perez"
+    "name": "Jose Perez",
+    "gender": "male"
   },
   {
     "id": 2222,
-    "name": "Ramazan Kuramagomedov"
+    "name": "Ramazan Kuramagomedov",
+    "gender": "male"
   },
   {
     "id": 2223,
-    "name": "Zak Bucia"
+    "name": "Zak Bucia",
+    "gender": "male"
   },
   {
     "id": 2224,
-    "name": "Gil Castillo"
+    "name": "Gil Castillo",
+    "gender": "male"
   },
   {
     "id": 2225,
-    "name": "Kenneth Alexander"
+    "name": "Kenneth Alexander",
+    "gender": "male"
   },
   {
     "id": 2226,
-    "name": "Josefine Knutsson"
+    "name": "Josefine Knutsson",
+    "gender": "male"
   },
   {
     "id": 2227,
-    "name": "Marcelo Aguiar"
+    "name": "Marcelo Aguiar",
+    "gender": "male"
   },
   {
     "id": 2228,
-    "name": "Angga"
+    "name": "Angga",
+    "gender": "male"
   },
   {
     "id": 2229,
-    "name": "Matt Horning"
+    "name": "Matt Horning",
+    "gender": "male"
   },
   {
     "id": 2230,
-    "name": "Justin Lawrence"
+    "name": "Justin Lawrence",
+    "gender": "male"
   },
   {
     "id": 2231,
-    "name": "Takashi Sugiura"
+    "name": "Takashi Sugiura",
+    "gender": "male"
   },
   {
     "id": 2232,
-    "name": "Scott Bills"
+    "name": "Scott Bills",
+    "gender": "male"
   },
   {
     "id": 2233,
-    "name": "Michiyoshi Ohara"
+    "name": "Michiyoshi Ohara",
+    "gender": "male"
   },
   {
     "id": 2234,
-    "name": "Yan Qihui"
+    "name": "Yan Qihui",
+    "gender": "female"
   },
   {
     "id": 2235,
-    "name": "Ryan Hayes"
+    "name": "Ryan Hayes",
+    "gender": "male"
   },
   {
     "id": 2236,
-    "name": "Bubba Jenkins"
+    "name": "Bubba Jenkins",
+    "gender": "male"
   },
   {
     "id": 2237,
-    "name": "Taiei Kin"
+    "name": "Taiei Kin",
+    "gender": "male"
   },
   {
     "id": 2238,
-    "name": "Martin Buschkamp"
+    "name": "Martin Buschkamp",
+    "gender": "male"
   },
   {
     "id": 2239,
-    "name": "Egan Inoue"
+    "name": "Egan Inoue",
+    "gender": "male"
   },
   {
     "id": 2240,
-    "name": "Bobby Flynn"
+    "name": "Bobby Flynn",
+    "gender": "male"
   },
   {
     "id": 2241,
-    "name": "Chuck Grigsby"
+    "name": "Chuck Grigsby",
+    "gender": "male"
   },
   {
     "id": 2242,
-    "name": "Jon Olav Einemo"
+    "name": "Jon Olav Einemo",
+    "gender": "male"
   },
   {
     "id": 2243,
-    "name": "Brian Johnston"
+    "name": "Brian Johnston",
+    "gender": "male"
   },
   {
     "id": 2244,
-    "name": "Albert Tumenov"
+    "name": "Albert Tumenov",
+    "gender": "male"
   },
   {
     "id": 2245,
-    "name": "Dennis Olson"
+    "name": "Dennis Olson",
+    "gender": "male"
   },
   {
     "id": 2246,
-    "name": "Dave Strasser"
+    "name": "Dave Strasser",
+    "gender": "male"
   },
   {
     "id": 2247,
-    "name": "Rocky Lee"
+    "name": "Rocky Lee",
+    "gender": "male"
   },
   {
     "id": 2248,
-    "name": "Rama Supandhi"
+    "name": "Rama Supandhi",
+    "gender": "male"
   },
   {
     "id": 2249,
-    "name": "Jonathan Meunier"
+    "name": "Jonathan Meunier",
+    "gender": "male"
   },
   {
     "id": 2250,
-    "name": "Bassil Hafez"
+    "name": "Bassil Hafez",
+    "gender": "male"
   },
   {
     "id": 2251,
-    "name": "Sokun Koh"
+    "name": "Sokun Koh",
+    "gender": "male"
   },
   {
     "id": 2252,
-    "name": "Nora Cornolle"
+    "name": "Nora Cornolle",
+    "gender": "male"
   },
   {
     "id": 2253,
-    "name": "Piera Rodriguez"
+    "name": "Piera Rodriguez",
+    "gender": "male"
   },
   {
     "id": 2254,
-    "name": "Danny Abbadi"
+    "name": "Danny Abbadi",
+    "gender": "male"
   },
   {
     "id": 2255,
-    "name": "Leo Sylvest"
+    "name": "Leo Sylvest",
+    "gender": "male"
   },
   {
     "id": 2256,
-    "name": "Scott Carson"
+    "name": "Scott Carson",
+    "gender": "male"
   },
   {
     "id": 2257,
-    "name": "Fedor Nikolov"
+    "name": "Fedor Nikolov",
+    "gender": "male"
   },
   {
     "id": 2258,
-    "name": "Serhiy Sidey"
+    "name": "Serhiy Sidey",
+    "gender": "male"
   },
   {
     "id": 2259,
-    "name": "James Giboo"
+    "name": "James Giboo",
+    "gender": "male"
   },
   {
     "id": 2260,
-    "name": "Eric Smith"
+    "name": "Eric Smith",
+    "gender": "male"
   },
   {
     "id": 2261,
-    "name": "Muhammad Naimov"
+    "name": "Muhammad Naimov",
+    "gender": "male"
   },
   {
     "id": 2262,
-    "name": "Fares Ziam"
+    "name": "Fares Ziam",
+    "gender": "male"
   },
   {
     "id": 2263,
-    "name": "Len Bentley"
+    "name": "Len Bentley",
+    "gender": "male"
   },
   {
     "id": 2264,
-    "name": "James Gabert"
+    "name": "James Gabert",
+    "gender": "male"
   },
   {
     "id": 2265,
-    "name": "Jeremie Holloway"
+    "name": "Jeremie Holloway",
+    "gender": "male"
   },
   {
     "id": 2266,
-    "name": "Brandon Hester"
+    "name": "Brandon Hester",
+    "gender": "male"
   },
   {
     "id": 2267,
-    "name": "SangWon Kim"
+    "name": "SangWon Kim",
+    "gender": "male"
   },
   {
     "id": 2268,
-    "name": "Kyle Bochniak"
+    "name": "Kyle Bochniak",
+    "gender": "male"
   },
   {
     "id": 2269,
-    "name": "Danny Silva"
+    "name": "Danny Silva",
+    "gender": "male"
   },
   {
     "id": 2270,
-    "name": "AJ Cunningham"
+    "name": "AJ Cunningham",
+    "gender": "male"
   },
   {
     "id": 2271,
-    "name": "Gan McGee"
+    "name": "Gan McGee",
+    "gender": "male"
   },
   {
     "id": 2272,
-    "name": "Roy Boughton"
+    "name": "Roy Boughton",
+    "gender": "male"
   },
   {
     "id": 2273,
-    "name": "Tommy Petersen"
+    "name": "Tommy Petersen",
+    "gender": "male"
   },
   {
     "id": 2274,
-    "name": "Eduardo Neves"
+    "name": "Eduardo Neves",
+    "gender": "male"
   },
   {
     "id": 2275,
-    "name": "Pat Curran"
+    "name": "Pat Curran",
+    "gender": "male"
   },
   {
     "id": 2276,
-    "name": "Braxton Smith"
+    "name": "Braxton Smith",
+    "gender": "male"
   },
   {
     "id": 2277,
-    "name": "Kevin Gray"
+    "name": "Kevin Gray",
+    "gender": "male"
   },
   {
     "id": 2278,
-    "name": "Gustavo Gabriel"
+    "name": "Gustavo Gabriel",
+    "gender": "male"
   },
   {
     "id": 2279,
-    "name": "Craig Jones"
+    "name": "Craig Jones",
+    "gender": "male"
   },
   {
     "id": 2280,
-    "name": "Brian Sleeman"
+    "name": "Brian Sleeman",
+    "gender": "male"
   },
   {
     "id": 2281,
-    "name": "Isaac Dulgarian"
+    "name": "Isaac Dulgarian",
+    "gender": "male"
   },
   {
     "id": 2282,
-    "name": "Ralph Dillon"
+    "name": "Ralph Dillon",
+    "gender": "male"
   },
   {
     "id": 2283,
-    "name": "Jorge Lopez"
+    "name": "Jorge Lopez",
+    "gender": "male"
   },
   {
     "id": 2284,
-    "name": "Cal Worsham"
+    "name": "Cal Worsham",
+    "gender": "male"
   },
   {
     "id": 2285,
-    "name": "Nikolas Motta"
+    "name": "Nikolas Motta",
+    "gender": "male"
   },
   {
     "id": 2286,
-    "name": "Windri Patilima"
+    "name": "Windri Patilima",
+    "gender": "male"
   },
   {
     "id": 2287,
-    "name": "Mike Rodriguez"
+    "name": "Mike Rodriguez",
+    "gender": "male"
   },
   {
     "id": 2288,
-    "name": "Canaan Kawaihae"
+    "name": "Canaan Kawaihae",
+    "gender": "male"
   },
   {
     "id": 2289,
-    "name": "Troy Mandaloniz"
+    "name": "Troy Mandaloniz",
+    "gender": "male"
   },
   {
     "id": 2290,
-    "name": "Ian Murphy"
+    "name": "Ian Murphy",
+    "gender": "male"
   },
   {
     "id": 2291,
-    "name": "Corey Hill"
+    "name": "Corey Hill",
+    "gender": "male"
   },
   {
     "id": 2292,
-    "name": "Robert Whittaker"
+    "name": "Robert Whittaker",
+    "gender": "male"
   },
   {
     "id": 2293,
-    "name": "Achilles Estremadura"
+    "name": "Achilles Estremadura",
+    "gender": "male"
   },
   {
     "id": 2294,
-    "name": "Rolando Bedoya"
+    "name": "Rolando Bedoya",
+    "gender": "male"
   },
   {
     "id": 2295,
-    "name": "Chase Sherman"
+    "name": "Chase Sherman",
+    "gender": "male"
   },
   {
     "id": 2296,
-    "name": "Bryan Pardoe"
+    "name": "Bryan Pardoe",
+    "gender": "male"
   },
   {
     "id": 2297,
-    "name": "Guy Mezger"
+    "name": "Guy Mezger",
+    "gender": "male"
   },
   {
     "id": 2298,
-    "name": "Leonardo Damiani"
+    "name": "Leonardo Damiani",
+    "gender": "male"
   },
   {
     "id": 2299,
-    "name": "Alejandro Flores"
+    "name": "Alejandro Flores",
+    "gender": "male"
   },
   {
     "id": 2300,
-    "name": "Sherron Leggett"
+    "name": "Sherron Leggett",
+    "gender": "male"
   },
   {
     "id": 2301,
-    "name": "Josh Epps"
+    "name": "Josh Epps",
+    "gender": "male"
   },
   {
     "id": 2302,
-    "name": "Gian Villante"
+    "name": "Gian Villante",
+    "gender": "male"
   },
   {
     "id": 2303,
-    "name": "Nobuhiko Takada"
+    "name": "Nobuhiko Takada",
+    "gender": "male"
   },
   {
     "id": 2304,
-    "name": "Jadson Costa"
+    "name": "Jadson Costa",
+    "gender": "male"
   },
   {
     "id": 2305,
-    "name": "Chris Dempsey"
+    "name": "Chris Dempsey",
+    "gender": "male"
   },
   {
     "id": 2306,
-    "name": "Kultar Gill"
+    "name": "Kultar Gill",
+    "gender": "male"
   },
   {
     "id": 2307,
-    "name": "Justin DeMoney"
+    "name": "Justin DeMoney",
+    "gender": "male"
   },
   {
     "id": 2308,
-    "name": "Justin Sumter"
+    "name": "Justin Sumter",
+    "gender": "male"
   },
   {
     "id": 2309,
-    "name": "Bob Gilstrap"
+    "name": "Bob Gilstrap",
+    "gender": "male"
   },
   {
     "id": 2310,
-    "name": "Taylor Moore"
+    "name": "Taylor Moore",
+    "gender": "male"
   },
   {
     "id": 2311,
-    "name": "Ion Cutelaba"
+    "name": "Ion Cutelaba",
+    "gender": "male"
   },
   {
     "id": 2312,
-    "name": "Gerric Hayes"
+    "name": "Gerric Hayes",
+    "gender": "male"
   },
   {
     "id": 2313,
-    "name": "Houston Alexander"
+    "name": "Houston Alexander",
+    "gender": "male"
   },
   {
     "id": 2314,
-    "name": "Ibo Aslan"
+    "name": "Ibo Aslan",
+    "gender": "male"
   },
   {
     "id": 2315,
-    "name": "Sam Liera"
+    "name": "Sam Liera",
+    "gender": "male"
   },
   {
     "id": 2316,
-    "name": "Andre Santos"
+    "name": "Andre Santos",
+    "gender": "male"
   },
   {
     "id": 2317,
-    "name": "Jean Matsumoto"
+    "name": "Jean Matsumoto",
+    "gender": "male"
   },
   {
     "id": 2318,
-    "name": "Jong Won Kim"
+    "name": "Jong Won Kim",
+    "gender": "male"
   },
   {
     "id": 2319,
-    "name": "Joe Lowry"
+    "name": "Joe Lowry",
+    "gender": "male"
   },
   {
     "id": 2320,
-    "name": "Mikey Gonzalez"
+    "name": "Mikey Gonzalez",
+    "gender": "male"
   },
   {
     "id": 2321,
-    "name": "Brian Houston"
+    "name": "Brian Houston",
+    "gender": "male"
   },
   {
     "id": 2322,
-    "name": "Tomomi Iwama"
+    "name": "Tomomi Iwama",
+    "gender": "male"
   },
   {
     "id": 2323,
-    "name": "Paul Georgieff"
+    "name": "Paul Georgieff",
+    "gender": "male"
   },
   {
     "id": 2324,
-    "name": "Mark Schultz"
+    "name": "Mark Schultz",
+    "gender": "male"
   },
   {
     "id": 2325,
-    "name": "Gasan Umalatov"
+    "name": "Gasan Umalatov",
+    "gender": "male"
   },
   {
     "id": 2326,
-    "name": "Nate Moore"
+    "name": "Nate Moore",
+    "gender": "male"
   },
   {
     "id": 2327,
-    "name": "Albert Cheng"
+    "name": "Albert Cheng",
+    "gender": "male"
   },
   {
     "id": 2328,
-    "name": "Marc Diakiese"
+    "name": "Marc Diakiese",
+    "gender": "male"
   },
   {
     "id": 2329,
-    "name": "Khalid Murtazaliev"
+    "name": "Khalid Murtazaliev",
+    "gender": "male"
   },
   {
     "id": 2330,
-    "name": "Philip Preece"
+    "name": "Philip Preece",
+    "gender": "male"
   },
   {
     "id": 2331,
-    "name": "Ron Stallings"
+    "name": "Ron Stallings",
+    "gender": "male"
   },
   {
     "id": 2332,
-    "name": "Jai Herbert"
+    "name": "Jai Herbert",
+    "gender": "male"
   },
   {
     "id": 2333,
-    "name": "Balajin"
+    "name": "Balajin",
+    "gender": "male"
   },
   {
     "id": 2334,
-    "name": "Miguel Linares"
+    "name": "Miguel Linares",
+    "gender": "male"
   },
   {
     "id": 2335,
-    "name": "Jonatas Novaes"
+    "name": "Jonatas Novaes",
+    "gender": "male"
   },
   {
     "id": 2336,
-    "name": "Lucas Lopes"
+    "name": "Lucas Lopes",
+    "gender": "male"
   },
   {
     "id": 2337,
-    "name": "Trey Houston"
+    "name": "Trey Houston",
+    "gender": "male"
   },
   {
     "id": 2338,
-    "name": "Sanford Alton Meeks"
+    "name": "Sanford Alton Meeks",
+    "gender": "male"
   },
   {
     "id": 2339,
-    "name": "Darrius Flowers"
+    "name": "Darrius Flowers",
+    "gender": "male"
   },
   {
     "id": 2340,
-    "name": "John Dixson"
+    "name": "John Dixson",
+    "gender": "male"
   },
   {
     "id": 2341,
-    "name": "Shaun Etchell"
+    "name": "Shaun Etchell",
+    "gender": "male"
   },
   {
     "id": 2342,
-    "name": "JunYoung Hong"
+    "name": "JunYoung Hong",
+    "gender": "male"
   },
   {
     "id": 2343,
-    "name": "Sultan Aliev"
+    "name": "Sultan Aliev",
+    "gender": "male"
   },
   {
     "id": 2344,
-    "name": "Damonte Robinson"
+    "name": "Damonte Robinson",
+    "gender": "male"
   },
   {
     "id": 2345,
-    "name": "Harry Moskowitz"
+    "name": "Harry Moskowitz",
+    "gender": "male"
   },
   {
     "id": 2346,
-    "name": "Jorgen Kruth"
+    "name": "Jorgen Kruth",
+    "gender": "male"
   },
   {
     "id": 2347,
-    "name": "Moti Horenstein"
+    "name": "Moti Horenstein",
+    "gender": "male"
   },
   {
     "id": 2348,
-    "name": "Sarah D'alelio"
+    "name": "Sarah D'alelio",
+    "gender": "male"
   },
   {
     "id": 2349,
-    "name": "Ashiek Ajim"
+    "name": "Ashiek Ajim",
+    "gender": "male"
   },
   {
     "id": 2350,
-    "name": "Ludovit Klein"
+    "name": "Ludovit Klein",
+    "gender": "male"
   },
   {
     "id": 2351,
-    "name": "Jose Barreto"
+    "name": "Jose Barreto",
+    "gender": "male"
   },
   {
     "id": 2352,
-    "name": "Vinicius Cenci"
+    "name": "Vinicius Cenci",
+    "gender": "male"
   },
   {
     "id": 2353,
-    "name": "Richie Santiago"
+    "name": "Richie Santiago",
+    "gender": "male"
   },
   {
     "id": 2354,
-    "name": "Scott Morris"
+    "name": "Scott Morris",
+    "gender": "male"
   },
   {
     "id": 2355,
-    "name": "Maiju Kujala"
+    "name": "Maiju Kujala",
+    "gender": "male"
   },
   {
     "id": 2356,
-    "name": "Antony Rea"
+    "name": "Antony Rea",
+    "gender": "male"
   },
   {
     "id": 2357,
-    "name": "Chris Wright"
+    "name": "Chris Wright",
+    "gender": "male"
   },
   {
     "id": 2358,
-    "name": "Nick Penner"
+    "name": "Nick Penner",
+    "gender": "male"
   },
   {
     "id": 2359,
-    "name": "Christian Aguilera"
+    "name": "Christian Aguilera",
+    "gender": "male"
   },
   {
     "id": 2360,
-    "name": "Mario Soto"
+    "name": "Mario Soto",
+    "gender": "male"
   },
   {
     "id": 2361,
-    "name": "Gerald Harris"
+    "name": "Gerald Harris",
+    "gender": "male"
   },
   {
     "id": 2362,
-    "name": "Rubin Williams"
+    "name": "Rubin Williams",
+    "gender": "male"
   },
   {
     "id": 2363,
-    "name": "Steve Mann"
+    "name": "Steve Mann",
+    "gender": "male"
   },
   {
     "id": 2364,
-    "name": "Alessandro Costa"
+    "name": "Alessandro Costa",
+    "gender": "male"
   },
   {
     "id": 2365,
-    "name": "Michael Bravo"
+    "name": "Michael Bravo",
+    "gender": "male"
   },
   {
     "id": 2366,
-    "name": "Alexander Morgan"
+    "name": "Alexander Morgan",
+    "gender": "male"
   },
   {
     "id": 2367,
-    "name": "Abdul-Kareem Al-Selwady"
+    "name": "Abdul-Kareem Al-Selwady",
+    "gender": "male"
   },
   {
     "id": 2368,
-    "name": "Chris Amarante"
+    "name": "Chris Amarante",
+    "gender": "male"
   },
   {
     "id": 2369,
-    "name": "Marc Stevens"
+    "name": "Marc Stevens",
+    "gender": "male"
   },
   {
     "id": 2370,
-    "name": "Danny Navarro"
+    "name": "Danny Navarro",
+    "gender": "male"
   },
   {
     "id": 2371,
-    "name": "David Dodd"
+    "name": "David Dodd",
+    "gender": "male"
   },
   {
     "id": 2372,
-    "name": "Elves Brener"
+    "name": "Elves Brener",
+    "gender": "male"
   },
   {
     "id": 2373,
-    "name": "Ivan Valenzuela"
+    "name": "Ivan Valenzuela",
+    "gender": "male"
   },
   {
     "id": 2374,
-    "name": "Chelsea Hackett"
+    "name": "Chelsea Hackett",
+    "gender": "male"
   },
   {
     "id": 2375,
-    "name": "CJ Keith"
+    "name": "CJ Keith",
+    "gender": "male"
   },
   {
     "id": 2376,
-    "name": "Bryanna Fissori"
+    "name": "Bryanna Fissori",
+    "gender": "male"
   },
   {
     "id": 2377,
-    "name": "Jeff Molina"
+    "name": "Jeff Molina",
+    "gender": "male"
   },
   {
     "id": 2378,
-    "name": "Dean Barry"
+    "name": "Dean Barry",
+    "gender": "male"
   },
   {
     "id": 2379,
-    "name": "Norifumi Yamamoto"
+    "name": "Norifumi Yamamoto",
+    "gender": "male"
   },
   {
     "id": 2380,
-    "name": "Bryan Humes"
+    "name": "Bryan Humes",
+    "gender": "male"
   },
   {
     "id": 2381,
-    "name": "Crezio de Souza"
+    "name": "Crezio de Souza",
+    "gender": "male"
   },
   {
     "id": 2382,
-    "name": "Wuziazibieke Jiahefu"
+    "name": "Wuziazibieke Jiahefu",
+    "gender": "male"
   },
   {
     "id": 2383,
-    "name": "Rulon Gardner"
+    "name": "Rulon Gardner",
+    "gender": "male"
   },
   {
     "id": 2384,
-    "name": "Cortez Coleman"
+    "name": "Cortez Coleman",
+    "gender": "male"
   },
   {
     "id": 2385,
-    "name": "Aalon Cruz"
+    "name": "Aalon Cruz",
+    "gender": "male"
   },
   {
     "id": 2386,
-    "name": "Paul Capaldo"
+    "name": "Paul Capaldo",
+    "gender": "male"
   },
   {
     "id": 2387,
-    "name": "Chris Condo"
+    "name": "Chris Condo",
+    "gender": "male"
   },
   {
     "id": 2388,
-    "name": "Yoji Anjo"
+    "name": "Yoji Anjo",
+    "gender": "male"
   },
   {
     "id": 2389,
-    "name": "Ricky Legere Jr."
+    "name": "Ricky Legere Jr.",
+    "gender": "male"
   },
   {
     "id": 2390,
-    "name": "Luciano Pereira"
+    "name": "Luciano Pereira",
+    "gender": "male"
   },
   {
     "id": 2391,
-    "name": "Aaron Brink"
+    "name": "Aaron Brink",
+    "gender": "male"
   },
   {
     "id": 2392,
-    "name": "Diego Henrique da Silva"
+    "name": "Diego Henrique da Silva",
+    "gender": "male"
   },
   {
     "id": 2393,
-    "name": "OJ Dominguez"
+    "name": "OJ Dominguez",
+    "gender": "male"
   },
   {
     "id": 2394,
-    "name": "Jesse Jones"
+    "name": "Jesse Jones",
+    "gender": "male"
   },
   {
     "id": 2395,
-    "name": "Trent Jenkins"
+    "name": "Trent Jenkins",
+    "gender": "male"
   },
   {
     "id": 2396,
-    "name": "Timo Feucht"
+    "name": "Timo Feucht",
+    "gender": "male"
   },
   {
     "id": 2397,
-    "name": "Garrett Mueller"
+    "name": "Garrett Mueller",
+    "gender": "male"
   },
   {
     "id": 2398,
-    "name": "Ryan Tobar"
+    "name": "Ryan Tobar",
+    "gender": "male"
   },
   {
     "id": 2399,
-    "name": "Koji Oishi"
+    "name": "Koji Oishi",
+    "gender": "male"
   },
   {
     "id": 2400,
-    "name": "Rob Sinclair"
+    "name": "Rob Sinclair",
+    "gender": "male"
   },
   {
     "id": 2401,
-    "name": "Scott Ferrozzo"
+    "name": "Scott Ferrozzo",
+    "gender": "male"
   },
   {
     "id": 2402,
-    "name": "Caio Bittencourt"
+    "name": "Caio Bittencourt",
+    "gender": "male"
   },
   {
     "id": 2403,
-    "name": "Muslim Salikhov"
+    "name": "Muslim Salikhov",
+    "gender": "male"
   },
   {
     "id": 2404,
-    "name": "Yosuke Nishijima"
+    "name": "Yosuke Nishijima",
+    "gender": "male"
   },
   {
     "id": 2405,
-    "name": "Michael McDonald"
+    "name": "Michael McDonald",
+    "gender": "male"
   },
   {
     "id": 2406,
-    "name": "Rafael Carino"
+    "name": "Rafael Carino",
+    "gender": "male"
   },
   {
     "id": 2407,
-    "name": "Jeremy Kennedy"
+    "name": "Jeremy Kennedy",
+    "gender": "male"
   },
   {
     "id": 2408,
-    "name": "Luis Ramos"
+    "name": "Luis Ramos",
+    "gender": "male"
   },
   {
     "id": 2409,
-    "name": "Eric Steenberg"
+    "name": "Eric Steenberg",
+    "gender": "male"
   },
   {
     "id": 2410,
-    "name": "Hugo Duarte"
+    "name": "Hugo Duarte",
+    "gender": "male"
   },
   {
     "id": 2411,
-    "name": "Andre Fialho"
+    "name": "Andre Fialho",
+    "gender": "male"
   },
   {
     "id": 2412,
-    "name": "Igor Da Silva"
+    "name": "Igor Da Silva",
+    "gender": "male"
   },
   {
     "id": 2413,
-    "name": "Andre Amado"
+    "name": "Andre Amado",
+    "gender": "male"
   },
   {
     "id": 2414,
-    "name": "Sam Oropeza"
+    "name": "Sam Oropeza",
+    "gender": "male"
   },
   {
     "id": 2415,
-    "name": "Frank Lester"
+    "name": "Frank Lester",
+    "gender": "male"
   },
   {
     "id": 2416,
-    "name": "Steven Nguyen"
+    "name": "Steven Nguyen",
+    "gender": "male"
   },
   {
     "id": 2417,
-    "name": "Maiara Amanajas dos Santos"
+    "name": "Maiara Amanajas dos Santos",
+    "gender": "male"
   },
   {
     "id": 2418,
-    "name": "Wagner Campos"
+    "name": "Wagner Campos",
+    "gender": "male"
   },
   {
     "id": 2419,
-    "name": "He-Man Gipson"
+    "name": "He-Man Gipson",
+    "gender": "male"
   },
   {
     "id": 2420,
-    "name": "Koichiro Matsumoto"
+    "name": "Koichiro Matsumoto",
+    "gender": "male"
   },
   {
     "id": 2421,
-    "name": "Dan Severn"
+    "name": "Dan Severn",
+    "gender": "male"
   },
   {
     "id": 2422,
-    "name": "Josh Clopton"
+    "name": "Josh Clopton",
+    "gender": "male"
   },
   {
     "id": 2423,
-    "name": "Damion Douglas"
+    "name": "Damion Douglas",
+    "gender": "male"
   },
   {
     "id": 2424,
-    "name": "Eduardo Torres Caut"
+    "name": "Eduardo Torres Caut",
+    "gender": "male"
   },
   {
     "id": 2425,
-    "name": "Omar Morales"
+    "name": "Omar Morales",
+    "gender": "male"
   },
   {
     "id": 2426,
-    "name": "Brandon Foxworth"
+    "name": "Brandon Foxworth",
+    "gender": "male"
   },
   {
     "id": 2427,
-    "name": "Cortavious Romious"
+    "name": "Cortavious Romious",
+    "gender": "male"
   },
   {
     "id": 2428,
-    "name": "Joe Warren"
+    "name": "Joe Warren",
+    "gender": "male"
   },
   {
     "id": 2429,
-    "name": "George Hardwick"
+    "name": "George Hardwick",
+    "gender": "male"
   },
   {
     "id": 2430,
-    "name": "Dante Rivera"
+    "name": "Dante Rivera",
+    "gender": "male"
   },
   {
     "id": 2431,
-    "name": "Bill Duvall"
+    "name": "Bill Duvall",
+    "gender": "male"
   },
   {
     "id": 2432,
-    "name": "Henry Miller"
+    "name": "Henry Miller",
+    "gender": "male"
   },
   {
     "id": 2433,
-    "name": "Ben Earwood"
+    "name": "Ben Earwood",
+    "gender": "male"
   },
   {
     "id": 2434,
-    "name": "Andy Murad"
+    "name": "Andy Murad",
+    "gender": "male"
   },
   {
     "id": 2435,
-    "name": "Sovannahry Em"
+    "name": "Sovannahry Em",
+    "gender": "male"
   },
   {
     "id": 2436,
-    "name": "Nad Narimani"
+    "name": "Nad Narimani",
+    "gender": "male"
   },
   {
     "id": 2437,
-    "name": "Craig Oxley"
+    "name": "Craig Oxley",
+    "gender": "male"
   },
   {
     "id": 2438,
-    "name": "Jeremy Kimball"
+    "name": "Jeremy Kimball",
+    "gender": "male"
   },
   {
     "id": 2439,
-    "name": "Josh Stuart"
+    "name": "Josh Stuart",
+    "gender": "male"
   },
   {
     "id": 2440,
-    "name": "John Elam"
+    "name": "John Elam",
+    "gender": "male"
   },
   {
     "id": 2441,
-    "name": "Javi Alanis"
+    "name": "Javi Alanis",
+    "gender": "male"
   },
   {
     "id": 2442,
-    "name": "Iliarde Santos"
+    "name": "Iliarde Santos",
+    "gender": "male"
   },
   {
     "id": 2443,
-    "name": "Bogdan Guskov"
+    "name": "Bogdan Guskov",
+    "gender": "male"
   },
   {
     "id": 2444,
-    "name": "Yoshinori Horie"
+    "name": "Yoshinori Horie",
+    "gender": "male"
   },
   {
     "id": 2445,
-    "name": "Karl Williams"
+    "name": "Karl Williams",
+    "gender": "male"
   },
   {
     "id": 2446,
-    "name": "Colley  Bradford"
+    "name": "Colley  Bradford",
+    "gender": "male"
   },
   {
     "id": 2447,
-    "name": "Zane Frazier"
+    "name": "Zane Frazier",
+    "gender": "male"
   },
   {
     "id": 2448,
-    "name": "Lucas Almeida"
+    "name": "Lucas Almeida",
+    "gender": "male"
   },
   {
     "id": 2449,
-    "name": "Joe Martin"
+    "name": "Joe Martin",
+    "gender": "male"
   },
   {
     "id": 2450,
-    "name": "Zachary Micklewright"
+    "name": "Zachary Micklewright",
+    "gender": "male"
   },
   {
     "id": 2451,
-    "name": "Romie Aram"
+    "name": "Romie Aram",
+    "gender": "male"
   },
   {
     "id": 2452,
-    "name": "Junior Tafa"
+    "name": "Junior Tafa",
+    "gender": "male"
   },
   {
     "id": 2453,
-    "name": "Askar Mozharov"
+    "name": "Askar Mozharov",
+    "gender": "male"
   },
   {
     "id": 2454,
-    "name": "Milco Voorn"
+    "name": "Milco Voorn",
+    "gender": "male"
   },
   {
     "id": 2455,
-    "name": "Jakob Lovstad"
+    "name": "Jakob Lovstad",
+    "gender": "male"
   },
   {
     "id": 2456,
-    "name": "Brendson Ribeiro"
+    "name": "Brendson Ribeiro",
+    "gender": "male"
   },
   {
     "id": 2457,
-    "name": "James Wade"
+    "name": "James Wade",
+    "gender": "male"
   },
   {
     "id": 2458,
-    "name": "Shayilan Nuerdanbieke"
+    "name": "Shayilan Nuerdanbieke",
+    "gender": "male"
   },
   {
     "id": 2459,
-    "name": "Victor Altamirano"
+    "name": "Victor Altamirano",
+    "gender": "male"
   },
   {
     "id": 2460,
-    "name": "Ricky Camp"
+    "name": "Ricky Camp",
+    "gender": "male"
   },
   {
     "id": 2461,
-    "name": "Kyle Watson"
+    "name": "Kyle Watson",
+    "gender": "male"
   },
   {
     "id": 2462,
-    "name": "Justin Governale"
+    "name": "Justin Governale",
+    "gender": "male"
   },
   {
     "id": 2463,
-    "name": "Sam Adkins"
+    "name": "Sam Adkins",
+    "gender": "male"
   },
   {
     "id": 2464,
-    "name": "Chris Jones"
+    "name": "Chris Jones",
+    "gender": "male"
   },
   {
     "id": 2465,
-    "name": "Mike Bencic"
+    "name": "Mike Bencic",
+    "gender": "male"
   },
   {
     "id": 2466,
-    "name": "Marcelo Rojo"
+    "name": "Marcelo Rojo",
+    "gender": "male"
   },
   {
     "id": 2467,
-    "name": "Sergey Morozov"
+    "name": "Sergey Morozov",
+    "gender": "male"
   },
   {
     "id": 2468,
-    "name": "Leah Letson"
+    "name": "Leah Letson",
+    "gender": "male"
   },
   {
     "id": 2469,
-    "name": "Talita Alencar"
+    "name": "Talita Alencar",
+    "gender": "male"
   },
   {
     "id": 2470,
-    "name": "Salim Touahri"
+    "name": "Salim Touahri",
+    "gender": "male"
   },
   {
     "id": 2471,
-    "name": "Dmitrii Smoliakov"
+    "name": "Dmitrii Smoliakov",
+    "gender": "male"
   },
   {
     "id": 2472,
-    "name": "Jamal Pogues"
+    "name": "Jamal Pogues",
+    "gender": "male"
   },
   {
     "id": 2473,
-    "name": "Pete Rogers Jr."
+    "name": "Pete Rogers Jr.",
+    "gender": "male"
   },
   {
     "id": 2474,
-    "name": "Aaron Lanfranco"
+    "name": "Aaron Lanfranco",
+    "gender": "male"
   },
   {
     "id": 2475,
-    "name": "Malik Lewis"
+    "name": "Malik Lewis",
+    "gender": "male"
   },
   {
     "id": 2476,
-    "name": "Chris Duncan"
+    "name": "Chris Duncan",
+    "gender": "male"
   },
   {
     "id": 2477,
-    "name": "Song Kenan"
+    "name": "Song Kenan",
+    "gender": "male"
   },
   {
     "id": 2478,
-    "name": "Janay Harding"
+    "name": "Janay Harding",
+    "gender": "male"
   },
   {
     "id": 2479,
-    "name": "Casey Ryan"
+    "name": "Casey Ryan",
+    "gender": "male"
   },
   {
     "id": 2480,
-    "name": "Josh Ferguson"
+    "name": "Josh Ferguson",
+    "gender": "male"
   },
   {
     "id": 2481,
-    "name": "Andy Ologun"
+    "name": "Andy Ologun",
+    "gender": "male"
   },
   {
     "id": 2482,
-    "name": "Ron van Clief"
+    "name": "Ron van Clief",
+    "gender": "male"
   },
   {
     "id": 2483,
-    "name": "Callan Potter"
+    "name": "Callan Potter",
+    "gender": "male"
   },
   {
     "id": 2484,
-    "name": "John Yoo"
+    "name": "John Yoo",
+    "gender": "male"
   },
   {
     "id": 2485,
-    "name": "Rich Attonito"
+    "name": "Rich Attonito",
+    "gender": "male"
   },
   {
     "id": 2486,
-    "name": "Herschel Walker"
+    "name": "Herschel Walker",
+    "gender": "male"
   },
   {
     "id": 2487,
-    "name": "Anthony Macias"
+    "name": "Anthony Macias",
+    "gender": "male"
   },
   {
     "id": 2488,
-    "name": "Angelo Antonio"
+    "name": "Angelo Antonio",
+    "gender": "male"
   },
   {
     "id": 2489,
-    "name": "Lazar Stojadinovic"
+    "name": "Lazar Stojadinovic",
+    "gender": "male"
   },
   {
     "id": 2490,
-    "name": "MinWoo Kim"
+    "name": "MinWoo Kim",
+    "gender": "male"
   },
   {
     "id": 2491,
-    "name": "Kevin Rosier"
+    "name": "Kevin Rosier",
+    "gender": "male"
   },
   {
     "id": 2492,
-    "name": "Scott Harper"
+    "name": "Scott Harper",
+    "gender": "male"
   },
   {
     "id": 2493,
-    "name": "Patrick Kaase"
+    "name": "Patrick Kaase",
+    "gender": "male"
   },
   {
     "id": 2494,
-    "name": "Matt Hamill"
+    "name": "Matt Hamill",
+    "gender": "male"
   },
   {
     "id": 2495,
-    "name": "Adam Steele"
+    "name": "Adam Steele",
+    "gender": "male"
   },
   {
     "id": 2496,
-    "name": "Maimaitituoheti Keremuaili"
+    "name": "Maimaitituoheti Keremuaili",
+    "gender": "male"
   },
   {
     "id": 2497,
-    "name": "Andrew Martinez"
+    "name": "Andrew Martinez",
+    "gender": "male"
   },
   {
     "id": 2498,
-    "name": "Tsuyoshi Kurihara"
+    "name": "Tsuyoshi Kurihara",
+    "gender": "male"
   },
   {
     "id": 2499,
-    "name": "Masio Fullen"
+    "name": "Masio Fullen",
+    "gender": "male"
   },
   {
     "id": 2500,
-    "name": "Chandler Cole"
+    "name": "Chandler Cole",
+    "gender": "male"
   },
   {
     "id": 2501,
-    "name": "Michael Mangan"
+    "name": "Michael Mangan",
+    "gender": "male"
   },
   {
     "id": 2502,
-    "name": "Cameron Else"
+    "name": "Cameron Else",
+    "gender": "male"
   },
   {
     "id": 2503,
-    "name": "Matt Ramirez"
+    "name": "Matt Ramirez",
+    "gender": "male"
   },
   {
     "id": 2504,
-    "name": "Ian Rammel"
+    "name": "Ian Rammel",
+    "gender": "male"
   },
   {
     "id": 2505,
-    "name": "Alexander Soldatkin"
+    "name": "Alexander Soldatkin",
+    "gender": "male"
   },
   {
     "id": 2506,
-    "name": "Charles Radtke"
+    "name": "Charles Radtke",
+    "gender": "male"
   },
   {
     "id": 2507,
-    "name": "Amador Ramirez"
+    "name": "Amador Ramirez",
+    "gender": "male"
   },
   {
     "id": 2508,
-    "name": "Artenus Young"
+    "name": "Artenus Young",
+    "gender": "male"
   },
   {
     "id": 2509,
-    "name": "Clifford Starks"
+    "name": "Clifford Starks",
+    "gender": "male"
   },
   {
     "id": 2510,
-    "name": "Anthony Ivy"
+    "name": "Anthony Ivy",
+    "gender": "male"
   },
   {
     "id": 2511,
-    "name": "Chris Culley"
+    "name": "Chris Culley",
+    "gender": "male"
   },
   {
     "id": 2512,
-    "name": "Diana Belbita"
+    "name": "Diana Belbita",
+    "gender": "male"
   },
   {
     "id": 2513,
-    "name": "Ben Holscher"
+    "name": "Ben Holscher",
+    "gender": "male"
   },
   {
     "id": 2514,
-    "name": "Flavio Luiz Moura"
+    "name": "Flavio Luiz Moura",
+    "gender": "male"
   },
   {
     "id": 2515,
-    "name": "Rainy Martinez"
+    "name": "Rainy Martinez",
+    "gender": "male"
   },
   {
     "id": 2516,
-    "name": "Ricky Steele"
+    "name": "Ricky Steele",
+    "gender": "male"
   },
   {
     "id": 2517,
-    "name": "Gabriel Carrasco"
+    "name": "Gabriel Carrasco",
+    "gender": "male"
   },
   {
     "id": 2518,
-    "name": "Robbie Lawler"
+    "name": "Robbie Lawler",
+    "gender": "male"
   },
   {
     "id": 2519,
-    "name": "Jeff Hughes"
+    "name": "Jeff Hughes",
+    "gender": "male"
   },
   {
     "id": 2520,
-    "name": "Anthony Hamilton"
+    "name": "Anthony Hamilton",
+    "gender": "male"
   },
   {
     "id": 2521,
-    "name": "Jay Perrin"
+    "name": "Jay Perrin",
+    "gender": "male"
   },
   {
     "id": 2522,
-    "name": "Mateus Mendonca"
+    "name": "Mateus Mendonca",
+    "gender": "male"
   },
   {
     "id": 2523,
-    "name": "Maia Stevenson"
+    "name": "Maia Stevenson",
+    "gender": "male"
   },
   {
     "id": 2524,
-    "name": "Valeri Ignatov"
+    "name": "Valeri Ignatov",
+    "gender": "male"
   },
   {
     "id": 2525,
-    "name": "Lucas Rocha"
+    "name": "Lucas Rocha",
+    "gender": "male"
   },
   {
     "id": 2526,
-    "name": "Robert Whiteford"
+    "name": "Robert Whiteford",
+    "gender": "male"
   },
   {
     "id": 2527,
-    "name": "Stefan Klever"
+    "name": "Stefan Klever",
+    "gender": "male"
   },
   {
     "id": 2528,
-    "name": "Jamey-Lyn Horth"
+    "name": "Jamey-Lyn Horth",
+    "gender": "male"
   },
   {
     "id": 2529,
-    "name": "Renee Forte"
+    "name": "Renee Forte",
+    "gender": "male"
   },
   {
     "id": 2530,
-    "name": "Rami Hamed"
+    "name": "Rami Hamed",
+    "gender": "male"
   },
   {
     "id": 2531,
-    "name": "Max Mustaki"
+    "name": "Max Mustaki",
+    "gender": "male"
   },
   {
     "id": 2532,
-    "name": "Uros Medic"
+    "name": "Uros Medic",
+    "gender": "male"
   },
   {
     "id": 2533,
-    "name": "Marko Damiani"
+    "name": "Marko Damiani",
+    "gender": "male"
   },
   {
     "id": 2534,
-    "name": "Bazigit Atajev"
+    "name": "Bazigit Atajev",
+    "gender": "male"
   },
   {
     "id": 2535,
-    "name": "Tom Blackledge"
+    "name": "Tom Blackledge",
+    "gender": "male"
   },
   {
     "id": 2536,
-    "name": "Nate Mohr"
+    "name": "Nate Mohr",
+    "gender": "male"
   },
   {
     "id": 2537,
-    "name": "Shunichi Shimizu"
+    "name": "Shunichi Shimizu",
+    "gender": "male"
   },
   {
     "id": 2538,
-    "name": "Emrah Sonmez"
+    "name": "Emrah Sonmez",
+    "gender": "male"
   },
   {
     "id": 2539,
-    "name": "Luke Hartwig"
+    "name": "Luke Hartwig",
+    "gender": "male"
   },
   {
     "id": 2540,
-    "name": "Antonio Mendes"
+    "name": "Antonio Mendes",
+    "gender": "male"
   },
   {
     "id": 2541,
-    "name": "David Gardner"
+    "name": "David Gardner",
+    "gender": "male"
   },
   {
     "id": 2542,
-    "name": "Kamal Shalorus"
+    "name": "Kamal Shalorus",
+    "gender": "male"
   },
   {
     "id": 2543,
-    "name": "Don'Tale Mayes"
+    "name": "Don'Tale Mayes",
+    "gender": "male"
   },
   {
     "id": 2544,
-    "name": "Danilo Suzart"
+    "name": "Danilo Suzart",
+    "gender": "male"
   },
   {
     "id": 2545,
-    "name": "Brandon Girtz"
+    "name": "Brandon Girtz",
+    "gender": "male"
   },
   {
     "id": 2546,
-    "name": "Shawn Teed"
+    "name": "Shawn Teed",
+    "gender": "male"
   },
   {
     "id": 2547,
-    "name": "Jenna Castillo"
+    "name": "Jenna Castillo",
+    "gender": "male"
   },
   {
     "id": 2548,
-    "name": "Rolando Dy"
+    "name": "Rolando Dy",
+    "gender": "male"
   },
   {
     "id": 2549,
-    "name": "Hugo Sandoval"
+    "name": "Hugo Sandoval",
+    "gender": "male"
   },
   {
     "id": 2550,
-    "name": "Ihor Potieria"
+    "name": "Ihor Potieria",
+    "gender": "male"
   },
   {
     "id": 2551,
-    "name": "Travis Johnson"
+    "name": "Travis Johnson",
+    "gender": "male"
   },
   {
     "id": 2552,
-    "name": "Rickson Gracie"
+    "name": "Rickson Gracie",
+    "gender": "male"
   },
   {
     "id": 2553,
-    "name": "Rich Bouphanouvong"
+    "name": "Rich Bouphanouvong",
+    "gender": "male"
   },
   {
     "id": 2554,
-    "name": "Josh Quinlan"
+    "name": "Josh Quinlan",
+    "gender": "male"
   },
   {
     "id": 2555,
-    "name": "Kris Moutinho"
+    "name": "Kris Moutinho",
+    "gender": "male"
   },
   {
     "id": 2556,
-    "name": "Roman Salazar"
+    "name": "Roman Salazar",
+    "gender": "male"
   },
   {
     "id": 2557,
-    "name": "Jong Man Kim"
+    "name": "Jong Man Kim",
+    "gender": "male"
   },
   {
     "id": 2558,
-    "name": "Walter Smith-Cotito"
+    "name": "Walter Smith-Cotito",
+    "gender": "male"
   },
   {
     "id": 2559,
-    "name": "Chris Gruetzemacher"
+    "name": "Chris Gruetzemacher",
+    "gender": "male"
   },
   {
     "id": 2560,
-    "name": "Justin Eilers"
+    "name": "Justin Eilers",
+    "gender": "male"
   },
   {
     "id": 2561,
-    "name": "Bruno Silva"
+    "name": "Bruno Silva",
+    "gender": "male"
   },
   {
     "id": 2562,
-    "name": "Royston Wee"
+    "name": "Royston Wee",
+    "gender": "male"
   },
   {
     "id": 2563,
-    "name": "Rizvan Kuniev"
+    "name": "Rizvan Kuniev",
+    "gender": "male"
   },
   {
     "id": 2564,
-    "name": "Tobias Harila"
+    "name": "Tobias Harila",
+    "gender": "male"
   },
   {
     "id": 2565,
-    "name": "Gregory Bouchelaghem"
+    "name": "Gregory Bouchelaghem",
+    "gender": "male"
   },
   {
     "id": 2566,
-    "name": "Rory Markham"
+    "name": "Rory Markham",
+    "gender": "male"
   },
   {
     "id": 2567,
-    "name": "Gary Tapusoa"
+    "name": "Gary Tapusoa",
+    "gender": "male"
   },
   {
     "id": 2568,
-    "name": "Istela Nunes"
+    "name": "Istela Nunes",
+    "gender": "male"
   },
   {
     "id": 2569,
-    "name": "Hayder Hassan"
+    "name": "Hayder Hassan",
+    "gender": "male"
   },
   {
     "id": 2570,
-    "name": "Lewis Gonzalez"
+    "name": "Lewis Gonzalez",
+    "gender": "male"
   },
   {
     "id": 2571,
-    "name": "Rafael Freitas"
+    "name": "Rafael Freitas",
+    "gender": "male"
   },
   {
     "id": 2572,
-    "name": "Ryan McGivern"
+    "name": "Ryan McGivern",
+    "gender": "male"
   },
   {
     "id": 2573,
-    "name": "Taylor Roberts"
+    "name": "Taylor Roberts",
+    "gender": "male"
   },
   {
     "id": 2574,
-    "name": "Will Chope"
+    "name": "Will Chope",
+    "gender": "male"
   },
   {
     "id": 2575,
-    "name": "Jae Hyun Park"
+    "name": "Jae Hyun Park",
+    "gender": "male"
   },
   {
     "id": 2576,
-    "name": "Slim Trabelsi"
+    "name": "Slim Trabelsi",
+    "gender": "male"
   },
   {
     "id": 2577,
-    "name": "Ryo Kawamura"
+    "name": "Ryo Kawamura",
+    "gender": "male"
   },
   {
     "id": 2578,
-    "name": "Landon Quinones"
+    "name": "Landon Quinones",
+    "gender": "male"
   },
   {
     "id": 2579,
-    "name": "Goldman Butler"
+    "name": "Goldman Butler",
+    "gender": "male"
   },
   {
     "id": 2580,
-    "name": "Brian Gassaway"
+    "name": "Brian Gassaway",
+    "gender": "male"
   },
   {
     "id": 2581,
-    "name": "Edivan Santos"
+    "name": "Edivan Santos",
+    "gender": "male"
   },
   {
     "id": 2582,
-    "name": "Derrick Lewis"
+    "name": "Derrick Lewis",
+    "gender": "male"
   },
   {
     "id": 2583,
-    "name": "Onassis Parungao"
+    "name": "Onassis Parungao",
+    "gender": "male"
   },
   {
     "id": 2584,
-    "name": "Nate James"
+    "name": "Nate James",
+    "gender": "male"
   },
   {
     "id": 2585,
-    "name": "Demetrius Gioulacos"
+    "name": "Demetrius Gioulacos",
+    "gender": "male"
   },
   {
     "id": 2586,
-    "name": "Yibugele"
+    "name": "Yibugele",
+    "gender": "male"
   },
   {
     "id": 2587,
-    "name": "Lorenzo Hood"
+    "name": "Lorenzo Hood",
+    "gender": "male"
   },
   {
     "id": 2588,
-    "name": "Kazunari Murakami"
+    "name": "Kazunari Murakami",
+    "gender": "male"
   },
   {
     "id": 2589,
-    "name": "Yoislandy Izquierdo"
+    "name": "Yoislandy Izquierdo",
+    "gender": "male"
   },
   {
     "id": 2590,
-    "name": "Anthony Do"
+    "name": "Anthony Do",
+    "gender": "male"
   },
   {
     "id": 2591,
-    "name": "Jeremy Wallace"
+    "name": "Jeremy Wallace",
+    "gender": "male"
   },
   {
     "id": 2592,
-    "name": "Shingo Kohara"
+    "name": "Shingo Kohara",
+    "gender": "male"
   },
   {
     "id": 2593,
-    "name": "Brad Royster"
+    "name": "Brad Royster",
+    "gender": "male"
   },
   {
     "id": 2594,
-    "name": "Crafton Wallace"
+    "name": "Crafton Wallace",
+    "gender": "male"
   },
   {
     "id": 2595,
-    "name": "Janaina Silva"
+    "name": "Janaina Silva",
+    "gender": "male"
   },
   {
     "id": 2596,
-    "name": "Christopher Lopez"
+    "name": "Christopher Lopez",
+    "gender": "male"
   },
   {
     "id": 2597,
-    "name": "Vernon White"
+    "name": "Vernon White",
+    "gender": "male"
   },
   {
     "id": 2598,
-    "name": "Joe Jordan"
+    "name": "Joe Jordan",
+    "gender": "male"
   },
   {
     "id": 2599,
-    "name": "Rick Roufus"
+    "name": "Rick Roufus",
+    "gender": "male"
   },
   {
     "id": 2600,
-    "name": "Eric Magana"
+    "name": "Eric Magana",
+    "gender": "male"
   },
   {
     "id": 2601,
-    "name": "Jesse Fujarczyk"
+    "name": "Jesse Fujarczyk",
+    "gender": "male"
   },
   {
     "id": 2602,
-    "name": "Gilbert Rael"
+    "name": "Gilbert Rael",
+    "gender": "male"
   },
   {
     "id": 2603,
-    "name": "Carl Deaton"
+    "name": "Carl Deaton",
+    "gender": "male"
   },
   {
     "id": 2604,
-    "name": "Joe Hurley"
+    "name": "Joe Hurley",
+    "gender": "male"
   },
   {
     "id": 2605,
-    "name": "Mostapha Al-Turk"
+    "name": "Mostapha Al-Turk",
+    "gender": "male"
   },
   {
     "id": 2606,
-    "name": "Jordan Williams"
+    "name": "Jordan Williams",
+    "gender": "male"
   },
   {
     "id": 2607,
-    "name": "Nick Rossborough"
+    "name": "Nick Rossborough",
+    "gender": "male"
   },
   {
     "id": 2608,
-    "name": "Kevin Jackson"
+    "name": "Kevin Jackson",
+    "gender": "male"
   },
   {
     "id": 2609,
-    "name": "Jose Henrique"
+    "name": "Jose Henrique",
+    "gender": "male"
   },
   {
     "id": 2610,
-    "name": "Ho Taek Oh"
+    "name": "Ho Taek Oh",
+    "gender": "male"
   },
   {
     "id": 2611,
-    "name": "Yokthai Sithoar"
+    "name": "Yokthai Sithoar",
+    "gender": "male"
   },
   {
     "id": 2612,
-    "name": "Abram Torres"
+    "name": "Abram Torres",
+    "gender": "male"
   },
   {
     "id": 2613,
-    "name": "Scott McDonald"
+    "name": "Scott McDonald",
+    "gender": "male"
   },
   {
     "id": 2614,
-    "name": "Edimilson Souza"
+    "name": "Edimilson Souza",
+    "gender": "male"
   },
   {
     "id": 2615,
-    "name": "Hans Stringer"
+    "name": "Hans Stringer",
+    "gender": "male"
   },
   {
     "id": 2616,
-    "name": "Cory Devela"
+    "name": "Cory Devela",
+    "gender": "male"
   },
   {
     "id": 2617,
-    "name": "Pawan Maan"
+    "name": "Pawan Maan",
+    "gender": "male"
   },
   {
     "id": 2618,
-    "name": "TJ O'Brien"
+    "name": "TJ O'Brien",
+    "gender": "male"
   },
   {
     "id": 2619,
-    "name": "Kenneth Bergh"
+    "name": "Kenneth Bergh",
+    "gender": "male"
   },
   {
     "id": 2620,
-    "name": "Michael Morales"
+    "name": "Michael Morales",
+    "gender": "male"
   },
   {
     "id": 2621,
-    "name": "Rilley Dutro"
+    "name": "Rilley Dutro",
+    "gender": "male"
   },
   {
     "id": 2622,
-    "name": "Joseph Sandoval"
+    "name": "Joseph Sandoval",
+    "gender": "male"
   },
   {
     "id": 2623,
-    "name": "Duda Santana"
+    "name": "Duda Santana",
+    "gender": "male"
   },
   {
     "id": 2624,
-    "name": "Andre Lima"
+    "name": "Andre Lima",
+    "gender": "male"
   },
   {
     "id": 2625,
-    "name": "Elias Urbina"
+    "name": "Elias Urbina",
+    "gender": "male"
   },
   {
     "id": 2626,
-    "name": "Abdul Azeem Badakhshi"
+    "name": "Abdul Azeem Badakhshi",
+    "gender": "male"
   },
   {
     "id": 2627,
-    "name": "Anthony Christodoulou"
+    "name": "Anthony Christodoulou",
+    "gender": "male"
   },
   {
     "id": 2628,
-    "name": "Mohammed Usman"
+    "name": "Mohammed Usman",
+    "gender": "male"
   },
   {
     "id": 2629,
-    "name": "Dwight Grant"
+    "name": "Dwight Grant",
+    "gender": "male"
   },
   {
     "id": 2630,
-    "name": "Brett Albee"
+    "name": "Brett Albee",
+    "gender": "male"
   },
   {
     "id": 2631,
-    "name": "Matt Hobar"
+    "name": "Matt Hobar",
+    "gender": "male"
   },
   {
     "id": 2632,
-    "name": "Luke Caudillo"
+    "name": "Luke Caudillo",
+    "gender": "male"
   },
   {
     "id": 2633,
-    "name": "Naoki Matsushita"
+    "name": "Naoki Matsushita",
+    "gender": "male"
   },
   {
     "id": 2634,
-    "name": "Mark Godbeer"
+    "name": "Mark Godbeer",
+    "gender": "male"
   },
   {
     "id": 2635,
-    "name": "Jonathan Wiezorek"
+    "name": "Jonathan Wiezorek",
+    "gender": "male"
   },
   {
     "id": 2636,
-    "name": "Rex Holman"
+    "name": "Rex Holman",
+    "gender": "male"
   },
   {
     "id": 2637,
-    "name": "Maxim Grishin"
+    "name": "Maxim Grishin",
+    "gender": "male"
   },
   {
     "id": 2638,
-    "name": "David Hulett"
+    "name": "David Hulett",
+    "gender": "male"
   },
   {
     "id": 2639,
-    "name": "Desmond Green"
+    "name": "Desmond Green",
+    "gender": "male"
   },
   {
     "id": 2640,
-    "name": "Andre Roberts"
+    "name": "Andre Roberts",
+    "gender": "male"
   },
   {
     "id": 2641,
-    "name": "SeongChan Hong"
+    "name": "SeongChan Hong",
+    "gender": "male"
   },
   {
     "id": 2642,
-    "name": "Dorian Price"
+    "name": "Dorian Price",
+    "gender": "male"
   },
   {
     "id": 2643,
-    "name": "Townsend Saunders"
+    "name": "Townsend Saunders",
+    "gender": "male"
   },
   {
     "id": 2644,
-    "name": "Anton Zafir"
+    "name": "Anton Zafir",
+    "gender": "male"
   },
   {
     "id": 2645,
-    "name": "Juancamilo Ronderos"
+    "name": "Juancamilo Ronderos",
+    "gender": "male"
   },
   {
     "id": 2646,
-    "name": "Steve Kennedy"
+    "name": "Steve Kennedy",
+    "gender": "male"
   },
   {
     "id": 2647,
-    "name": "Justin Willis"
+    "name": "Justin Willis",
+    "gender": "male"
   },
   {
     "id": 2648,
-    "name": "Andreas Michailidis"
+    "name": "Andreas Michailidis",
+    "gender": "male"
   },
   {
     "id": 2649,
-    "name": "Curtis Stout"
+    "name": "Curtis Stout",
+    "gender": "male"
   },
   {
     "id": 2650,
-    "name": "Sergey Khandozhko"
+    "name": "Sergey Khandozhko",
+    "gender": "male"
   },
   {
     "id": 2651,
-    "name": "Cody Carrillo"
+    "name": "Cody Carrillo",
+    "gender": "male"
   },
   {
     "id": 2652,
-    "name": "Zach Light"
+    "name": "Zach Light",
+    "gender": "male"
   },
   {
     "id": 2653,
-    "name": "Miguel Cosio"
+    "name": "Miguel Cosio",
+    "gender": "male"
   },
   {
     "id": 2654,
-    "name": "Oleg Taktarov"
+    "name": "Oleg Taktarov",
+    "gender": "male"
   },
   {
     "id": 2655,
-    "name": "Saeed Hosseini"
+    "name": "Saeed Hosseini",
+    "gender": "male"
   },
   {
     "id": 2656,
-    "name": "Paul Song"
+    "name": "Paul Song",
+    "gender": "male"
   },
   {
     "id": 2657,
-    "name": "Victor Reyna"
+    "name": "Victor Reyna",
+    "gender": "male"
   },
   {
     "id": 2658,
-    "name": "Yuri Panferov"
+    "name": "Yuri Panferov",
+    "gender": "male"
   },
   {
     "id": 2659,
-    "name": "Jonny Parsons"
+    "name": "Jonny Parsons",
+    "gender": "male"
   },
   {
     "id": 2660,
-    "name": "JC Cottrell"
+    "name": "JC Cottrell",
+    "gender": "male"
   },
   {
     "id": 2661,
-    "name": "Jeremiah Billington"
+    "name": "Jeremiah Billington",
+    "gender": "male"
   },
   {
     "id": 2662,
-    "name": "Tom Gallicchio"
+    "name": "Tom Gallicchio",
+    "gender": "male"
   },
   {
     "id": 2663,
-    "name": "Brad Morris"
+    "name": "Brad Morris",
+    "gender": "male"
   },
   {
     "id": 2664,
-    "name": "Clayton MacFarlane"
+    "name": "Clayton MacFarlane",
+    "gender": "male"
   },
   {
     "id": 2665,
-    "name": "Jason Thacker"
+    "name": "Jason Thacker",
+    "gender": "male"
   },
   {
     "id": 2666,
-    "name": "Brian Davidson"
+    "name": "Brian Davidson",
+    "gender": "male"
   },
   {
     "id": 2667,
-    "name": "Dominic Clark"
+    "name": "Dominic Clark",
+    "gender": "male"
   },
   {
     "id": 2668,
-    "name": "Luis Mendoza"
+    "name": "Luis Mendoza",
+    "gender": "male"
   },
   {
     "id": 2669,
-    "name": "Mike Altman"
+    "name": "Mike Altman",
+    "gender": "male"
   },
   {
     "id": 2670,
-    "name": "Jason Day"
+    "name": "Jason Day",
+    "gender": "male"
   },
   {
     "id": 2671,
-    "name": "Rickson Zenidim"
+    "name": "Rickson Zenidim",
+    "gender": "male"
   },
   {
     "id": 2672,
-    "name": "Ricardo Morais"
+    "name": "Ricardo Morais",
+    "gender": "male"
   },
   {
     "id": 2673,
-    "name": "Greg Scott"
+    "name": "Greg Scott",
+    "gender": "male"
   },
   {
     "id": 2674,
-    "name": "Jaime Jara"
+    "name": "Jaime Jara",
+    "gender": "male"
   },
   {
     "id": 2675,
-    "name": "Dayana Silva"
+    "name": "Dayana Silva",
+    "gender": "male"
   },
   {
     "id": 2676,
-    "name": "Raul Castillo"
+    "name": "Raul Castillo",
+    "gender": "male"
   },
   {
     "id": 2677,
-    "name": "Matt Van Buren"
+    "name": "Matt Van Buren",
+    "gender": "male"
   },
   {
     "id": 2678,
-    "name": "Bronson Mohika"
+    "name": "Bronson Mohika",
+    "gender": "male"
   },
   {
     "id": 2679,
-    "name": "Blake Watkins"
+    "name": "Blake Watkins",
+    "gender": "male"
   },
   {
     "id": 2680,
-    "name": "Christian Ocon"
+    "name": "Christian Ocon",
+    "gender": "male"
   },
   {
     "id": 2681,
-    "name": "Bolaji Oki"
+    "name": "Bolaji Oki",
+    "gender": "male"
   },
   {
     "id": 2682,
-    "name": "Yuele Huang"
+    "name": "Yuele Huang",
+    "gender": "male"
   },
   {
     "id": 2683,
-    "name": "Ricardo Barros"
+    "name": "Ricardo Barros",
+    "gender": "male"
   },
   {
     "id": 2684,
-    "name": "Jack McGlaughlin"
+    "name": "Jack McGlaughlin",
+    "gender": "male"
   },
   {
     "id": 2685,
-    "name": "Tim Caron"
+    "name": "Tim Caron",
+    "gender": "male"
   },
   {
     "id": 2686,
-    "name": "Alfred Khashakyan"
+    "name": "Alfred Khashakyan",
+    "gender": "male"
   },
   {
     "id": 2687,
-    "name": "Justin McElfresh"
+    "name": "Justin McElfresh",
+    "gender": "male"
   },
   {
     "id": 2688,
-    "name": "Ian Butler"
+    "name": "Ian Butler",
+    "gender": "male"
   },
   {
     "id": 2689,
-    "name": "Quinn Mulhern"
+    "name": "Quinn Mulhern",
+    "gender": "male"
   },
   {
     "id": 2690,
-    "name": "Brandon Sayles"
+    "name": "Brandon Sayles",
+    "gender": "male"
   },
   {
     "id": 2691,
-    "name": "Lance Lawrence"
+    "name": "Lance Lawrence",
+    "gender": "male"
   },
   {
     "id": 2692,
-    "name": "Stephen Palling"
+    "name": "Stephen Palling",
+    "gender": "male"
   },
   {
     "id": 2693,
-    "name": "Scott Baker"
+    "name": "Scott Baker",
+    "gender": "male"
   },
   {
     "id": 2694,
-    "name": "Steve Nelmark"
+    "name": "Steve Nelmark",
+    "gender": "male"
   },
   {
     "id": 2695,
-    "name": "Brian Warren"
+    "name": "Brian Warren",
+    "gender": "male"
   },
   {
     "id": 2696,
-    "name": "Matt Lucas"
+    "name": "Matt Lucas",
+    "gender": "male"
   },
   {
     "id": 2697,
-    "name": "Juan Alcain"
+    "name": "Juan Alcain",
+    "gender": "male"
   },
   {
     "id": 2698,
-    "name": "Jamey Simmons"
+    "name": "Jamey Simmons",
+    "gender": "male"
   },
   {
     "id": 2699,
-    "name": "Aaron Wilkinson"
+    "name": "Aaron Wilkinson",
+    "gender": "male"
   },
   {
     "id": 2700,
-    "name": "Max Martyniouk"
+    "name": "Max Martyniouk",
+    "gender": "male"
   },
   {
     "id": 2701,
-    "name": "Bryan Vetell"
+    "name": "Bryan Vetell",
+    "gender": "male"
   },
   {
     "id": 2702,
-    "name": "Mario Neto"
+    "name": "Mario Neto",
+    "gender": "male"
   },
   {
     "id": 2703,
-    "name": "David Rasouri"
+    "name": "David Rasouri",
+    "gender": "male"
   },
   {
     "id": 2704,
-    "name": "Kaloyan Kolev"
+    "name": "Kaloyan Kolev",
+    "gender": "male"
   },
   {
     "id": 2705,
-    "name": "Emily Kagan"
+    "name": "Emily Kagan",
+    "gender": "male"
   },
   {
     "id": 2706,
-    "name": "Sora Rakhmonova"
+    "name": "Sora Rakhmonova",
+    "gender": "male"
   },
   {
     "id": 2707,
-    "name": "Eric Irvin"
+    "name": "Eric Irvin",
+    "gender": "male"
   },
   {
     "id": 2708,
-    "name": "Jonny Goh"
+    "name": "Jonny Goh",
+    "gender": "male"
   },
   {
     "id": 2709,
-    "name": "Waldo Cortes-Acosta"
+    "name": "Waldo Cortes-Acosta",
+    "gender": "male"
   },
   {
     "id": 2710,
-    "name": "Terrion Ware"
+    "name": "Terrion Ware",
+    "gender": "male"
   },
   {
     "id": 2711,
-    "name": "Dan Stittgen"
+    "name": "Dan Stittgen",
+    "gender": "male"
   },
   {
     "id": 2712,
-    "name": "Masanori Suda"
+    "name": "Masanori Suda",
+    "gender": "male"
   },
   {
     "id": 2713,
-    "name": "Laureano Staropoli"
+    "name": "Laureano Staropoli",
+    "gender": "male"
   },
   {
     "id": 2714,
-    "name": "Kiefer Crosbie"
+    "name": "Kiefer Crosbie",
+    "gender": "male"
   },
   {
     "id": 2715,
-    "name": "Lee Kwan Bum"
+    "name": "Lee Kwan Bum",
+    "gender": "male"
   },
   {
     "id": 2716,
-    "name": "Nick Bustamante"
+    "name": "Nick Bustamante",
+    "gender": "male"
   },
   {
     "id": 2717,
-    "name": "Sako Chivitchian"
+    "name": "Sako Chivitchian",
+    "gender": "male"
   },
   {
     "id": 2718,
-    "name": "Joe Charles"
+    "name": "Joe Charles",
+    "gender": "male"
   },
   {
     "id": 2719,
-    "name": "Derrick Noble"
+    "name": "Derrick Noble",
+    "gender": "male"
   },
   {
     "id": 2720,
-    "name": "Thomas Almeida"
+    "name": "Thomas Almeida",
+    "gender": "male"
   },
   {
     "id": 2721,
-    "name": "Takayo Hashi"
+    "name": "Takayo Hashi",
+    "gender": "male"
   },
   {
     "id": 2722,
-    "name": "Augusto Montano"
+    "name": "Augusto Montano",
+    "gender": "male"
   },
   {
     "id": 2723,
-    "name": "Edson Silva"
+    "name": "Edson Silva",
+    "gender": "male"
   },
   {
     "id": 2724,
-    "name": "Devin Smyth"
+    "name": "Devin Smyth",
+    "gender": "male"
   },
   {
     "id": 2725,
-    "name": "Chan-Mi Jeon"
+    "name": "Chan-Mi Jeon",
+    "gender": "male"
   },
   {
     "id": 2726,
-    "name": "Zachary Borrego"
+    "name": "Zachary Borrego",
+    "gender": "male"
   },
   {
     "id": 2727,
-    "name": "Valter Walker"
+    "name": "Valter Walker",
+    "gender": "male"
   },
   {
     "id": 2728,
-    "name": "Vanessa Melo"
+    "name": "Vanessa Melo",
+    "gender": "male"
   },
   {
     "id": 2729,
-    "name": "Sione Latu"
+    "name": "Sione Latu",
+    "gender": "male"
   },
   {
     "id": 2730,
-    "name": "Ross Pearson"
+    "name": "Ross Pearson",
+    "gender": "male"
   },
   {
     "id": 2731,
-    "name": "Sergei Pavlovich"
+    "name": "Sergei Pavlovich",
+    "gender": "male"
   },
   {
     "id": 2732,
-    "name": "Teila Tuli"
+    "name": "Teila Tuli",
+    "gender": "male"
   },
   {
     "id": 2733,
-    "name": "Jiniushiyue"
+    "name": "Jiniushiyue",
+    "gender": "male"
   },
   {
     "id": 2734,
-    "name": "Abus Magomedov"
+    "name": "Abus Magomedov",
+    "gender": "male"
   },
   {
     "id": 2735,
-    "name": "Patricky Freire"
+    "name": "Patricky Freire",
+    "gender": "male"
   },
   {
     "id": 2736,
-    "name": "Ivan Lopez"
+    "name": "Ivan Lopez",
+    "gender": "male"
   },
   {
     "id": 2737,
-    "name": "Tony Johnson"
+    "name": "Tony Johnson",
+    "gender": "male"
   },
   {
     "id": 2738,
-    "name": "Alessio Di Chirico"
+    "name": "Alessio Di Chirico",
+    "gender": "male"
   },
   {
     "id": 2739,
-    "name": "Carl Seumanutafa"
+    "name": "Carl Seumanutafa",
+    "gender": "male"
   },
   {
     "id": 2740,
-    "name": "Aaron Wetherspoon"
+    "name": "Aaron Wetherspoon",
+    "gender": "male"
   },
   {
     "id": 2741,
-    "name": "Enrique Watson"
+    "name": "Enrique Watson",
+    "gender": "male"
   },
   {
     "id": 2742,
-    "name": "Kelly Dullanty"
+    "name": "Kelly Dullanty",
+    "gender": "male"
   },
   {
     "id": 2743,
-    "name": "Leslie Smith"
+    "name": "Leslie Smith",
+    "gender": "male"
   },
   {
     "id": 2744,
-    "name": "Pedro Nobre"
+    "name": "Pedro Nobre",
+    "gender": "male"
   },
   {
     "id": 2745,
-    "name": "Erick Sanchez"
+    "name": "Erick Sanchez",
+    "gender": "male"
   },
   {
     "id": 2746,
-    "name": "Francisco Bueno"
+    "name": "Francisco Bueno",
+    "gender": "male"
   },
   {
     "id": 2747,
-    "name": "Jeremy Jackson"
+    "name": "Jeremy Jackson",
+    "gender": "male"
   },
   {
     "id": 2748,
-    "name": "Tristan Arenal"
+    "name": "Tristan Arenal",
+    "gender": "male"
   },
   {
     "id": 2749,
-    "name": "Tebaris Gordon"
+    "name": "Tebaris Gordon",
+    "gender": "male"
   },
   {
     "id": 2750,
-    "name": "Alvin Cacdac"
+    "name": "Alvin Cacdac",
+    "gender": "male"
   },
   {
     "id": 2751,
-    "name": "Joshua Weems"
+    "name": "Joshua Weems",
+    "gender": "male"
   },
   {
     "id": 2752,
-    "name": "Erick Montano"
+    "name": "Erick Montano",
+    "gender": "male"
   },
   {
     "id": 2753,
-    "name": "Top Noi Kiwram"
+    "name": "Top Noi Kiwram",
+    "gender": "male"
   },
   {
     "id": 2754,
-    "name": "Kyle Reyes"
+    "name": "Kyle Reyes",
+    "gender": "male"
   },
   {
     "id": 2755,
-    "name": "Vince Morales"
+    "name": "Vince Morales",
+    "gender": "male"
   },
   {
     "id": 2756,
-    "name": "Yukiya Naito"
+    "name": "Yukiya Naito",
+    "gender": "male"
   },
   {
     "id": 2757,
-    "name": "Joe Moreira"
+    "name": "Joe Moreira",
+    "gender": "male"
   },
   {
     "id": 2758,
-    "name": "David Branch"
+    "name": "David Branch",
+    "gender": "male"
   },
   {
     "id": 2759,
-    "name": "Gabriel Arges"
+    "name": "Gabriel Arges",
+    "gender": "male"
   },
   {
     "id": 2760,
-    "name": "Dieusel Berto"
+    "name": "Dieusel Berto",
+    "gender": "male"
   },
   {
     "id": 2761,
-    "name": "Gleidson Cutis"
+    "name": "Gleidson Cutis",
+    "gender": "male"
   },
   {
     "id": 2762,
-    "name": "Brandon Visher"
+    "name": "Brandon Visher",
+    "gender": "male"
   },
   {
     "id": 2763,
-    "name": "Adlan Amagov"
+    "name": "Adlan Amagov",
+    "gender": "male"
   },
   {
     "id": 2764,
-    "name": "SeungWoo Choi"
+    "name": "SeungWoo Choi",
+    "gender": "male"
   },
   {
     "id": 2765,
-    "name": "Juan Adams"
+    "name": "Juan Adams",
+    "gender": "male"
   },
   {
     "id": 2766,
-    "name": "War Machine"
+    "name": "War Machine",
+    "gender": "male"
   },
   {
     "id": 2767,
-    "name": "JungHyun Lee"
+    "name": "JungHyun Lee",
+    "gender": "male"
   },
   {
     "id": 2768,
-    "name": "CJ Hamilton"
+    "name": "CJ Hamilton",
+    "gender": "male"
   },
   {
     "id": 2769,
-    "name": "AJ Matthews"
+    "name": "AJ Matthews",
+    "gender": "male"
   },
   {
     "id": 2770,
-    "name": "James Toney"
+    "name": "James Toney",
+    "gender": "male"
   },
   {
     "id": 2771,
-    "name": "William Macario"
+    "name": "William Macario",
+    "gender": "male"
   },
   {
     "id": 2772,
-    "name": "Modestas Bukauskas"
+    "name": "Modestas Bukauskas",
+    "gender": "male"
   },
   {
     "id": 2773,
-    "name": "Mark Dickman"
+    "name": "Mark Dickman",
+    "gender": "male"
   },
   {
     "id": 2774,
-    "name": "Jared Gordon"
+    "name": "Jared Gordon",
+    "gender": "male"
   },
   {
     "id": 2775,
-    "name": "Floyd Sword"
+    "name": "Floyd Sword",
+    "gender": "male"
   },
   {
     "id": 2776,
-    "name": "Wes Albritton"
+    "name": "Wes Albritton",
+    "gender": "male"
   },
   {
     "id": 2777,
-    "name": "Mauricio Alonso"
+    "name": "Mauricio Alonso",
+    "gender": "male"
   },
   {
     "id": 2778,
-    "name": "Kyle Dietz"
+    "name": "Kyle Dietz",
+    "gender": "male"
   },
   {
     "id": 2779,
-    "name": "Alex Zuniga"
+    "name": "Alex Zuniga",
+    "gender": "male"
   },
   {
     "id": 2780,
-    "name": "Ryan McGillivray"
+    "name": "Ryan McGillivray",
+    "gender": "male"
   },
   {
     "id": 2781,
-    "name": "Lissette Neri"
+    "name": "Lissette Neri",
+    "gender": "male"
   },
   {
     "id": 2782,
-    "name": "Pro Escobedo"
+    "name": "Pro Escobedo",
+    "gender": "male"
   },
   {
     "id": 2783,
-    "name": "Dylan Mantello"
+    "name": "Dylan Mantello",
+    "gender": "male"
   },
   {
     "id": 2784,
-    "name": "Poliana Botelho"
+    "name": "Poliana Botelho",
+    "gender": "male"
   },
   {
     "id": 2785,
-    "name": "Minoki Ichihara"
+    "name": "Minoki Ichihara",
+    "gender": "male"
   },
   {
     "id": 2786,
-    "name": "Cole Williams"
+    "name": "Cole Williams",
+    "gender": "male"
   },
   {
     "id": 2787,
-    "name": "Isi Fitikefu"
+    "name": "Isi Fitikefu",
+    "gender": "male"
   },
   {
     "id": 2788,
-    "name": "Alexis Dufresne"
+    "name": "Alexis Dufresne",
+    "gender": "male"
   },
   {
     "id": 2789,
-    "name": "Silvana Gomez Juarez"
+    "name": "Silvana Gomez Juarez",
+    "gender": "male"
   },
   {
     "id": 2790,
-    "name": "Tony Johnson"
+    "name": "Tony Johnson",
+    "gender": "male"
   },
   {
     "id": 2791,
-    "name": "Alex Dunworth"
+    "name": "Alex Dunworth",
+    "gender": "male"
   },
   {
     "id": 2792,
-    "name": "Brett Cooper"
+    "name": "Brett Cooper",
+    "gender": "male"
   },
   {
     "id": 2793,
-    "name": "Joao Zaiden"
+    "name": "Joao Zaiden",
+    "gender": "male"
   },
   {
     "id": 2794,
-    "name": "Fabiano Scherner"
+    "name": "Fabiano Scherner",
+    "gender": "male"
   },
   {
     "id": 2795,
-    "name": "Punahele Soriano"
+    "name": "Punahele Soriano",
+    "gender": "male"
   },
   {
     "id": 2796,
-    "name": "Lowell Anderson"
+    "name": "Lowell Anderson",
+    "gender": "male"
   },
   {
     "id": 2797,
-    "name": "Eddie Sanchez"
+    "name": "Eddie Sanchez",
+    "gender": "male"
   },
   {
     "id": 2798,
-    "name": "David Hood"
+    "name": "David Hood",
+    "gender": "male"
   },
   {
     "id": 2799,
-    "name": "Dan Barrera"
+    "name": "Dan Barrera",
+    "gender": "male"
   },
   {
     "id": 2800,
-    "name": "Mike Bronzoulis"
+    "name": "Mike Bronzoulis",
+    "gender": "male"
   },
   {
     "id": 2801,
-    "name": "Greg Velasco"
+    "name": "Greg Velasco",
+    "gender": "male"
   },
   {
     "id": 2802,
-    "name": "Dae Won Kim"
+    "name": "Dae Won Kim",
+    "gender": "male"
   },
   {
     "id": 2803,
-    "name": "Yanis Ghemmouri"
+    "name": "Yanis Ghemmouri",
+    "gender": "male"
   },
   {
     "id": 2804,
-    "name": "Alex Ricci"
+    "name": "Alex Ricci",
+    "gender": "male"
   },
   {
     "id": 2805,
-    "name": "Alex Crispin"
+    "name": "Alex Crispin",
+    "gender": "male"
   },
   {
     "id": 2806,
-    "name": "Aaron Miller"
+    "name": "Aaron Miller",
+    "gender": "male"
   },
   {
     "id": 2807,
-    "name": "Ion Cherdivara"
+    "name": "Ion Cherdivara",
+    "gender": "male"
   },
   {
     "id": 2808,
-    "name": "Jeremy May"
+    "name": "Jeremy May",
+    "gender": "male"
   },
   {
     "id": 2809,
-    "name": "Rodrigo Ruas"
+    "name": "Rodrigo Ruas",
+    "gender": "male"
   },
   {
     "id": 2810,
-    "name": "Artem Frolov"
+    "name": "Artem Frolov",
+    "gender": "male"
   },
   {
     "id": 2811,
-    "name": "Cody Stamann"
+    "name": "Cody Stamann",
+    "gender": "male"
   },
   {
     "id": 2812,
-    "name": "Adam Schindler"
+    "name": "Adam Schindler",
+    "gender": "male"
   },
   {
     "id": 2813,
-    "name": "David Teymur"
+    "name": "David Teymur",
+    "gender": "male"
   },
   {
     "id": 2814,
-    "name": "Hans Nijman"
+    "name": "Hans Nijman",
+    "gender": "male"
   },
   {
     "id": 2815,
-    "name": "Fabio Gurgel"
+    "name": "Fabio Gurgel",
+    "gender": "male"
   },
   {
     "id": 2816,
-    "name": "Mike Seal"
+    "name": "Mike Seal",
+    "gender": "male"
   },
   {
     "id": 2817,
-    "name": "Nikk Covert"
+    "name": "Nikk Covert",
+    "gender": "male"
   },
   {
     "id": 2818,
-    "name": "Phil Harris"
+    "name": "Phil Harris",
+    "gender": "male"
   },
   {
     "id": 2819,
-    "name": "Hunter Worsham"
+    "name": "Hunter Worsham",
+    "gender": "male"
   },
   {
     "id": 2820,
-    "name": "Cory Peterson"
+    "name": "Cory Peterson",
+    "gender": "male"
   },
   {
     "id": 2821,
-    "name": "Damien Trites"
+    "name": "Damien Trites",
+    "gender": "male"
   },
   {
     "id": 2822,
-    "name": "Jake Lindsey"
+    "name": "Jake Lindsey",
+    "gender": "male"
   },
   {
     "id": 2823,
-    "name": "Josh Jarvis"
+    "name": "Josh Jarvis",
+    "gender": "male"
   },
   {
     "id": 2824,
-    "name": "Roland Payne"
+    "name": "Roland Payne",
+    "gender": "male"
   },
   {
     "id": 2825,
-    "name": "Greg McIntyre"
+    "name": "Greg McIntyre",
+    "gender": "male"
   },
   {
     "id": 2826,
-    "name": "Spencer Hearns"
+    "name": "Spencer Hearns",
+    "gender": "male"
   },
   {
     "id": 2827,
-    "name": "Dustin Jacoby"
+    "name": "Dustin Jacoby",
+    "gender": "male"
   },
   {
     "id": 2828,
-    "name": "Jamie Moyle"
+    "name": "Jamie Moyle",
+    "gender": "male"
   },
   {
     "id": 2829,
-    "name": "Steve Montgomery"
+    "name": "Steve Montgomery",
+    "gender": "male"
   },
   {
     "id": 2830,
-    "name": "Scott Ventimiglia"
+    "name": "Scott Ventimiglia",
+    "gender": "male"
   },
   {
     "id": 2831,
-    "name": "Sidney Silva"
+    "name": "Sidney Silva",
+    "gender": "male"
   },
   {
     "id": 2832,
-    "name": "Will Santiago"
+    "name": "Will Santiago",
+    "gender": "male"
   },
   {
     "id": 2833,
-    "name": "Manuel Rodriguez"
+    "name": "Manuel Rodriguez",
+    "gender": "male"
   },
   {
     "id": 2834,
-    "name": "Kristian Rothaermel"
+    "name": "Kristian Rothaermel",
+    "gender": "male"
   },
   {
     "id": 2835,
-    "name": "Jamahal Hill"
+    "name": "Jamahal Hill",
+    "gender": "male"
   },
   {
     "id": 2836,
-    "name": "Chad Cook"
+    "name": "Chad Cook",
+    "gender": "male"
   },
   {
     "id": 2837,
-    "name": "Mark Striegl"
+    "name": "Mark Striegl",
+    "gender": "male"
   },
   {
     "id": 2838,
-    "name": "SeungGuk Choi"
+    "name": "SeungGuk Choi",
+    "gender": "male"
   },
   {
     "id": 2839,
-    "name": "Ray Sefo"
+    "name": "Ray Sefo",
+    "gender": "male"
   },
   {
     "id": 2840,
-    "name": "Joe Hernandez"
+    "name": "Joe Hernandez",
+    "gender": "male"
   },
   {
     "id": 2841,
-    "name": "Sandra Lavado"
+    "name": "Sandra Lavado",
+    "gender": "male"
   },
   {
     "id": 2842,
-    "name": "Hugo Viana"
+    "name": "Hugo Viana",
+    "gender": "male"
   },
   {
     "id": 2843,
-    "name": "Claudio Mattos"
+    "name": "Claudio Mattos",
+    "gender": "male"
   },
   {
     "id": 2844,
-    "name": "Gareth Joseph"
+    "name": "Gareth Joseph",
+    "gender": "male"
   },
   {
     "id": 2845,
-    "name": "Tom Watson"
+    "name": "Tom Watson",
+    "gender": "male"
   },
   {
     "id": 2846,
-    "name": "Steve Bosse"
+    "name": "Steve Bosse",
+    "gender": "male"
   },
   {
     "id": 2847,
-    "name": "Tiki Ghosn"
+    "name": "Tiki Ghosn",
+    "gender": "male"
   },
   {
     "id": 2848,
-    "name": "Brunno Ferreira"
+    "name": "Brunno Ferreira",
+    "gender": "male"
   },
   {
     "id": 2849,
-    "name": "Jhonata Diniz"
+    "name": "Jhonata Diniz",
+    "gender": "male"
   },
   {
     "id": 2850,
-    "name": "Stephanie Luciano"
+    "name": "Stephanie Luciano",
+    "gender": "male"
   },
   {
     "id": 2851,
-    "name": "Erick Gonzalez"
+    "name": "Erick Gonzalez",
+    "gender": "male"
   },
   {
     "id": 2852,
-    "name": "Paul Varelans"
+    "name": "Paul Varelans",
+    "gender": "male"
   },
   {
     "id": 2853,
-    "name": "Bharat Kandare"
+    "name": "Bharat Kandare",
+    "gender": "male"
   },
   {
     "id": 2854,
-    "name": "Drew Dimanlig"
+    "name": "Drew Dimanlig",
+    "gender": "male"
   },
   {
     "id": 2855,
-    "name": "Yousri Belgaroui"
+    "name": "Yousri Belgaroui",
+    "gender": "male"
   },
   {
     "id": 2856,
-    "name": "John Makdessi"
+    "name": "John Makdessi",
+    "gender": "male"
   },
   {
     "id": 2857,
-    "name": "James Barnes"
+    "name": "James Barnes",
+    "gender": "male"
   },
   {
     "id": 2858,
-    "name": "Mitchell Sipe"
+    "name": "Mitchell Sipe",
+    "gender": "male"
   },
   {
     "id": 2859,
-    "name": "Daniel Spitz"
+    "name": "Daniel Spitz",
+    "gender": "male"
   },
   {
     "id": 2860,
-    "name": "Raja Shippen"
+    "name": "Raja Shippen",
+    "gender": "male"
   },
   {
     "id": 2861,
-    "name": "Ailiya Muratbek"
+    "name": "Ailiya Muratbek",
+    "gender": "male"
   },
   {
     "id": 2862,
-    "name": "Michal Figlak"
+    "name": "Michal Figlak",
+    "gender": "male"
   },
   {
     "id": 2863,
-    "name": "Yohan Banks"
+    "name": "Yohan Banks",
+    "gender": "male"
   },
   {
     "id": 2864,
-    "name": "Jose Canseco"
+    "name": "Jose Canseco",
+    "gender": "male"
   },
   {
     "id": 2865,
-    "name": "Chad Griggs"
+    "name": "Chad Griggs",
+    "gender": "male"
   },
   {
     "id": 2866,
-    "name": "Dmitri Stepanov"
+    "name": "Dmitri Stepanov",
+    "gender": "male"
   },
   {
     "id": 2867,
-    "name": "Josh Haynes"
+    "name": "Josh Haynes",
+    "gender": "male"
   },
   {
     "id": 2868,
-    "name": "Seichi Ikemoto"
+    "name": "Seichi Ikemoto",
+    "gender": "male"
   },
   {
     "id": 2869,
-    "name": "Matt Skelton"
+    "name": "Matt Skelton",
+    "gender": "male"
   },
   {
     "id": 2870,
-    "name": "Lina Kvokov"
+    "name": "Lina Kvokov",
+    "gender": "male"
   },
   {
     "id": 2871,
-    "name": "Aurelijus Kerpe"
+    "name": "Aurelijus Kerpe",
+    "gender": "male"
   },
   {
     "id": 2872,
-    "name": "Todd Duffee"
+    "name": "Todd Duffee",
+    "gender": "male"
   },
   {
     "id": 2873,
-    "name": "Lyman Good"
+    "name": "Lyman Good",
+    "gender": "male"
   },
   {
     "id": 2874,
-    "name": "Jutaro Nakao"
+    "name": "Jutaro Nakao",
+    "gender": "male"
   },
   {
     "id": 2875,
-    "name": "Pietro Menga"
+    "name": "Pietro Menga",
+    "gender": "male"
   },
   {
     "id": 2876,
-    "name": "Isis Verbeek"
+    "name": "Isis Verbeek",
+    "gender": "male"
   },
   {
     "id": 2877,
-    "name": "Shane Primm"
+    "name": "Shane Primm",
+    "gender": "male"
   },
   {
     "id": 2878,
-    "name": "Charles McTorry"
+    "name": "Charles McTorry",
+    "gender": "male"
   },
   {
     "id": 2879,
-    "name": "Mike Bourke"
+    "name": "Mike Bourke",
+    "gender": "male"
   },
   {
     "id": 2880,
-    "name": "Naho Sugiyuma"
+    "name": "Naho Sugiyuma",
+    "gender": "male"
   },
   {
     "id": 2881,
-    "name": "Anthony Lapsley"
+    "name": "Anthony Lapsley",
+    "gender": "male"
   },
   {
     "id": 2882,
-    "name": "Jason Freeman"
+    "name": "Jason Freeman",
+    "gender": "male"
   },
   {
     "id": 2883,
-    "name": "Eddie Mendez"
+    "name": "Eddie Mendez",
+    "gender": "male"
   },
   {
     "id": 2884,
-    "name": "Joe Neal"
+    "name": "Joe Neal",
+    "gender": "male"
   },
   {
     "id": 2885,
-    "name": "Courtney Buck"
+    "name": "Courtney Buck",
+    "gender": "male"
   },
   {
     "id": 2886,
-    "name": "Bartosz Fabinski"
+    "name": "Bartosz Fabinski",
+    "gender": "male"
   },
   {
     "id": 2887,
-    "name": "Steve Jennum"
+    "name": "Steve Jennum",
+    "gender": "male"
   },
   {
     "id": 2888,
-    "name": "Sim Kai Xiong"
+    "name": "Sim Kai Xiong",
+    "gender": "male"
   },
   {
     "id": 2889,
-    "name": "Amir Aliakbari"
+    "name": "Amir Aliakbari",
+    "gender": "male"
   },
   {
     "id": 2890,
-    "name": "Melissa Dixon"
+    "name": "Melissa Dixon",
+    "gender": "male"
   },
   {
     "id": 2891,
-    "name": "Courtney Turner"
+    "name": "Courtney Turner",
+    "gender": "male"
   },
   {
     "id": 2892,
-    "name": "Ray Sloan"
+    "name": "Ray Sloan",
+    "gender": "male"
   },
   {
     "id": 2893,
-    "name": "Thomas Diagne"
+    "name": "Thomas Diagne",
+    "gender": "male"
   },
   {
     "id": 2894,
-    "name": "Olivier Murad"
+    "name": "Olivier Murad",
+    "gender": "male"
   },
   {
     "id": 2895,
-    "name": "Chi Lewis-Parry"
+    "name": "Chi Lewis-Parry",
+    "gender": "male"
   },
   {
     "id": 2896,
-    "name": "Jon Manley"
+    "name": "Jon Manley",
+    "gender": "male"
   },
   {
     "id": 2897,
-    "name": "Jae Suk Lim"
+    "name": "Jae Suk Lim",
+    "gender": "male"
   },
   {
     "id": 2898,
-    "name": "Mychal Clark"
+    "name": "Mychal Clark",
+    "gender": "male"
   },
   {
     "id": 2899,
-    "name": "Dominic Brown"
+    "name": "Dominic Brown",
+    "gender": "male"
   },
   {
     "id": 2900,
-    "name": "Emilio Cuellar"
+    "name": "Emilio Cuellar",
+    "gender": "male"
   },
   {
     "id": 2901,
-    "name": "Zarah Fairn"
+    "name": "Zarah Fairn",
+    "gender": "male"
   },
   {
     "id": 2902,
-    "name": "Azunna Anyanwu"
+    "name": "Azunna Anyanwu",
+    "gender": "male"
   },
   {
     "id": 2903,
-    "name": "Hashem Arkhagha"
+    "name": "Hashem Arkhagha",
+    "gender": "male"
   },
   {
     "id": 2904,
-    "name": "Albert Rios"
+    "name": "Albert Rios",
+    "gender": "male"
   },
   {
     "id": 2905,
-    "name": "Tatsuya Ando"
+    "name": "Tatsuya Ando",
+    "gender": "male"
   },
   {
     "id": 2906,
-    "name": "Won Jin Eoh"
+    "name": "Won Jin Eoh",
+    "gender": "male"
   },
   {
     "id": 2907,
-    "name": "Karl Willis"
+    "name": "Karl Willis",
+    "gender": "male"
   },
   {
     "id": 2908,
-    "name": "Guram Kutateladze"
+    "name": "Guram Kutateladze",
+    "gender": "male"
   },
   {
     "id": 2909,
-    "name": "Khaos Williams"
+    "name": "Khaos Williams",
+    "gender": "male"
   },
   {
     "id": 2910,
-    "name": "Marcin Bandel"
+    "name": "Marcin Bandel",
+    "gender": "male"
   },
   {
     "id": 2911,
-    "name": "Loik Radzhabov"
+    "name": "Loik Radzhabov",
+    "gender": "male"
   },
   {
     "id": 2912,
-    "name": "Drakkar Klose"
+    "name": "Drakkar Klose",
+    "gender": "male"
   },
   {
     "id": 2913,
-    "name": "Ruslan Magomedov"
+    "name": "Ruslan Magomedov",
+    "gender": "male"
   },
   {
     "id": 2914,
-    "name": "Blood Diamond"
+    "name": "Blood Diamond",
+    "gender": "male"
   },
   {
     "id": 2915,
-    "name": "Viktor Pesta"
+    "name": "Viktor Pesta",
+    "gender": "male"
   },
   {
     "id": 2916,
-    "name": "Jerron Peoples"
+    "name": "Jerron Peoples",
+    "gender": "male"
   },
   {
     "id": 2917,
-    "name": "Lucas Gamaza"
+    "name": "Lucas Gamaza",
+    "gender": "male"
   },
   {
     "id": 2918,
-    "name": "Xie Bin"
+    "name": "Xie Bin",
+    "gender": "male"
   },
   {
     "id": 2919,
-    "name": "Ron Henderson"
+    "name": "Ron Henderson",
+    "gender": "male"
   },
   {
     "id": 2920,
-    "name": "Ryan Larson"
+    "name": "Ryan Larson",
+    "gender": "male"
   },
   {
     "id": 2921,
-    "name": "Randall Wallace"
+    "name": "Randall Wallace",
+    "gender": "male"
   },
   {
     "id": 2922,
-    "name": "JJ Ambrose"
+    "name": "JJ Ambrose",
+    "gender": "male"
   },
   {
     "id": 2923,
-    "name": "Mike Davis"
+    "name": "Mike Davis",
+    "gender": "male"
   },
   {
     "id": 2924,
-    "name": "Marcos Conrado Jr."
+    "name": "Marcos Conrado Jr.",
+    "gender": "male"
   },
   {
     "id": 2925,
-    "name": "Maria Oliveira"
+    "name": "Maria Oliveira",
+    "gender": "male"
   },
   {
     "id": 2926,
-    "name": "Amiran Gogoladze"
+    "name": "Amiran Gogoladze",
+    "gender": "male"
   },
   {
     "id": 2927,
-    "name": "Victoria Leonardo"
+    "name": "Victoria Leonardo",
+    "gender": "male"
   },
   {
     "id": 2928,
-    "name": "Derek Downey"
+    "name": "Derek Downey",
+    "gender": "male"
   },
   {
     "id": 2929,
-    "name": "Wagner da Conceicao Martins"
+    "name": "Wagner da Conceicao Martins",
+    "gender": "male"
   },
   {
     "id": 2930,
-    "name": "Lolohea Mahe"
+    "name": "Lolohea Mahe",
+    "gender": "male"
   },
   {
     "id": 2931,
-    "name": "Sabah Homasi"
+    "name": "Sabah Homasi",
+    "gender": "male"
   },
   {
     "id": 2932,
-    "name": "Timothy Cuamba"
+    "name": "Timothy Cuamba",
+    "gender": "male"
   },
   {
     "id": 2933,
-    "name": "Guilherme Costa"
+    "name": "Guilherme Costa",
+    "gender": "male"
   },
   {
     "id": 2934,
-    "name": "Galore Bofando"
+    "name": "Galore Bofando",
+    "gender": "male"
   },
   {
     "id": 2935,
-    "name": "Iouri Kotchkine"
+    "name": "Iouri Kotchkine",
+    "gender": "male"
   },
   {
     "id": 2936,
-    "name": "Jose Medina"
+    "name": "Jose Medina",
+    "gender": "male"
   },
   {
     "id": 2937,
-    "name": "KJ Noons"
+    "name": "KJ Noons",
+    "gender": "male"
   },
   {
     "id": 2938,
-    "name": "Denys Bondar"
+    "name": "Denys Bondar",
+    "gender": "male"
   },
   {
     "id": 2939,
-    "name": "Andreas Spang"
+    "name": "Andreas Spang",
+    "gender": "male"
   },
   {
     "id": 2940,
-    "name": "Steve Lopez"
+    "name": "Steve Lopez",
+    "gender": "male"
   },
   {
     "id": 2941,
-    "name": "Jesse Strader"
+    "name": "Jesse Strader",
+    "gender": "male"
   },
   {
     "id": 2942,
-    "name": "Kailan Hill"
+    "name": "Kailan Hill",
+    "gender": "male"
   },
   {
     "id": 2943,
-    "name": "Ricky Palacios"
+    "name": "Ricky Palacios",
+    "gender": "male"
   },
   {
     "id": 2944,
-    "name": "Eli Aronov"
+    "name": "Eli Aronov",
+    "gender": "male"
   },
   {
     "id": 2945,
-    "name": "Ivan Serati"
+    "name": "Ivan Serati",
+    "gender": "male"
   },
   {
     "id": 2946,
-    "name": "Tom Nolan"
+    "name": "Tom Nolan",
+    "gender": "male"
   },
   {
     "id": 2947,
-    "name": "Montserrat Rendon"
+    "name": "Montserrat Rendon",
+    "gender": "male"
   },
   {
     "id": 2948,
-    "name": "Luis Pajuelo"
+    "name": "Luis Pajuelo",
+    "gender": "male"
   },
   {
     "id": 2949,
-    "name": "Levi Avera"
+    "name": "Levi Avera",
+    "gender": "male"
   },
   {
     "id": 2950,
-    "name": "Carlton Minus"
+    "name": "Carlton Minus",
+    "gender": "male"
   },
   {
     "id": 2951,
-    "name": "Chris Inman"
+    "name": "Chris Inman",
+    "gender": "male"
   },
   {
     "id": 2952,
-    "name": "Kyle Bradley"
+    "name": "Kyle Bradley",
+    "gender": "male"
   },
   {
     "id": 2953,
-    "name": "Asjabharan"
+    "name": "Asjabharan",
+    "gender": "male"
   },
   {
     "id": 2954,
-    "name": "Paulo Santos"
+    "name": "Paulo Santos",
+    "gender": "male"
   },
   {
     "id": 2955,
-    "name": "Hakeem Dawodu"
+    "name": "Hakeem Dawodu",
+    "gender": "male"
   },
   {
     "id": 2956,
-    "name": "Cain Carrizosa"
+    "name": "Cain Carrizosa",
+    "gender": "male"
   },
   {
     "id": 2957,
-    "name": "Dave Beneteau"
+    "name": "Dave Beneteau",
+    "gender": "male"
   },
   {
     "id": 2958,
-    "name": "Terrell Brown"
+    "name": "Terrell Brown",
+    "gender": "male"
   },
   {
     "id": 2959,
-    "name": "Jimmy Quinlan"
+    "name": "Jimmy Quinlan",
+    "gender": "male"
   },
   {
     "id": 2960,
-    "name": "Valmir Lazaro"
+    "name": "Valmir Lazaro",
+    "gender": "male"
   },
   {
     "id": 2961,
-    "name": "Jonathan Contrestano"
+    "name": "Jonathan Contrestano",
+    "gender": "male"
   },
   {
     "id": 2962,
-    "name": "Nohelin Hernandez"
+    "name": "Nohelin Hernandez",
+    "gender": "male"
   },
   {
     "id": 2963,
-    "name": "Sirwan Kakai"
+    "name": "Sirwan Kakai",
+    "gender": "male"
   },
   {
     "id": 2964,
-    "name": "Tae Hyun Lee"
+    "name": "Tae Hyun Lee",
+    "gender": "male"
   },
   {
     "id": 2965,
-    "name": "Ante Delija"
+    "name": "Ante Delija",
+    "gender": "male"
   },
   {
     "id": 2966,
-    "name": "Frank Hamaker"
+    "name": "Frank Hamaker",
+    "gender": "male"
   },
   {
     "id": 2967,
-    "name": "Jeff Terry"
+    "name": "Jeff Terry",
+    "gender": "male"
   },
   {
     "id": 2968,
-    "name": "Sam Fulton"
+    "name": "Sam Fulton",
+    "gender": "male"
   },
   {
     "id": 2969,
-    "name": "Ido Pariente"
+    "name": "Ido Pariente",
+    "gender": "male"
   },
   {
     "id": 2970,
-    "name": "Imani Lee"
+    "name": "Imani Lee",
+    "gender": "male"
   },
   {
     "id": 2971,
-    "name": "Herman Terrado"
+    "name": "Herman Terrado",
+    "gender": "male"
   },
   {
     "id": 2972,
-    "name": "Rico Altamirano"
+    "name": "Rico Altamirano",
+    "gender": "male"
   },
   {
     "id": 2973,
-    "name": "Roman Bravo-Young"
+    "name": "Roman Bravo-Young",
+    "gender": "male"
   },
   {
     "id": 2974,
-    "name": "Nick Urso"
+    "name": "Nick Urso",
+    "gender": "male"
   },
   {
     "id": 2975,
-    "name": "Motoki Miyazawa"
+    "name": "Motoki Miyazawa",
+    "gender": "male"
   },
   {
     "id": 2976,
-    "name": "Marquel Mederos"
+    "name": "Marquel Mederos",
+    "gender": "male"
   },
   {
     "id": 2977,
-    "name": "Cameron Rowston"
+    "name": "Cameron Rowston",
+    "gender": "male"
   },
   {
     "id": 2978,
-    "name": "Batgerel Danaa"
+    "name": "Batgerel Danaa",
+    "gender": "male"
   },
   {
     "id": 2979,
-    "name": "Daniel Weichel"
+    "name": "Daniel Weichel",
+    "gender": "male"
   },
   {
     "id": 2980,
-    "name": "Dylan Salvador"
+    "name": "Dylan Salvador",
+    "gender": "male"
   },
   {
     "id": 2981,
-    "name": "Juan Miranda"
+    "name": "Juan Miranda",
+    "gender": "male"
   },
   {
     "id": 2982,
-    "name": "Mehdi Baghdad"
+    "name": "Mehdi Baghdad",
+    "gender": "male"
   },
   {
     "id": 2983,
-    "name": "Sean Salmon"
+    "name": "Sean Salmon",
+    "gender": "male"
   },
   {
     "id": 2984,
-    "name": "Jeremy Hamilton"
+    "name": "Jeremy Hamilton",
+    "gender": "male"
   },
   {
     "id": 2985,
-    "name": "Bob Sapp"
+    "name": "Bob Sapp",
+    "gender": "male"
   },
   {
     "id": 2986,
-    "name": "Aji Susilo"
+    "name": "Aji Susilo",
+    "gender": "male"
   },
   {
     "id": 2987,
-    "name": "Michelle Maher"
+    "name": "Michelle Maher",
+    "gender": "female"
   },
   {
     "id": 2988,
-    "name": "Ramiro Hernandez"
+    "name": "Ramiro Hernandez",
+    "gender": "male"
   },
   {
     "id": 2989,
-    "name": "David Velasquez"
+    "name": "David Velasquez",
+    "gender": "male"
   },
   {
     "id": 2990,
-    "name": "Raquel Pa'aluhi"
+    "name": "Raquel Pa'aluhi",
+    "gender": "female"
   },
   {
     "id": 2991,
-    "name": "Yazmin Jauregui"
+    "name": "Yazmin Jauregui",
+    "gender": "male"
   },
   {
     "id": 2992,
-    "name": "Nate Quarry"
+    "name": "Nate Quarry",
+    "gender": "male"
   },
   {
     "id": 2993,
-    "name": "Leonardo Morales"
+    "name": "Leonardo Morales",
+    "gender": "male"
   },
   {
     "id": 2994,
-    "name": "Mateo Vogel"
+    "name": "Mateo Vogel",
+    "gender": "male"
   },
   {
     "id": 2995,
-    "name": "Yamato Nishikawa"
+    "name": "Yamato Nishikawa",
+    "gender": "male"
   },
   {
     "id": 2996,
-    "name": "Hiroko Yamanaka"
+    "name": "Hiroko Yamanaka",
+    "gender": "male"
   },
   {
     "id": 2997,
-    "name": "Manolo Zecchini"
+    "name": "Manolo Zecchini",
+    "gender": "male"
   },
   {
     "id": 2998,
-    "name": "Akihito Tanaka"
+    "name": "Akihito Tanaka",
+    "gender": "male"
   },
   {
     "id": 2999,
-    "name": "Jin Bala"
+    "name": "Jin Bala",
+    "gender": "male"
   },
   {
     "id": 3000,
-    "name": "Veta Arteaga"
+    "name": "Veta Arteaga",
+    "gender": "male"
   },
   {
     "id": 3001,
-    "name": "Alexander Shlemenko"
+    "name": "Alexander Shlemenko",
+    "gender": "male"
   },
   {
     "id": 3002,
-    "name": "Adriano Santos"
+    "name": "Adriano Santos",
+    "gender": "male"
   },
   {
     "id": 3003,
-    "name": "Brad Riddell"
+    "name": "Brad Riddell",
+    "gender": "male"
   },
   {
     "id": 3004,
-    "name": "Carlos Huachin"
+    "name": "Carlos Huachin",
+    "gender": "male"
   },
   {
     "id": 3005,
-    "name": "Larry Parker"
+    "name": "Larry Parker",
+    "gender": "male"
   },
   {
     "id": 3006,
-    "name": "ChangHo Lee"
+    "name": "ChangHo Lee",
+    "gender": "male"
   },
   {
     "id": 3007,
-    "name": "Carlos Felipe"
+    "name": "Carlos Felipe",
+    "gender": "male"
   },
   {
     "id": 3008,
-    "name": "Rodolfo Rubio Perez"
+    "name": "Rodolfo Rubio Perez",
+    "gender": "male"
   },
   {
     "id": 3009,
-    "name": "Lucasz Sudolski"
+    "name": "Lucasz Sudolski",
+    "gender": "male"
   },
   {
     "id": 3010,
-    "name": "Melton Bowen"
+    "name": "Melton Bowen",
+    "gender": "male"
   },
   {
     "id": 3011,
-    "name": "Edson Drago"
+    "name": "Edson Drago",
+    "gender": "male"
   },
   {
     "id": 3012,
-    "name": "Jarjis Danho"
+    "name": "Jarjis Danho",
+    "gender": "male"
   },
   {
     "id": 3013,
-    "name": "Dave Herman"
+    "name": "Dave Herman",
+    "gender": "male"
   },
   {
     "id": 3014,
-    "name": "Bob Schrijber"
+    "name": "Bob Schrijber",
+    "gender": "male"
   },
   {
     "id": 3015,
-    "name": "Dominic Waters"
+    "name": "Dominic Waters",
+    "gender": "male"
   },
   {
     "id": 3016,
-    "name": "Derrick Burnsed"
+    "name": "Derrick Burnsed",
+    "gender": "male"
   },
   {
     "id": 3017,
-    "name": "Josh Diekmann"
+    "name": "Josh Diekmann",
+    "gender": "male"
   },
   {
     "id": 3018,
-    "name": "Yasuhiro Urushitani"
+    "name": "Yasuhiro Urushitani",
+    "gender": "male"
   },
   {
     "id": 3019,
-    "name": "Danny Barlow"
+    "name": "Danny Barlow",
+    "gender": "male"
   },
   {
     "id": 3020,
-    "name": "Bentley Syler"
+    "name": "Bentley Syler",
+    "gender": "male"
   },
   {
     "id": 3021,
-    "name": "Mario Miranda"
+    "name": "Mario Miranda",
+    "gender": "male"
   },
   {
     "id": 3022,
-    "name": "Valesca Machado"
+    "name": "Valesca Machado",
+    "gender": "male"
   },
   {
     "id": 3023,
-    "name": "Bibulatov Magomed"
+    "name": "Bibulatov Magomed",
+    "gender": "male"
   },
   {
     "id": 3024,
-    "name": "Jason Saggo"
+    "name": "Jason Saggo",
+    "gender": "male"
   },
   {
     "id": 3025,
-    "name": "Seth Kleinbeck"
+    "name": "Seth Kleinbeck",
+    "gender": "male"
   },
   {
     "id": 3026,
-    "name": "Aiemann Zahabi"
+    "name": "Aiemann Zahabi",
+    "gender": "male"
   },
   {
     "id": 3027,
-    "name": "Yusuke Kasuya"
+    "name": "Yusuke Kasuya",
+    "gender": "male"
   },
   {
     "id": 3028,
-    "name": "Ashe Bowman"
+    "name": "Ashe Bowman",
+    "gender": "male"
   },
   {
     "id": 3029,
-    "name": "Yoshiaki Yatsu"
+    "name": "Yoshiaki Yatsu",
+    "gender": "male"
   },
   {
     "id": 3030,
-    "name": "Steve Vigneault"
+    "name": "Steve Vigneault",
+    "gender": "male"
   },
   {
     "id": 3031,
-    "name": "Cody Sons"
+    "name": "Cody Sons",
+    "gender": "male"
   },
   {
     "id": 3032,
-    "name": "Melchor Manibusan"
+    "name": "Melchor Manibusan",
+    "gender": "male"
   },
   {
     "id": 3033,
-    "name": "Hugh Pulley"
+    "name": "Hugh Pulley",
+    "gender": "male"
   },
   {
     "id": 3034,
-    "name": "Nicolae Negumereanu"
+    "name": "Nicolae Negumereanu",
+    "gender": "male"
   },
   {
     "id": 3035,
-    "name": "Yusaku Nakamura"
+    "name": "Yusaku Nakamura",
+    "gender": "male"
   },
   {
     "id": 3036,
-    "name": "Drew Brokenshire"
+    "name": "Drew Brokenshire",
+    "gender": "male"
   },
   {
     "id": 3037,
-    "name": "Remo Cardarelli"
+    "name": "Remo Cardarelli",
+    "gender": "male"
   },
   {
     "id": 3038,
-    "name": "Rob McCullough"
+    "name": "Rob McCullough",
+    "gender": "male"
   },
   {
     "id": 3039,
-    "name": "Juliana Lima"
+    "name": "Juliana Lima",
+    "gender": "male"
   },
   {
     "id": 3040,
-    "name": "Azat Maksum"
+    "name": "Azat Maksum",
+    "gender": "male"
   },
   {
     "id": 3041,
-    "name": "Carlos Zevallos"
+    "name": "Carlos Zevallos",
+    "gender": "male"
   },
   {
     "id": 3042,
-    "name": "Tony Petarra"
+    "name": "Tony Petarra",
+    "gender": "male"
   },
   {
     "id": 3043,
-    "name": "JJ Aldrich"
+    "name": "JJ Aldrich",
+    "gender": "male"
   },
   {
     "id": 3044,
-    "name": "Cole Escovedo"
+    "name": "Cole Escovedo",
+    "gender": "male"
   },
   {
     "id": 3045,
-    "name": "Riki Fukuda"
+    "name": "Riki Fukuda",
+    "gender": "male"
   },
   {
     "id": 3046,
-    "name": "Willamy Freire"
+    "name": "Willamy Freire",
+    "gender": "male"
   },
   {
     "id": 3047,
-    "name": "Junye Gao"
+    "name": "Junye Gao",
+    "gender": "male"
   },
   {
     "id": 3048,
-    "name": "David Bielkheden"
+    "name": "David Bielkheden",
+    "gender": "male"
   },
   {
     "id": 3049,
-    "name": "WonBin Ki"
+    "name": "WonBin Ki",
+    "gender": "male"
   },
   {
     "id": 3050,
-    "name": "Kaitlin Young"
+    "name": "Kaitlin Young",
+    "gender": "male"
   },
   {
     "id": 3051,
-    "name": "Casey Huffman"
+    "name": "Casey Huffman",
+    "gender": "male"
   },
   {
     "id": 3052,
-    "name": "Bo Cantrell"
+    "name": "Bo Cantrell",
+    "gender": "male"
   },
   {
     "id": 3053,
-    "name": "Rico Farrington"
+    "name": "Rico Farrington",
+    "gender": "male"
   },
   {
     "id": 3054,
-    "name": "Paul Jones"
+    "name": "Paul Jones",
+    "gender": "male"
   },
   {
     "id": 3055,
-    "name": "Gabe Lemley"
+    "name": "Gabe Lemley",
+    "gender": "male"
   },
   {
     "id": 3056,
-    "name": "Yuri Vaulin"
+    "name": "Yuri Vaulin",
+    "gender": "male"
   },
   {
     "id": 3057,
-    "name": "Shane Howell"
+    "name": "Shane Howell",
+    "gender": "male"
   },
   {
     "id": 3058,
-    "name": "AJ Fonseca"
+    "name": "AJ Fonseca",
+    "gender": "male"
   },
   {
     "id": 3059,
-    "name": "Donavon Frelow"
+    "name": "Donavon Frelow",
+    "gender": "male"
   },
   {
     "id": 3060,
-    "name": "Jason Tan"
+    "name": "Jason Tan",
+    "gender": "male"
   },
   {
     "id": 3061,
-    "name": "Joe Son"
+    "name": "Joe Son",
+    "gender": "male"
   },
   {
     "id": 3062,
-    "name": "Zach Rosol"
+    "name": "Zach Rosol",
+    "gender": "male"
   },
   {
     "id": 3063,
-    "name": "Chris Liguori"
+    "name": "Chris Liguori",
+    "gender": "male"
   },
   {
     "id": 3064,
-    "name": "Zelim Imadaev"
+    "name": "Zelim Imadaev",
+    "gender": "male"
   },
   {
     "id": 3065,
-    "name": "Garrett Gross"
+    "name": "Garrett Gross",
+    "gender": "male"
   },
   {
     "id": 3066,
-    "name": "Andreas Stahl"
+    "name": "Andreas Stahl",
+    "gender": "male"
   },
   {
     "id": 3067,
-    "name": "Jeremia Siregar"
+    "name": "Jeremia Siregar",
+    "gender": "male"
   },
   {
     "id": 3068,
-    "name": "Joe Slick"
+    "name": "Joe Slick",
+    "gender": "male"
   },
   {
     "id": 3069,
-    "name": "Chris Barnhizer"
+    "name": "Chris Barnhizer",
+    "gender": "male"
   },
   {
     "id": 3070,
-    "name": "Ross Pointon"
+    "name": "Ross Pointon",
+    "gender": "male"
   },
   {
     "id": 3071,
-    "name": "Jonas Bilharinho"
+    "name": "Jonas Bilharinho",
+    "gender": "male"
   },
   {
     "id": 3072,
-    "name": "Andy Enz"
+    "name": "Andy Enz",
+    "gender": "male"
   },
   {
     "id": 3073,
-    "name": "Michael Knaap"
+    "name": "Michael Knaap",
+    "gender": "male"
   },
   {
     "id": 3074,
-    "name": "Theo Rlayang"
+    "name": "Theo Rlayang",
+    "gender": "male"
   },
   {
     "id": 3075,
-    "name": "Carl Malenko"
+    "name": "Carl Malenko",
+    "gender": "male"
   },
   {
     "id": 3076,
-    "name": "Chelsea Chandler"
+    "name": "Chelsea Chandler",
+    "gender": "male"
   },
   {
     "id": 3077,
-    "name": "Alexander Crispim"
+    "name": "Alexander Crispim",
+    "gender": "male"
   },
   {
     "id": 3078,
-    "name": "Chris Coggins"
+    "name": "Chris Coggins",
+    "gender": "male"
   },
   {
     "id": 3079,
-    "name": "Michel Quinones"
+    "name": "Michel Quinones",
+    "gender": "male"
   },
   {
     "id": 3080,
-    "name": "Michal Martinek"
+    "name": "Michal Martinek",
+    "gender": "male"
   },
   {
     "id": 3081,
-    "name": "Dion Staring"
+    "name": "Dion Staring",
+    "gender": "male"
   },
   {
     "id": 3082,
-    "name": "Chris Herrera"
+    "name": "Chris Herrera",
+    "gender": "male"
   },
   {
     "id": 3083,
-    "name": "Kai Kara-France"
+    "name": "Kai Kara-France",
+    "gender": "male"
   },
   {
     "id": 3084,
-    "name": "Deshaun Johnson"
+    "name": "Deshaun Johnson",
+    "gender": "male"
   },
   {
     "id": 3085,
-    "name": "Khomkrit Niimi"
+    "name": "Khomkrit Niimi",
+    "gender": "male"
   },
   {
     "id": 3086,
-    "name": "Booker DeRousse"
+    "name": "Booker DeRousse",
+    "gender": "male"
   },
   {
     "id": 3087,
-    "name": "Nick Agallar"
+    "name": "Nick Agallar",
+    "gender": "male"
   },
   {
     "id": 3088,
-    "name": "Tim Lajcik"
+    "name": "Tim Lajcik",
+    "gender": "male"
   },
   {
     "id": 3089,
-    "name": "Osamu Tachihikari"
+    "name": "Osamu Tachihikari",
+    "gender": "male"
   },
   {
     "id": 3090,
-    "name": "Kyle Bolt"
+    "name": "Kyle Bolt",
+    "gender": "male"
   },
   {
     "id": 3091,
-    "name": "Jess Bouscal"
+    "name": "Jess Bouscal",
+    "gender": "male"
   },
   {
     "id": 3092,
-    "name": "Charalampos Grigoriou"
+    "name": "Charalampos Grigoriou",
+    "gender": "male"
   },
   {
     "id": 3093,
-    "name": "Joey Armstrong"
+    "name": "Joey Armstrong",
+    "gender": "male"
   },
   {
     "id": 3094,
-    "name": "Ozzy Diaz"
+    "name": "Ozzy Diaz",
+    "gender": "male"
   },
   {
     "id": 3095,
-    "name": "Jordan Dowdy"
+    "name": "Jordan Dowdy",
+    "gender": "male"
   },
   {
     "id": 3096,
-    "name": "Rafael Rios"
+    "name": "Rafael Rios",
+    "gender": "male"
   },
   {
     "id": 3097,
-    "name": "Jeremiah Riggs"
+    "name": "Jeremiah Riggs",
+    "gender": "male"
   },
   {
     "id": 3098,
-    "name": "Ibragim Magomedov"
+    "name": "Ibragim Magomedov",
+    "gender": "male"
   },
   {
     "id": 3099,
-    "name": "Ben Wall"
+    "name": "Ben Wall",
+    "gender": "male"
   },
   {
     "id": 3100,
-    "name": "Te Edwards"
+    "name": "Te Edwards",
+    "gender": "male"
   },
   {
     "id": 3101,
-    "name": "Dos Caras Jr."
+    "name": "Dos Caras Jr.",
+    "gender": "male"
   },
   {
     "id": 3102,
-    "name": "Kaiwen"
+    "name": "Kaiwen",
+    "gender": "male"
   },
   {
     "id": 3103,
-    "name": "Donovan Beard"
+    "name": "Donovan Beard",
+    "gender": "male"
   },
   {
     "id": 3104,
-    "name": "Thaddeus Luster"
+    "name": "Thaddeus Luster",
+    "gender": "male"
   },
   {
     "id": 3105,
-    "name": "Jay Cucciniello"
+    "name": "Jay Cucciniello",
+    "gender": "male"
   },
   {
     "id": 3106,
-    "name": "Simon Biyong"
+    "name": "Simon Biyong",
+    "gender": "male"
   },
   {
     "id": 3107,
-    "name": "Alexander Munoz"
+    "name": "Alexander Munoz",
+    "gender": "male"
   },
   {
     "id": 3108,
-    "name": "Nicdali Rivera-Calanoc"
+    "name": "Nicdali Rivera-Calanoc",
+    "gender": "male"
   },
   {
     "id": 3109,
-    "name": "Stephanie Frausto"
+    "name": "Stephanie Frausto",
+    "gender": "male"
   },
   {
     "id": 3110,
-    "name": "Rocky Long"
+    "name": "Rocky Long",
+    "gender": "male"
   },
   {
     "id": 3111,
-    "name": "Chris Avila"
+    "name": "Chris Avila",
+    "gender": "male"
   },
   {
     "id": 3112,
-    "name": "Keenan Raymond"
+    "name": "Keenan Raymond",
+    "gender": "male"
   },
   {
     "id": 3113,
-    "name": "Fabricio Guerreiro"
+    "name": "Fabricio Guerreiro",
+    "gender": "male"
   },
   {
     "id": 3114,
-    "name": "Viktoriia Dudakova"
+    "name": "Viktoriia Dudakova",
+    "gender": "male"
   },
   {
     "id": 3115,
-    "name": "Hiroyuki Abe"
+    "name": "Hiroyuki Abe",
+    "gender": "male"
   },
   {
     "id": 3116,
-    "name": "Alexandre Barros"
+    "name": "Alexandre Barros",
+    "gender": "male"
   },
   {
     "id": 3117,
-    "name": "Billy Miles"
+    "name": "Billy Miles",
+    "gender": "male"
   },
   {
     "id": 3118,
-    "name": "Frank Megallon"
+    "name": "Frank Megallon",
+    "gender": "male"
   },
   {
     "id": 3119,
-    "name": "Shimon Smotritsky"
+    "name": "Shimon Smotritsky",
+    "gender": "male"
   },
   {
     "id": 3120,
-    "name": "Lukasz Sajewski"
+    "name": "Lukasz Sajewski",
+    "gender": "male"
   },
   {
     "id": 3121,
-    "name": "Pat Audinwood"
+    "name": "Pat Audinwood",
+    "gender": "male"
   },
   {
     "id": 3122,
-    "name": "Bobby Sanchez"
+    "name": "Bobby Sanchez",
+    "gender": "male"
   },
   {
     "id": 3123,
-    "name": "Luis Gomez"
+    "name": "Luis Gomez",
+    "gender": "male"
   },
   {
     "id": 3124,
-    "name": "Sean Wilson"
+    "name": "Sean Wilson",
+    "gender": "male"
   },
   {
     "id": 3125,
-    "name": "Roman Kopylov"
+    "name": "Roman Kopylov",
+    "gender": "male"
   },
   {
     "id": 3126,
-    "name": "Marcin Wrzosek"
+    "name": "Marcin Wrzosek",
+    "gender": "male"
   },
   {
     "id": 3127,
-    "name": "Marlon Sims"
+    "name": "Marlon Sims",
+    "gender": "male"
   },
   {
     "id": 3128,
-    "name": "Kathryn Paprocki"
+    "name": "Kathryn Paprocki",
+    "gender": "male"
   },
   {
     "id": 3129,
-    "name": "Michael Page"
+    "name": "Michael Page",
+    "gender": "male"
   },
   {
     "id": 3130,
-    "name": "Ramon Taveras"
+    "name": "Ramon Taveras",
+    "gender": "male"
   },
   {
     "id": 3131,
-    "name": "Carlo Pedersoli Jr."
+    "name": "Carlo Pedersoli Jr.",
+    "gender": "male"
   },
   {
     "id": 3132,
-    "name": "Matt Dixon"
+    "name": "Matt Dixon",
+    "gender": "male"
   },
   {
     "id": 3133,
-    "name": "Nursulton Ruziboev"
+    "name": "Nursulton Ruziboev",
+    "gender": "male"
   },
   {
     "id": 3134,
-    "name": "Talita Nogueira"
+    "name": "Talita Nogueira",
+    "gender": "male"
   },
   {
     "id": 3135,
-    "name": "Ketlen Souza"
+    "name": "Ketlen Souza",
+    "gender": "female"
   },
   {
     "id": 3136,
-    "name": "Isao Kobayashi"
+    "name": "Isao Kobayashi",
+    "gender": "male"
   },
   {
     "id": 3137,
-    "name": "Dakota Bush"
+    "name": "Dakota Bush",
+    "gender": "male"
   },
   {
     "id": 3138,
-    "name": "Steven Graham"
+    "name": "Steven Graham",
+    "gender": "male"
   },
   {
     "id": 3139,
-    "name": "Mizuki"
+    "name": "Mizuki",
+    "gender": "male"
   },
   {
     "id": 3140,
-    "name": "Justin McCully"
+    "name": "Justin McCully",
+    "gender": "male"
   },
   {
     "id": 3141,
-    "name": "Jose Alday"
+    "name": "Jose Alday",
+    "gender": "male"
   },
   {
     "id": 3142,
-    "name": "Gerard Gordeau"
+    "name": "Gerard Gordeau",
+    "gender": "male"
   },
   {
     "id": 3143,
-    "name": "Josh Shockman"
+    "name": "Josh Shockman",
+    "gender": "male"
   },
   {
     "id": 3144,
-    "name": "Rhys McKee"
+    "name": "Rhys McKee",
+    "gender": "male"
   },
   {
     "id": 3145,
-    "name": "Carter Williams"
+    "name": "Carter Williams",
+    "gender": "male"
   },
   {
     "id": 3146,
-    "name": "Javy Ayala"
+    "name": "Javy Ayala",
+    "gender": "male"
   },
   {
     "id": 3147,
-    "name": "Augusto Sakai"
+    "name": "Augusto Sakai",
+    "gender": "male"
   },
   {
     "id": 3148,
-    "name": "Jeff Cox"
+    "name": "Jeff Cox",
+    "gender": "male"
   },
   {
     "id": 3149,
-    "name": "Jason Suttie"
+    "name": "Jason Suttie",
+    "gender": "male"
   },
   {
     "id": 3150,
-    "name": "Collin Anglin"
+    "name": "Collin Anglin",
+    "gender": "male"
   },
   {
     "id": 3151,
-    "name": "Denis Sobolev"
+    "name": "Denis Sobolev",
+    "gender": "male"
   },
   {
     "id": 3152,
-    "name": "Jin Oh Kim"
+    "name": "Jin Oh Kim",
+    "gender": "male"
   },
   {
     "id": 3153,
-    "name": "Adli Edwards"
+    "name": "Adli Edwards",
+    "gender": "male"
   },
   {
     "id": 3154,
-    "name": "Joshua Wang-Kim"
+    "name": "Joshua Wang-Kim",
+    "gender": "male"
   },
   {
     "id": 3155,
-    "name": "Elisha Helsper"
+    "name": "Elisha Helsper",
+    "gender": "male"
   },
   {
     "id": 3156,
-    "name": "Ryan Parker"
+    "name": "Ryan Parker",
+    "gender": "male"
   },
   {
     "id": 3157,
-    "name": "Billy Goff"
+    "name": "Billy Goff",
+    "gender": "male"
   },
   {
     "id": 3158,
-    "name": "Lu Zhengyong"
+    "name": "Lu Zhengyong",
+    "gender": "male"
   },
   {
     "id": 3159,
-    "name": "Jean Silva"
+    "name": "Jean Silva",
+    "gender": "male"
   },
   {
     "id": 3160,
-    "name": "Wes Shivers"
+    "name": "Wes Shivers",
+    "gender": "male"
   },
   {
     "id": 3161,
-    "name": "Brandon Lewis"
+    "name": "Brandon Lewis",
+    "gender": "male"
   },
   {
     "id": 3162,
-    "name": "Josh Paiva"
+    "name": "Josh Paiva",
+    "gender": "male"
   },
   {
     "id": 3163,
-    "name": "Issac DeJesus"
+    "name": "Issac DeJesus",
+    "gender": "male"
   },
   {
     "id": 3164,
-    "name": "Filip Pejic"
+    "name": "Filip Pejic",
+    "gender": "male"
   },
   {
     "id": 3165,
-    "name": "Alex Reyes"
+    "name": "Alex Reyes",
+    "gender": "male"
   },
   {
     "id": 3166,
-    "name": "Mark Eddiva"
+    "name": "Mark Eddiva",
+    "gender": "male"
   },
   {
     "id": 3167,
-    "name": "Murad Chunkaiev"
+    "name": "Murad Chunkaiev",
+    "gender": "male"
   },
   {
     "id": 3168,
-    "name": "Gilbert Aldana"
+    "name": "Gilbert Aldana",
+    "gender": "male"
   },
   {
     "id": 3169,
-    "name": "Kelly Faszholz"
+    "name": "Kelly Faszholz",
+    "gender": "male"
   },
   {
     "id": 3170,
-    "name": "Ryan Bastianelli"
+    "name": "Ryan Bastianelli",
+    "gender": "male"
   },
   {
     "id": 3171,
-    "name": "Jinensibieke Asikeerbai"
+    "name": "Jinensibieke Asikeerbai",
+    "gender": "male"
   },
   {
     "id": 3172,
-    "name": "Nurullo Aliev"
+    "name": "Nurullo Aliev",
+    "gender": "male"
   },
   {
     "id": 3173,
-    "name": "Danny Davis"
+    "name": "Danny Davis",
+    "gender": "male"
   },
   {
     "id": 3174,
-    "name": "Shin Haraguchi"
+    "name": "Shin Haraguchi",
+    "gender": "male"
   },
   {
     "id": 3175,
-    "name": "John Matua"
+    "name": "John Matua",
+    "gender": "male"
   },
   {
     "id": 3176,
-    "name": "Reza Nasri"
+    "name": "Reza Nasri",
+    "gender": "male"
   },
   {
     "id": 3177,
-    "name": "Aaron Trujillo"
+    "name": "Aaron Trujillo",
+    "gender": "male"
   },
   {
     "id": 3178,
-    "name": "Atsushi Yamamoto"
+    "name": "Atsushi Yamamoto",
+    "gender": "male"
   },
   {
     "id": 3179,
-    "name": "Akira Kikuchi"
+    "name": "Akira Kikuchi",
+    "gender": "male"
   },
   {
     "id": 3180,
-    "name": "Marcelo Brito"
+    "name": "Marcelo Brito",
+    "gender": "male"
   },
   {
     "id": 3181,
-    "name": "Reese Andy"
+    "name": "Reese Andy",
+    "gender": "male"
   },
   {
     "id": 3182,
-    "name": "Fredy Serrano"
+    "name": "Fredy Serrano",
+    "gender": "male"
   },
   {
     "id": 3183,
-    "name": "Daniel Gallemore"
+    "name": "Daniel Gallemore",
+    "gender": "male"
   },
   {
     "id": 3184,
-    "name": "Gilbert Jimenez"
+    "name": "Gilbert Jimenez",
+    "gender": "male"
   },
   {
     "id": 3185,
-    "name": "Alexander Poppeck"
+    "name": "Alexander Poppeck",
+    "gender": "male"
   },
   {
     "id": 3186,
-    "name": "Dillon Smith"
+    "name": "Dillon Smith",
+    "gender": "male"
   },
   {
     "id": 3187,
-    "name": "Cesar Almeida"
+    "name": "Cesar Almeida",
+    "gender": "male"
   },
   {
     "id": 3188,
-    "name": "Hugo Cunha"
+    "name": "Hugo Cunha",
+    "gender": "male"
   },
   {
     "id": 3189,
-    "name": "Jason McLean"
+    "name": "Jason McLean",
+    "gender": "male"
   },
   {
     "id": 3190,
-    "name": "Laverne Clark"
+    "name": "Laverne Clark",
+    "gender": "male"
   },
   {
     "id": 3191,
-    "name": "Adrienna Jenkins"
+    "name": "Adrienna Jenkins",
+    "gender": "male"
   },
   {
     "id": 3192,
-    "name": "Val Woodburn"
+    "name": "Val Woodburn",
+    "gender": "male"
   },
   {
     "id": 3193,
-    "name": "David Lee"
+    "name": "David Lee",
+    "gender": "male"
   },
   {
     "id": 3194,
-    "name": "Fabio Mello"
+    "name": "Fabio Mello",
+    "gender": "male"
   },
   {
     "id": 3195,
-    "name": "Rosi Sexton"
+    "name": "Rosi Sexton",
+    "gender": "male"
   },
   {
     "id": 3196,
-    "name": "Claudio Ribeiro"
+    "name": "Claudio Ribeiro",
+    "gender": "male"
   },
   {
     "id": 3197,
-    "name": "Dave Rickels"
+    "name": "Dave Rickels",
+    "gender": "male"
   },
   {
     "id": 3198,
-    "name": "Ben Reiter"
+    "name": "Ben Reiter",
+    "gender": "male"
   },
   {
     "id": 3199,
-    "name": "Ryan Madigan"
+    "name": "Ryan Madigan",
+    "gender": "male"
   },
   {
     "id": 3200,
-    "name": "Joey Roberts"
+    "name": "Joey Roberts",
+    "gender": "male"
   },
   {
     "id": 3201,
-    "name": "Felix Lee Mitchell"
+    "name": "Felix Lee Mitchell",
+    "gender": "male"
   },
   {
     "id": 3202,
-    "name": "Richie Smullen"
+    "name": "Richie Smullen",
+    "gender": "male"
   },
   {
     "id": 3203,
-    "name": "Alberta Cerra Leon"
+    "name": "Alberta Cerra Leon",
+    "gender": "male"
   },
   {
     "id": 3204,
-    "name": "Andrew Todhunter"
+    "name": "Andrew Todhunter",
+    "gender": "male"
   },
   {
     "id": 3205,
-    "name": "Horacio Gutierrez"
+    "name": "Horacio Gutierrez",
+    "gender": "male"
   },
   {
     "id": 3206,
-    "name": "Kolton Englund"
+    "name": "Kolton Englund",
+    "gender": "male"
   },
   {
     "id": 3207,
-    "name": "Wagner Silva"
+    "name": "Wagner Silva",
+    "gender": "male"
   },
   {
     "id": 3208,
-    "name": "Kevin Knabjian"
+    "name": "Kevin Knabjian",
+    "gender": "male"
   },
   {
     "id": 3209,
-    "name": "Alonzo Martinez"
+    "name": "Alonzo Martinez",
+    "gender": "male"
   },
   {
     "id": 3210,
-    "name": "Taiyilake Nueraji"
+    "name": "Taiyilake Nueraji",
+    "gender": "male"
   },
   {
     "id": 3211,
-    "name": "Jorge Ortiz"
+    "name": "Jorge Ortiz",
+    "gender": "male"
   },
   {
     "id": 3212,
-    "name": "Mark Madsen"
+    "name": "Mark Madsen",
+    "gender": "male"
   },
   {
     "id": 3213,
-    "name": "Ahmad Hassanzada"
+    "name": "Ahmad Hassanzada",
+    "gender": "male"
   },
   {
     "id": 3214,
-    "name": "Josh San Diego"
+    "name": "Josh San Diego",
+    "gender": "male"
   },
   {
     "id": 3215,
-    "name": "Eric Galvan"
+    "name": "Eric Galvan",
+    "gender": "male"
   },
   {
     "id": 3216,
-    "name": "Rafael Fiziev"
+    "name": "Rafael Fiziev",
+    "gender": "male"
   },
   {
     "id": 3217,
-    "name": "Matt Pedro"
+    "name": "Matt Pedro",
+    "gender": "male"
   },
   {
     "id": 3218,
-    "name": "JJ Okanovich"
+    "name": "JJ Okanovich",
+    "gender": "male"
   },
   {
     "id": 3219,
-    "name": "Abu Azaitar"
+    "name": "Abu Azaitar",
+    "gender": "male"
   },
   {
     "id": 3220,
-    "name": "Ariel Gandulla"
+    "name": "Ariel Gandulla",
+    "gender": "male"
   },
   {
     "id": 3221,
-    "name": "Brandon Polcare"
+    "name": "Brandon Polcare",
+    "gender": "male"
   },
   {
     "id": 3222,
-    "name": "Dave Courchaine"
+    "name": "Dave Courchaine",
+    "gender": "male"
   },
   {
     "id": 3223,
-    "name": "Johnny Rhodes"
+    "name": "Johnny Rhodes",
+    "gender": "male"
   },
   {
     "id": 3224,
-    "name": "Pat Benson"
+    "name": "Pat Benson",
+    "gender": "male"
   },
   {
     "id": 3225,
-    "name": "Vitaly Minakov"
+    "name": "Vitaly Minakov",
+    "gender": "male"
   },
   {
     "id": 3226,
-    "name": "Byron Bloodworth"
+    "name": "Byron Bloodworth",
+    "gender": "male"
   },
   {
     "id": 3227,
-    "name": "Cameron VanCamp"
+    "name": "Cameron VanCamp",
+    "gender": "male"
   },
   {
     "id": 3228,
-    "name": "Ronald Carillo"
+    "name": "Ronald Carillo",
+    "gender": "male"
   },
   {
     "id": 3229,
-    "name": "Steve White"
+    "name": "Steve White",
+    "gender": "male"
   },
   {
     "id": 3230,
-    "name": "Stephen Ledbetter"
+    "name": "Stephen Ledbetter",
+    "gender": "male"
   },
   {
     "id": 3231,
-    "name": "Kengo Watanabe"
+    "name": "Kengo Watanabe",
+    "gender": "male"
   },
   {
     "id": 3232,
-    "name": "Augusto Mendes"
+    "name": "Augusto Mendes",
+    "gender": "male"
   },
   {
     "id": 3233,
-    "name": "Josh McDonald"
+    "name": "Josh McDonald",
+    "gender": "male"
   },
   {
     "id": 3234,
-    "name": "Ike Villanueva"
+    "name": "Ike Villanueva",
+    "gender": "male"
   },
   {
     "id": 3235,
-    "name": "Kenji Arai"
+    "name": "Kenji Arai",
+    "gender": "male"
   },
   {
     "id": 3236,
-    "name": "Felipe Pena"
+    "name": "Felipe Pena",
+    "gender": "male"
   },
   {
     "id": 3237,
-    "name": "Waachiim Spiritwolf"
+    "name": "Waachiim Spiritwolf",
+    "gender": "male"
   },
   {
     "id": 3238,
-    "name": "Norman Parke"
+    "name": "Norman Parke",
+    "gender": "male"
   },
   {
     "id": 3239,
-    "name": "Alan Baudot"
+    "name": "Alan Baudot",
+    "gender": "male"
   },
   {
     "id": 3240,
-    "name": "Guilherme Viana"
+    "name": "Guilherme Viana",
+    "gender": "male"
   },
   {
     "id": 3241,
-    "name": "Manuel Gaxhja"
+    "name": "Manuel Gaxhja",
+    "gender": "male"
   },
   {
     "id": 3242,
-    "name": "Jairzinho Rozenstruik"
+    "name": "Jairzinho Rozenstruik",
+    "gender": "male"
   },
   {
     "id": 3243,
-    "name": "Tanner Boser"
+    "name": "Tanner Boser",
+    "gender": "male"
   },
   {
     "id": 3244,
-    "name": "Eldari Kurtanidze"
+    "name": "Eldari Kurtanidze",
+    "gender": "male"
   },
   {
     "id": 3245,
-    "name": "Jesus Pinedo"
+    "name": "Jesus Pinedo",
+    "gender": "male"
   },
   {
     "id": 3246,
-    "name": "Mitch Raposo"
+    "name": "Mitch Raposo",
+    "gender": "male"
   },
   {
     "id": 3247,
-    "name": "Gary Frazier"
+    "name": "Gary Frazier",
+    "gender": "male"
   },
   {
     "id": 3248,
-    "name": "Francois Botha"
+    "name": "Francois Botha",
+    "gender": "male"
   },
   {
     "id": 3249,
-    "name": "Todd Butler"
+    "name": "Todd Butler",
+    "gender": "male"
   },
   {
     "id": 3250,
-    "name": "Kelly Kobold"
+    "name": "Kelly Kobold",
+    "gender": "male"
   },
   {
     "id": 3251,
-    "name": "John Lewis"
+    "name": "John Lewis",
+    "gender": "male"
   },
   {
     "id": 3252,
-    "name": "Andrew Ramm"
+    "name": "Andrew Ramm",
+    "gender": "male"
   },
   {
     "id": 3253,
-    "name": "Ruben Villareal"
+    "name": "Ruben Villareal",
+    "gender": "male"
   },
   {
     "id": 3254,
-    "name": "Doug Kay"
+    "name": "Doug Kay",
+    "gender": "male"
   },
   {
     "id": 3255,
-    "name": "David Smith"
+    "name": "David Smith",
+    "gender": "male"
   },
   {
     "id": 3256,
-    "name": "Micheal Gillmore"
+    "name": "Micheal Gillmore",
+    "gender": "male"
   },
   {
     "id": 3257,
-    "name": "Fabio Cherant"
+    "name": "Fabio Cherant",
+    "gender": "male"
   },
   {
     "id": 3258,
-    "name": "Mayana Kellem"
+    "name": "Mayana Kellem",
+    "gender": "male"
   },
   {
     "id": 3259,
-    "name": "Puja Tomar"
+    "name": "Puja Tomar",
+    "gender": "male"
   },
   {
     "id": 3260,
-    "name": "Elvis Mutapcic"
+    "name": "Elvis Mutapcic",
+    "gender": "male"
   },
   {
     "id": 3261,
-    "name": "Alexander Sarnavskiy"
+    "name": "Alexander Sarnavskiy",
+    "gender": "male"
   },
   {
     "id": 3262,
-    "name": "Joe Merritt"
+    "name": "Joe Merritt",
+    "gender": "male"
   },
   {
     "id": 3263,
-    "name": "Aliev Makhmud"
+    "name": "Aliev Makhmud",
+    "gender": "male"
   },
   {
     "id": 3264,
-    "name": "Brad Gumm"
+    "name": "Brad Gumm",
+    "gender": "male"
   },
   {
     "id": 3265,
-    "name": "Adrian Diaz"
+    "name": "Adrian Diaz",
+    "gender": "male"
   },
   {
     "id": 3266,
-    "name": "Feng Pengchao"
+    "name": "Feng Pengchao",
+    "gender": "male"
   },
   {
     "id": 3267,
-    "name": "Jordan Radev"
+    "name": "Jordan Radev",
+    "gender": "male"
   },
   {
     "id": 3268,
-    "name": "Tadao Yasuda"
+    "name": "Tadao Yasuda",
+    "gender": "male"
   },
   {
     "id": 3269,
-    "name": "Young Hwang"
+    "name": "Young Hwang",
+    "gender": "male"
   },
   {
     "id": 3270,
-    "name": "Xue Do Won"
+    "name": "Xue Do Won",
+    "gender": "male"
   },
   {
     "id": 3271,
-    "name": "Drew Pendleton"
+    "name": "Drew Pendleton",
+    "gender": "male"
   },
   {
     "id": 3272,
-    "name": "Matt Andersen"
+    "name": "Matt Andersen",
+    "gender": "male"
   },
   {
     "id": 3273,
-    "name": "Estefani Almeida"
+    "name": "Estefani Almeida",
+    "gender": "male"
   },
   {
     "id": 3274,
-    "name": "Thomas Campbell"
+    "name": "Thomas Campbell",
+    "gender": "male"
   },
   {
     "id": 3275,
-    "name": "Kevin Roddy"
+    "name": "Kevin Roddy",
+    "gender": "male"
   },
   {
     "id": 3276,
-    "name": "David Avellan"
+    "name": "David Avellan",
+    "gender": "male"
   },
   {
     "id": 3277,
-    "name": "Ashkan Mokhtarian"
+    "name": "Ashkan Mokhtarian",
+    "gender": "male"
   },
   {
     "id": 3278,
-    "name": "Koyomi Matsushima"
+    "name": "Koyomi Matsushima",
+    "gender": "male"
   },
   {
     "id": 3279,
-    "name": "Marco Ruas"
+    "name": "Marco Ruas",
+    "gender": "male"
   },
   {
     "id": 3280,
-    "name": "Brett Rogers"
+    "name": "Brett Rogers",
+    "gender": "male"
   },
   {
     "id": 3281,
-    "name": "Brianna Fortino"
+    "name": "Brianna Fortino",
+    "gender": "male"
   },
   {
     "id": 3282,
-    "name": "Devin Cole"
+    "name": "Devin Cole",
+    "gender": "male"
   },
   {
     "id": 3283,
-    "name": "Ryan Stonitsch"
+    "name": "Ryan Stonitsch",
+    "gender": "male"
   },
   {
     "id": 3284,
-    "name": "Rodney Faverus"
+    "name": "Rodney Faverus",
+    "gender": "male"
   },
   {
     "id": 3285,
-    "name": "James Mulheron"
+    "name": "James Mulheron",
+    "gender": "male"
   },
   {
     "id": 3286,
-    "name": "Jonny Carson"
+    "name": "Jonny Carson",
+    "gender": "male"
   },
   {
     "id": 3287,
-    "name": "Nick Hein"
+    "name": "Nick Hein",
+    "gender": "male"
   },
   {
     "id": 3288,
-    "name": "Adam Hunter"
+    "name": "Adam Hunter",
+    "gender": "male"
   },
   {
     "id": 3289,
-    "name": "Mark Cherico"
+    "name": "Mark Cherico",
+    "gender": "male"
   },
   {
     "id": 3290,
-    "name": "Nick Nolte"
+    "name": "Nick Nolte",
+    "gender": "male"
   },
   {
     "id": 3291,
-    "name": "Kyu Sung Kim"
+    "name": "Kyu Sung Kim",
+    "gender": "male"
   },
   {
     "id": 3292,
-    "name": "Gleristone Santos"
+    "name": "Gleristone Santos",
+    "gender": "male"
   },
   {
     "id": 3293,
-    "name": "Emily Ducote"
+    "name": "Emily Ducote",
+    "gender": "male"
   },
   {
     "id": 3294,
-    "name": "Andy Waters"
+    "name": "Andy Waters",
+    "gender": "male"
   },
   {
     "id": 3295,
-    "name": "Jason Gilliam"
+    "name": "Jason Gilliam",
+    "gender": "male"
   },
   {
     "id": 3296,
-    "name": "Johnny Cisneros"
+    "name": "Johnny Cisneros",
+    "gender": "male"
   },
   {
     "id": 3297,
-    "name": "Art Jimmerson"
+    "name": "Art Jimmerson",
+    "gender": "male"
   },
   {
     "id": 3298,
-    "name": "Justin Hawes"
+    "name": "Justin Hawes",
+    "gender": "male"
   },
   {
     "id": 3299,
-    "name": "Art Santore"
+    "name": "Art Santore",
+    "gender": "male"
   },
   {
     "id": 3300,
-    "name": "Charlie Ward"
+    "name": "Charlie Ward",
+    "gender": "male"
   },
   {
     "id": 3301,
-    "name": "Jianping Yang"
+    "name": "Jianping Yang",
+    "gender": "male"
   },
   {
     "id": 3302,
-    "name": "Tony Halme"
+    "name": "Tony Halme",
+    "gender": "male"
   },
   {
     "id": 3303,
-    "name": "Clint Hester"
+    "name": "Clint Hester",
+    "gender": "male"
   },
   {
     "id": 3304,
-    "name": "Bas Rutten"
+    "name": "Bas Rutten",
+    "gender": "male"
   },
   {
     "id": 3305,
-    "name": "Frank Camacho"
+    "name": "Frank Camacho",
+    "gender": "male"
   },
   {
     "id": 3306,
-    "name": "Sheymon Moraes"
+    "name": "Sheymon Moraes",
+    "gender": "male"
   },
   {
     "id": 3307,
-    "name": "Ian McCall"
+    "name": "Ian McCall",
+    "gender": "male"
   },
   {
     "id": 3308,
-    "name": "Jonathan Wilson"
+    "name": "Jonathan Wilson",
+    "gender": "male"
   },
   {
     "id": 3309,
-    "name": "Julio Cesar Neves Jr."
+    "name": "Julio Cesar Neves Jr.",
+    "gender": "male"
   },
   {
     "id": 3310,
-    "name": "Hisaki Kato"
+    "name": "Hisaki Kato",
+    "gender": "male"
   },
   {
     "id": 3311,
-    "name": "Karol Rosa"
+    "name": "Karol Rosa",
+    "gender": "male"
   },
   {
     "id": 3312,
-    "name": "Bao Quach"
+    "name": "Bao Quach",
+    "gender": "male"
   },
   {
     "id": 3313,
-    "name": "Alex Soto"
+    "name": "Alex Soto",
+    "gender": "male"
   },
   {
     "id": 3314,
-    "name": "Richie Hightower"
+    "name": "Richie Hightower",
+    "gender": "male"
   },
   {
     "id": 3315,
-    "name": "Chris Hawk"
+    "name": "Chris Hawk",
+    "gender": "male"
   },
   {
     "id": 3316,
-    "name": "Fabio Aguiar"
+    "name": "Fabio Aguiar",
+    "gender": "male"
   },
   {
     "id": 3317,
-    "name": "Salvador Woods"
+    "name": "Salvador Woods",
+    "gender": "male"
   },
   {
     "id": 3318,
-    "name": "Terrence Mitchell"
+    "name": "Terrence Mitchell",
+    "gender": "male"
   },
   {
     "id": 3319,
-    "name": "Thomas Paull"
+    "name": "Thomas Paull",
+    "gender": "male"
   },
   {
     "id": 3320,
-    "name": "Paulo Costa"
+    "name": "Paulo Costa",
+    "gender": "male"
   },
   {
     "id": 3321,
-    "name": "Josh Bryant"
+    "name": "Josh Bryant",
+    "gender": "male"
   },
   {
     "id": 3322,
-    "name": "Ravena Oliveira"
+    "name": "Ravena Oliveira",
+    "gender": "male"
   },
   {
     "id": 3323,
-    "name": "Ed Ratcliff"
+    "name": "Ed Ratcliff",
+    "gender": "male"
   },
   {
     "id": 3324,
-    "name": "Maheshate"
+    "name": "Maheshate",
+    "gender": "male"
   },
   {
     "id": 3325,
-    "name": "Luke Jumeau"
+    "name": "Luke Jumeau",
+    "gender": "male"
   },
   {
     "id": 3326,
-    "name": "Stephanie Webber"
+    "name": "Stephanie Webber",
+    "gender": "male"
   },
   {
     "id": 3327,
-    "name": "Bob Cook"
+    "name": "Bob Cook",
+    "gender": "male"
   },
   {
     "id": 3328,
-    "name": "Alex Enlund"
+    "name": "Alex Enlund",
+    "gender": "male"
   },
   {
     "id": 3329,
-    "name": "Dariya Zheleznykova"
+    "name": "Dariya Zheleznykova",
+    "gender": "male"
   },
   {
     "id": 3330,
-    "name": "Davi Bittencourt"
+    "name": "Davi Bittencourt",
+    "gender": "male"
   },
   {
     "id": 3331,
-    "name": "Francimar Barroso"
+    "name": "Francimar Barroso",
+    "gender": "male"
   },
   {
     "id": 3332,
-    "name": "Abubakar Nurmagomedov"
+    "name": "Abubakar Nurmagomedov",
+    "gender": "male"
   },
   {
     "id": 3333,
-    "name": "Kerry Schall"
+    "name": "Kerry Schall",
+    "gender": "male"
   },
   {
     "id": 3334,
-    "name": "Eddie Ruiz"
+    "name": "Eddie Ruiz",
+    "gender": "male"
   },
   {
     "id": 3335,
-    "name": "Raul Sandoval"
+    "name": "Raul Sandoval",
+    "gender": "male"
   },
   {
     "id": 3336,
-    "name": "Justin Gaethje"
+    "name": "Justin Gaethje",
+    "gender": "male"
   },
   {
     "id": 3337,
-    "name": "Daniel Acacio"
+    "name": "Daniel Acacio",
+    "gender": "male"
   },
   {
     "id": 3338,
-    "name": "Greg Rebello"
+    "name": "Greg Rebello",
+    "gender": "male"
   },
   {
     "id": 3339,
-    "name": "Andrey Koreshkov"
+    "name": "Andrey Koreshkov",
+    "gender": "male"
   },
   {
     "id": 3340,
-    "name": "Erik Silva"
+    "name": "Erik Silva",
+    "gender": "male"
   },
   {
     "id": 3341,
-    "name": "Geza Kalman"
+    "name": "Geza Kalman",
+    "gender": "male"
   },
   {
     "id": 3342,
-    "name": "Sean Gannon"
+    "name": "Sean Gannon",
+    "gender": "male"
   },
   {
     "id": 3343,
-    "name": "Dustin Moore"
+    "name": "Dustin Moore",
+    "gender": "male"
   },
   {
     "id": 3344,
-    "name": "Cesar Marscucci"
+    "name": "Cesar Marscucci",
+    "gender": "male"
   },
   {
     "id": 3345,
-    "name": "Wayne Phillips"
+    "name": "Wayne Phillips",
+    "gender": "male"
   },
   {
     "id": 3346,
-    "name": "Jennifer Gonzalez"
+    "name": "Jennifer Gonzalez",
+    "gender": "male"
   },
   {
     "id": 3347,
-    "name": "Ryan MacDonald"
+    "name": "Ryan MacDonald",
+    "gender": "male"
   },
   {
     "id": 3348,
-    "name": "Izabela Badurek"
+    "name": "Izabela Badurek",
+    "gender": "male"
   },
   {
     "id": 3349,
-    "name": "Alavutdin Gadjiev"
+    "name": "Alavutdin Gadjiev",
+    "gender": "male"
   },
   {
     "id": 3350,
-    "name": "Zviad Lazishvili"
+    "name": "Zviad Lazishvili",
+    "gender": "male"
   },
   {
     "id": 3351,
-    "name": "Scott McAfee"
+    "name": "Scott McAfee",
+    "gender": "male"
   },
   {
     "id": 3352,
-    "name": "Cameron Smotherman"
+    "name": "Cameron Smotherman",
+    "gender": "male"
   },
   {
     "id": 3353,
-    "name": "Rafael Carvalho"
+    "name": "Rafael Carvalho",
+    "gender": "male"
   },
   {
     "id": 3354,
-    "name": "Chris Hofmann"
+    "name": "Chris Hofmann",
+    "gender": "male"
   },
   {
     "id": 3355,
-    "name": "Jaimelene Nievera"
+    "name": "Jaimelene Nievera",
+    "gender": "male"
   },
   {
     "id": 3356,
-    "name": "Brandon Magana"
+    "name": "Brandon Magana",
+    "gender": "male"
   },
   {
     "id": 3357,
-    "name": "Jaime Alvarez"
+    "name": "Jaime Alvarez",
+    "gender": "male"
   },
   {
     "id": 3358,
-    "name": "Emanuel Newton"
+    "name": "Emanuel Newton",
+    "gender": "male"
   },
   {
     "id": 3359,
-    "name": "Gary Mangat"
+    "name": "Gary Mangat",
+    "gender": "male"
   },
   {
     "id": 3360,
-    "name": "Steve Kozola"
+    "name": "Steve Kozola",
+    "gender": "male"
   },
   {
     "id": 3361,
-    "name": "Shonte Barnes"
+    "name": "Shonte Barnes",
+    "gender": "male"
   },
   {
     "id": 3362,
-    "name": "Jesse Juarez"
+    "name": "Jesse Juarez",
+    "gender": "male"
   },
   {
     "id": 3363,
-    "name": "Brendon Marotte"
+    "name": "Brendon Marotte",
+    "gender": "male"
   },
   {
     "id": 3364,
-    "name": "Yuji Nagata"
+    "name": "Yuji Nagata",
+    "gender": "male"
   },
   {
     "id": 3365,
-    "name": "Alton Cunningham"
+    "name": "Alton Cunningham",
+    "gender": "male"
   },
   {
     "id": 3366,
-    "name": "Nikolay Veretennikov"
+    "name": "Nikolay Veretennikov",
+    "gender": "male"
   },
   {
     "id": 3367,
-    "name": "Chad Johnson"
+    "name": "Chad Johnson",
+    "gender": "male"
   },
   {
     "id": 3368,
-    "name": "Marcus Brimage"
+    "name": "Marcus Brimage",
+    "gender": "male"
   },
   {
     "id": 3369,
-    "name": "Jared Papazian"
+    "name": "Jared Papazian",
+    "gender": "male"
   },
   {
     "id": 3370,
-    "name": "Matheus Scheffel"
+    "name": "Matheus Scheffel",
+    "gender": "male"
   },
   {
     "id": 3371,
-    "name": "Scott Bessac"
+    "name": "Scott Bessac",
+    "gender": "male"
   },
   {
     "id": 3372,
-    "name": "Yuki Ishikawa"
+    "name": "Yuki Ishikawa",
+    "gender": "male"
   },
   {
     "id": 3373,
-    "name": "Julie Kedzie"
+    "name": "Julie Kedzie",
+    "gender": "male"
   },
   {
     "id": 3374,
-    "name": "Dennis Dombrow"
+    "name": "Dennis Dombrow",
+    "gender": "male"
   },
   {
     "id": 3375,
-    "name": "Tulio Palhares"
+    "name": "Tulio Palhares",
+    "gender": "male"
   },
   {
     "id": 3376,
-    "name": "Peter Petties"
+    "name": "Peter Petties",
+    "gender": "male"
   },
   {
     "id": 3377,
-    "name": "Jake Hecht"
+    "name": "Jake Hecht",
+    "gender": "male"
   },
   {
     "id": 3378,
-    "name": "Bobby Stack"
+    "name": "Bobby Stack",
+    "gender": "male"
   },
   {
     "id": 3379,
-    "name": "Henrique Shiguemoto"
+    "name": "Henrique Shiguemoto",
+    "gender": "male"
   },
   {
     "id": 3380,
-    "name": "Eun Soo Lee"
+    "name": "Eun Soo Lee",
+    "gender": "male"
   },
   {
     "id": 3381,
-    "name": "Bristol Marunde"
+    "name": "Bristol Marunde",
+    "gender": "male"
   },
   {
     "id": 3382,
-    "name": "Ivan Shtyrkov"
+    "name": "Ivan Shtyrkov",
+    "gender": "male"
   },
   {
     "id": 3383,
-    "name": "Emilio Chavez"
+    "name": "Emilio Chavez",
+    "gender": "male"
   },
   {
     "id": 3384,
-    "name": "Edward Faaloloto"
+    "name": "Edward Faaloloto",
+    "gender": "male"
   },
   {
     "id": 3385,
-    "name": "Brian McLaughlin"
+    "name": "Brian McLaughlin",
+    "gender": "male"
   },
   {
     "id": 3386,
-    "name": "Adam Smith"
+    "name": "Adam Smith",
+    "gender": "male"
   },
   {
     "id": 3387,
-    "name": "Carina Damm"
+    "name": "Carina Damm",
+    "gender": "male"
   },
   {
     "id": 3388,
-    "name": "Minoru Toyonaga"
+    "name": "Minoru Toyonaga",
+    "gender": "male"
   },
   {
     "id": 3389,
-    "name": "Wataru Sakata"
+    "name": "Wataru Sakata",
+    "gender": "male"
   },
   {
     "id": 3390,
-    "name": "Victor Madrigal"
+    "name": "Victor Madrigal",
+    "gender": "male"
   },
   {
     "id": 3391,
-    "name": "Ray Steinbeiss"
+    "name": "Ray Steinbeiss",
+    "gender": "male"
   },
   {
     "id": 3392,
-    "name": "Stipe Miocic"
+    "name": "Stipe Miocic",
+    "gender": "male"
   },
   {
     "id": 3393,
-    "name": "CJ Fernandes"
+    "name": "CJ Fernandes",
+    "gender": "male"
   },
   {
     "id": 3394,
-    "name": "Joe Benoit"
+    "name": "Joe Benoit",
+    "gender": "male"
   },
   {
     "id": 3395,
-    "name": "Ken Cross"
+    "name": "Ken Cross",
+    "gender": "male"
   },
   {
     "id": 3396,
-    "name": "Nordine Taleb"
+    "name": "Nordine Taleb",
+    "gender": "male"
   },
   {
     "id": 3397,
-    "name": "Tomohiko Hashimoto"
+    "name": "Tomohiko Hashimoto",
+    "gender": "male"
   },
   {
     "id": 3398,
-    "name": "Ronald Jhun"
+    "name": "Ronald Jhun",
+    "gender": "male"
   },
   {
     "id": 3399,
-    "name": "Akira Corassani"
+    "name": "Akira Corassani",
+    "gender": "male"
   },
   {
     "id": 3400,
-    "name": "Caros Fodor"
+    "name": "Caros Fodor",
+    "gender": "male"
   },
   {
     "id": 3401,
-    "name": "Pedro Rocha"
+    "name": "Pedro Rocha",
+    "gender": "male"
   },
   {
     "id": 3402,
-    "name": "Mario Piazzon"
+    "name": "Mario Piazzon",
+    "gender": "male"
   },
   {
     "id": 3403,
-    "name": "Besam Yousef"
+    "name": "Besam Yousef",
+    "gender": "male"
   },
   {
     "id": 3404,
-    "name": "Willie Peeters"
+    "name": "Willie Peeters",
+    "gender": "male"
   },
   {
     "id": 3405,
-    "name": "Marco Polo Reyes"
+    "name": "Marco Polo Reyes",
+    "gender": "male"
   },
   {
     "id": 3406,
-    "name": "Oleksandr Doskalchuk"
+    "name": "Oleksandr Doskalchuk",
+    "gender": "male"
   },
   {
     "id": 3407,
-    "name": "Amir Rahnavardi"
+    "name": "Amir Rahnavardi",
+    "gender": "male"
   },
   {
     "id": 3408,
-    "name": "Shonie Carter"
+    "name": "Shonie Carter",
+    "gender": "male"
   },
   {
     "id": 3409,
-    "name": "John Kuhner"
+    "name": "John Kuhner",
+    "gender": "male"
   },
   {
     "id": 3410,
-    "name": "Jack Morrison"
+    "name": "Jack Morrison",
+    "gender": "male"
   },
   {
     "id": 3411,
-    "name": "Carl Toomey"
+    "name": "Carl Toomey",
+    "gender": "male"
   },
   {
     "id": 3412,
-    "name": "Deron Winn"
+    "name": "Deron Winn",
+    "gender": "male"
   },
   {
     "id": 3413,
-    "name": "Hailey Cowan"
+    "name": "Hailey Cowan",
+    "gender": "male"
   },
   {
     "id": 3414,
-    "name": "Chris Bostick"
+    "name": "Chris Bostick",
+    "gender": "male"
   },
   {
     "id": 3415,
-    "name": "Ernie Verdicia"
+    "name": "Ernie Verdicia",
+    "gender": "male"
   },
   {
     "id": 3416,
-    "name": "Paul Rodriguez"
+    "name": "Paul Rodriguez",
+    "gender": "male"
   },
   {
     "id": 3417,
-    "name": "Mal Foki"
+    "name": "Mal Foki",
+    "gender": "male"
   },
   {
     "id": 3418,
-    "name": "Grigory Popov"
+    "name": "Grigory Popov",
+    "gender": "male"
   },
   {
     "id": 3419,
-    "name": "Kevin Vallejos"
+    "name": "Kevin Vallejos",
+    "gender": "male"
   },
   {
     "id": 3420,
-    "name": "Taylor Callens"
+    "name": "Taylor Callens",
+    "gender": "male"
   },
   {
     "id": 3421,
-    "name": "Roger Hollett"
+    "name": "Roger Hollett",
+    "gender": "male"
   },
   {
     "id": 3422,
-    "name": "Eduardo Bustillos"
+    "name": "Eduardo Bustillos",
+    "gender": "male"
   },
   {
     "id": 3423,
-    "name": "So Yul Kim"
+    "name": "So Yul Kim",
+    "gender": "male"
   },
   {
     "id": 3424,
-    "name": "Russell Patrick"
+    "name": "Russell Patrick",
+    "gender": "male"
   },
   {
     "id": 3425,
-    "name": "Thanh Le"
+    "name": "Thanh Le",
+    "gender": "male"
   },
   {
     "id": 3426,
-    "name": "Pedro Otavio"
+    "name": "Pedro Otavio",
+    "gender": "male"
   },
   {
     "id": 3427,
-    "name": "Ricardo Funch"
+    "name": "Ricardo Funch",
+    "gender": "male"
   },
   {
     "id": 3428,
-    "name": "Jesse Moreng"
+    "name": "Jesse Moreng",
+    "gender": "male"
   },
   {
     "id": 3429,
-    "name": "Mikey Burnett"
+    "name": "Mikey Burnett",
+    "gender": "male"
   },
   {
     "id": 3430,
-    "name": "Brandon Gaines"
+    "name": "Brandon Gaines",
+    "gender": "male"
   },
   {
     "id": 3431,
-    "name": "Jesse Bongfeldt"
+    "name": "Jesse Bongfeldt",
+    "gender": "male"
   },
   {
     "id": 3432,
-    "name": "Rongzhu"
+    "name": "Rongzhu",
+    "gender": "male"
   },
   {
     "id": 3433,
-    "name": "Nick Roehrick"
+    "name": "Nick Roehrick",
+    "gender": "male"
   },
   {
     "id": 3434,
-    "name": "Karl Reed"
+    "name": "Karl Reed",
+    "gender": "male"
   },
   {
     "id": 3435,
-    "name": "John Hosman"
+    "name": "John Hosman",
+    "gender": "male"
   },
   {
     "id": 3436,
-    "name": "Takenori Sato"
+    "name": "Takenori Sato",
+    "gender": "male"
   },
   {
     "id": 3437,
-    "name": "Damian Grabowski"
+    "name": "Damian Grabowski",
+    "gender": "male"
   },
   {
     "id": 3438,
-    "name": "Dan Manasoiu"
+    "name": "Dan Manasoiu",
+    "gender": "male"
   },
   {
     "id": 3439,
-    "name": "Shamar Bailey"
+    "name": "Shamar Bailey",
+    "gender": "male"
   },
   {
     "id": 3440,
-    "name": "Francesco Maturi"
+    "name": "Francesco Maturi",
+    "gender": "male"
   },
   {
     "id": 3441,
-    "name": "Pedro Rizzo"
+    "name": "Pedro Rizzo",
+    "gender": "male"
   },
   {
     "id": 3442,
-    "name": "Paul Bradley"
+    "name": "Paul Bradley",
+    "gender": "male"
   },
   {
     "id": 3443,
-    "name": "Nolan Ticman"
+    "name": "Nolan Ticman",
+    "gender": "male"
   },
   {
     "id": 3444,
-    "name": "David Barrios"
+    "name": "David Barrios",
+    "gender": "male"
   },
   {
     "id": 3445,
-    "name": "Justin Salas"
+    "name": "Justin Salas",
+    "gender": "male"
   },
   {
     "id": 3446,
-    "name": "Scott Lighty"
+    "name": "Scott Lighty",
+    "gender": "male"
   },
   {
     "id": 3447,
-    "name": "Hussain Rasouli"
+    "name": "Hussain Rasouli",
+    "gender": "male"
   },
   {
     "id": 3448,
-    "name": "Ericka Almeida"
+    "name": "Ericka Almeida",
+    "gender": "male"
   },
   {
     "id": 3449,
-    "name": "Hiroyuki Takaya"
+    "name": "Hiroyuki Takaya",
+    "gender": "male"
   },
   {
     "id": 3450,
-    "name": "Rico DiSciullo"
+    "name": "Rico DiSciullo",
+    "gender": "male"
   },
   {
     "id": 3451,
-    "name": "Phil Johns"
+    "name": "Phil Johns",
+    "gender": "male"
   },
   {
     "id": 3452,
-    "name": "Chuck O'Neil"
+    "name": "Chuck O'Neil",
+    "gender": "male"
   },
   {
     "id": 3453,
-    "name": "Willie Parks"
+    "name": "Willie Parks",
+    "gender": "male"
   },
   {
     "id": 3454,
-    "name": "Kevin Borjas"
+    "name": "Kevin Borjas",
+    "gender": "male"
   },
   {
     "id": 3455,
-    "name": "Jhonata Silva"
+    "name": "Jhonata Silva",
+    "gender": "male"
   },
   {
     "id": 3456,
-    "name": "Stephen Thompson"
+    "name": "Stephen Thompson",
+    "gender": "male"
   },
   {
     "id": 3457,
-    "name": "Humberto Brown Morrison"
+    "name": "Humberto Brown Morrison",
+    "gender": "male"
   },
   {
     "id": 3458,
-    "name": "Fernando Bettega"
+    "name": "Fernando Bettega",
+    "gender": "male"
   },
   {
     "id": 3459,
-    "name": "Gabriel Salinas-Jones"
+    "name": "Gabriel Salinas-Jones",
+    "gender": "male"
   },
   {
     "id": 3460,
-    "name": "Maurice Eazel"
+    "name": "Maurice Eazel",
+    "gender": "male"
   },
   {
     "id": 3461,
-    "name": "Anthony Romero"
+    "name": "Anthony Romero",
+    "gender": "male"
   },
   {
     "id": 3462,
-    "name": "Bruno Souza"
+    "name": "Bruno Souza",
+    "gender": "male"
   },
   {
     "id": 3463,
-    "name": "Jair Farias"
+    "name": "Jair Farias",
+    "gender": "male"
   },
   {
     "id": 3464,
-    "name": "Scott Adams"
+    "name": "Scott Adams",
+    "gender": "male"
   },
   {
     "id": 3465,
-    "name": "Jared Cannonier"
+    "name": "Jared Cannonier",
+    "gender": "male"
   },
   {
     "id": 3466,
-    "name": "Clay French"
+    "name": "Clay French",
+    "gender": "male"
   },
   {
     "id": 3467,
-    "name": "Antonio Dos Santos"
+    "name": "Antonio Dos Santos",
+    "gender": "male"
   },
   {
     "id": 3468,
-    "name": "Yoko Takahashi"
+    "name": "Yoko Takahashi",
+    "gender": "male"
   },
   {
     "id": 3469,
-    "name": "Charlie Brenneman"
+    "name": "Charlie Brenneman",
+    "gender": "male"
   },
   {
     "id": 3470,
-    "name": "Yurij Kiseliov"
+    "name": "Yurij Kiseliov",
+    "gender": "male"
   },
   {
     "id": 3471,
-    "name": "Ramona Pascual"
+    "name": "Ramona Pascual",
+    "gender": "male"
   },
   {
     "id": 3472,
-    "name": "Marcos da Matta"
+    "name": "Marcos da Matta",
+    "gender": "male"
   },
   {
     "id": 3473,
-    "name": "Mickael Lebout"
+    "name": "Mickael Lebout",
+    "gender": "male"
   },
   {
     "id": 3474,
-    "name": "Joao Roque"
+    "name": "Joao Roque",
+    "gender": "male"
   },
   {
     "id": 3475,
-    "name": "Tony Juarez"
+    "name": "Tony Juarez",
+    "gender": "male"
   },
   {
     "id": 3476,
-    "name": "Chatt Lavender"
+    "name": "Chatt Lavender",
+    "gender": "male"
   },
   {
     "id": 3477,
-    "name": "Andrew Sanchez"
+    "name": "Andrew Sanchez",
+    "gender": "male"
   },
   {
     "id": 3478,
-    "name": "Fiona Muxlow"
+    "name": "Fiona Muxlow",
+    "gender": "male"
   },
   {
     "id": 3479,
-    "name": "Arman Tsarukyan"
+    "name": "Arman Tsarukyan",
+    "gender": "male"
   },
   {
     "id": 3480,
-    "name": "Randy Costa"
+    "name": "Randy Costa",
+    "gender": "male"
   },
   {
     "id": 3481,
-    "name": "Collin Hart"
+    "name": "Collin Hart",
+    "gender": "male"
   },
   {
     "id": 3482,
-    "name": "Rayanne Amanda"
+    "name": "Rayanne Amanda",
+    "gender": "male"
   },
   {
     "id": 3483,
-    "name": "Luciano Azevedo"
+    "name": "Luciano Azevedo",
+    "gender": "male"
   },
   {
     "id": 3484,
-    "name": "Kyle Driscoll"
+    "name": "Kyle Driscoll",
+    "gender": "male"
   },
   {
     "id": 3485,
-    "name": "Jasmine Jasudavicius"
+    "name": "Jasmine Jasudavicius",
+    "gender": "male"
   },
   {
     "id": 3486,
-    "name": "Don Carlo-Clauss"
+    "name": "Don Carlo-Clauss",
+    "gender": "male"
   },
   {
     "id": 3487,
-    "name": "Victor Dias"
+    "name": "Victor Dias",
+    "gender": "male"
   },
   {
     "id": 3488,
-    "name": "Keiichiro Yamamiya"
+    "name": "Keiichiro Yamamiya",
+    "gender": "male"
   },
   {
     "id": 3489,
-    "name": "Milana Dudieva"
+    "name": "Milana Dudieva",
+    "gender": "male"
   },
   {
     "id": 3490,
-    "name": "Icho Larenas"
+    "name": "Icho Larenas",
+    "gender": "male"
   },
   {
     "id": 3491,
-    "name": "Dan O'Connor"
+    "name": "Dan O'Connor",
+    "gender": "male"
   },
   {
     "id": 3492,
-    "name": "Nikolajus Cilkinas"
+    "name": "Nikolajus Cilkinas",
+    "gender": "male"
   },
   {
     "id": 3493,
-    "name": "Yuki Sasaki"
+    "name": "Yuki Sasaki",
+    "gender": "male"
   },
   {
     "id": 3494,
-    "name": "Damir Mirenic"
+    "name": "Damir Mirenic",
+    "gender": "male"
   },
   {
     "id": 3495,
-    "name": "Dinis Paiva Jr."
+    "name": "Dinis Paiva Jr.",
+    "gender": "male"
   },
   {
     "id": 3496,
-    "name": "Steve Mensing"
+    "name": "Steve Mensing",
+    "gender": "male"
   },
   {
     "id": 3497,
-    "name": "Sean Daugherty"
+    "name": "Sean Daugherty",
+    "gender": "male"
   },
   {
     "id": 3498,
-    "name": "Nasrudin Nasrudinov"
+    "name": "Nasrudin Nasrudinov",
+    "gender": "male"
   },
   {
     "id": 3499,
-    "name": "Greg Wilson"
+    "name": "Greg Wilson",
+    "gender": "male"
   },
   {
     "id": 3500,
-    "name": "Junior Albini"
+    "name": "Junior Albini",
+    "gender": "male"
   },
   {
     "id": 3501,
-    "name": "Alex Higley"
+    "name": "Alex Higley",
+    "gender": "male"
   },
   {
     "id": 3502,
-    "name": "Nick Ertl"
+    "name": "Nick Ertl",
+    "gender": "male"
   },
   {
     "id": 3503,
-    "name": "John Salgado"
+    "name": "John Salgado",
+    "gender": "male"
   },
   {
     "id": 3504,
-    "name": "Ray Routh"
+    "name": "Ray Routh",
+    "gender": "male"
   },
   {
     "id": 3505,
-    "name": "Josh Burns"
+    "name": "Josh Burns",
+    "gender": "male"
   },
   {
     "id": 3506,
-    "name": "Patrick Smith"
+    "name": "Patrick Smith",
+    "gender": "male"
   },
   {
     "id": 3507,
-    "name": "Kyle Kingsbury"
+    "name": "Kyle Kingsbury",
+    "gender": "male"
   },
   {
     "id": 3508,
-    "name": "Jason DeLucia"
+    "name": "Jason DeLucia",
+    "gender": "male"
   },
   {
     "id": 3509,
-    "name": "Douglas Lima"
+    "name": "Douglas Lima",
+    "gender": "male"
   },
   {
     "id": 3510,
-    "name": "Bruno Korea"
+    "name": "Bruno Korea",
+    "gender": "male"
   },
   {
     "id": 3511,
-    "name": "Kerry Vera"
+    "name": "Kerry Vera",
+    "gender": "male"
   },
   {
     "id": 3512,
-    "name": "Josh Pulsifer"
+    "name": "Josh Pulsifer",
+    "gender": "male"
   },
   {
     "id": 3513,
-    "name": "Mark Climaco"
+    "name": "Mark Climaco",
+    "gender": "male"
   },
   {
     "id": 3514,
-    "name": "Ismael Bonfim"
+    "name": "Ismael Bonfim",
+    "gender": "male"
   },
   {
     "id": 3515,
-    "name": "Jesse Murray"
+    "name": "Jesse Murray",
+    "gender": "male"
   },
   {
     "id": 3516,
-    "name": "Gilles Arsene"
+    "name": "Gilles Arsene",
+    "gender": "male"
   },
   {
     "id": 3517,
-    "name": "Steve Judson"
+    "name": "Steve Judson",
+    "gender": "male"
   },
   {
     "id": 3518,
-    "name": "Chibwikem Onyenegecha"
+    "name": "Chibwikem Onyenegecha",
+    "gender": "male"
   },
   {
     "id": 3519,
-    "name": "Jonathan Rivera"
+    "name": "Jonathan Rivera",
+    "gender": "male"
   },
   {
     "id": 3520,
-    "name": "Haven Torres"
+    "name": "Haven Torres",
+    "gender": "male"
   },
   {
     "id": 3521,
-    "name": "Chris Solomon"
+    "name": "Chris Solomon",
+    "gender": "male"
   },
   {
     "id": 3522,
-    "name": "Santiago Ponzinibbio"
+    "name": "Santiago Ponzinibbio",
+    "gender": "male"
   },
   {
     "id": 3523,
-    "name": "Robert Densley"
+    "name": "Robert Densley",
+    "gender": "male"
   },
   {
     "id": 3524,
-    "name": "Rashard Lovelace"
+    "name": "Rashard Lovelace",
+    "gender": "male"
   },
   {
     "id": 3525,
-    "name": "Leon Aliu"
+    "name": "Leon Aliu",
+    "gender": "male"
   },
   {
     "id": 3526,
-    "name": "Michel Batista"
+    "name": "Michel Batista",
+    "gender": "male"
   },
   {
     "id": 3527,
-    "name": "Dustin Joynson"
+    "name": "Dustin Joynson",
+    "gender": "male"
   },
   {
     "id": 3528,
-    "name": "Dong Hyun Ma"
+    "name": "Dong Hyun Ma",
+    "gender": "male"
   },
   {
     "id": 3529,
-    "name": "Marc Cofer"
+    "name": "Marc Cofer",
+    "gender": "male"
   },
   {
     "id": 3530,
-    "name": "Joe Pardo"
+    "name": "Joe Pardo",
+    "gender": "male"
   },
   {
     "id": 3531,
-    "name": "Dhafir Harris"
+    "name": "Dhafir Harris",
+    "gender": "male"
   },
   {
     "id": 3532,
-    "name": "Karine Gevorgyan"
+    "name": "Karine Gevorgyan",
+    "gender": "male"
   },
   {
     "id": 3533,
-    "name": "Nick Pica"
+    "name": "Nick Pica",
+    "gender": "male"
   },
   {
     "id": 3534,
-    "name": "Gennaro Strangis"
+    "name": "Gennaro Strangis",
+    "gender": "male"
   },
   {
     "id": 3535,
-    "name": "Rony Sefo"
+    "name": "Rony Sefo",
+    "gender": "male"
   },
   {
     "id": 3536,
-    "name": "Yan Xiaonan"
+    "name": "Yan Xiaonan",
+    "gender": "female"
   },
   {
     "id": 3537,
-    "name": "Gabe Ruediger"
+    "name": "Gabe Ruediger",
+    "gender": "male"
   },
   {
     "id": 3538,
-    "name": "Logan Urban"
+    "name": "Logan Urban",
+    "gender": "male"
   },
   {
     "id": 3539,
-    "name": "TJ Hepburn"
+    "name": "TJ Hepburn",
+    "gender": "male"
   },
   {
     "id": 3540,
-    "name": "Daniel Pereira"
+    "name": "Daniel Pereira",
+    "gender": "male"
   },
   {
     "id": 3541,
-    "name": "Johnny Rees"
+    "name": "Johnny Rees",
+    "gender": "male"
   },
   {
     "id": 3542,
-    "name": "Dwayne Cason"
+    "name": "Dwayne Cason",
+    "gender": "male"
   },
   {
     "id": 3543,
-    "name": "Josiane Nunes"
+    "name": "Josiane Nunes",
+    "gender": "male"
   },
   {
     "id": 3544,
-    "name": "Danny Chavez"
+    "name": "Danny Chavez",
+    "gender": "male"
   },
   {
     "id": 3545,
-    "name": "Marcio Navarro"
+    "name": "Marcio Navarro",
+    "gender": "male"
   },
   {
     "id": 3546,
-    "name": "Ulysses Gomez"
+    "name": "Ulysses Gomez",
+    "gender": "male"
   },
   {
     "id": 3547,
-    "name": "Rostem Akman"
+    "name": "Rostem Akman",
+    "gender": "male"
   },
   {
     "id": 3548,
-    "name": "Maria Rios"
+    "name": "Maria Rios",
+    "gender": "male"
   },
   {
     "id": 3549,
-    "name": "Oron Kahlon"
+    "name": "Oron Kahlon",
+    "gender": "male"
   },
   {
     "id": 3550,
-    "name": "Rodrigo Lidio"
+    "name": "Rodrigo Lidio",
+    "gender": "male"
   },
   {
     "id": 3551,
-    "name": "Jacob Silva"
+    "name": "Jacob Silva",
+    "gender": "male"
   },
   {
     "id": 3552,
-    "name": "Rudy Bears"
+    "name": "Rudy Bears",
+    "gender": "male"
   },
   {
     "id": 3553,
-    "name": "Jacob Noe"
+    "name": "Jacob Noe",
+    "gender": "male"
   },
   {
     "id": 3554,
-    "name": "Anying Wang"
+    "name": "Anying Wang",
+    "gender": "male"
   },
   {
     "id": 3555,
-    "name": "Jerome Rivera"
+    "name": "Jerome Rivera",
+    "gender": "male"
   },
   {
     "id": 3556,
-    "name": "Michael Kuiper"
+    "name": "Michael Kuiper",
+    "gender": "male"
   },
   {
     "id": 3557,
-    "name": "Sherrard Blackledge"
+    "name": "Sherrard Blackledge",
+    "gender": "male"
   },
   {
     "id": 3558,
-    "name": "Teddy Ash"
+    "name": "Teddy Ash",
+    "gender": "male"
   },
   {
     "id": 3559,
-    "name": "Brogan Walker"
+    "name": "Brogan Walker",
+    "gender": "male"
   },
   {
     "id": 3560,
-    "name": "Ryan Roberts"
+    "name": "Ryan Roberts",
+    "gender": "male"
   },
   {
     "id": 3561,
-    "name": "Carlos Vera"
+    "name": "Carlos Vera",
+    "gender": "male"
   },
   {
     "id": 3562,
-    "name": "Brandon Wolff"
+    "name": "Brandon Wolff",
+    "gender": "male"
   },
   {
     "id": 3563,
-    "name": "Bruna Brasil"
+    "name": "Bruna Brasil",
+    "gender": "male"
   },
   {
     "id": 3564,
-    "name": "Eduardo Pamplona"
+    "name": "Eduardo Pamplona",
+    "gender": "male"
   },
   {
     "id": 3565,
-    "name": "Ray Wizard"
+    "name": "Ray Wizard",
+    "gender": "male"
   },
   {
     "id": 3566,
-    "name": "Ty Flores"
+    "name": "Ty Flores",
+    "gender": "male"
   },
   {
     "id": 3567,
-    "name": "John Kelly"
+    "name": "John Kelly",
+    "gender": "male"
   },
   {
     "id": 3568,
-    "name": "Anton Turkalj"
+    "name": "Anton Turkalj",
+    "gender": "male"
   },
   {
     "id": 3569,
-    "name": "Jimmy Lawson"
+    "name": "Jimmy Lawson",
+    "gender": "male"
   },
   {
     "id": 3570,
-    "name": "Carls John De Tomas"
+    "name": "Carls John De Tomas",
+    "gender": "male"
   },
   {
     "id": 3571,
-    "name": "Yazan Hajeh"
+    "name": "Yazan Hajeh",
+    "gender": "male"
   },
   {
     "id": 3572,
-    "name": "Richard Dalton"
+    "name": "Richard Dalton",
+    "gender": "male"
   },
   {
     "id": 3573,
-    "name": "Paulo Renato Junior"
+    "name": "Paulo Renato Junior",
+    "gender": "male"
   },
   {
     "id": 3574,
-    "name": "Ricky Calatayud"
+    "name": "Ricky Calatayud",
+    "gender": "male"
   },
   {
     "id": 3575,
-    "name": "Raou Raou"
+    "name": "Raou Raou",
+    "gender": "male"
   },
   {
     "id": 3576,
-    "name": "David Roberts"
+    "name": "David Roberts",
+    "gender": "male"
   },
   {
     "id": 3577,
-    "name": "Alberto Montes"
+    "name": "Alberto Montes",
+    "gender": "male"
   },
   {
     "id": 3578,
-    "name": "Cody Floyd"
+    "name": "Cody Floyd",
+    "gender": "male"
   },
   {
     "id": 3579,
-    "name": "Fellipe Andrew"
+    "name": "Fellipe Andrew",
+    "gender": "male"
   },
   {
     "id": 3580,
-    "name": "Colin Fletcher"
+    "name": "Colin Fletcher",
+    "gender": "male"
   },
   {
     "id": 3581,
-    "name": "Karla Benitez"
+    "name": "Karla Benitez",
+    "gender": "male"
   },
   {
     "id": 3582,
-    "name": "Torrance Taylor"
+    "name": "Torrance Taylor",
+    "gender": "male"
   },
   {
     "id": 3583,
-    "name": "Nate Schroeder"
+    "name": "Nate Schroeder",
+    "gender": "male"
   },
   {
     "id": 3584,
-    "name": "Shane Young"
+    "name": "Shane Young",
+    "gender": "male"
   },
   {
     "id": 3585,
-    "name": "Justin Gonzales"
+    "name": "Justin Gonzales",
+    "gender": "male"
   },
   {
     "id": 3586,
-    "name": "Josh Bennett"
+    "name": "Josh Bennett",
+    "gender": "male"
   },
   {
     "id": 3587,
-    "name": "Waylon Kennell"
+    "name": "Waylon Kennell",
+    "gender": "male"
   },
   {
     "id": 3588,
-    "name": "Billy Vaughan"
+    "name": "Billy Vaughan",
+    "gender": "male"
   },
   {
     "id": 3589,
-    "name": "Chase Waldon"
+    "name": "Chase Waldon",
+    "gender": "male"
   },
   {
     "id": 3590,
-    "name": "Eiji Ishikawa"
+    "name": "Eiji Ishikawa",
+    "gender": "male"
   },
   {
     "id": 3591,
-    "name": "Francisco Trevino"
+    "name": "Francisco Trevino",
+    "gender": "male"
   },
   {
     "id": 3592,
-    "name": "Joe Cason"
+    "name": "Joe Cason",
+    "gender": "male"
   },
   {
     "id": 3593,
-    "name": "Sasha Palatnikov"
+    "name": "Sasha Palatnikov",
+    "gender": "male"
   },
   {
     "id": 3594,
-    "name": "Kotetsu Boku"
+    "name": "Kotetsu Boku",
+    "gender": "male"
   },
   {
     "id": 3595,
-    "name": "Josh Neal"
+    "name": "Josh Neal",
+    "gender": "male"
   },
   {
     "id": 3596,
-    "name": "Issa Isakov"
+    "name": "Issa Isakov",
+    "gender": "male"
   },
   {
     "id": 3597,
-    "name": "Marcelo Mello"
+    "name": "Marcelo Mello",
+    "gender": "male"
   },
   {
     "id": 3598,
-    "name": "Shana Dobson"
+    "name": "Shana Dobson",
+    "gender": "male"
   },
   {
     "id": 3599,
-    "name": "Justin Tafa"
+    "name": "Justin Tafa",
+    "gender": "male"
   },
   {
     "id": 3600,
-    "name": "Jason Reinhardt"
+    "name": "Jason Reinhardt",
+    "gender": "male"
   },
   {
     "id": 3601,
-    "name": "John Doyle"
+    "name": "John Doyle",
+    "gender": "male"
   },
   {
     "id": 3602,
-    "name": "Jordan Goodwin"
+    "name": "Jordan Goodwin",
+    "gender": "male"
   },
   {
     "id": 3603,
-    "name": "Tai Tuivasa"
+    "name": "Tai Tuivasa",
+    "gender": "male"
   },
   {
     "id": 3604,
-    "name": "Jerome LeBanner"
+    "name": "Jerome LeBanner",
+    "gender": "male"
   },
   {
     "id": 3605,
-    "name": "Marvin Maldonado"
+    "name": "Marvin Maldonado",
+    "gender": "male"
   },
   {
     "id": 3606,
-    "name": "Lee Gibson"
+    "name": "Lee Gibson",
+    "gender": "male"
   },
   {
     "id": 3607,
-    "name": "Jocelyn Jones-Lybarger"
+    "name": "Jocelyn Jones-Lybarger",
+    "gender": "male"
   },
   {
     "id": 3608,
-    "name": "Victor Valenzuela"
+    "name": "Victor Valenzuela",
+    "gender": "male"
   },
   {
     "id": 3609,
-    "name": "Matt Kovacs"
+    "name": "Matt Kovacs",
+    "gender": "male"
   },
   {
     "id": 3610,
-    "name": "Isaac Vallie-Flagg"
+    "name": "Isaac Vallie-Flagg",
+    "gender": "male"
   },
   {
     "id": 3611,
-    "name": "Dequan Townsend"
+    "name": "Dequan Townsend",
+    "gender": "male"
   },
   {
     "id": 3612,
-    "name": "Charon Spain"
+    "name": "Charon Spain",
+    "gender": "male"
   },
   {
     "id": 3613,
-    "name": "Jason Butcher"
+    "name": "Jason Butcher",
+    "gender": "male"
   },
   {
     "id": 3614,
-    "name": "Turrell Galloway"
+    "name": "Turrell Galloway",
+    "gender": "male"
   },
   {
     "id": 3615,
-    "name": "Cody Garbrandt"
+    "name": "Cody Garbrandt",
+    "gender": "male"
   },
   {
     "id": 3616,
-    "name": "Ron Fields"
+    "name": "Ron Fields",
+    "gender": "male"
   },
   {
     "id": 3617,
-    "name": "Kenyon Jackson"
+    "name": "Kenyon Jackson",
+    "gender": "male"
   },
   {
     "id": 3618,
-    "name": "Ivan Cole"
+    "name": "Ivan Cole",
+    "gender": "male"
   },
   {
     "id": 3619,
-    "name": "Mike Jackson"
+    "name": "Mike Jackson",
+    "gender": "male"
   },
   {
     "id": 3620,
-    "name": "Yanal Ashmouz"
+    "name": "Yanal Ashmouz",
+    "gender": "male"
   },
   {
     "id": 3621,
-    "name": "Evan Esguerra"
+    "name": "Evan Esguerra",
+    "gender": "male"
   },
   {
     "id": 3622,
-    "name": "Justin Pennington"
+    "name": "Justin Pennington",
+    "gender": "male"
   },
   {
     "id": 3623,
-    "name": "Colleen Schneider"
+    "name": "Colleen Schneider",
+    "gender": "male"
   },
   {
     "id": 3624,
-    "name": "Miles Johns"
+    "name": "Miles Johns",
+    "gender": "male"
   },
   {
     "id": 3625,
-    "name": "Mike Dolce"
+    "name": "Mike Dolce",
+    "gender": "male"
   },
   {
     "id": 3626,
-    "name": "Bendy Casimir"
+    "name": "Bendy Casimir",
+    "gender": "male"
   },
   {
     "id": 3627,
-    "name": "Clint Godfrey"
+    "name": "Clint Godfrey",
+    "gender": "male"
   },
   {
     "id": 3628,
-    "name": "Oban Elliott"
+    "name": "Oban Elliott",
+    "gender": "male"
   },
   {
     "id": 3629,
-    "name": "Scott Junk"
+    "name": "Scott Junk",
+    "gender": "male"
   },
   {
     "id": 3630,
-    "name": "Joel Thomas"
+    "name": "Joel Thomas",
+    "gender": "male"
   },
   {
     "id": 3631,
-    "name": "Nick Newell"
+    "name": "Nick Newell",
+    "gender": "male"
   },
   {
     "id": 3632,
-    "name": "Sean Lally"
+    "name": "Sean Lally",
+    "gender": "male"
   },
   {
     "id": 3633,
-    "name": "Asbel Cancio"
+    "name": "Asbel Cancio",
+    "gender": "male"
   },
   {
     "id": 3634,
-    "name": "Marques Daniels"
+    "name": "Marques Daniels",
+    "gender": "male"
   },
   {
     "id": 3635,
-    "name": "Brian Cobb"
+    "name": "Brian Cobb",
+    "gender": "male"
   },
   {
     "id": 3636,
-    "name": "Christian Uflacker"
+    "name": "Christian Uflacker",
+    "gender": "male"
   },
   {
     "id": 3637,
-    "name": "Nick Denis"
+    "name": "Nick Denis",
+    "gender": "male"
   },
   {
     "id": 3638,
-    "name": "David Gomez"
+    "name": "David Gomez",
+    "gender": "male"
   },
   {
     "id": 3639,
-    "name": "Rolando Perez"
+    "name": "Rolando Perez",
+    "gender": "male"
   },
   {
     "id": 3640,
-    "name": "Junya Kudo"
+    "name": "Junya Kudo",
+    "gender": "male"
   },
   {
     "id": 3641,
-    "name": "Forrest Petz"
+    "name": "Forrest Petz",
+    "gender": "male"
   },
   {
     "id": 3642,
-    "name": "Bubba Pugh"
+    "name": "Bubba Pugh",
+    "gender": "male"
   },
   {
     "id": 3643,
-    "name": "Adam Milstead"
+    "name": "Adam Milstead",
+    "gender": "male"
   },
   {
     "id": 3644,
-    "name": "Tim Roman"
+    "name": "Tim Roman",
+    "gender": "male"
   },
   {
     "id": 3645,
-    "name": "Jin Soo Son"
+    "name": "Jin Soo Son",
+    "gender": "male"
   },
   {
     "id": 3646,
-    "name": "Haisam Rida"
+    "name": "Haisam Rida",
+    "gender": "male"
   },
   {
     "id": 3647,
-    "name": "Edwin Aguilar"
+    "name": "Edwin Aguilar",
+    "gender": "male"
   },
   {
     "id": 3648,
-    "name": "Gary Quan"
+    "name": "Gary Quan",
+    "gender": "male"
   },
   {
     "id": 3649,
-    "name": "Tim Catalfo"
+    "name": "Tim Catalfo",
+    "gender": "male"
   },
   {
     "id": 3650,
-    "name": "Jesse Gillespie"
+    "name": "Jesse Gillespie",
+    "gender": "male"
   },
   {
     "id": 3651,
-    "name": "Roy Jones"
+    "name": "Roy Jones",
+    "gender": "male"
   },
   {
     "id": 3652,
-    "name": "Mack Brewer"
+    "name": "Mack Brewer",
+    "gender": "male"
   },
   {
     "id": 3653,
-    "name": "Tsuyoshi Tamakairiki"
+    "name": "Tsuyoshi Tamakairiki",
+    "gender": "male"
   },
   {
     "id": 3654,
-    "name": "JR Coughran"
+    "name": "JR Coughran",
+    "gender": "male"
   },
   {
     "id": 3655,
-    "name": "Takayuki Okada"
+    "name": "Takayuki Okada",
+    "gender": "male"
   },
   {
     "id": 3656,
-    "name": "Joe Wilk"
+    "name": "Joe Wilk",
+    "gender": "male"
   },
   {
     "id": 3657,
-    "name": "Khusein Askhabov"
+    "name": "Khusein Askhabov",
+    "gender": "male"
   },
   {
     "id": 3658,
-    "name": "Joe Camacho"
+    "name": "Joe Camacho",
+    "gender": "male"
   },
   {
     "id": 3659,
-    "name": "Aoriqileng"
+    "name": "Aoriqileng",
+    "gender": "male"
   },
   {
     "id": 3660,
-    "name": "Kier Gooch"
+    "name": "Kier Gooch",
+    "gender": "male"
   },
   {
     "id": 3661,
-    "name": "Austin Hubbard"
+    "name": "Austin Hubbard",
+    "gender": "male"
   },
   {
     "id": 3662,
-    "name": "Liudvik Sholinian"
+    "name": "Liudvik Sholinian",
+    "gender": "male"
   },
   {
     "id": 3663,
-    "name": "Austin Tweedy"
+    "name": "Austin Tweedy",
+    "gender": "male"
   },
   {
     "id": 3664,
-    "name": "Adrian Serrano"
+    "name": "Adrian Serrano",
+    "gender": "male"
   },
   {
     "id": 3665,
-    "name": "Jorge de Oliveira"
+    "name": "Jorge de Oliveira",
+    "gender": "male"
   },
   {
     "id": 3666,
-    "name": "Ewerton Teixeira"
+    "name": "Ewerton Teixeira",
+    "gender": "male"
   },
   {
     "id": 3667,
-    "name": "Wagner Prado"
+    "name": "Wagner Prado",
+    "gender": "male"
   },
   {
     "id": 3668,
-    "name": "Tom Aaron"
+    "name": "Tom Aaron",
+    "gender": "male"
   },
   {
     "id": 3669,
-    "name": "Ron Sparks"
+    "name": "Ron Sparks",
+    "gender": "male"
   },
   {
     "id": 3670,
-    "name": "Zac Pauga"
+    "name": "Zac Pauga",
+    "gender": "male"
   },
   {
     "id": 3671,
-    "name": "Amber Tackett"
+    "name": "Amber Tackett",
+    "gender": "male"
   },
   {
     "id": 3672,
-    "name": "Dimitiri Wanderley"
+    "name": "Dimitiri Wanderley",
+    "gender": "male"
   },
   {
     "id": 3673,
-    "name": "Henrique Da Silva Lopes"
+    "name": "Henrique Da Silva Lopes",
+    "gender": "male"
   },
   {
     "id": 3674,
-    "name": "Virgil Zwicker"
+    "name": "Virgil Zwicker",
+    "gender": "male"
   },
   {
     "id": 3675,
-    "name": "Wade Shipp"
+    "name": "Wade Shipp",
+    "gender": "male"
   },
   {
     "id": 3676,
-    "name": "Mike Easton"
+    "name": "Mike Easton",
+    "gender": "male"
   },
   {
     "id": 3677,
-    "name": "Marnic Mann"
+    "name": "Marnic Mann",
+    "gender": "male"
   },
   {
     "id": 3678,
-    "name": "Eldo Xavier Dias"
+    "name": "Eldo Xavier Dias",
+    "gender": "male"
   },
   {
     "id": 3679,
-    "name": "Claudionor Fontinelle"
+    "name": "Claudionor Fontinelle",
+    "gender": "male"
   },
   {
     "id": 3680,
-    "name": "Victor Valimaki"
+    "name": "Victor Valimaki",
+    "gender": "male"
   },
   {
     "id": 3681,
-    "name": "Gisele Moreira"
+    "name": "Gisele Moreira",
+    "gender": "male"
   },
   {
     "id": 3682,
-    "name": "Coltin Cole"
+    "name": "Coltin Cole",
+    "gender": "male"
   },
   {
     "id": 3683,
-    "name": "Kenny Giddens"
+    "name": "Kenny Giddens",
+    "gender": "male"
   },
   {
     "id": 3684,
-    "name": "Andrew Montanez"
+    "name": "Andrew Montanez",
+    "gender": "male"
   },
   {
     "id": 3685,
-    "name": "Darian Weeks"
+    "name": "Darian Weeks",
+    "gender": "male"
   },
   {
     "id": 3686,
-    "name": "Louis Taylor"
+    "name": "Louis Taylor",
+    "gender": "male"
   },
   {
     "id": 3687,
-    "name": "Vitor Vianna"
+    "name": "Vitor Vianna",
+    "gender": "male"
   },
   {
     "id": 3688,
-    "name": "Idris Wasi"
+    "name": "Idris Wasi",
+    "gender": "male"
   },
   {
     "id": 3689,
-    "name": "Kasey Tanner"
+    "name": "Kasey Tanner",
+    "gender": "male"
   },
   {
     "id": 3690,
-    "name": "Ashlee Evans-Smith"
+    "name": "Ashlee Evans-Smith",
+    "gender": "male"
   },
   {
     "id": 3691,
-    "name": "Brendan Loughnane"
+    "name": "Brendan Loughnane",
+    "gender": "male"
   },
   {
     "id": 3692,
-    "name": "Joao Pierini"
+    "name": "Joao Pierini",
+    "gender": "male"
   },
   {
     "id": 3693,
-    "name": "Gaston Bolanos"
+    "name": "Gaston Bolanos",
+    "gender": "male"
   },
   {
     "id": 3694,
-    "name": "Thomas Gifford"
+    "name": "Thomas Gifford",
+    "gender": "male"
   },
   {
     "id": 3695,
-    "name": "Tyrone Roberts"
+    "name": "Tyrone Roberts",
+    "gender": "male"
   },
   {
     "id": 3696,
-    "name": "Joe Brammer"
+    "name": "Joe Brammer",
+    "gender": "male"
   },
   {
     "id": 3697,
-    "name": "Christian Leroy Duncan"
+    "name": "Christian Leroy Duncan",
+    "gender": "male"
   },
   {
     "id": 3698,
-    "name": "Joel Sutton"
+    "name": "Joel Sutton",
+    "gender": "male"
   },
   {
     "id": 3699,
-    "name": "Pablo Villaseca"
+    "name": "Pablo Villaseca",
+    "gender": "male"
   },
   {
     "id": 3700,
-    "name": "George Stork"
+    "name": "George Stork",
+    "gender": "male"
   },
   {
     "id": 3701,
-    "name": "Lance Benoist"
+    "name": "Lance Benoist",
+    "gender": "male"
   },
   {
     "id": 3702,
-    "name": "Felipe Olivieri"
+    "name": "Felipe Olivieri",
+    "gender": "male"
   },
   {
     "id": 3703,
-    "name": "Tiffany Masters"
+    "name": "Tiffany Masters",
+    "gender": "male"
   },
   {
     "id": 3704,
-    "name": "Dave Dalgliesh"
+    "name": "Dave Dalgliesh",
+    "gender": "male"
   },
   {
     "id": 3705,
-    "name": "Jason Jackson"
+    "name": "Jason Jackson",
+    "gender": "male"
   },
   {
     "id": 3706,
-    "name": "Alberto Mina"
+    "name": "Alberto Mina",
+    "gender": "male"
   },
   {
     "id": 3707,
-    "name": "Anthony Avila"
+    "name": "Anthony Avila",
+    "gender": "male"
   },
   {
     "id": 3708,
-    "name": "Joe Schilling"
+    "name": "Joe Schilling",
+    "gender": "male"
   },
   {
     "id": 3709,
-    "name": "Jhonoven Pati"
+    "name": "Jhonoven Pati",
+    "gender": "male"
   },
   {
     "id": 3710,
-    "name": "Mo Miller"
+    "name": "Mo Miller",
+    "gender": "male"
   },
   {
     "id": 3711,
-    "name": "Yuya Shirai"
+    "name": "Yuya Shirai",
+    "gender": "male"
   },
   {
     "id": 3712,
-    "name": "Sarah Payant"
+    "name": "Sarah Payant",
+    "gender": "male"
   },
   {
     "id": 3713,
-    "name": "Boston Salmon"
+    "name": "Boston Salmon",
+    "gender": "male"
   },
   {
     "id": 3714,
-    "name": "Maka Watson"
+    "name": "Maka Watson",
+    "gender": "male"
   },
   {
     "id": 3715,
-    "name": "Jerry Bohlander"
+    "name": "Jerry Bohlander",
+    "gender": "male"
   },
   {
     "id": 3716,
-    "name": "Landon Showalter"
+    "name": "Landon Showalter",
+    "gender": "male"
   },
   {
     "id": 3717,
-    "name": "Nariman Abbasov"
+    "name": "Nariman Abbasov",
+    "gender": "male"
   },
   {
     "id": 3718,
-    "name": "Justin Davis"
+    "name": "Justin Davis",
+    "gender": "male"
   },
   {
     "id": 3719,
-    "name": "Reynaldo Trujillo"
+    "name": "Reynaldo Trujillo",
+    "gender": "male"
   },
   {
     "id": 3720,
-    "name": "Kyle Noblitt"
+    "name": "Kyle Noblitt",
+    "gender": "male"
   },
   {
     "id": 3721,
-    "name": "Tony Sylvester"
+    "name": "Tony Sylvester",
+    "gender": "male"
   },
   {
     "id": 3722,
-    "name": "George Zuniga"
+    "name": "George Zuniga",
+    "gender": "male"
   },
   {
     "id": 3723,
-    "name": "Rex Richards"
+    "name": "Rex Richards",
+    "gender": "male"
   },
   {
     "id": 3724,
-    "name": "Cory Hendricks"
+    "name": "Cory Hendricks",
+    "gender": "male"
   },
   {
     "id": 3725,
-    "name": "Clint Coronel"
+    "name": "Clint Coronel",
+    "gender": "male"
   },
   {
     "id": 3726,
-    "name": "Richardson Moreira"
+    "name": "Richardson Moreira",
+    "gender": "male"
   },
   {
     "id": 3727,
-    "name": "Amilcar Alves"
+    "name": "Amilcar Alves",
+    "gender": "male"
   },
   {
     "id": 3728,
-    "name": "Bobby Escalante"
+    "name": "Bobby Escalante",
+    "gender": "male"
   },
   {
     "id": 3729,
-    "name": "Shauna Bannon"
+    "name": "Shauna Bannon",
+    "gender": "male"
   },
   {
     "id": 3730,
-    "name": "Pedro Falcao"
+    "name": "Pedro Falcao",
+    "gender": "male"
   },
   {
     "id": 3731,
-    "name": "Felipe Silva"
+    "name": "Felipe Silva",
+    "gender": "male"
   },
   {
     "id": 3732,
-    "name": "Peggy Morgan"
+    "name": "Peggy Morgan",
+    "gender": "male"
   },
   {
     "id": 3733,
-    "name": "Mason Fowler"
+    "name": "Mason Fowler",
+    "gender": "male"
   },
   {
     "id": 3734,
-    "name": "Michael Cora"
+    "name": "Michael Cora",
+    "gender": "male"
   },
   {
     "id": 3735,
-    "name": "Christina Marks"
+    "name": "Christina Marks",
+    "gender": "male"
   },
   {
     "id": 3736,
-    "name": "Oliver Enkamp"
+    "name": "Oliver Enkamp",
+    "gender": "male"
   },
   {
     "id": 3737,
-    "name": "Siala Siliga"
+    "name": "Siala Siliga",
+    "gender": "male"
   },
   {
     "id": 3738,
-    "name": "Taneisha Tennant"
+    "name": "Taneisha Tennant",
+    "gender": "male"
   },
   {
     "id": 3739,
-    "name": "Mario Rivera"
+    "name": "Mario Rivera",
+    "gender": "male"
   },
   {
     "id": 3740,
-    "name": "Dewey Cooper"
+    "name": "Dewey Cooper",
+    "gender": "male"
   },
   {
     "id": 3741,
-    "name": "Luis Santos"
+    "name": "Luis Santos",
+    "gender": "male"
   },
   {
     "id": 3742,
-    "name": "Jeremiah O'Neal"
+    "name": "Jeremiah O'Neal",
+    "gender": "male"
   },
   {
     "id": 3743,
-    "name": "Natalia Silva"
+    "name": "Natalia Silva",
+    "gender": "female"
   },
   {
     "id": 3744,
-    "name": "Harris Sarmiento"
+    "name": "Harris Sarmiento",
+    "gender": "male"
   },
   {
     "id": 3745,
-    "name": "Adam Fugitt"
+    "name": "Adam Fugitt",
+    "gender": "male"
   },
   {
     "id": 3746,
-    "name": "Eugenio Tadeu"
+    "name": "Eugenio Tadeu",
+    "gender": "male"
   },
   {
     "id": 3747,
-    "name": "Sean Spencer"
+    "name": "Sean Spencer",
+    "gender": "male"
   },
   {
     "id": 3748,
-    "name": "John Clarke"
+    "name": "John Clarke",
+    "gender": "male"
   },
   {
     "id": 3749,
-    "name": "John Donaldson"
+    "name": "John Donaldson",
+    "gender": "male"
   },
   {
     "id": 3750,
-    "name": "Kazuhisa Watanabe"
+    "name": "Kazuhisa Watanabe",
+    "gender": "male"
   },
   {
     "id": 3751,
-    "name": "Tateki Matsuda"
+    "name": "Tateki Matsuda",
+    "gender": "male"
   },
   {
     "id": 3752,
-    "name": "Masaaki Satake"
+    "name": "Masaaki Satake",
+    "gender": "male"
   },
   {
     "id": 3753,
-    "name": "Luke Zachrich"
+    "name": "Luke Zachrich",
+    "gender": "male"
   },
   {
     "id": 3754,
-    "name": "Ricky Rainey"
+    "name": "Ricky Rainey",
+    "gender": "male"
   },
   {
     "id": 3755,
-    "name": "Keith Berish"
+    "name": "Keith Berish",
+    "gender": "male"
   },
   {
     "id": 3756,
-    "name": "Juan Manuel Puig"
+    "name": "Juan Manuel Puig",
+    "gender": "male"
   },
   {
     "id": 3757,
-    "name": "Roldan Sangcha'an"
+    "name": "Roldan Sangcha'an",
+    "gender": "male"
   },
   {
     "id": 3758,
-    "name": "Derrick Mehmen"
+    "name": "Derrick Mehmen",
+    "gender": "male"
   },
   {
     "id": 3759,
-    "name": "Chris Curtis"
+    "name": "Chris Curtis",
+    "gender": "male"
   },
   {
     "id": 3760,
-    "name": "Marcus Bossett"
+    "name": "Marcus Bossett",
+    "gender": "male"
   },
   {
     "id": 3761,
-    "name": "Sarah Frota"
+    "name": "Sarah Frota",
+    "gender": "male"
   },
   {
     "id": 3762,
-    "name": "Kevin Szaflarski"
+    "name": "Kevin Szaflarski",
+    "gender": "male"
   },
   {
     "id": 3763,
-    "name": "KB Bhullar"
+    "name": "KB Bhullar",
+    "gender": "male"
   },
   {
     "id": 3764,
-    "name": "Lee Brousseau"
+    "name": "Lee Brousseau",
+    "gender": "male"
   },
   {
     "id": 3765,
-    "name": "Bryce Mejia"
+    "name": "Bryce Mejia",
+    "gender": "male"
   },
   {
     "id": 3766,
-    "name": "Chris Mickle"
+    "name": "Chris Mickle",
+    "gender": "male"
   },
   {
     "id": 3767,
-    "name": "Bevon Lewis"
+    "name": "Bevon Lewis",
+    "gender": "male"
   },
   {
     "id": 3768,
-    "name": "Timothy Johnson"
+    "name": "Timothy Johnson",
+    "gender": "male"
   },
   {
     "id": 3769,
-    "name": "Angel Pacheco"
+    "name": "Angel Pacheco",
+    "gender": "male"
   },
   {
     "id": 3770,
-    "name": "Ailin Perez"
+    "name": "Ailin Perez",
+    "gender": "male"
   },
   {
     "id": 3771,
-    "name": "Soichi Nishida"
+    "name": "Soichi Nishida",
+    "gender": "male"
   },
   {
     "id": 3772,
-    "name": "Egidijus Valavicius"
+    "name": "Egidijus Valavicius",
+    "gender": "male"
   },
   {
     "id": 3773,
-    "name": "Todd Brown"
+    "name": "Todd Brown",
+    "gender": "male"
   },
   {
     "id": 3774,
-    "name": "Michael Lerma"
+    "name": "Michael Lerma",
+    "gender": "male"
   },
   {
     "id": 3775,
-    "name": "Cody Canterbury"
+    "name": "Cody Canterbury",
+    "gender": "male"
   },
   {
     "id": 3776,
-    "name": "Ricardo Prasel"
+    "name": "Ricardo Prasel",
+    "gender": "male"
   },
   {
     "id": 3777,
-    "name": "Chance Farrar"
+    "name": "Chance Farrar",
+    "gender": "male"
   },
   {
     "id": 3778,
-    "name": "Wes Combs"
+    "name": "Wes Combs",
+    "gender": "male"
   },
   {
     "id": 3779,
-    "name": "Wesley Correira"
+    "name": "Wesley Correira",
+    "gender": "male"
   },
   {
     "id": 3780,
-    "name": "Treston Thomison"
+    "name": "Treston Thomison",
+    "gender": "male"
   },
   {
     "id": 3781,
-    "name": "Lauren Mueller"
+    "name": "Lauren Mueller",
+    "gender": "female"
   },
   {
     "id": 3782,
-    "name": "Jorge Interiano"
+    "name": "Jorge Interiano",
+    "gender": "male"
   },
   {
     "id": 3783,
-    "name": "Michael Diaz"
+    "name": "Michael Diaz",
+    "gender": "male"
   },
   {
     "id": 3784,
-    "name": "Klidson Abreu"
+    "name": "Klidson Abreu",
+    "gender": "male"
   },
   {
     "id": 3785,
-    "name": "Emiliano Linares"
+    "name": "Emiliano Linares",
+    "gender": "male"
   },
   {
     "id": 3786,
-    "name": "Matt Ricehouse"
+    "name": "Matt Ricehouse",
+    "gender": "male"
   },
   {
     "id": 3787,
-    "name": "Xavier Siller"
+    "name": "Xavier Siller",
+    "gender": "male"
   },
   {
     "id": 3788,
-    "name": "Ray Rodriguez"
+    "name": "Ray Rodriguez",
+    "gender": "male"
   },
   {
     "id": 3789,
-    "name": "Mitch Whitesel"
+    "name": "Mitch Whitesel",
+    "gender": "male"
   },
   {
     "id": 3790,
-    "name": "Kazuma Maruyama"
+    "name": "Kazuma Maruyama",
+    "gender": "male"
   },
   {
     "id": 3791,
-    "name": "Xiao Long"
+    "name": "Xiao Long",
+    "gender": "male"
   },
   {
     "id": 3792,
-    "name": "Xavier Foupa-Pokam"
+    "name": "Xavier Foupa-Pokam",
+    "gender": "male"
   },
   {
     "id": 3793,
-    "name": "Patrik White"
+    "name": "Patrik White",
+    "gender": "male"
   },
   {
     "id": 3794,
-    "name": "Tafon Nchukwi"
+    "name": "Tafon Nchukwi",
+    "gender": "male"
   },
   {
     "id": 3795,
-    "name": "John Kolosci"
+    "name": "John Kolosci",
+    "gender": "male"
   },
   {
     "id": 3796,
-    "name": "Robbie Ring"
+    "name": "Robbie Ring",
+    "gender": "male"
   },
   {
     "id": 3797,
-    "name": "Dooho Choi"
+    "name": "Dooho Choi",
+    "gender": "male"
   },
   {
     "id": 3798,
-    "name": "Darren Till"
+    "name": "Darren Till",
+    "gender": "male"
   },
   {
     "id": 3799,
-    "name": "Cedric Doumbe"
+    "name": "Cedric Doumbe",
+    "gender": "male"
   },
   {
     "id": 3800,
-    "name": "Jose Santibanez"
+    "name": "Jose Santibanez",
+    "gender": "male"
   },
   {
     "id": 3801,
-    "name": "Ho Bae Myeon"
+    "name": "Ho Bae Myeon",
+    "gender": "male"
   },
   {
     "id": 3802,
-    "name": "Cesar Gracie"
+    "name": "Cesar Gracie",
+    "gender": "male"
   },
   {
     "id": 3803,
-    "name": "Herdem Alacabek"
+    "name": "Herdem Alacabek",
+    "gender": "male"
   },
   {
     "id": 3804,
-    "name": "Shawn Bunch"
+    "name": "Shawn Bunch",
+    "gender": "male"
   },
   {
     "id": 3805,
-    "name": "Pablo Alfonso"
+    "name": "Pablo Alfonso",
+    "gender": "male"
   },
   {
     "id": 3806,
-    "name": "Royler Gracie"
+    "name": "Royler Gracie",
+    "gender": "male"
   },
   {
     "id": 3807,
-    "name": "Andy Wang"
+    "name": "Andy Wang",
+    "gender": "male"
   },
   {
     "id": 3808,
-    "name": "Stephen Bass"
+    "name": "Stephen Bass",
+    "gender": "male"
   },
   {
     "id": 3809,
-    "name": "Fabio Silva"
+    "name": "Fabio Silva",
+    "gender": "male"
   },
   {
     "id": 3810,
-    "name": "Kali Robbins"
+    "name": "Kali Robbins",
+    "gender": "male"
   },
   {
     "id": 3811,
-    "name": "Jason Godsey"
+    "name": "Jason Godsey",
+    "gender": "male"
   },
   {
     "id": 3812,
-    "name": "Felipe Portela"
+    "name": "Felipe Portela",
+    "gender": "male"
   },
   {
     "id": 3813,
-    "name": "Robert Peralta"
+    "name": "Robert Peralta",
+    "gender": "male"
   },
   {
     "id": 3814,
-    "name": "Che Mills"
+    "name": "Che Mills",
+    "gender": "male"
   },
   {
     "id": 3815,
-    "name": "Alexandru Lungu"
+    "name": "Alexandru Lungu",
+    "gender": "male"
   },
   {
     "id": 3816,
-    "name": "Thomas Ramirez"
+    "name": "Thomas Ramirez",
+    "gender": "male"
   },
   {
     "id": 3817,
-    "name": "Khadzhi Bestaev"
+    "name": "Khadzhi Bestaev",
+    "gender": "male"
   },
   {
     "id": 3818,
-    "name": "Andre Winner"
+    "name": "Andre Winner",
+    "gender": "male"
   },
   {
     "id": 3819,
-    "name": "Derek Getzel"
+    "name": "Derek Getzel",
+    "gender": "male"
   },
   {
     "id": 3820,
-    "name": "Levan Makashvili"
+    "name": "Levan Makashvili",
+    "gender": "male"
   },
   {
     "id": 3821,
-    "name": "Pete Rodriguez"
+    "name": "Pete Rodriguez",
+    "gender": "male"
   },
   {
     "id": 3822,
-    "name": "Michal Oleksiejczuk"
+    "name": "Michal Oleksiejczuk",
+    "gender": "male"
   },
   {
     "id": 3823,
-    "name": "Hong Man Choi"
+    "name": "Hong Man Choi",
+    "gender": "male"
   },
   {
     "id": 3824,
-    "name": "Mike Polchlopek"
+    "name": "Mike Polchlopek",
+    "gender": "male"
   },
   {
     "id": 3825,
-    "name": "Tom Sauer"
+    "name": "Tom Sauer",
+    "gender": "male"
   },
   {
     "id": 3826,
-    "name": "Paul Creighton"
+    "name": "Paul Creighton",
+    "gender": "male"
   },
   {
     "id": 3827,
-    "name": "Corey Anderson"
+    "name": "Corey Anderson",
+    "gender": "male"
   },
   {
     "id": 3828,
-    "name": "Eddie Gordon"
+    "name": "Eddie Gordon",
+    "gender": "male"
   },
   {
     "id": 3829,
-    "name": "Nathan Jones"
+    "name": "Nathan Jones",
+    "gender": "male"
   },
   {
     "id": 3830,
-    "name": "Stefan Leko"
+    "name": "Stefan Leko",
+    "gender": "male"
   },
   {
     "id": 3831,
-    "name": "Sergey Ignatov"
+    "name": "Sergey Ignatov",
+    "gender": "male"
   },
   {
     "id": 3832,
-    "name": "Jon Murphy"
+    "name": "Jon Murphy",
+    "gender": "male"
   },
   {
     "id": 3833,
-    "name": "Patrick Speight"
+    "name": "Patrick Speight",
+    "gender": "male"
   },
   {
     "id": 3834,
-    "name": "Dmitry Poberezhets"
+    "name": "Dmitry Poberezhets",
+    "gender": "male"
   },
   {
     "id": 3835,
-    "name": "Marius Zaromskis"
+    "name": "Marius Zaromskis",
+    "gender": "male"
   },
   {
     "id": 3836,
-    "name": "Marcos Mariano"
+    "name": "Marcos Mariano",
+    "gender": "male"
   },
   {
     "id": 3837,
-    "name": "Todd Gouwenberg"
+    "name": "Todd Gouwenberg",
+    "gender": "male"
   },
   {
     "id": 3838,
-    "name": "Willian Colorado"
+    "name": "Willian Colorado",
+    "gender": "male"
   },
   {
     "id": 3839,
-    "name": "Nasrat Haqparast"
+    "name": "Nasrat Haqparast",
+    "gender": "male"
   },
   {
     "id": 3840,
-    "name": "Baergeng Jieleyisi"
+    "name": "Baergeng Jieleyisi",
+    "gender": "male"
   },
   {
     "id": 3841,
-    "name": "Tommy Speer"
+    "name": "Tommy Speer",
+    "gender": "male"
   },
   {
     "id": 3842,
-    "name": "Priscila Cachoeira"
+    "name": "Priscila Cachoeira",
+    "gender": "male"
   },
   {
     "id": 3843,
-    "name": "Solomon Hutcherson"
+    "name": "Solomon Hutcherson",
+    "gender": "male"
   },
   {
     "id": 3844,
-    "name": "Rafael  Del Real"
+    "name": "Rafael  Del Real",
+    "gender": "male"
   },
   {
     "id": 3845,
-    "name": "Antonio Duarte"
+    "name": "Antonio Duarte",
+    "gender": "male"
   },
   {
     "id": 3846,
-    "name": "Blake Bowman"
+    "name": "Blake Bowman",
+    "gender": "male"
   },
   {
     "id": 3847,
-    "name": "Anthony Alves"
+    "name": "Anthony Alves",
+    "gender": "male"
   },
   {
     "id": 3848,
-    "name": "John Devine"
+    "name": "John Devine",
+    "gender": "male"
   },
   {
     "id": 3849,
-    "name": "Justin Wilcox"
+    "name": "Justin Wilcox",
+    "gender": "male"
   },
   {
     "id": 3850,
-    "name": "Alan Gomez"
+    "name": "Alan Gomez",
+    "gender": "male"
   },
   {
     "id": 3851,
-    "name": "Anthony Ruiz"
+    "name": "Anthony Ruiz",
+    "gender": "male"
   },
   {
     "id": 3852,
-    "name": "Josh Janousek"
+    "name": "Josh Janousek",
+    "gender": "male"
   },
   {
     "id": 3853,
-    "name": "Josiah Harrell"
+    "name": "Josiah Harrell",
+    "gender": "male"
   },
   {
     "id": 3854,
-    "name": "Jodie Esquibel"
+    "name": "Jodie Esquibel",
+    "gender": "male"
   },
   {
     "id": 3855,
-    "name": "Marcelo Guimaraes"
+    "name": "Marcelo Guimaraes",
+    "gender": "male"
   },
   {
     "id": 3856,
-    "name": "Rick Davis"
+    "name": "Rick Davis",
+    "gender": "male"
   },
   {
     "id": 3857,
-    "name": "Gian Siqueira"
+    "name": "Gian Siqueira",
+    "gender": "male"
   },
   {
     "id": 3858,
-    "name": "Konstantin Erokhin"
+    "name": "Konstantin Erokhin",
+    "gender": "male"
   },
   {
     "id": 3859,
-    "name": "Vinicius Oliveira"
+    "name": "Vinicius Oliveira",
+    "gender": "male"
   },
   {
     "id": 3860,
-    "name": "Magomed Ankalaev"
+    "name": "Magomed Ankalaev",
+    "gender": "male"
   },
   {
     "id": 3861,
-    "name": "Gaetano Pirrello"
+    "name": "Gaetano Pirrello",
+    "gender": "male"
   },
   {
     "id": 3862,
-    "name": "Derek Bohi"
+    "name": "Derek Bohi",
+    "gender": "male"
   },
   {
     "id": 3863,
-    "name": "Nick Sperling"
+    "name": "Nick Sperling",
+    "gender": "male"
   },
   {
     "id": 3864,
-    "name": "Cheyden Leialoha"
+    "name": "Cheyden Leialoha",
+    "gender": "male"
   },
   {
     "id": 3865,
-    "name": "Vinicius Salvador"
+    "name": "Vinicius Salvador",
+    "gender": "male"
   },
   {
     "id": 3866,
-    "name": "Marvin Eastman"
+    "name": "Marvin Eastman",
+    "gender": "male"
   },
   {
     "id": 3867,
-    "name": "Zoila Frausto"
+    "name": "Zoila Frausto",
+    "gender": "male"
   },
   {
     "id": 3868,
-    "name": "Nathan Coy"
+    "name": "Nathan Coy",
+    "gender": "male"
   },
   {
     "id": 3869,
-    "name": "Takeshi Inoue"
+    "name": "Takeshi Inoue",
+    "gender": "male"
   },
   {
     "id": 3870,
-    "name": "Kyle Stewart"
+    "name": "Kyle Stewart",
+    "gender": "male"
   },
   {
     "id": 3871,
-    "name": "Ryan Keenan"
+    "name": "Ryan Keenan",
+    "gender": "male"
   },
   {
     "id": 3872,
-    "name": "Stephen Regman"
+    "name": "Stephen Regman",
+    "gender": "male"
   },
   {
     "id": 3873,
-    "name": "Igor Borisov"
+    "name": "Igor Borisov",
+    "gender": "male"
   },
   {
     "id": 3874,
-    "name": "Lucas Alexander"
+    "name": "Lucas Alexander",
+    "gender": "male"
   },
   {
     "id": 3875,
-    "name": "Eric Bedard"
+    "name": "Eric Bedard",
+    "gender": "male"
   },
   {
     "id": 3876,
-    "name": "Mitch Ramirez"
+    "name": "Mitch Ramirez",
+    "gender": "male"
   },
   {
     "id": 3877,
-    "name": "Carlos Prates"
+    "name": "Carlos Prates",
+    "gender": "male"
   },
   {
     "id": 3878,
-    "name": "Mike Moreno"
+    "name": "Mike Moreno",
+    "gender": "male"
   },
   {
     "id": 3879,
-    "name": "Jesse Sanders"
+    "name": "Jesse Sanders",
+    "gender": "male"
   },
   {
     "id": 3880,
-    "name": "Issei Tamura"
+    "name": "Issei Tamura",
+    "gender": "male"
   },
   {
     "id": 3881,
-    "name": "Shamil Gamzatov"
+    "name": "Shamil Gamzatov",
+    "gender": "male"
   },
   {
     "id": 3882,
-    "name": "Chris Honeycutt"
+    "name": "Chris Honeycutt",
+    "gender": "male"
   },
   {
     "id": 3883,
-    "name": "Andrew Craig"
+    "name": "Andrew Craig",
+    "gender": "male"
   },
   {
     "id": 3884,
-    "name": "Elias Theodorou"
+    "name": "Elias Theodorou",
+    "gender": "male"
   },
   {
     "id": 3885,
-    "name": "Edilberto de Oliveira"
+    "name": "Edilberto de Oliveira",
+    "gender": "male"
   },
   {
     "id": 3886,
-    "name": "Jeremy Tavares"
+    "name": "Jeremy Tavares",
+    "gender": "male"
   },
   {
     "id": 3887,
-    "name": "Alex Gorgees"
+    "name": "Alex Gorgees",
+    "gender": "male"
   },
   {
     "id": 3888,
-    "name": "Shara Magomedov"
+    "name": "Shara Magomedov",
+    "gender": "male"
   },
   {
     "id": 3889,
-    "name": "Dave Martin"
+    "name": "Dave Martin",
+    "gender": "male"
   },
   {
     "id": 3890,
-    "name": "John Dodson"
+    "name": "John Dodson",
+    "gender": "male"
   },
   {
     "id": 3891,
-    "name": "Chris Guillen"
+    "name": "Chris Guillen",
+    "gender": "male"
   },
   {
     "id": 3892,
-    "name": "Ernesta Kareckaite"
+    "name": "Ernesta Kareckaite",
+    "gender": "male"
   },
   {
     "id": 3893,
-    "name": "Brian Lo-A-Njoe"
+    "name": "Brian Lo-A-Njoe",
+    "gender": "male"
   },
   {
     "id": 3894,
-    "name": "RJ Clifford"
+    "name": "RJ Clifford",
+    "gender": "male"
   },
   {
     "id": 3895,
-    "name": "Gabriella Fernandes"
+    "name": "Gabriella Fernandes",
+    "gender": "male"
   },
   {
     "id": 3896,
-    "name": "Roman Bogatov"
+    "name": "Roman Bogatov",
+    "gender": "male"
   },
   {
     "id": 3897,
-    "name": "Jeremy Boczulak"
+    "name": "Jeremy Boczulak",
+    "gender": "male"
   },
   {
     "id": 3898,
-    "name": "Nick Piedmont"
+    "name": "Nick Piedmont",
+    "gender": "male"
   },
   {
     "id": 3899,
-    "name": "Steve Hadsel"
+    "name": "Steve Hadsel",
+    "gender": "male"
   },
   {
     "id": 3900,
-    "name": "Sho Patrick Usami"
+    "name": "Sho Patrick Usami",
+    "gender": "male"
   },
   {
     "id": 3901,
-    "name": "Miika Mehmet"
+    "name": "Miika Mehmet",
+    "gender": "male"
   },
   {
     "id": 3902,
-    "name": "Marcus Silveira"
+    "name": "Marcus Silveira",
+    "gender": "male"
   },
   {
     "id": 3903,
-    "name": "Alan Hiro"
+    "name": "Alan Hiro",
+    "gender": "male"
   },
   {
     "id": 3904,
-    "name": "Nick Sanzo"
+    "name": "Nick Sanzo",
+    "gender": "male"
   },
   {
     "id": 3905,
-    "name": "Donnie Chappell"
+    "name": "Donnie Chappell",
+    "gender": "male"
   },
   {
     "id": 3906,
-    "name": "Jules Bruchez"
+    "name": "Jules Bruchez",
+    "gender": "male"
   },
   {
     "id": 3907,
-    "name": "Mike Ricci"
+    "name": "Mike Ricci",
+    "gender": "male"
   },
   {
     "id": 3908,
-    "name": "Keith Hackney"
+    "name": "Keith Hackney",
+    "gender": "male"
   },
   {
     "id": 3909,
-    "name": "Bobby Lashley"
+    "name": "Bobby Lashley",
+    "gender": "male"
   },
   {
     "id": 3910,
-    "name": "Matt Dwyer"
+    "name": "Matt Dwyer",
+    "gender": "male"
   },
   {
     "id": 3911,
-    "name": "James Gray"
+    "name": "James Gray",
+    "gender": "male"
   },
   {
     "id": 3912,
-    "name": "Robert Lucarelli"
+    "name": "Robert Lucarelli",
+    "gender": "male"
   },
   {
     "id": 3913,
-    "name": "Justin Bruckmann"
+    "name": "Justin Bruckmann",
+    "gender": "male"
   },
   {
     "id": 3914,
-    "name": "Blair Tugman"
+    "name": "Blair Tugman",
+    "gender": "male"
   },
   {
     "id": 3915,
-    "name": "Kaleo Kwan"
+    "name": "Kaleo Kwan",
+    "gender": "male"
   },
   {
     "id": 3916,
-    "name": "Wang Guan"
+    "name": "Wang Guan",
+    "gender": "male"
   },
   {
     "id": 3917,
-    "name": "Damir Ismagulov"
+    "name": "Damir Ismagulov",
+    "gender": "male"
   },
   {
     "id": 3918,
-    "name": "Tra Telligman"
+    "name": "Tra Telligman",
+    "gender": "male"
   },
   {
     "id": 3919,
-    "name": "DeMarco Villalona"
+    "name": "DeMarco Villalona",
+    "gender": "male"
   },
   {
     "id": 3920,
-    "name": "Luana Santos"
+    "name": "Luana Santos",
+    "gender": "male"
   },
   {
     "id": 3921,
-    "name": "Muhammed Lawal"
+    "name": "Muhammed Lawal",
+    "gender": "male"
   },
   {
     "id": 3922,
-    "name": "Raheam Forest"
+    "name": "Raheam Forest",
+    "gender": "male"
   },
   {
     "id": 3923,
-    "name": "Calen Born"
+    "name": "Calen Born",
+    "gender": "male"
   },
   {
     "id": 3924,
-    "name": "Thiago Perpetuo"
+    "name": "Thiago Perpetuo",
+    "gender": "male"
   },
   {
     "id": 3925,
-    "name": "Danilo Belluardo"
+    "name": "Danilo Belluardo",
+    "gender": "male"
   },
   {
     "id": 3926,
-    "name": "Vincent Eazelle"
+    "name": "Vincent Eazelle",
+    "gender": "male"
   },
   {
     "id": 3927,
-    "name": "Azamat Murzakanov"
+    "name": "Azamat Murzakanov",
+    "gender": "male"
   },
   {
     "id": 3928,
-    "name": "Chris Saunders"
+    "name": "Chris Saunders",
+    "gender": "male"
   },
   {
     "id": 3929,
-    "name": "Daniel Jolly"
+    "name": "Daniel Jolly",
+    "gender": "male"
   },
   {
     "id": 3930,
-    "name": "Felix Klinkhammer"
+    "name": "Felix Klinkhammer",
+    "gender": "male"
   },
   {
     "id": 3931,
-    "name": "Oluwale Bamgbose"
+    "name": "Oluwale Bamgbose",
+    "gender": "male"
   },
   {
     "id": 3932,
-    "name": "Yoshihiro Takayama"
+    "name": "Yoshihiro Takayama",
+    "gender": "male"
   },
   {
     "id": 3933,
-    "name": "Kevin Natividad"
+    "name": "Kevin Natividad",
+    "gender": "male"
   },
   {
     "id": 3934,
-    "name": "Yuji Hisamatsu"
+    "name": "Yuji Hisamatsu",
+    "gender": "male"
   },
   {
     "id": 3935,
-    "name": "Mauricio Ruffy"
+    "name": "Mauricio Ruffy",
+    "gender": "male"
   },
   {
     "id": 3936,
-    "name": "Themba Gorimbo"
+    "name": "Themba Gorimbo",
+    "gender": "male"
   },
   {
     "id": 3937,
-    "name": "Toshiomi Kazama"
+    "name": "Toshiomi Kazama",
+    "gender": "male"
   },
   {
     "id": 3938,
-    "name": "Peter Barrett"
+    "name": "Peter Barrett",
+    "gender": "male"
   },
   {
     "id": 3939,
-    "name": "Josh Appelt"
+    "name": "Josh Appelt",
+    "gender": "male"
   },
   {
     "id": 3940,
-    "name": "Murtaza Talha"
+    "name": "Murtaza Talha",
+    "gender": "male"
   },
   {
     "id": 3941,
-    "name": "Solomon Renfro"
+    "name": "Solomon Renfro",
+    "gender": "male"
   },
   {
     "id": 3942,
-    "name": "Roberta Rovel"
+    "name": "Roberta Rovel",
+    "gender": "male"
   },
   {
     "id": 3943,
-    "name": "Victor Jones"
+    "name": "Victor Jones",
+    "gender": "male"
   },
   {
     "id": 3944,
-    "name": "Dave Terrel"
+    "name": "Dave Terrel",
+    "gender": "male"
   },
   {
     "id": 3945,
-    "name": "Guilherme Vasconcelos"
+    "name": "Guilherme Vasconcelos",
+    "gender": "male"
   },
   {
     "id": 3946,
-    "name": "Scott Norton"
+    "name": "Scott Norton",
+    "gender": "male"
   },
   {
     "id": 3947,
-    "name": "Acacio Dos Santos"
+    "name": "Acacio Dos Santos",
+    "gender": "male"
   },
   {
     "id": 3948,
-    "name": "Matt Foki"
+    "name": "Matt Foki",
+    "gender": "male"
   },
   {
     "id": 3949,
-    "name": "Michael Lombardo"
+    "name": "Michael Lombardo",
+    "gender": "male"
   },
   {
     "id": 3950,
-    "name": "Delson Heleno"
+    "name": "Delson Heleno",
+    "gender": "male"
   },
   {
     "id": 3951,
-    "name": "Jack Jenkins"
+    "name": "Jack Jenkins",
+    "gender": "male"
   },
   {
     "id": 3952,
-    "name": "Fred Ettish"
+    "name": "Fred Ettish",
+    "gender": "male"
   },
   {
     "id": 3953,
-    "name": "Kim In Seok"
+    "name": "Kim In Seok",
+    "gender": "male"
   },
   {
     "id": 3954,
-    "name": "Mike Wessel"
+    "name": "Mike Wessel",
+    "gender": "male"
   },
   {
     "id": 3955,
-    "name": "Dave Cochran"
+    "name": "Dave Cochran",
+    "gender": "male"
   },
   {
     "id": 3956,
-    "name": "Jermaine Andre"
+    "name": "Jermaine Andre",
+    "gender": "male"
   },
   {
     "id": 3957,
-    "name": "Dustin West"
+    "name": "Dustin West",
+    "gender": "male"
   },
   {
     "id": 3958,
-    "name": "Rob Wilkinson"
+    "name": "Rob Wilkinson",
+    "gender": "male"
   },
   {
     "id": 3959,
-    "name": "Levi Alford"
+    "name": "Levi Alford",
+    "gender": "male"
   },
   {
     "id": 3960,
-    "name": "Royce Alger"
+    "name": "Royce Alger",
+    "gender": "male"
   },
   {
     "id": 3961,
-    "name": "Tommy Lee"
+    "name": "Tommy Lee",
+    "gender": "male"
   },
   {
     "id": 3962,
-    "name": "Gugun Gusman"
+    "name": "Gugun Gusman",
+    "gender": "male"
   },
   {
     "id": 3963,
-    "name": "Ryan Janes"
+    "name": "Ryan Janes",
+    "gender": "male"
   },
   {
     "id": 3964,
-    "name": "Caio Machado"
+    "name": "Caio Machado",
+    "gender": "male"
   },
   {
     "id": 3965,
-    "name": "Julia Budd"
+    "name": "Julia Budd",
+    "gender": "male"
   },
   {
     "id": 3966,
-    "name": "Tina Lahdemaki"
+    "name": "Tina Lahdemaki",
+    "gender": "male"
   },
   {
     "id": 3967,
-    "name": "Eric Jacob"
+    "name": "Eric Jacob",
+    "gender": "male"
   },
   {
     "id": 3968,
-    "name": "Antonio Jones"
+    "name": "Antonio Jones",
+    "gender": "male"
   },
   {
     "id": 3969,
-    "name": "Morgan Charriere"
+    "name": "Morgan Charriere",
+    "gender": "male"
   },
   {
     "id": 3970,
-    "name": "Travis Fulton"
+    "name": "Travis Fulton",
+    "gender": "male"
   },
   {
     "id": 3971,
-    "name": "Tim Gorman"
+    "name": "Tim Gorman",
+    "gender": "male"
   },
   {
     "id": 3972,
-    "name": "Raimond Magomedaliev"
+    "name": "Raimond Magomedaliev",
+    "gender": "male"
   },
   {
     "id": 3973,
-    "name": "Anthony Figueroa"
+    "name": "Anthony Figueroa",
+    "gender": "male"
   },
   {
     "id": 3974,
-    "name": "Tim Williams"
+    "name": "Tim Williams",
+    "gender": "male"
   },
   {
     "id": 3975,
-    "name": "Sterling Ford"
+    "name": "Sterling Ford",
+    "gender": "male"
   },
   {
     "id": 3976,
-    "name": "Vince Murdock"
+    "name": "Vince Murdock",
+    "gender": "male"
   },
   {
     "id": 3977,
-    "name": "Nick Gonzalez"
+    "name": "Nick Gonzalez",
+    "gender": "male"
   },
   {
     "id": 3978,
-    "name": "Ron Faircloth"
+    "name": "Ron Faircloth",
+    "gender": "male"
   },
   {
     "id": 3979,
-    "name": "Sheila Gaff"
+    "name": "Sheila Gaff",
+    "gender": "male"
   },
   {
     "id": 3980,
-    "name": "Taylor Johnson"
+    "name": "Taylor Johnson",
+    "gender": "male"
   },
   {
     "id": 3981,
-    "name": "Ernest Chavez"
+    "name": "Ernest Chavez",
+    "gender": "male"
   },
   {
     "id": 3982,
-    "name": "Arjan Bhullar"
+    "name": "Arjan Bhullar",
+    "gender": "male"
   },
   {
     "id": 3983,
-    "name": "Koya Kanda"
+    "name": "Koya Kanda",
+    "gender": "male"
   },
   {
     "id": 3984,
-    "name": "Jon Hess"
+    "name": "Jon Hess",
+    "gender": "male"
   },
   {
     "id": 3985,
-    "name": "Bobby Voelker"
+    "name": "Bobby Voelker",
+    "gender": "male"
   },
   {
     "id": 3986,
-    "name": "Corinne Laframboise"
+    "name": "Corinne Laframboise",
+    "gender": "male"
   },
   {
     "id": 3987,
-    "name": "Miranda Granger"
+    "name": "Miranda Granger",
+    "gender": "male"
   },
   {
     "id": 3988,
-    "name": "Cody East"
+    "name": "Cody East",
+    "gender": "male"
   },
   {
     "id": 3989,
-    "name": "Stevie Lynch"
+    "name": "Stevie Lynch",
+    "gender": "male"
   },
   {
     "id": 3990,
-    "name": "Israel Giron"
+    "name": "Israel Giron",
+    "gender": "male"
   },
   {
     "id": 3991,
-    "name": "Devin Johnson"
+    "name": "Devin Johnson",
+    "gender": "male"
   },
   {
     "id": 3992,
-    "name": "Jeri Sitzes"
+    "name": "Jeri Sitzes",
+    "gender": "male"
   },
   {
     "id": 3993,
-    "name": "Reyes Cortez Jr."
+    "name": "Reyes Cortez Jr.",
+    "gender": "male"
   },
   {
     "id": 3994,
-    "name": "Brady Huang"
+    "name": "Brady Huang",
+    "gender": "male"
   },
   {
     "id": 3995,
-    "name": "Hugo Govea"
+    "name": "Hugo Govea",
+    "gender": "male"
   },
   {
     "id": 3996,
-    "name": "Zhang Mingyang"
+    "name": "Zhang Mingyang",
+    "gender": "female"
   },
   {
     "id": 3997,
-    "name": "Travis Calanoc"
+    "name": "Travis Calanoc",
+    "gender": "male"
   },
   {
     "id": 3998,
-    "name": "Joachim Christensen"
+    "name": "Joachim Christensen",
+    "gender": "male"
   },
   {
     "id": 3999,
-    "name": "Bubba Bush"
+    "name": "Bubba Bush",
+    "gender": "male"
   },
   {
     "id": 4000,
-    "name": "Justin Robbins"
+    "name": "Justin Robbins",
+    "gender": "male"
   },
   {
     "id": 4001,
-    "name": "Baru Harn"
+    "name": "Baru Harn",
+    "gender": "male"
   },
   {
     "id": 4002,
-    "name": "Rainn Guerrero"
+    "name": "Rainn Guerrero",
+    "gender": "male"
   },
   {
     "id": 4003,
-    "name": "Angel De Anda"
+    "name": "Angel De Anda",
+    "gender": "male"
   },
   {
     "id": 4004,
-    "name": "Tokimitsu Ishizawa"
+    "name": "Tokimitsu Ishizawa",
+    "gender": "male"
   },
   {
     "id": 4005,
-    "name": "Alatengheili"
+    "name": "Alatengheili",
+    "gender": "male"
   },
   {
     "id": 4006,
-    "name": "Won Sik Park"
+    "name": "Won Sik Park",
+    "gender": "male"
   },
   {
     "id": 4007,
-    "name": "Austin Lingo"
+    "name": "Austin Lingo",
+    "gender": "male"
   },
   {
     "id": 4008,
-    "name": "Ben Sosoli"
+    "name": "Ben Sosoli",
+    "gender": "male"
   },
   {
     "id": 4009,
-    "name": "Greg Stott"
+    "name": "Greg Stott",
+    "gender": "male"
   },
   {
     "id": 4010,
-    "name": "Dennis Bryant"
+    "name": "Dennis Bryant",
+    "gender": "male"
   },
   {
     "id": 4011,
-    "name": "Pat Schilling"
+    "name": "Pat Schilling",
+    "gender": "male"
   },
   {
     "id": 4012,
-    "name": "Sean Alvarez"
+    "name": "Sean Alvarez",
+    "gender": "male"
   },
   {
     "id": 4013,
-    "name": "Chuck Liddell"
+    "name": "Chuck Liddell",
+    "gender": "male"
   },
   {
     "id": 4014,
-    "name": "Eric Castile"
+    "name": "Eric Castile",
+    "gender": "male"
   },
   {
     "id": 4015,
-    "name": "David Marshall"
+    "name": "David Marshall",
+    "gender": "male"
   },
   {
     "id": 4016,
-    "name": "Jose Torres"
+    "name": "Jose Torres",
+    "gender": "male"
   },
   {
     "id": 4017,
-    "name": "Jay Bogan"
+    "name": "Jay Bogan",
+    "gender": "male"
   },
   {
     "id": 4018,
-    "name": "Leigh Remedios"
+    "name": "Leigh Remedios",
+    "gender": "male"
   },
   {
     "id": 4019,
-    "name": "Melinda Fabian"
+    "name": "Melinda Fabian",
+    "gender": "male"
   },
   {
     "id": 4020,
-    "name": "Junior Barata"
+    "name": "Junior Barata",
+    "gender": "male"
   },
   {
     "id": 4021,
-    "name": "Brian Geraghty"
+    "name": "Brian Geraghty",
+    "gender": "male"
   },
   {
     "id": 4022,
-    "name": "Daniel Santos"
+    "name": "Daniel Santos",
+    "gender": "male"
   },
   {
     "id": 4023,
-    "name": "Daniel Schmitt"
+    "name": "Daniel Schmitt",
+    "gender": "male"
   },
   {
     "id": 4024,
-    "name": "Jon Madsen"
+    "name": "Jon Madsen",
+    "gender": "male"
   },
   {
     "id": 4025,
-    "name": "Min Soo Kim"
+    "name": "Min Soo Kim",
+    "gender": "male"
   },
   {
     "id": 4026,
-    "name": "Jamie Houston"
+    "name": "Jamie Houston",
+    "gender": "male"
   },
   {
     "id": 4027,
-    "name": "Michael Patt"
+    "name": "Michael Patt",
+    "gender": "male"
   },
   {
     "id": 4028,
-    "name": "Greg Hardy"
+    "name": "Greg Hardy",
+    "gender": "male"
   },
   {
     "id": 4029,
-    "name": "Kevin Engel"
+    "name": "Kevin Engel",
+    "gender": "male"
   },
   {
     "id": 4030,
-    "name": "Karen Darabedyan"
+    "name": "Karen Darabedyan",
+    "gender": "male"
   },
   {
     "id": 4031,
-    "name": "Sean Soriano"
+    "name": "Sean Soriano",
+    "gender": "male"
   },
   {
     "id": 4032,
-    "name": "Jason Young"
+    "name": "Jason Young",
+    "gender": "male"
   },
   {
     "id": 4033,
-    "name": "Frank Caracci"
+    "name": "Frank Caracci",
+    "gender": "male"
   },
   {
     "id": 4034,
-    "name": "Melvin Manhoef"
+    "name": "Melvin Manhoef",
+    "gender": "male"
   },
   {
     "id": 4035,
-    "name": "Henry Corrales"
+    "name": "Henry Corrales",
+    "gender": "male"
   },
   {
     "id": 4036,
-    "name": "Yorgan De Castro"
+    "name": "Yorgan De Castro",
+    "gender": "male"
   },
   {
     "id": 4037,
-    "name": "Tatsuya Iwasaki"
+    "name": "Tatsuya Iwasaki",
+    "gender": "male"
   },
   {
     "id": 4038,
-    "name": "Rhadi Ferguson"
+    "name": "Rhadi Ferguson",
+    "gender": "male"
   },
   {
     "id": 4039,
-    "name": "Linton Vassell"
+    "name": "Linton Vassell",
+    "gender": "male"
   },
   {
     "id": 4040,
-    "name": "Anthony Adams"
+    "name": "Anthony Adams",
+    "gender": "male"
   },
   {
     "id": 4041,
-    "name": "Sherman Pendergarst"
+    "name": "Sherman Pendergarst",
+    "gender": "male"
   },
   {
     "id": 4042,
-    "name": "JP Felty"
+    "name": "JP Felty",
+    "gender": "male"
   },
   {
     "id": 4043,
-    "name": "Geronimo dos Santos"
+    "name": "Geronimo dos Santos",
+    "gender": "male"
   },
   {
     "id": 4044,
-    "name": "Bogdan Grad"
+    "name": "Bogdan Grad",
+    "gender": "male"
   },
   {
     "id": 4045,
-    "name": "Sean Loeffler"
+    "name": "Sean Loeffler",
+    "gender": "male"
   },
   {
     "id": 4046,
-    "name": "Josh Wick"
+    "name": "Josh Wick",
+    "gender": "male"
   },
   {
     "id": 4047,
-    "name": "Tim Stout"
+    "name": "Tim Stout",
+    "gender": "male"
   },
   {
     "id": 4048,
-    "name": "Roberto Traven"
+    "name": "Roberto Traven",
+    "gender": "male"
   },
   {
     "id": 4049,
-    "name": "Kyle Prepolec"
+    "name": "Kyle Prepolec",
+    "gender": "male"
   },
   {
     "id": 4050,
-    "name": "Jack Marshman"
+    "name": "Jack Marshman",
+    "gender": "male"
   },
   {
     "id": 4051,
-    "name": "Aleksa Camur"
+    "name": "Aleksa Camur",
+    "gender": "male"
   },
   {
     "id": 4052,
-    "name": "Chris Manuel"
+    "name": "Chris Manuel",
+    "gender": "male"
   },
   {
     "id": 4053,
-    "name": "Ian Garry"
+    "name": "Ian Garry",
+    "gender": "male"
   },
   {
     "id": 4054,
-    "name": "Harvey Park"
+    "name": "Harvey Park",
+    "gender": "male"
   },
   {
     "id": 4055,
-    "name": "Alejandro Villalobos"
+    "name": "Alejandro Villalobos",
+    "gender": "male"
   },
   {
     "id": 4056,
-    "name": "Victor Martinez"
+    "name": "Victor Martinez",
+    "gender": "male"
   },
   {
     "id": 4057,
-    "name": "Jason Riley"
+    "name": "Jason Riley",
+    "gender": "male"
   },
   {
     "id": 4058,
-    "name": "Cameron Dollar"
+    "name": "Cameron Dollar",
+    "gender": "male"
   },
   {
     "id": 4059,
-    "name": "Shelton Graves"
+    "name": "Shelton Graves",
+    "gender": "male"
   },
   {
     "id": 4060,
-    "name": "Scott Ettling"
+    "name": "Scott Ettling",
+    "gender": "male"
   },
   {
     "id": 4061,
-    "name": "Mounir Lazzez"
+    "name": "Mounir Lazzez",
+    "gender": "male"
   },
   {
     "id": 4062,
-    "name": "Jack Nilson"
+    "name": "Jack Nilson",
+    "gender": "male"
   },
   {
     "id": 4063,
-    "name": "Israel Delgado"
+    "name": "Israel Delgado",
+    "gender": "male"
   },
   {
     "id": 4064,
-    "name": "Luiz Dutra"
+    "name": "Luiz Dutra",
+    "gender": "male"
   },
   {
     "id": 4065,
-    "name": "Nair Melikyan"
+    "name": "Nair Melikyan",
+    "gender": "male"
   },
   {
     "id": 4066,
-    "name": "Norma Dumont"
+    "name": "Norma Dumont",
+    "gender": "male"
   },
   {
     "id": 4067,
-    "name": "Tuco Tokkos"
+    "name": "Tuco Tokkos",
+    "gender": "male"
   },
   {
     "id": 4068,
-    "name": "Cristian Quinonez"
+    "name": "Cristian Quinonez",
+    "gender": "male"
   },
   {
     "id": 4069,
-    "name": "Wallen Del Rosario"
+    "name": "Wallen Del Rosario",
+    "gender": "male"
   },
   {
     "id": 4070,
-    "name": "Emmanuel Yarborough"
+    "name": "Emmanuel Yarborough",
+    "gender": "male"
   },
   {
     "id": 4071,
-    "name": "Shinsho Anzai"
+    "name": "Shinsho Anzai",
+    "gender": "male"
   },
   {
     "id": 4072,
-    "name": "Shoji Maruyama"
+    "name": "Shoji Maruyama",
+    "gender": "male"
   },
   {
     "id": 4073,
-    "name": "Hidetaka Monma"
+    "name": "Hidetaka Monma",
+    "gender": "male"
   },
   {
     "id": 4074,
-    "name": "John Paul Elias"
+    "name": "John Paul Elias",
+    "gender": "male"
   },
   {
     "id": 4075,
-    "name": "Maurice Mitchell"
+    "name": "Maurice Mitchell",
+    "gender": "male"
   },
   {
     "id": 4076,
-    "name": "Kazunori Yokota"
+    "name": "Kazunori Yokota",
+    "gender": "male"
   },
   {
     "id": 4077,
-    "name": "Cyborg Abreu"
+    "name": "Cyborg Abreu",
+    "gender": "male"
   },
   {
     "id": 4078,
-    "name": "Brandon Melendez"
+    "name": "Brandon Melendez",
+    "gender": "male"
   },
   {
     "id": 4079,
-    "name": "Andy Uhrich"
+    "name": "Andy Uhrich",
+    "gender": "male"
   },
   {
     "id": 4080,
-    "name": "Juan Puerta"
+    "name": "Juan Puerta",
+    "gender": "male"
   },
   {
     "id": 4081,
-    "name": "Pete Sabala"
+    "name": "Pete Sabala",
+    "gender": "male"
   },
   {
     "id": 4082,
-    "name": "Dusko Todorovic"
+    "name": "Dusko Todorovic",
+    "gender": "male"
   },
   {
     "id": 4083,
-    "name": "Richard Jacobi"
+    "name": "Richard Jacobi",
+    "gender": "male"
   },
   {
     "id": 4084,
-    "name": "Masutatsu Yano"
+    "name": "Masutatsu Yano",
+    "gender": "male"
   },
   {
     "id": 4085,
-    "name": "Justin Frazier"
+    "name": "Justin Frazier",
+    "gender": "male"
   },
   {
     "id": 4086,
-    "name": "Lloyd Van Dams"
+    "name": "Lloyd Van Dams",
+    "gender": "male"
   },
   {
     "id": 4087,
-    "name": "Branko Cikatic"
+    "name": "Branko Cikatic",
+    "gender": "male"
   },
   {
     "id": 4088,
-    "name": "Dave Zitanick"
+    "name": "Dave Zitanick",
+    "gender": "male"
   },
   {
     "id": 4089,
-    "name": "Tito Jones"
+    "name": "Tito Jones",
+    "gender": "male"
   },
   {
     "id": 4090,
-    "name": "Yusaku Kinoshita"
+    "name": "Yusaku Kinoshita",
+    "gender": "male"
   },
   {
     "id": 4091,
-    "name": "Jackie Lee"
+    "name": "Jackie Lee",
+    "gender": "male"
   },
   {
     "id": 4092,
-    "name": "John Cofer"
+    "name": "John Cofer",
+    "gender": "male"
   },
   {
     "id": 4093,
-    "name": "Kyron Bowen"
+    "name": "Kyron Bowen",
+    "gender": "male"
   },
   {
     "id": 4094,
-    "name": "Alejandro Garcia"
+    "name": "Alejandro Garcia",
+    "gender": "male"
   },
   {
     "id": 4095,
-    "name": "Homer Moore"
+    "name": "Homer Moore",
+    "gender": "male"
   },
   {
     "id": 4096,
-    "name": "Keith Mielke"
+    "name": "Keith Mielke",
+    "gender": "male"
   },
   {
     "id": 4097,
-    "name": "Eperaim Ginting"
+    "name": "Eperaim Ginting",
+    "gender": "male"
   },
   {
     "id": 4098,
-    "name": "Justin Martin"
+    "name": "Justin Martin",
+    "gender": "male"
   },
   {
     "id": 4099,
-    "name": "Jack May"
+    "name": "Jack May",
+    "gender": "male"
   },
   {
     "id": 4100,
-    "name": "Jamelle Jones"
+    "name": "Jamelle Jones",
+    "gender": "male"
   },
   {
     "id": 4101,
-    "name": "Nicholas Sergiacomi"
+    "name": "Nicholas Sergiacomi",
+    "gender": "male"
   },
   {
     "id": 4102,
-    "name": "Del Hawkins"
+    "name": "Del Hawkins",
+    "gender": "male"
   },
   {
     "id": 4103,
-    "name": "Ariel Beck"
+    "name": "Ariel Beck",
+    "gender": "male"
   },
   {
     "id": 4104,
-    "name": "Abner Lloveras"
+    "name": "Abner Lloveras",
+    "gender": "male"
   },
   {
     "id": 4105,
-    "name": "Brian Melancon"
+    "name": "Brian Melancon",
+    "gender": "male"
   },
   {
     "id": 4106,
-    "name": "Amaury Bitetti"
+    "name": "Amaury Bitetti",
+    "gender": "male"
   },
   {
     "id": 4107,
-    "name": "John Campetella"
+    "name": "John Campetella",
+    "gender": "male"
   },
   {
     "id": 4108,
-    "name": "Andre Pederneiras"
+    "name": "Andre Pederneiras",
+    "gender": "male"
   },
   {
     "id": 4109,
-    "name": "Bryson Kamaka"
+    "name": "Bryson Kamaka",
+    "gender": "male"
   },
   {
     "id": 4110,
-    "name": "Matej Penaz"
+    "name": "Matej Penaz",
+    "gender": "male"
   },
   {
     "id": 4111,
-    "name": "Pauline Macias"
+    "name": "Pauline Macias",
+    "gender": "male"
   }
 ]

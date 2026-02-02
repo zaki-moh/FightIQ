@@ -49,20 +49,36 @@ def strike_efficiency(stats: pd.DataFrame) -> None:
 
 
 def grapple_efficiency(stats: pd.DataFrame) -> None:
+    grapple_cols = [
+        "average_takedowns_landed_per_15_minutes",
+        "average_submissions_attempted_per_15_minutes",
+        "takedown_defense",
+    ]
+
+    for col in grapple_cols:
+        stats[col] = (
+            stats[col]
+            .replace(0, pd.NA)
+            .fillna(stats[col].median())
+        )
+
     td_pressure = (
         stats["average_takedowns_landed_per_15_minutes"]
         / stats["average_takedowns_landed_per_15_minutes"].quantile(0.95)
-    ).clip(lower=0, upper=1).fillna(0)
+    ).clip(lower=0, upper=1)
 
     submission_pressure = (
         stats["average_submissions_attempted_per_15_minutes"] / 5
-    ).clip(lower=0, upper=1).fillna(0)
+    ).clip(lower=0, upper=1)
+
+    td_defense = (stats["takedown_defense"] / 100).clip(0, 1)
 
     stats["grapple_efficiency"] = (
         0.5 * td_pressure
-        + 0.3 * (stats["takedown_defense"] / 100)
+        + 0.3 * td_defense
         + 0.2 * submission_pressure
-    )
+    ).fillna(0)
+
 
 
 

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { fighters, Fighter } from '@/data/fighters'
+import { fighters } from '@/data/fighters'
 import Placeholder from './Placeholder'
 import clsx from 'clsx'
 
@@ -8,9 +8,9 @@ interface FighterSelectorProps {
   fighterA: string
   fighterB: string
   onChangeA: (value: string) => void
-  onSelectA: (name: string) => void
+  onSelectA: (name: string, gender: string) => void
   onChangeB: (value: string) => void
-  onSelectB: (name: string) => void
+  onSelectB: (name: string, gender: string) => void
 }
 
 const FighterSelector = ({
@@ -70,7 +70,7 @@ const FighterSelector = ({
                   <div
                     key={f.id}
                     onMouseDown={() => {
-                      onSelectA(f.name)
+                      onSelectA(f.name, f.gender)
                       setOpenA(false)
                     }}
                     className="px-4 py-2 text-white text-sm cursor-pointer hover:bg-blue-500/15 active:bg-blue-500/25"
@@ -117,7 +117,7 @@ const FighterSelector = ({
                   <div
                     key={f.id}
                     onMouseDown={() => {
-                      onSelectB(f.name)
+                      onSelectB(f.name, f.gender)
                       setOpenB(false)
                     }}
                     className="px-4 py-2 text-white text-sm cursor-pointer hover:bg-blue-500/15 active:bg-blue-500/25"
