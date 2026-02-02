@@ -19,6 +19,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+class Warning(BaseModel):
+    type: str
+    message: str
 
 class Edge(BaseModel):
     type: str | None
@@ -43,18 +46,21 @@ class Fighter(BaseModel):
 class PredictionResponse(BaseModel):
     fighterA: Fighter
     fighterB: Fighter
-    winner: str
-    confidence: float
-    probabilities: dict[str, float]
-    edge: Edge
-    is_historic: bool
-    explanation: Explanation
-    strikeDelta: float
-    grappleDelta: float
-    reachDelta: float
-    ageDelta: float
-    weightDelta: float
-    heightDelta: float
+    winner: str | None
+    confidence: float | None
+    probabilities: dict[str, float] | None
+    edge: Edge | None
+    is_historic: bool | None
+    explanation: Explanation | None
+    strikeDelta: float | None
+    grappleDelta: float | None
+    reachDelta: float | None
+    ageStageA: str | None
+    ageStageB: str | None
+    weightDelta: float | None
+    heightDelta: float | None
+    warning: dict | None
+
 
 @app.post("/predict", response_model=PredictionResponse)
 def predict(data: Matchup):

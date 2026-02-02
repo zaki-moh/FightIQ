@@ -11,6 +11,11 @@ type FighterInput = {
   gender: string | null
 }
 
+type PredictionWarning = {
+  type: 'gender_mismatch' | 'extreme_weight_mismatch'
+  message: string
+}
+
 type PredictionResult = {
   fighterA: {
     name: string
@@ -35,9 +40,11 @@ type PredictionResult = {
   strikeDelta: number
   grappleDelta: number
   reachDelta: number
-  ageDelta: number
+  ageStageA: string
+  ageStageB: string
   weightDelta: number
   heightDelta: number
+  warning: PredictionWarning | undefined
 }
 
 const MMA = () => {
@@ -167,7 +174,18 @@ const MMA = () => {
             : 'Change fighters to re-predict'}
         </Button>
 
-        {result && (
+        {result != null && result.warning && (
+          <div className="mt-4 max-w-xl mx-auto rounded-md border-l-2 border-red-400/40 bg-red-400/5 px-3 py-2">
+            <p className="text-xs leading-relaxed text-red-300/60">
+              <span className="font-medium text-red-300/80">
+                ⚠️ Warning
+              </span>{' '}
+              {result.warning.message}
+            </p>
+          </div>
+        )}
+
+        {result && !result.warning && (
           <div className="mt-9 items-center flex text-white/60 gap-3">
             <div className="h-px px bg-white/10 flex-1" />
             <span className="font-medium text-xs tracking-wide uppercase ">
@@ -189,7 +207,7 @@ const MMA = () => {
           </div>
         )}
 
-        {result && (
+        {result && !result.warning && (
           <div className="mt-9 flex flex-col items-center gap-6 sm:flex-row sm:gap-12 sm:justify-center">
             <FighterCard
               fighterName={fighterA.name}
@@ -213,15 +231,17 @@ const MMA = () => {
           </p>
         )}
 
-        {result && !error && (
+        {result && !result.warning && !error && (
           <div className="mt-10 px-2 sm:px-0 max-w-3xl mx-auto">
             <KeyAdvantagesDelta
               strikeDelta={result.strikeDelta}
-              grapplingDelta={result.grappleDelta}
+              grappleDelta={result.grappleDelta}
               reachDelta={result.reachDelta}
-              ageDelta={result.ageDelta}
+              ageStages={[result.ageStageA, result.ageStageB]}
               weightDelta={result.weightDelta}
               heightDelta={result.heightDelta}
+              fighterA={fighterA}
+              fighterB={fighterB}
               winnerName={result.winner}
             />
 

@@ -53,6 +53,40 @@ EXPLANATION_TEXT = {
     "weight": "a meaningful size and weight advantage",
 }
 
+CAREER_STAGES = {
+    "early": (18, 24),
+    "early_prime": (25, 28),
+    "prime": (29, 32),
+    "veteran": (33, 37),
+    "late": (38, math.inf),
+}
+
+
+def build_warning_response(fighter_A, fighter_B, warning):
+    return {
+        "fighterA": {
+            "name": fighter_A["name"],
+            "gender": fighter_A["gender"] or "unknown",
+        },
+        "fighterB": {
+            "name": fighter_B["name"],
+            "gender": fighter_B["gender"] or "unknown",
+        },
+        "winner": None,
+        "confidence": None,
+        "probabilities": None,
+        "edge": None,
+        "is_historic": None,
+        "explanation": None,
+        "strikeDelta": None,
+        "grappleDelta": None,
+        "reachDelta": None,
+        "ageStageA": None,
+        "ageStageB": None,
+        "weightDelta": None,
+        "heightDelta": None,
+        "warning": warning,
+    }
 
 def build_response(
     fighter_A,
@@ -67,9 +101,11 @@ def build_response(
     strike_delta,
     grapple_delta,
     reach_delta,
-    age_delta,
+    ageStageA,
+    ageStageB,
     weight_delta_lb,
-    height_diff
+    height_diff,
+    warning
 ):
     return {
         "fighterA": {
@@ -92,9 +128,11 @@ def build_response(
         "strikeDelta": float(strike_delta),
         "grappleDelta": float(grapple_delta),
         "reachDelta": float(reach_delta),
-        "ageDelta": float(age_delta),
+        "ageStageA": ageStageA,
+        "ageStageB": ageStageB,
         "weightDelta": float(weight_delta_lb),
-        "heightDelta": float(height_diff)
+        "heightDelta": float(height_diff),
+        "warning": warning,
     }
 
 
@@ -109,7 +147,7 @@ def build_historic_matchups(df):
     return historic_matchups
 
 
-historic_fights = build_historic_matchups(historic_df)
+historic_fights = build_historic_matchups(historic_df) if historic_df is not None else se()
 
 
 def prob_A_beats_B(fighter_A, fighter_B):
@@ -196,28 +234,47 @@ def determine_edge(
 def build_summary(winner_name, explanation_factors):
     if not explanation_factors:
         return (
-            f"{winner_name} is favored based on overall "
-            "statistical balance."
+            f"The model favors {winner_name} in a closely matched contest "
+            "based on overall statistical balance."
         )
 
-    reasons = [
-        EXPLANATION_TEXT.get(f["type"], "a statistical advantage")
-        for f in explanation_factors[:3]
-    ]
+    types = {f["type"] for f in explanation_factors}
 
-    if len(reasons) == 1:
-        return f"{winner_name} is favored due to {reasons[0]}."
-
-    if len(reasons) == 2:
+    if "grappling" in types and "striking" not in types:
         return (
-            f"{winner_name} is favored due to "
-            f"{reasons[0]} and {reasons[1]}."
+            f"The model expects {winner_name} to dictate where the fight takes place "
+            "through superior grappling control."
+        )
+
+    if "striking" in types and "grappling" not in types:
+        return (
+            f"The model predicts a stand-up battle where {winner_name} "
+            "holds the technical striking edge."
+        )
+
+    if "striking" in types and "grappling" in types:
+        return (
+            f"The model favors {winner_name} as the more well-rounded fighter "
+            "across both striking exchanges and grappling control."
+        )
+
+    if "reach" in types or "weight" in types or "age" in types:
+        return (
+            f"The matchup favors {winner_name} through meaningful physical "
+            "and positional advantages."
         )
 
     return (
-        f"{winner_name} is favored due to "
-        f"{', '.join(reasons[:-1])}, and {reasons[-1]}."
+        f"The model favors {winner_name} due to a combination of statistical edges "
+        "across key performance areas."
     )
+
+
+def get_career_stage(age: int) -> str:
+    for stage, (low, high) in CAREER_STAGES.items():
+        if low <= age <= high:
+            return stage
+    return "unknown"
 
 
 def predictWinner(fighter_A_Name, fighter_B_Name):
@@ -243,6 +300,29 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
     fighter_A = rowsA.iloc[0].fillna(0)
     fighter_B = rowsB.iloc[0].fillna(0)
 
+    if fighter_A["gender"] != fighter_B["gender"]:
+        return build_warning_response(
+            fighter_A, 
+            fighter_B, 
+            {
+                "type": "gender_mismatch",
+                "message": "FightIQ predictions are only supported between fighters of the same gender."
+            }
+        )
+        
+
+    weight_diff_lb = abs(fighter_A["weight_in_kg"] - fighter_B["weight_in_kg"]) * 2.20462
+
+    if weight_diff_lb > 30:
+        return build_warning_response(
+            fighter_A, 
+            fighter_B, 
+            {
+                "type": "extreme_weight_mismatch",
+                "message": f"This matchup has a {int(weight_diff_lb)} lb size difference, which falls outside the range of realistic sanctioned fights used to train the model."
+            }
+        )
+
     p_A_wins = prob_A_beats_B(fighter_A, fighter_B)
     p_B_wins = prob_A_beats_B(fighter_B, fighter_A)
 
@@ -266,7 +346,9 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
     reach_diff = (
         fighter_A["reach_in_cm"] - fighter_B["reach_in_cm"]
     ) / 2.54
-    age_diff = fighter_A["age"] - fighter_B["age"]
+
+    ageStageA = get_career_stage(fighter_A["age"])
+    ageStageB = get_career_stage(fighter_B["age"])
 
     height_diff = (
         fighter_A["height_cm"] - fighter_B["height_cm"]
@@ -277,7 +359,6 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         "striking": strike_diff,
         "grappling": grapple_diff,
         "reach": reach_diff,
-        "age": age_diff,
     }
 
     if p_A > p_B:
@@ -353,7 +434,9 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
         strike_diff * 100,
         grapple_diff * 100,
         reach_diff,
-        age_diff,
+        ageStageA,
+        ageStageB,
         weight_in_lb,
-        height_diff
+        height_diff,
+        warning=None,
     )

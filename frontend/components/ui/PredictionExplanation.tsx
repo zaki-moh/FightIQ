@@ -29,7 +29,7 @@ const PredictionExplanations = ({
     
   return (
     <section className="max-w-3xl mt-10 px-4 mx-auto">
-      <div className="rounded-xl bg-white/5 border border-white/5 p-4 sm:p-6">
+      <div className="rounded-xl bg-white/5 border border-white/5 p-4 sm:p-6 transition-all duration-300 hover:bg-white/[0.08] hover:shadow-[0_0_35px_rgba(59,130,246,0.12)]">
         <h3 className="mt-2 sm:mt-4 text-sm sm:text-base text-white/90 font-medium text-center tracking-wide">
           Why the model favors {name} in this matchup
         </h3>
