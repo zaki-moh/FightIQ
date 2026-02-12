@@ -11,15 +11,15 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky isolate top-0 bg-[#050D27] shadow-md z-50">
-      <div className="flex items-center w-full justify-between px-6 h-16">
-        <Link href="/" className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 active:scale-90"> 
-          <Image 
+    <header className="sticky top-0 bg-[#050D27] shadow-md z-50">
+      <div className="flex items-center justify-between px-6 h-16">
+        <Link href="/">
+          <Image
             src="/assets/icons/FightIQfinal.png"
-            alt="logo" 
-            width={1536} 
-            height={1024} 
-            className="h-8 sm:h-10 w-auto cursor-pointer"
+            alt="logo"
+            width={1536}
+            height={1024}
+            className="h-8 sm:h-10 w-auto"
           />
         </Link>
 
@@ -34,18 +34,18 @@ const Header = () => {
           )}
         </button>
 
-        <nav>
-         <nav className="hidden md:block">
-            <NavItems />
-          </nav>
+        <nav className="hidden md:block">
+          <NavItems />
         </nav>
-
-        {open && (
-          <div className="md:hidden px-6 pb-4 pt-2 bg-[#050D27] border-t border-white/10">
-            <NavItems mobile={true}/>
-          </div>
-        )}
       </div>
+
+      {open && (
+        <div className="md:hidden w-full bg-[#050D27] border-t border-white/10">
+          <div className="px-6 py-4">
+            <NavItems mobile />
+          </div>
+        </div>
+      )}
     </header>
   )
 }

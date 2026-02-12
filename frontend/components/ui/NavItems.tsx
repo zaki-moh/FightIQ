@@ -14,30 +14,30 @@ const NavItems = ({ mobile }: NavItemsProps) => {
         <li>
           <Link
             href="/ufc"
-            className="block w-full rounded-md px-3 py-2 text-white/80
+            className="flex justify-center block w-full rounded-md px-3 py-2 text-white/80
                        hover:bg-white/10 transition-colors"
           >
-            UFC Predictions
+            UFC
           </Link>
         </li>
 
         <li>
           <Link
             href="/one"
-            className="block w-full rounded-md px-3 py-2 text-white/80
+            className="flex justify-center block w-full rounded-md px-3 py-2 text-white/80
                        hover:bg-white/10 transition-colors"
           >
-            ONE Championship Predictions
+            ONE
           </Link>
         </li>
 
         <li>
           <Link
             href="/toprank"
-            className="block w-full rounded-md px-3 py-2 text-white/80
+            className="flex justify-center block w-full rounded-md px-3 py-2 text-white/80
                        hover:bg-white/10 transition-colors"
           >
-            Top Rank Predictions
+            Top Rank
           </Link>
         </li>
       </ul>
