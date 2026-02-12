@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from src.predict import predictWinner
+from src.fighterStats import get_fighter_stats
 import os
 
 app = FastAPI()
@@ -43,6 +44,18 @@ class Fighter(BaseModel):
     name: str
     gender: str
 
+class Physical(BaseModel):
+    height_in_inches: float
+    reach_in_inches: float
+    weight_in_lb: float
+    age: int
+
+class Performance(BaseModel):
+    striking_efficiency: float
+    grappling_efficiency: float
+    win_ratio: float
+    career_stage: str
+
 class PredictionResponse(BaseModel):
     fighterA: Fighter
     fighterB: Fighter
@@ -61,9 +74,13 @@ class PredictionResponse(BaseModel):
     heightDelta: float | None
     warning: dict | None
 
+class FighterStatsResponse(BaseModel):
+    physical: Physical
+    performance: Performance
+
 
 @app.post("/predict", response_model=PredictionResponse)
-def predict(data: Matchup):
+def predict_endpoint(data: Matchup):
     if data.fighterA == data.fighterB:
         raise HTTPException(
             status_code=400,
@@ -82,6 +99,23 @@ def predict(data: Matchup):
         )
 
     return result
+
+
+@app.get("/fighters/{fighter_name}/stats", response_model=FighterStatsResponse)
+def get_fighters_endpoint(fighter_name: str):
+    try:
+        stats = get_fighter_stats(fighter_name)
+        return stats
+    except ValueError as e:
+        raise HTTPException(
+            status_code=404,
+             detail="Fighter not found"
+        )
+    except FileNotFoundError as e:
+        raise HTTPException(
+            status_code=500,
+            detail="Fighter data not available"
+        )
 
 @app.get("/health")
 def health():

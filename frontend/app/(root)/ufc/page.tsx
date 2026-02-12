@@ -174,14 +174,45 @@ const MMA = () => {
             : 'Change fighters to re-predict'}
         </Button>
 
-        {result != null && result.warning && (
-          <div className="mt-4 max-w-xl mx-auto rounded-md border-l-2 border-red-400/40 bg-red-400/5 px-3 py-2">
-            <p className="text-xs leading-relaxed text-red-300/60">
-              <span className="font-medium text-red-300/80">
-                ⚠️ Warning
-              </span>{' '}
-              {result.warning.message}
-            </p>
+        {result != null && result.warning && result.warning.type == "extreme_weight_mismatch" && (
+          <div className="mt-4 max-w-xl mx-auto rounded-md border-l-2 border-amber-400/40 bg-amber-400/5 px-4 py-3">
+            <div className="flex items-start gap-3 text-left">
+              <span className="text-amber-300/90">⚠️</span>
+
+              <div className="flex flex-col">
+                <span className="font-medium text-amber-300/90">
+                  Warning
+                </span>
+
+                <span className="mt-1 text-amber-300/70 text-sm leading-relaxed">
+                  This matchup has a{" "}
+                  <span className="font-medium text-amber-300/90">
+                    {result.warning.message}
+                  </span>{" "}
+                  size difference, which falls outside the range of realistic sanctioned fights used to train the model.
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {result != null && result.warning && result.warning.type == "gender_mismatch" && (
+          <div className="mt-8 mb-6 max-w-2xl mx-auto rounded-md border-l-2 border-amber-400/40 bg-amber-400/5 px-4 py-3">
+            <div className="flex gap-3 items-start text-left">
+              
+              <span className="text-amber-300/80 text-sm">⚠️</span>
+
+              <div className="flex flex-col">
+                <span className="font-medium text-amber-300/90 text-sm">
+                  Warning
+                </span>
+
+                <span className="mt-1 text-amber-300/70 text-sm leading-relaxed">
+                  {result.warning.message}
+                </span>
+              </div>
+
+            </div>
           </div>
         )}
 

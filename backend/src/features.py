@@ -46,6 +46,17 @@ def strike_efficiency(stats: pd.DataFrame) -> None:
         - defense_penalty
     )
 
+    min_val = stats["strike_efficiency"].min()
+    max_val = stats["strike_efficiency"].max()
+    if max_val - min_val != 0:
+        stats["strike_efficiency"] = (
+            (stats["strike_efficiency"] - min_val)
+            / (max_val - min_val)
+        )
+    else:
+        stats["strike_efficiency"] = 0
+
+
 
 
 def grapple_efficiency(stats: pd.DataFrame) -> None:
@@ -112,4 +123,22 @@ def add_features(stats: pd.DataFrame) -> pd.DataFrame:
     performance_score(stats)
     win_ratio(stats)
 
+    NUMERIC_COLUMNS = [
+        "height_cm",
+        "reach_in_cm",
+        "weight_in_kg",
+        "age",
+        "strike_efficiency",
+        "grapple_efficiency",
+        "performance",
+        "win_ratio",
+    ]
+
+    for col in NUMERIC_COLUMNS:
+        stats[col] = pd.to_numeric(stats[col], errors="coerce").fillna(0)
+
+    stats["age"] = stats["age"].fillna(stats["age"].median())
+    stats["age"] = stats["age"].astype(int)
+
     return stats
+

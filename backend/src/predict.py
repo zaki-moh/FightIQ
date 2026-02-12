@@ -319,7 +319,7 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
             fighter_B, 
             {
                 "type": "extreme_weight_mismatch",
-                "message": f"This matchup has a {int(weight_diff_lb)} lb size difference, which falls outside the range of realistic sanctioned fights used to train the model."
+                "message": f"{int(weight_diff_lb)} lb"
             }
         )
 
