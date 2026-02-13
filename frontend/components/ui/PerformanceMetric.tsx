@@ -9,13 +9,13 @@ type PerformanceMetricProps =
     }
   | {
       type: 'categorical'
-      label: string
-      value: 'early' | 'early_prime' | 'prime' | 'veteran' | 'late'
+      label: string 
+      value: 'early' | 'early prime' | 'prime' | 'veteran' | 'late'
     }
 
 const stageStyles = {
   "early": "bg-teal-400/10 text-teal-300 border-teal-400/30",
-  "early_prime": "bg-green-400/10 text-green-300 border-green-400/30",
+  "early prime": "bg-green-400/10 text-green-300 border-green-400/30",
   "prime": "bg-blue-400/10 text-blue-300 border-blue-400/30",
   "veteran": "bg-purple-400/10 text-purple-300 border-purple-400/30",
   "late": "bg-amber-400/10 text-amber-300 border-amber-400/30"

@@ -29,7 +29,7 @@ except FileNotFoundError:
 
 CAREER_STAGES = {
     "early": (18, 24),
-    "early_prime": (25, 28),
+    "early prime": (25, 28),
     "prime": (29, 32),
     "veteran": (33, 37),
     "late": (38, math.inf),
