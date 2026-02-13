@@ -101,7 +101,7 @@ const FighterCard = ({
           w-80
           px-4 py-5
           flex flex-col gap-2
-          transition-colors duration-200
+          transition-colors duration-300
           ${isWinner
             ? "ring-2 ring-blue-400 "
             : "opacity-85 border border-white/10 hover:ring-1 hover:ring-white/20"
