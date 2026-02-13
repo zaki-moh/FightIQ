@@ -10,7 +10,7 @@ type PerformanceMetricProps =
   | {
       type: 'categorical'
       label: string
-      value: string
+      value: 'early' | 'early_prime' | 'prime' | 'veteran' | 'late'
     }
 
 const stageStyles = {
