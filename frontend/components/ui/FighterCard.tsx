@@ -28,7 +28,7 @@ type Performance = {
   striking_efficiency: number
   grappling_efficiency: number
   win_ratio: number
-  career_stage: string
+  career_stage: 'early' | 'early prime' | 'prime' | 'veteran' | 'late'
 }
 
 type FighterStats = {
