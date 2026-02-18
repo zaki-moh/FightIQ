@@ -1,4 +1,8 @@
 'use client'
+// Main UFC prediction flow page:
+// - fighter selection
+// - API prediction request
+// - warning/result rendering
 import Button from '@/components/ui/Button'
 import FighterCard from '@/components/ui/FighterCard'
 import FighterSelector from '@/components/ui/FighterSelector'

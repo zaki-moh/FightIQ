@@ -27,9 +27,9 @@ const Page = () => {
                 <Image
                   width={1024}
                   height={379}
-                  src="/assets/icons/UFCcropped.png"
+                  src="/assets/icons/svg/UFCcropped.svg"
                   alt="UFC"
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-full max-w-full object-contain brightness-0 invert opacity-90"
                 />
               </div>
             }
@@ -45,9 +45,9 @@ const Page = () => {
                 <Image
                   width={1024}
                   height={379}
-                  src="/assets/icons/OneChampionship.png"
+                  src="/assets/icons/svg/OneChampionship.svg"
                   alt="ONE Championship"
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-full max-w-full object-contain brightness-0 invert opacity-90"
                 />
               </div>
             }
@@ -65,9 +65,9 @@ const Page = () => {
                 <Image
                   width={1024}
                   height={379}
-                  src="/assets/icons/TopRank2.png"
+                  src="/assets/icons/svg/TopRank2.svg"
                   alt="Top Rank"
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-full max-w-full object-contain brightness-0 invert opacity-90"
                 />
               </div>
             }

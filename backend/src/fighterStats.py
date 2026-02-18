@@ -1,3 +1,9 @@
+"""Legacy CSV-backed fighter stats helpers.
+
+This module remains as compatibility fallback while DB-backed runtime
+storage is rolled out.
+"""
+
 from pathlib import Path
 import pandas as pd
 from src.features import add_features
@@ -37,12 +43,14 @@ CAREER_STAGES = {
 
 
 def get_career_stage(age: int) -> str:
+    """Map numeric age into a descriptive career stage bucket."""
     for stage, (low, high) in CAREER_STAGES.items():
         if low <= age <= high:
             return stage
     return "unknown"
 
 def get_fighter_stats(fighter_name: str):
+    """Return physical/performance stats for one fighter from CSV dataset."""
     if fighters_df is None:
         raise FileNotFoundError("fighter stats dataset not found")
 

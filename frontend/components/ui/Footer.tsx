@@ -1,3 +1,4 @@
+// Global site footer with links and social handles.
 import Link from 'next/link'
 import Image from 'next/image'
 import FooterItems from './FooterItems'
@@ -17,11 +18,11 @@ const Footer = () => {
       >
         <div className="flex flex-col items-center md:items-start gap-3">
           <Image
-            src="/assets/icons/FightIQfinal.png"
+            src="/assets/icons/svg/FightIQfinal.svg"
             alt="FightIQ logo"
             width={512}
             height={256}
-            className="h-9 sm:h-10 w-auto opacity-90"
+            className="h-9 sm:h-10 w-auto brightness-0 invert opacity-85"
             priority={false}
           />
 

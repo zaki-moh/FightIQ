@@ -1,3 +1,5 @@
+"""Offline model training script for FightIQ UFC predictor."""
+
 import pandas as pd
 from pathlib import Path
 import joblib

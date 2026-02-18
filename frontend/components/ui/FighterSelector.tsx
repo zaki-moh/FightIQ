@@ -1,6 +1,8 @@
 'use client'
-import { useState } from 'react'
-import { fighters } from '@/data/fighters'
+// Fighter autocomplete component used on the UFC prediction page.
+// Uses API-backed search with static fallback for resilience.
+import { useEffect, useState } from 'react'
+import { fighters as fallbackFighters } from '@/data/fighters'
 import Placeholder from './Placeholder'
 import clsx from 'clsx'
 
@@ -13,6 +15,12 @@ interface FighterSelectorProps {
   onSelectB: (name: string, gender: string) => void
 }
 
+type FighterOption = {
+  id: number
+  name: string
+  gender: string
+}
+
 const FighterSelector = ({
   fighterA,
   fighterB,
@@ -23,24 +31,94 @@ const FighterSelector = ({
 }: FighterSelectorProps) => {
   const [openA, setOpenA] = useState(false)
   const [openB, setOpenB] = useState(false)
+  const [filteredA, setFilteredA] = useState<FighterOption[]>([])
+  const [filteredB, setFilteredB] = useState<FighterOption[]>([])
 
-  const filteredA =
-    fighterA.length >= 2
-      ? fighters.filter(
-          (f) =>
-            f.name.toLowerCase().includes(fighterA.toLowerCase()) &&
-            f.name !== fighterB
-        )
-      : []
+  const API_URL = process.env.NEXT_PUBLIC_API_URL
 
-  const filteredB =
-    fighterB.length >= 2
-      ? fighters.filter(
-          (f) =>
-            f.name.toLowerCase().includes(fighterB.toLowerCase()) &&
-            f.name !== fighterA
+  const fallbackSearch = (query: string, excludeName: string): FighterOption[] => {
+    return fallbackFighters
+      .filter(
+        (f) =>
+          f.name.toLowerCase().includes(query.toLowerCase()) &&
+          f.name !== excludeName
+      )
+      .slice(0, 10)
+  }
+
+  useEffect(() => {
+    const query = fighterA.trim()
+    if (query.length < 2) {
+      setFilteredA([])
+      return
+    }
+
+    if (!API_URL) {
+      setFilteredA(fallbackSearch(query, fighterB))
+      return
+    }
+
+    const controller = new AbortController()
+    const timeout = setTimeout(async () => {
+      try {
+        const response = await fetch(
+          `${API_URL}/fighters?query=${encodeURIComponent(query)}&exclude_name=${encodeURIComponent(fighterB)}`,
+          { signal: controller.signal }
         )
-      : []
+
+        if (!response.ok) {
+          throw new Error('Fighter search failed')
+        }
+
+        const data = (await response.json()) as FighterOption[]
+        setFilteredA(data.slice(0, 10))
+      } catch {
+        setFilteredA(fallbackSearch(query, fighterB))
+      }
+    }, 180)
+
+    return () => {
+      controller.abort()
+      clearTimeout(timeout)
+    }
+  }, [API_URL, fighterA, fighterB])
+
+  useEffect(() => {
+    const query = fighterB.trim()
+    if (query.length < 2) {
+      setFilteredB([])
+      return
+    }
+
+    if (!API_URL) {
+      setFilteredB(fallbackSearch(query, fighterA))
+      return
+    }
+
+    const controller = new AbortController()
+    const timeout = setTimeout(async () => {
+      try {
+        const response = await fetch(
+          `${API_URL}/fighters?query=${encodeURIComponent(query)}&exclude_name=${encodeURIComponent(fighterA)}`,
+          { signal: controller.signal }
+        )
+
+        if (!response.ok) {
+          throw new Error('Fighter search failed')
+        }
+
+        const data = (await response.json()) as FighterOption[]
+        setFilteredB(data.slice(0, 10))
+      } catch {
+        setFilteredB(fallbackSearch(query, fighterA))
+      }
+    }, 180)
+
+    return () => {
+      controller.abort()
+      clearTimeout(timeout)
+    }
+  }, [API_URL, fighterA, fighterB])
 
   return (
     <div className="mt-6 w-full max-w-xl mx-auto px-2">

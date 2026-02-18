@@ -1,4 +1,6 @@
 'use client'
+// Prediction result card for one fighter.
+// Also acts as trigger for detailed fighter stats modal.
 import clsx from 'clsx'
 import Card from './Card'
 import Image from 'next/image'

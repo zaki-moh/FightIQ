@@ -1,7 +1,10 @@
+"""Feature engineering functions for fighter-level model inputs."""
+
 import pandas as pd
 
 
 def add_physical_features(stats: pd.DataFrame) -> None:
+    """Impute key physical fields with weight-class-aware medians."""
     for col in ["height_cm", "weight_in_kg", "reach_in_cm"]:
         stats[col] = (
             stats.groupby("weight_in_kg")[col]
@@ -11,6 +14,7 @@ def add_physical_features(stats: pd.DataFrame) -> None:
 
 
 def add_age(stats: pd.DataFrame) -> None:
+    """Compute fighter age from date_of_birth and impute missing values."""
     stats["date_of_birth"] = pd.to_datetime(stats["date_of_birth"], errors="coerce")
     today = pd.to_datetime("today")
     stats["age"] = (today - stats["date_of_birth"]).dt.days // 365
@@ -19,6 +23,7 @@ def add_age(stats: pd.DataFrame) -> None:
 
 
 def strike_efficiency(stats: pd.DataFrame) -> None:
+    """Build normalized striking efficiency metric."""
     mean_strikes = (
         stats["significant_strikes_landed_per_minute"]
         .replace(0, pd.NA)
@@ -60,6 +65,7 @@ def strike_efficiency(stats: pd.DataFrame) -> None:
 
 
 def grapple_efficiency(stats: pd.DataFrame) -> None:
+    """Build normalized grappling efficiency metric."""
     grapple_cols = [
         "average_takedowns_landed_per_15_minutes",
         "average_submissions_attempted_per_15_minutes",
@@ -94,6 +100,7 @@ def grapple_efficiency(stats: pd.DataFrame) -> None:
 
 
 def performance_score(stats: pd.DataFrame) -> None:
+    """Compute blended performance score from striking and wrestling signals."""
     stats["performance"] = (
         0.3 * stats["normalized_strikes"]
         + 0.3 * (stats["significant_strike_defence"] / 100)
@@ -106,6 +113,7 @@ def performance_score(stats: pd.DataFrame) -> None:
 
 
 def win_ratio(stats: pd.DataFrame) -> None:
+    """Compute fighter win ratio from record columns."""
     stats["win_ratio"] = (
         stats["wins"]
         / (stats["wins"] + stats["losses"] + stats["draws"])
@@ -114,6 +122,7 @@ def win_ratio(stats: pd.DataFrame) -> None:
 
 
 def add_features(stats: pd.DataFrame) -> pd.DataFrame:
+    """Apply complete feature pipeline and return clean dataframe."""
     stats = stats.copy()
 
     add_physical_features(stats)
@@ -141,4 +150,3 @@ def add_features(stats: pd.DataFrame) -> pd.DataFrame:
     stats["age"] = stats["age"].astype(int)
 
     return stats
-

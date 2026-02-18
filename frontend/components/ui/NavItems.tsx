@@ -1,4 +1,5 @@
 'use client'
+// Header navigation links and promotion logo interactions.
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -49,15 +50,15 @@ const NavItems = ({ mobile }: NavItemsProps) => {
       <li>
         <Link
           href="/ufc"
-          className="flex items-center justify-center h-12 w-12
-                     opacity-85 transition-opacity hover:opacity-100"
+          className="group flex items-center justify-center h-12 w-12
+                     transition-transform duration-200 hover:scale-105"
         >
           <Image
-            src="/assets/icons/UFCcropped.png"
+            src="/assets/icons/svg/UFCcropped.svg"
             alt="UFC"
             width={128}
             height={48}
-            className="object-contain"
+            className="object-contain transition-all duration-200 [filter:brightness(0)_invert(1)_drop-shadow(0_0_6px_rgba(220,38,38,0.35))] group-hover:[filter:brightness(0)_invert(1)_drop-shadow(0_0_14px_rgba(220,38,38,0.85))]"
           />
         </Link>
       </li>
@@ -65,15 +66,15 @@ const NavItems = ({ mobile }: NavItemsProps) => {
       <li>
         <Link
           href="/one"
-          className="flex items-center justify-center h-12 w-12
-                     opacity-85 transition-opacity hover:opacity-100"
+          className="group flex items-center justify-center h-12 w-12
+                     transition-transform duration-200 hover:scale-105"
         >
           <Image
-            src="/assets/icons/OneChampionship.png"
+            src="/assets/icons/svg/OneChampionship.svg"
             alt="ONE Championship"
             width={128}
             height={48}
-            className="object-contain"
+            className="object-contain transition-all duration-200 [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.45))] group-hover:[filter:brightness(0)_invert(1)_drop-shadow(0_0_15px_rgba(255,255,255,0.95))]"
           />
         </Link>
       </li>
@@ -81,15 +82,15 @@ const NavItems = ({ mobile }: NavItemsProps) => {
       <li>
         <Link
           href="/toprank"
-          className="flex items-center justify-center h-10 w-10
-                     opacity-85 transition-opacity hover:opacity-100 translate-y-[1px]"
+          className="group flex items-center justify-center h-10 w-10
+                     translate-y-[1px] transition-transform duration-200 hover:scale-105"
         >
           <Image
-            src="/assets/icons/TopRank2.png"
+            src="/assets/icons/svg/TopRank2.svg"
             alt="Top Rank"
             width={128}
             height={48}
-            className="object-contain"
+            className="object-contain transition-all duration-200 [filter:brightness(0)_invert(1)_drop-shadow(0_0_6px_rgba(37,99,235,0.38))] group-hover:[filter:brightness(0)_invert(1)_drop-shadow(0_0_14px_rgba(37,99,235,0.9))]"
           />
         </Link>
       </li>

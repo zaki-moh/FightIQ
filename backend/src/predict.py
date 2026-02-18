@@ -1,3 +1,9 @@
+"""Prediction and explanation service functions.
+
+Loads model artifacts and engineered fighter stats, then produces
+matchup probabilities plus explainable factors for the API layer.
+"""
+
 import math
 from pathlib import Path
 
@@ -63,6 +69,7 @@ CAREER_STAGES = {
 
 
 def build_warning_response(fighter_A, fighter_B, warning):
+    """Return response shape for unsupported matchup conditions."""
     return {
         "fighterA": {
             "name": fighter_A["name"],
@@ -107,6 +114,7 @@ def build_response(
     height_diff,
     warning
 ):
+    """Return normalized successful prediction response payload."""
     return {
         "fighterA": {
             "name": fighter_A["name"],
@@ -137,6 +145,7 @@ def build_response(
 
 
 def build_historic_matchups(df):
+    """Build set of historic matchup keys for train-era warning flag."""
     historic_matchups = set()
     for _, row in df.iterrows():
         matchup = frozenset([
@@ -151,6 +160,7 @@ historic_fights = build_historic_matchups(historic_df) if historic_df is not Non
 
 
 def prob_A_beats_B(fighter_A, fighter_B):
+    """Compute model probability that fighter_A beats fighter_B."""
     numeric_cols = [
         "weight_diff",
         "height_diff",
@@ -198,6 +208,7 @@ def determine_edge(
     grapple_diff,
     weight_in_lb,
 ):
+    """Select primary stylistic edge label aligned to predicted winner."""
     STRIKE_SCALE = 0.20
     GRAPPLE_SCALE = 0.20
     WEIGHT_SCALE = 25.0
@@ -232,6 +243,7 @@ def determine_edge(
 
 
 def build_summary(winner_name, explanation_factors):
+    """Generate short natural-language explanation summary."""
     if not explanation_factors:
         return (
             f"The model favors {winner_name} in a closely matched contest "
@@ -271,6 +283,7 @@ def build_summary(winner_name, explanation_factors):
 
 
 def get_career_stage(age: int) -> str:
+    """Map numeric age into a descriptive career stage bucket."""
     for stage, (low, high) in CAREER_STAGES.items():
         if low <= age <= high:
             return stage
@@ -278,6 +291,7 @@ def get_career_stage(age: int) -> str:
 
 
 def predictWinner(fighter_A_Name, fighter_B_Name):
+    """Main prediction entrypoint consumed by API route."""
     if stats is None or model is None or scaler is None:
         return {"error": "Prediction system not initialized"}
 

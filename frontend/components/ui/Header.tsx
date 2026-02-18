@@ -1,4 +1,5 @@
 'use client'
+// Sticky top-level application header with responsive nav.
 import Link from 'next/link'
 import React, { useState } from 'react'
 import Image from 'next/image'
@@ -13,13 +14,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 bg-[#050D27] shadow-md z-50">
       <div className="flex items-center justify-between px-6 h-16">
-        <Link href="/">
+        <Link href="/" className="group">
           <Image
-            src="/assets/icons/FightIQfinal.png"
+            src="/assets/icons/svg/FightIQfinal.svg"
             alt="logo"
             width={1536}
             height={1024}
-            className="h-8 sm:h-10 w-auto"
+            className="h-8 sm:h-10 w-auto transition-all duration-200 [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.28))] group-hover:[filter:brightness(0)_invert(1)_drop-shadow(0_0_14px_rgba(255,255,255,0.5))]"
           />
         </Link>
 
