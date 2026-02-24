@@ -23,6 +23,10 @@ DATABASE_URL = os.getenv(
     f"sqlite:///{DEFAULT_SQLITE_PATH}",
 )
 
+# Some platforms still provide postgres:// URLs; SQLAlchemy expects postgresql://.
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
 is_sqlite = DATABASE_URL.startswith("sqlite")
 
 engine = create_engine(
