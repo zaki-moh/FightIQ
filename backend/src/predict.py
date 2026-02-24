@@ -156,7 +156,7 @@ def build_historic_matchups(df):
     return historic_matchups
 
 
-historic_fights = build_historic_matchups(historic_df) if historic_df is not None else se()
+historic_fights = build_historic_matchups(historic_df) if historic_df is not None else set()
 
 
 def prob_A_beats_B(fighter_A, fighter_B):
