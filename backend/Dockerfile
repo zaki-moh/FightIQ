@@ -17,5 +17,5 @@ COPY models ./models
 
 EXPOSE 8000
 
-# Use shell expansion so PORT env var works, with a safe default.
-CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Start via Python so PORT parsing is explicit and shell expansion is not required.
+CMD ["python", "-m", "src.run"]
