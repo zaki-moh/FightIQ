@@ -7,7 +7,7 @@ consistent and reusable across API routes and scripts.
 from collections.abc import Iterable
 from typing import Any
 
-from sqlalchemy import func, select
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from src.models import Fighter
@@ -31,20 +31,47 @@ def search_fighters(
     limit: int = 10,
     exclude_name: str | None = None,
 ) -> list[Fighter]:
-    """Search fighters by partial name for autocomplete UIs."""
+    """Search fighters by name with prefix-first ranking for autocomplete."""
     cleaned = query.strip()
     if not cleaned:
         return []
 
-    stmt = select(Fighter).where(
-        func.lower(Fighter.name).like(f"%{cleaned.lower()}%")
+    normalized_query = normalize_name(cleaned)
+    excluded_normalized = (
+        normalize_name(exclude_name)
+        if exclude_name is not None and exclude_name.strip()
+        else None
     )
 
-    if exclude_name:
-        stmt = stmt.where(Fighter.name_normalized != normalize_name(exclude_name))
+    prefix_stmt = select(Fighter).where(
+        Fighter.name_normalized.like(f"{normalized_query}%")
+    )
+    if excluded_normalized:
+        prefix_stmt = prefix_stmt.where(
+            Fighter.name_normalized != excluded_normalized
+        )
+    prefix_stmt = prefix_stmt.order_by(Fighter.name.asc()).limit(limit)
+    prefix_matches = list(db.execute(prefix_stmt).scalars().all())
 
-    stmt = stmt.order_by(Fighter.name.asc()).limit(limit)
-    return list(db.execute(stmt).scalars().all())
+    if len(prefix_matches) >= limit:
+        return prefix_matches
+
+    remaining = limit - len(prefix_matches)
+    contains_stmt = select(Fighter).where(
+        Fighter.name_normalized.like(f"%{normalized_query}%")
+    )
+    if excluded_normalized:
+        contains_stmt = contains_stmt.where(
+            Fighter.name_normalized != excluded_normalized
+        )
+    if prefix_matches:
+        contains_stmt = contains_stmt.where(
+            Fighter.id.notin_([fighter.id for fighter in prefix_matches])
+        )
+
+    contains_stmt = contains_stmt.order_by(Fighter.name.asc()).limit(remaining)
+    contains_matches = list(db.execute(contains_stmt).scalars().all())
+    return prefix_matches + contains_matches
 
 
 def upsert_fighter(db: Session, fighter_data: dict[str, Any]) -> Fighter:

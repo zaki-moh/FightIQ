@@ -18,7 +18,9 @@ def _read_port() -> int:
 
 def main() -> None:
     """Start Uvicorn for the FightIQ API."""
-    uvicorn.run("src.main:app", host="0.0.0.0", port=_read_port())
+    port = _read_port()
+    print(f"[startup] FightIQ entrypoint src.run on port {port}", flush=True)
+    uvicorn.run("src.main:app", host="0.0.0.0", port=port)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 'use client'
 // Fighter autocomplete component used on the UFC prediction page.
 // Uses API-backed search with static fallback for resilience.
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { fighters as fallbackFighters } from '@/data/fighters'
 import Placeholder from './Placeholder'
 import clsx from 'clsx'
@@ -33,16 +33,31 @@ const FighterSelector = ({
   const [openB, setOpenB] = useState(false)
   const [filteredA, setFilteredA] = useState<FighterOption[]>([])
   const [filteredB, setFilteredB] = useState<FighterOption[]>([])
+  const latestRequestA = useRef(0)
+  const latestRequestB = useRef(0)
 
   const API_URL = process.env.NEXT_PUBLIC_API_URL
 
   const fallbackSearch = (query: string, excludeName: string): FighterOption[] => {
+    const loweredQuery = query.toLowerCase()
+    const loweredExclude = excludeName.toLowerCase()
+
     return fallbackFighters
       .filter(
         (f) =>
-          f.name.toLowerCase().includes(query.toLowerCase()) &&
-          f.name !== excludeName
+          f.name.toLowerCase().includes(loweredQuery) &&
+          f.name.toLowerCase() !== loweredExclude
       )
+      .sort((a, b) => {
+        const aLower = a.name.toLowerCase()
+        const bLower = b.name.toLowerCase()
+        const aPrefix = aLower.startsWith(loweredQuery) ? 0 : 1
+        const bPrefix = bLower.startsWith(loweredQuery) ? 0 : 1
+        if (aPrefix !== bPrefix) {
+          return aPrefix - bPrefix
+        }
+        return a.name.localeCompare(b.name)
+      })
       .slice(0, 10)
   }
 
@@ -58,11 +73,13 @@ const FighterSelector = ({
       return
     }
 
+    const requestId = latestRequestA.current + 1
+    latestRequestA.current = requestId
     const controller = new AbortController()
     const timeout = setTimeout(async () => {
       try {
         const response = await fetch(
-          `${API_URL}/fighters?query=${encodeURIComponent(query)}&exclude_name=${encodeURIComponent(fighterB)}`,
+          `${API_URL}/fighters?query=${encodeURIComponent(query)}&exclude_name=${encodeURIComponent(fighterB)}&limit=15`,
           { signal: controller.signal }
         )
 
@@ -71,11 +88,34 @@ const FighterSelector = ({
         }
 
         const data = (await response.json()) as FighterOption[]
-        setFilteredA(data.slice(0, 10))
-      } catch {
+        if (requestId !== latestRequestA.current) {
+          return
+        }
+
+        const loweredQuery = query.toLowerCase()
+        const ranked = [...data].sort((a, b) => {
+          const aLower = a.name.toLowerCase()
+          const bLower = b.name.toLowerCase()
+          const aPrefix = aLower.startsWith(loweredQuery) ? 0 : 1
+          const bPrefix = bLower.startsWith(loweredQuery) ? 0 : 1
+          if (aPrefix !== bPrefix) {
+            return aPrefix - bPrefix
+          }
+          return a.name.localeCompare(b.name)
+        })
+        setFilteredA(ranked.slice(0, 10))
+      } catch (error) {
+        if (controller.signal.aborted || requestId !== latestRequestA.current) {
+          return
+        }
+
+        if (error instanceof DOMException && error.name === 'AbortError') {
+          return
+        }
+
         setFilteredA(fallbackSearch(query, fighterB))
       }
-    }, 180)
+    }, 220)
 
     return () => {
       controller.abort()
@@ -95,11 +135,13 @@ const FighterSelector = ({
       return
     }
 
+    const requestId = latestRequestB.current + 1
+    latestRequestB.current = requestId
     const controller = new AbortController()
     const timeout = setTimeout(async () => {
       try {
         const response = await fetch(
-          `${API_URL}/fighters?query=${encodeURIComponent(query)}&exclude_name=${encodeURIComponent(fighterA)}`,
+          `${API_URL}/fighters?query=${encodeURIComponent(query)}&exclude_name=${encodeURIComponent(fighterA)}&limit=15`,
           { signal: controller.signal }
         )
 
@@ -108,11 +150,34 @@ const FighterSelector = ({
         }
 
         const data = (await response.json()) as FighterOption[]
-        setFilteredB(data.slice(0, 10))
-      } catch {
+        if (requestId !== latestRequestB.current) {
+          return
+        }
+
+        const loweredQuery = query.toLowerCase()
+        const ranked = [...data].sort((a, b) => {
+          const aLower = a.name.toLowerCase()
+          const bLower = b.name.toLowerCase()
+          const aPrefix = aLower.startsWith(loweredQuery) ? 0 : 1
+          const bPrefix = bLower.startsWith(loweredQuery) ? 0 : 1
+          if (aPrefix !== bPrefix) {
+            return aPrefix - bPrefix
+          }
+          return a.name.localeCompare(b.name)
+        })
+        setFilteredB(ranked.slice(0, 10))
+      } catch (error) {
+        if (controller.signal.aborted || requestId !== latestRequestB.current) {
+          return
+        }
+
+        if (error instanceof DOMException && error.name === 'AbortError') {
+          return
+        }
+
         setFilteredB(fallbackSearch(query, fighterA))
       }
-    }, 180)
+    }, 220)
 
     return () => {
       controller.abort()
