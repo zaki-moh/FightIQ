@@ -5,10 +5,11 @@ storage is rolled out.
 """
 
 from pathlib import Path
-import pandas as pd
-from src.features import add_features
 import math
 
+import pandas as pd
+
+from src.features import add_features
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -17,21 +18,29 @@ MODELS_DIR = BASE_DIR / "models"
 
 historic_df = None
 fighters_df = None
+_datasets_loaded = False
 
 
-try:
+def _load_datasets() -> None:
+    """Load CSV datasets on first use to avoid import-time side effects."""
+    global historic_df, fighters_df, _datasets_loaded
+    if _datasets_loaded:
+        return
+
     fights_path = DATA_DIR / "large_dataset.csv"
-    historic_df = pd.read_csv(fights_path)
-except FileNotFoundError:
-    print(f"[WARN] Historic dataset not found at {fights_path}")
+    try:
+        historic_df = pd.read_csv(fights_path)
+    except FileNotFoundError:
+        print(f"[WARN] Historic dataset not found at {fights_path}")
 
-
-try:
     stats_path = DATA_DIR / "ufc-fighters-statistics-with-gender.csv"
-    fighters_df = pd.read_csv(stats_path)
-    fighters_df = add_features(fighters_df)
-except FileNotFoundError:
-    print(f"[WARN] Fighter stats not found at {stats_path}")
+    try:
+        fighters_df = pd.read_csv(stats_path)
+        fighters_df = add_features(fighters_df)
+    except FileNotFoundError:
+        print(f"[WARN] Fighter stats not found at {stats_path}")
+
+    _datasets_loaded = True
 
 CAREER_STAGES = {
     "early": (18, 24),
@@ -51,6 +60,8 @@ def get_career_stage(age: int) -> str:
 
 def get_fighter_stats(fighter_name: str):
     """Return physical/performance stats for one fighter from CSV dataset."""
+    _load_datasets()
+
     if fighters_df is None:
         raise FileNotFoundError("fighter stats dataset not found")
 
