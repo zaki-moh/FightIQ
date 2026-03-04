@@ -16,8 +16,18 @@ const Welcome = () => {
   const router = useRouter()
 
   return (
-    <main className="flex flex-col items-center px-4 md:px-6 lg:px-8 pb-16 sm:pb-24">
-      <div className="w-full max-w-6xl flex flex-col items-center">
+    <main className="relative overflow-hidden min-h-screen w-full flex flex-col items-center px-4 md:px-6 lg:px-8 pb-16 sm:pb-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 welcome-bg"
+      >
+        <div className="welcome-aurora welcome-aurora--a" />
+        <div className="welcome-aurora welcome-aurora--b" />
+        <div className="welcome-grid" />
+        <div className="welcome-particles" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center">
 
         <section className="mt-14 sm:mt-24 text-center flex flex-col gap-6 max-w-3xl">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-[1.15]">

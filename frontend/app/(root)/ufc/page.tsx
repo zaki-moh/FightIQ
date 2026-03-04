@@ -8,6 +8,9 @@ import FighterCard from '@/components/ui/FighterCard'
 import FighterSelector from '@/components/ui/FighterSelector'
 import KeyAdvantagesDelta from '@/components/ui/KeyAdvantagesDelta'
 import PredictionExplanation from '@/components/ui/PredictionExplanation'
+import RecentMatchups, {
+  type RecentMatchup,
+} from '@/components/ui/RecentMatchups'
 import React, { useState, useEffect } from 'react'
 
 type FighterInput = {
@@ -51,6 +54,9 @@ type PredictionResult = {
   warning: PredictionWarning | undefined
 }
 
+const RECENT_MATCHUPS_KEY = 'fightiq.recent-matchups'
+const RECENT_MATCHUPS_LIMIT = 8
+
 const MMA = () => {
   const [fighterA, setFighterA] = useState<FighterInput>({
     name: '',
@@ -71,6 +77,33 @@ const MMA = () => {
   const [result, setResult] = useState<PredictionResult | null>(null)
 
   const [isDirty, setIsDirty] = useState(true)
+
+  const [recentMatchups, setRecentMatchups] = useState<RecentMatchup[]>([])
+
+  useEffect(() => {
+    try {
+      const rawMatchups = window.localStorage.getItem(RECENT_MATCHUPS_KEY)
+      if (!rawMatchups) return
+
+      const parsed = JSON.parse(rawMatchups) as RecentMatchup[]
+      if (!Array.isArray(parsed)) return
+
+      setRecentMatchups(parsed.slice(0, RECENT_MATCHUPS_LIMIT))
+    } catch (loadError) {
+      console.warn('Unable to load recent matchups from localStorage', loadError)
+    }
+  }, [])
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(
+        RECENT_MATCHUPS_KEY,
+        JSON.stringify(recentMatchups)
+      )
+    } catch (saveError) {
+      console.warn('Unable to save recent matchups to localStorage', saveError)
+    }
+  }, [recentMatchups])
 
   useEffect(() => {
     setResult(null)
@@ -105,7 +138,22 @@ const MMA = () => {
 
   const canPredict = inputsFilled && isDirty && !loading
 
-  const handlePredict = async () => {
+  const handleLoadRecentMatchup = (matchup: RecentMatchup) => {
+    setFighterA(matchup.fighterA)
+    setFighterB(matchup.fighterB)
+    setSelectedA(matchup.fighterA.name)
+    setSelectedB(matchup.fighterB.name)
+    void handlePredict(matchup.fighterA, matchup.fighterB)
+  }
+
+  const handleClearRecentMatchups = () => {
+    setRecentMatchups([])
+  }
+
+  const handlePredict = async (
+    fighterAToPredict: FighterInput = fighterA,
+    fighterBToPredict: FighterInput = fighterB
+  ) => {
     setLoading(true)
     setResult(null)
     setError(null)
@@ -117,8 +165,8 @@ const MMA = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          fighterA: fighterA.name,
-          fighterB: fighterB.name,
+          fighterA: fighterAToPredict.name,
+          fighterB: fighterBToPredict.name,
         }),
       })
 
@@ -126,9 +174,33 @@ const MMA = () => {
         throw new Error('Prediction unavailable')
       }
 
-      const data = await response.json()
+      const data: PredictionResult = await response.json()
       setResult(data)
       setIsDirty(false)
+
+      if (!data.warning) {
+        const newItem: RecentMatchup = {
+          fighterA: { ...fighterAToPredict },
+          fighterB: { ...fighterBToPredict },
+          winner: data.winner,
+          confidence: data.confidence,
+          createdAt: new Date().toISOString(),
+        }
+
+        setRecentMatchups(prev => {
+          const deduped = prev.filter(
+            matchup =>
+              !(
+                matchup.fighterA.name.toLowerCase() ===
+                  newItem.fighterA.name.toLowerCase() &&
+                matchup.fighterB.name.toLowerCase() ===
+                  newItem.fighterB.name.toLowerCase()
+              )
+          )
+
+          return [newItem, ...deduped].slice(0, RECENT_MATCHUPS_LIMIT)
+        })
+      }
     } catch (err) {
       console.error('Prediction request failed:', err)
 
@@ -168,7 +240,7 @@ const MMA = () => {
           variant="primary"
           size="lg"
           className="mt-6 sm:mt-4 px-6 sm:px-10 w-full sm:w-auto"
-          onClick={handlePredict}
+          onClick={() => void handlePredict()}
           disabled={!canPredict}
         >
           {loading
@@ -177,6 +249,12 @@ const MMA = () => {
             ? 'Predict'
             : 'Change fighters to re-predict'}
         </Button>
+
+        <RecentMatchups
+          matchups={recentMatchups}
+          onLoadMatchup={handleLoadRecentMatchup}
+          onClearMatchups={handleClearRecentMatchups}
+        />
 
         {result != null && result.warning && result.warning.type == "extreme_weight_mismatch" && (
           <div className="mt-4 max-w-xl mx-auto rounded-md border-l-2 border-amber-400/40 bg-amber-400/5 px-4 py-3">

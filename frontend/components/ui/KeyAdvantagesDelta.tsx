@@ -1,6 +1,5 @@
 import React from 'react'
 import DeltaRow from './DeltaRow'
-import { Labrada } from 'next/font/google'
 
 
 type FighterInput = {
@@ -36,6 +35,15 @@ const KeyAdvantagesDelta = ({
 
   const MINOR_THRESHOLD = 0.01
   type DeltaDirection = 'winner' | 'loser' | 'neutral'
+  const winnerIsFighterA = winnerName === fighterA.name
+
+  const directionFromSignedDiff = (diff: number): DeltaDirection => {
+    if (diff === 0) return 'neutral'
+
+    const fighterAHasEdge = diff > 0
+    const winnerHasEdge = winnerIsFighterA ? fighterAHasEdge : !fighterAHasEdge
+    return winnerHasEdge ? 'winner' : 'loser'
+  }
 
 
   const STAGE_SCORES: Record<string, number> = {
@@ -77,12 +85,9 @@ const KeyAdvantagesDelta = ({
     }
   }
 
-  const ageDirection: DeltaDirection =
-  STAGE_SCORES[ageStages[0]] > STAGE_SCORES[ageStages[1]]
-    ? 'winner'  
-    : STAGE_SCORES[ageStages[0]] < STAGE_SCORES[ageStages[1]]
-    ? 'loser'    
-    : 'neutral'
+  const ageDirection: DeltaDirection = directionFromSignedDiff(
+    STAGE_SCORES[ageStages[0]] - STAGE_SCORES[ageStages[1]]
+  )
 
 
   return (
@@ -109,7 +114,7 @@ const KeyAdvantagesDelta = ({
             label="Height"
             delta={Math.abs(heightDelta)}
             unit="in."
-            direction={heightDelta > 0 ? 'winner' : 'loser'}
+            direction={directionFromSignedDiff(heightDelta)}
           />
         )}
 
@@ -118,7 +123,7 @@ const KeyAdvantagesDelta = ({
             label="Reach"
             unit='in.'
             delta={Math.abs(reachDelta)}
-            direction={reachDelta > 0 ? 'winner' : 'loser'}
+            direction={directionFromSignedDiff(reachDelta)}
           />
         )}
 
@@ -127,7 +132,7 @@ const KeyAdvantagesDelta = ({
             label="Weight"
             delta={Math.abs(weightDelta)}
             unit="lbs"
-            direction={weightDelta > 0 ? 'winner' : 'loser'}
+            direction={directionFromSignedDiff(weightDelta)}
           />
         )}
 
@@ -136,7 +141,7 @@ const KeyAdvantagesDelta = ({
             label="Striking"
             unit='% pp'
             delta={Math.abs(strikeDelta)}
-            direction={strikeDelta > 0 ? 'winner' : 'loser'}
+            direction={directionFromSignedDiff(strikeDelta)}
           />
         )}
 
@@ -145,7 +150,7 @@ const KeyAdvantagesDelta = ({
             label="Grappling"
             unit='% pp'
             delta={Math.abs(grappleDelta)}
-            direction={grappleDelta > 0 ? 'winner' : 'loser'}
+            direction={directionFromSignedDiff(grappleDelta)}
           />
         )}
 
