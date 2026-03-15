@@ -2,6 +2,8 @@
 
 FightIQ is a full-stack combat sports analytics app that predicts UFC matchups and explains why the model favors one fighter.
 
+Link: https://fight-iq-omega.vercel.app/
+
 ## What It Does
 
 - Predicts winner and confidence for a selected UFC matchup
