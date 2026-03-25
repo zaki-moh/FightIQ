@@ -188,15 +188,20 @@ const MMA = () => {
         }
 
         setRecentMatchups(prev => {
-          const deduped = prev.filter(
-            matchup =>
-              !(
-                matchup.fighterA.name.toLowerCase() ===
-                  newItem.fighterA.name.toLowerCase() &&
-                matchup.fighterB.name.toLowerCase() ===
-                  newItem.fighterB.name.toLowerCase()
-              )
-          )
+          const deduped = prev.filter(matchup => {
+
+            const existingPair = [
+              matchup.fighterA.name.toLowerCase(),
+              matchup.fighterB.name.toLowerCase(),
+            ].sort()
+            
+            const newPair = [
+              newItem.fighterA.name.toLowerCase(),
+              newItem.fighterB.name.toLowerCase(),
+            ].sort()
+            
+            return !(existingPair[0] === newPair[0] && existingPair[1] === newPair[1])
+          })
 
           return [newItem, ...deduped].slice(0, RECENT_MATCHUPS_LIMIT)
         })

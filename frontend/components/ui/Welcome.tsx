@@ -11,9 +11,11 @@ import {
 import Button from './Button'
 import Card from './Card'
 import FadeInSection from './FadeInSection'
+import { useScrollPause } from '@/hooks/useScrollPause'
 
 const Welcome = () => {
   const router = useRouter()
+  useScrollPause()
 
   return (
     <main className="relative overflow-hidden min-h-screen w-full flex flex-col items-center px-4 md:px-6 lg:px-8 pb-16 sm:pb-24">
