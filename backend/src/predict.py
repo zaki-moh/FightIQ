@@ -1,7 +1,7 @@
 """Prediction and explanation service functions.
 
-Loads model artifacts and engineered fighter stats, then produces
-matchup probabilities plus explainable factors for the API layer.
+Loads model artifacts plus historic matchup data, then produces
+matchup probabilities and explanation payloads from DB-backed fighter rows.
 """
 
 import math
@@ -10,7 +10,8 @@ from pathlib import Path
 import joblib
 import pandas as pd
 
-from src.features import add_features
+from src.fighters_repo import get_fighter_by_name
+
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,7 +20,6 @@ MODELS_DIR = BASE_DIR / "models"
 
 
 historic_df = None
-stats = None
 model = None
 scaler = None
 
@@ -29,14 +29,6 @@ try:
     historic_df = pd.read_csv(fights_path)
 except FileNotFoundError:
     print(f"[WARN] Historic dataset not found at {fights_path}")
-
-
-try:
-    stats_path = DATA_DIR / "ufc-fighters-statistics-with-gender.csv"
-    stats = pd.read_csv(stats_path)
-    stats = add_features(stats)
-except FileNotFoundError:
-    print(f"[WARN] Fighter stats not found at {stats_path}")
 
 
 try:
@@ -290,9 +282,25 @@ def get_career_stage(age: int) -> str:
     return "unknown"
 
 
-def predictWinner(fighter_A_Name, fighter_B_Name):
+def normalize_fighter_for_prediction(fighter):
+    """Convert ORM fighter row into the legacy dict shape used by inference."""
+    return {
+        "name": fighter.name,
+        "gender": fighter.gender or "unknown",
+        "height_cm": float(fighter.height_cm or 0),
+        "reach_in_cm": float(fighter.reach_in_cm or 0),
+        "weight_in_kg": float(fighter.weight_in_kg or 0),
+        "age": int(fighter.age or 0),
+        "strike_efficiency": float(fighter.strike_efficiency or 0),
+        "grapple_efficiency": float(fighter.grapple_efficiency or 0),
+        "performance": float(fighter.performance or 0),
+        "win_ratio": float(fighter.win_ratio or 0),
+    }
+
+
+def predictWinner(db, fighter_A_Name, fighter_B_Name):
     """Main prediction entrypoint consumed by API route."""
-    if stats is None or model is None or scaler is None:
+    if model is None or scaler is None:
         return {"error": "Prediction system not initialized"}
 
     fighter_A_Name = fighter_A_Name.lower()
@@ -301,18 +309,14 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
     query = frozenset([fighter_A_Name, fighter_B_Name])
     is_historic = query in historic_fights
 
-    rowsA = stats.loc[
-        stats["name"].str.lower() == fighter_A_Name
-    ]
-    rowsB = stats.loc[
-        stats["name"].str.lower() == fighter_B_Name
-    ]
+    fighterA = get_fighter_by_name(db, fighter_A_Name)
+    fighterB = get_fighter_by_name(db, fighter_B_Name)
 
-    if rowsA.empty or rowsB.empty:
+    if not fighterA or not fighterB:
         return {"error": "One or more fighters not found"}
 
-    fighter_A = rowsA.iloc[0].fillna(0)
-    fighter_B = rowsB.iloc[0].fillna(0)
+    fighter_A = normalize_fighter_for_prediction(fighterA)
+    fighter_B = normalize_fighter_for_prediction(fighterB)
 
     if fighter_A["gender"] != fighter_B["gender"]:
         return build_warning_response(
@@ -329,8 +333,8 @@ def predictWinner(fighter_A_Name, fighter_B_Name):
 
     if weight_diff_lb > 30:
         return build_warning_response(
-            fighter_A, 
-            fighter_B, 
+            fighter_A,
+            fighter_B,
             {
                 "type": "extreme_weight_mismatch",
                 "message": f"{int(weight_diff_lb)} lb"

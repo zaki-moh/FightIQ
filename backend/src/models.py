@@ -31,7 +31,6 @@ class Fighter(Base):
     reach_in_cm: Mapped[float | None] = mapped_column(Float, nullable=True)
     weight_in_kg: Mapped[float | None] = mapped_column(Float, nullable=True)
     age: Mapped[int | None] = mapped_column(Integer, nullable=True)
-
     strike_efficiency: Mapped[float | None] = mapped_column(Float, nullable=True)
     grapple_efficiency: Mapped[float | None] = mapped_column(Float, nullable=True)
     win_ratio: Mapped[float | None] = mapped_column(Float, nullable=True)

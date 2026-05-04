@@ -99,7 +99,10 @@ def startup_event():
 
 
 @app.post("/predict", response_model=PredictionResponse)
-def predict_endpoint(data: Matchup):
+def predict_endpoint(
+    data: Matchup,
+    db: Session = Depends(get_db)
+    ):
     """Return matchup prediction payload for two selected fighters."""
     if data.fighterA == data.fighterB:
         raise HTTPException(
@@ -108,7 +111,7 @@ def predict_endpoint(data: Matchup):
         )
 
     try:
-        result = predictWinner(data.fighterA, data.fighterB)
+        result = predictWinner(db, data.fighterA, data.fighterB)
     except Exception:
         raise HTTPException(status_code=500, detail="Prediction failed")
 
